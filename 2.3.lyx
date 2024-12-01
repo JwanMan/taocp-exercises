@@ -1,0 +1,884 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc4[01]
+\end_layout
+
+\end_inset
+
+True or false:
+ In a conventional tree diagram (root at the top),
+ if node 
+\begin_inset Formula $X$
+\end_inset
+
+ has a 
+\emph on
+higher
+\emph default
+ level number than node 
+\begin_inset Formula $Y$
+\end_inset
+
+,
+ then node 
+\begin_inset Formula $X$
+\end_inset
+
+ appears 
+\emph on
+lower
+\emph default
+ in the diagram than node 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+True.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc5[02]
+\end_layout
+
+\end_inset
+
+If node 
+\begin_inset Formula $A$
+\end_inset
+
+ has three siblings and 
+\begin_inset Formula $B$
+\end_inset
+
+ is the parent of 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ what is the degree of 
+\begin_inset Formula $B$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+4.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc6[21]
+\end_layout
+
+\end_inset
+
+Define the statement 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $X$
+\end_inset
+
+ is an 
+\begin_inset Formula $m$
+\end_inset
+
+th cousin of 
+\begin_inset Formula $Y$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ times removed
+\begin_inset Quotes erd
+\end_inset
+
+ as a meaningful relation between nodes 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ of a tree,
+ by analogy with family trees,
+ if 
+\begin_inset Formula $m>0$
+\end_inset
+
+ and 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+.
+ (See a dictionary for the meaning of these terms in regard to family trees.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+It means that there exists a node 
+\begin_inset Formula $X'$
+\end_inset
+
+ such that either 
+\begin_inset Formula $X$
+\end_inset
+
+ is the 
+\begin_inset Formula $n$
+\end_inset
+
+th ancestor of 
+\begin_inset Formula $X'$
+\end_inset
+
+ or vice versa (that is,
+ the ancestor 
+\begin_inset Formula $n$
+\end_inset
+
+ levels below,
+ where for 
+\begin_inset Formula $n=0$
+\end_inset
+
+ we would take 
+\begin_inset Formula $X'=X$
+\end_inset
+
+),
+ 
+\begin_inset Formula $X'$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are at the same level,
+ the 
+\begin_inset Formula $(m+1)$
+\end_inset
+
+th ancestor of 
+\begin_inset Formula $X'$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is the same,
+ and the 
+\begin_inset Formula $m$
+\end_inset
+
+th ancestor isn't.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc8[03]
+\end_layout
+
+\end_inset
+
+What binary tree is not a tree?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+By the definitions in this book,
+ the empty binary tree.
+ Actually binary trees and trees are very separate concepts and therefore none is.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc9[00]
+\end_layout
+
+\end_inset
+
+In the two binary trees of (1),
+ which node is the root (
+\begin_inset Formula $B$
+\end_inset
+
+ or 
+\begin_inset Formula $A$
+\end_inset
+
+)?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+By the current conventions,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc13[10]
+\end_layout
+
+\end_inset
+
+Suppose that node 
+\begin_inset Formula $X$
+\end_inset
+
+ is numbered 
+\begin_inset Formula $a_{1}.a_{2}.\cdots.a_{k}$
+\end_inset
+
+ in the Dewey decimal system;
+ what are the Dewey numbers of the nodes in the path from 
+\begin_inset Formula $X$
+\end_inset
+
+ to the root (see exercise 3)?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+They would be 
+\begin_inset Formula $a_{1}.a_{2}.\cdots.a_{k};a_{1}.a_{2}.\cdots.a_{k-1};\dots;a_{1}.a_{2};a_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc15[20]
+\end_layout
+
+\end_inset
+
+Invent a notation for the nodes of binary trees,
+ analogous to the Dewey decimal notation for nodes of trees.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We could call the root 
+\begin_inset Formula $\%$
+\end_inset
+
+ and,
+ for a given nonempty node called 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ (a string),
+ its left child could be called 
+\begin_inset Formula $\lambda L$
+\end_inset
+
+ and its right child 
+\begin_inset Formula $\lambda R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc17[01]
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $Z$
+\end_inset
+
+ stands for Fig.
+ 19 regarded as a forest,
+ what node is 
+\begin_inset Formula $\text{parent}(Z[1,2,2])$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{parent}(Z[1,2,2])=\text{parent}(\text{children of node }1.2.2)=E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc18[08]
+\end_layout
+
+\end_inset
+
+In List (3),
+ what is 
+\begin_inset Formula $L[5,1,1]$
+\end_inset
+
+?
+ What is 
+\begin_inset Formula $L[3,1]$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $L[5,1,1]=(2)$
+\end_inset
+
+,
+ 
+\begin_inset Formula $L[3,1]$
+\end_inset
+
+ doesn't exist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc20[M21]
+\end_layout
+
+\end_inset
+
+Define a 
+\emph on
+0-2-tree
+\emph default
+ as a tree in which each node has exactly zero or two children.
+ (Formally,
+ a 0-2-tree consists of a single node,
+ called its root,
+ plus 0 or 2 disjoint 0-2-trees.) Show that every 0-2-tree has an odd number of nodes;
+ and give a one-to-one correspondence between binary trees with 
+\begin_inset Formula $n$
+\end_inset
+
+ nodes and (ordered) 0-2-trees with 
+\begin_inset Formula $2n+1$
+\end_inset
+
+ nodes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We can prove that 0-2-trees have an odd number of nodes by induction on the depth of the tree:
+ for depth 0,
+ we just have one node with no children,
+ and for depth greater than 0,
+ we have the root and two children whose subtrees have each an odd number of nodes,
+ so the main tree also has an odd number of nodes.
+\end_layout
+
+\begin_layout Standard
+For the bijection,
+ an empty binary tree corresponds to a node with 0 children,
+ and any other binary tree corresponds to a node whose children are the left and right nodes.
+ This is clearly bijective,
+ and we can prove that the bijection sends binary trees with 
+\begin_inset Formula $n$
+\end_inset
+
+ nodes to ordered 0-2-trees with 
+\begin_inset Formula $2n+1$
+\end_inset
+
+ nodes by induction on 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $n=0$
+\end_inset
+
+,
+ this is obvious;
+ for 
+\begin_inset Formula $n>0$
+\end_inset
+
+,
+ let 
+\begin_inset Formula $m$
+\end_inset
+
+ be the number of nodes in the left subtree,
+ clearly 
+\begin_inset Formula $0\leq m<n$
+\end_inset
+
+ and the right subtree has 
+\begin_inset Formula $n-m-1$
+\end_inset
+
+ nodes,
+ 
+\begin_inset Formula $0<n-m-1\leq n$
+\end_inset
+
+,
+ so by the induction hypothesis on the subtrees the corresponding 0-2-tree has 
+\begin_inset Formula $1+(2m+1)+(2(n-m-1)+1)=1+2m+1+2n-2m-2+1=2n+1$
+\end_inset
+
+ nodes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc22[21]
+\end_layout
+
+\end_inset
+
+Standard European paper sizes A0,
+ A1,
+ A2,
+ ...,
+ 
+\begin_inset Formula $\text{A}n$
+\end_inset
+
+,
+ ...
+ are rectangles whose sides are in the ratio 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ to 1 and whose areas are 
+\begin_inset Formula $2^{-n}$
+\end_inset
+
+ square meters.
+ Therefore if we cut a sheet of 
+\begin_inset Formula $\text{A}n$
+\end_inset
+
+ paper in half,
+ we get two sheets of 
+\begin_inset Formula $\text{A}(n+1)$
+\end_inset
+
+ paper.
+ Use this principle to design a graphic representation of binary trees,
+ and illustrate your idea by drawing the representation of 2.3.1–(1) below.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+One idea would be to represent an empty binary tree as nothing and a nonempty binary tree as dividing the sheet in two by a line parallel to the short side,
+ interrupted by the label of the root node,
+ and then draw the left and right subtrees in the left/top and right/bottom sides of the paper.
+ In fact,
+ one might not even need to draw the whole line,
+ drawing only the line from the label of the parent node (or from the top of the sheet for the root) to the own label is enough and would probably be clearer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (0,0) -- (0,5.656854) -- (8,5.656854) -- (8,0) -- cycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (4,5.656854) -- (4,2.828427) node(A)[fill=white]{$A$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      (A) -- (2,2.828427) node(B)[fill=white]{$B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      (B) -- (2,4.2426405) node[fill=white]{$D$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      (B) -- (6,2.828427) node(C)[fill=white]{$C$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      (C) -- (6,4.2426405) node(E)[fill=white]{$E$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      (E) -- (5,4.2426405) node[fill=white]{$G$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      (C) -- (6,1.4142135) node(F)[fill=white]{$F$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      (F) -- (5,1.4142135) node[fill=white]{$H$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      (F) -- (7,1.4142135) node[fill=white]{$J$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1316 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc1[20]
+\end_layout
+
+\end_inset
+
+The text gives a formal definition of 
+\begin_inset Formula $B(F)$
+\end_inset
+
+,
+ the binary tree corresponding to a forest 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ Give a formal definition that reverses the process;
+ in other words,
+ define 
+\begin_inset Formula $F(B)$
+\end_inset
+
+,
+ the forest corresponding to a binary tree 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $F(B)$
+\end_inset
+
+ is the forest such that 
+\begin_inset Formula $B(F(B))=B$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $F=B^{-1}$
+\end_inset
+
+.
+ Now we shall give an explicit definition of 
+\begin_inset Formula $F$
+\end_inset
+
+ and see that 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $F$
+\end_inset
+
+ are,
+ in fact,
+ inverses.
+\end_layout
+
+\begin_layout Standard
+Given a binary tree 
+\begin_inset Formula $B$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $B$
+\end_inset
+
+ is empty,
+ 
+\begin_inset Formula $F(B)$
+\end_inset
+
+ is the empty forest.
+\end_layout
+
+\begin_layout Enumerate
+Otherwise,
+ let 
+\begin_inset Formula $\text{root}(P)$
+\end_inset
+
+ be the root node of a given nonempty binary tree,
+ 
+\begin_inset Formula $\text{left}(P)$
+\end_inset
+
+ be its left subtree,
+ and 
+\begin_inset Formula $\text{right}(P)$
+\end_inset
+
+ be its right subtree.
+ Then,
+ if 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ is the tree whose root is 
+\begin_inset Formula $\text{root}(T)$
+\end_inset
+
+ and whose children are the trees of the forest 
+\begin_inset Formula $F(\text{left}(B))$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $F(B)=(T_{1},F(\text{right}(B)))$
+\end_inset
+
+,
+ that is,
+ the forest made up of the tree 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ followed by the trees in 
+\begin_inset Formula $F(\text{right}(B))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We can prove that they are inverses by structural induction,
+ which is a case of strong induction in the number of nodes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B(F(B))=B$
+\end_inset
+
+ is obvious if 
+\begin_inset Formula $B$
+\end_inset
+
+ is empty;
+ otherwise 
+\begin_inset Formula $F(B)=((\text{root}(B);F(\text{left}(B)));F(\text{right}(B)))$
+\end_inset
+
+ is made up of a tree 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ with 
+\begin_inset Formula $\text{root}(B)$
+\end_inset
+
+ as root and the trees in 
+\begin_inset Formula $F(\text{left}(B))$
+\end_inset
+
+ as children,
+ and then the trees in 
+\begin_inset Formula $F(\text{right}(B))$
+\end_inset
+
+,
+ and so 
+\begin_inset Formula $B(F(B))$
+\end_inset
+
+ has 
+\begin_inset Formula $\text{root}(T_{1})=\text{root}(B)$
+\end_inset
+
+ as its root,
+ its left subtree is 
+\begin_inset Formula $B(F(\text{left}(B)))=\text{left}(B)$
+\end_inset
+
+,
+ and its right subtree is 
+\begin_inset Formula $B(F(\text{right}(B)))=\text{right}(B)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(B(F))=F$
+\end_inset
+
+ is obvious for an empty forest 
+\begin_inset Formula $F$
+\end_inset
+
+;
+ if 
+\begin_inset Formula $F=(T_{1},\dots,T_{n})$
+\end_inset
+
+ is nonempty,
+ then 
+\begin_inset Formula $B(F)$
+\end_inset
+
+ has 
+\begin_inset Formula $\text{root}(T_{1})$
+\end_inset
+
+ as its root,
+ 
+\begin_inset Formula $B(T_{11},\dots,T_{1m})$
+\end_inset
+
+ as its left subtree,
+ where 
+\begin_inset Formula $T_{11},\dots,T_{1m}$
+\end_inset
+
+ are the subtrees of 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $B(T_{2},\dots,T_{n})$
+\end_inset
+
+ as the right subtree,
+ so 
+\begin_inset Formula $F(B(F))$
+\end_inset
+
+ is made up of a tree 
+\begin_inset Formula $T'_{1}$
+\end_inset
+
+ whose root is 
+\begin_inset Formula $\text{root}(B(F))=\text{root}(T_{1})$
+\end_inset
+
+ and whose children are the trees in 
+\begin_inset Formula $F(\text{left}(B(F)))=F(B(T_{11},\dots,T_{1m}))=(T_{11},\dots,T_{1m})$
+\end_inset
+
+ (therefore 
+\begin_inset Formula $T'_{1}=T_{1}$
+\end_inset
+
+),
+ followed by the trees in 
+\begin_inset Formula $F(\text{right}(B))=F(B(T_{2},\dots,T_{n}))=(T_{2},\dots,T_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc2[20]
+\end_layout
+
+\end_inset
+
+We defined Dewey decimal notation for forests in Section 2.3,
+ and for binary trees in exercise 2.3.1–5.
+ Thus the node 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $J$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ in (1) is represented by 
+\begin_inset Quotes eld
+\end_inset
+
+2.2.1
+\begin_inset Quotes erd
+\end_inset
+
+,
+ and in the equivalent binary tree (3) it is represented by 
+\begin_inset Quotes eld
+\end_inset
+
+11010
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+(this is a 1 for the root following by zero or more 0s or 1s,
+ where 0 means moving to the left subtree and 1 means moving to the right)
+\end_layout
+
+\end_inset
+
+.
+ If possible,
+ give a rule that directly expresses the natural correspondence between the Dewey decimal notations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+One can get the forest notation from the binary tree notation by switching the 1 at the start by a 0 and then counting the number of 1s after each 0 and adding 1 to that number.
+ In this case,
+ we would change 
+\begin_inset Quotes eld
+\end_inset
+
+11010
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+01010
+\begin_inset Quotes erd
+\end_inset
+
+,
+ then count 
+\begin_inset Quotes eld
+\end_inset
+
+1.1.0
+\begin_inset Quotes erd
+\end_inset
+
+ and add 1 to each number to get 
+\begin_inset Quotes eld
+\end_inset
+
+2.2.1
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc13[26]
+\end_layout
+
+\end_inset
+
+Write a 
+\family typewriter
+MIX
+\family default
+ program for the 
+\family typewriter
+COPY
+\family default
+ subroutine (which fits in the program of the text between lines 063–104).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We have 40 lines.
+ We use Algorithm 2.3.1C to copy the tree in rI1.
+ In C5,
+ to take the next node in preorder,
+ we follow the 
+\family typewriter
+RLINK
+\family default
+ up to and including that of a node with 
+\begin_inset Formula $\mathtt{RTAG}=0$
+\end_inset
+
+ (positive sign),
+ unless the node has a left child.
+ In C4,
+ when inserting a node to the left,
+ we set 
+\begin_inset Formula $\mathtt{RTAG}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{RLINK}$
+\end_inset
+
+ to the parent node,
+ In C2,
+ when inserting a node to the right,
+ we set 
+\begin_inset Formula $\mathtt{RTAG}=1$
+\end_inset
+
+ and 
+\family typewriter
+RLINK
+\family default
+ to the previous 
+\family typewriter
+RLINK
+\family default
+ of the parent node.
+\end_layout
+
+\begin_layout Standard
+We also need to copy the 
+\family typewriter
+INFO
+\family default
+ of the 
+\family typewriter
+HEAD
+\family default
+,
+ which is easily achieved by going from C1 to C3 rather than to C4.
+ This code is slightly less efficient than the one by Knuth,
+ and it has not been tested.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+        ST2  1F
+\end_layout
+
+\begin_layout Plain Layout
+
+        ST3  2F
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP  ALLOC       ;
+ C1 [Initialize]
+\end_layout
+
+\begin_layout Plain Layout
+
+        ENT2 0,3
+\end_layout
+
+\begin_layout Plain Layout
+
+        ST2  0,2(RLINK)  ;
+ RLINK(U) <- U
+\end_layout
+
+\begin_layout Plain Layout
+
+3H      LDA  1,1         ;
+ C3 [Copy INFO]
+\end_layout
+
+\begin_layout Plain Layout
+
+        STA  1,2
+\end_layout
+
+\begin_layout Plain Layout
+
+        LDA  0,1(TYPE)
+\end_layout
+
+\begin_layout Plain Layout
+
+        STA  0,2(TYPE)
+\end_layout
+
+\begin_layout Plain Layout
+
+4H      LDA  0,1(LLINK)  ;
+ C4 [Anything to the left?]
+\end_layout
+
+\begin_layout Plain Layout
+
+        JAZ  5F
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP  ALLOC       ;
+ R <= AVAIL
+\end_layout
+
+\begin_layout Plain Layout
+
+        ST3  0,2(LLINK)  ;
+ LLINK(Q) <- R
+\end_layout
+
+\begin_layout Plain Layout
+
+        ENNA 0,2
+\end_layout
+
+\begin_layout Plain Layout
+
+        STA  0,3(RLINKT)
+\end_layout
+
+\begin_layout Plain Layout
+
+        LD1  0,1(LLINK)
+\end_layout
+
+\begin_layout Plain Layout
+
+        ENT2 0,3
+\end_layout
+
+\begin_layout Plain Layout
+
+5H      LD1N 0,1(RLINKT) ;
+ C5 [Advance]
+\end_layout
+
+\begin_layout Plain Layout
+
+        LD2  0,2(RLINK)
+\end_layout
+
+\begin_layout Plain Layout
+
+        J1P  5B
+\end_layout
+
+\begin_layout Plain Layout
+
+        ENN1 0,1
+\end_layout
+
+\begin_layout Plain Layout
+
+6H      CMP2 0,2(RLINK)  ;
+ C6 [Test if complete]
+\end_layout
+
+\begin_layout Plain Layout
+
+        JEQ  2F          ;
+ Finish when Q = RLINK(Q)
+\end_layout
+
+\begin_layout Plain Layout
+
+        LDA  0,1         ;
+ C2 [Anything to the right?]
+\end_layout
+
+\begin_layout Plain Layout
+
+        JAN  3B
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP  ALLOC       ;
+ R <= AVAIL
+\end_layout
+
+\begin_layout Plain Layout
+
+        LDA  0,2(RLINKT) ;
+ RLINK(Q) <- R
+\end_layout
+
+\begin_layout Plain Layout
+
+        STA  0,3(RLINKT)
+\end_layout
+
+\begin_layout Plain Layout
+
+        ST3  0,2(RLINKT)
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP  3B
+\end_layout
+
+\begin_layout Plain Layout
+
+ALLOC   STJ  8F
+\end_layout
+
+\begin_layout Plain Layout
+
+        LD3  AVAIL
+\end_layout
+
+\begin_layout Plain Layout
+
+        J3Z  OVERFLOW
+\end_layout
+
+\begin_layout Plain Layout
+
+        LDX  0,3(LLINK)
+\end_layout
+
+\begin_layout Plain Layout
+
+        STX  AVAIL
+\end_layout
+
+\begin_layout Plain Layout
+
+        STZ  0,3(LLINK)
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP  *
+\end_layout
+
+\begin_layout Plain Layout
+
+2H      ENT3 *
+\end_layout
+
+\begin_layout Plain Layout
+
+        ENT1 0,2
+\end_layout
+
+\begin_layout Plain Layout
+
+1H      ENT2 *
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc14[M21]
+\end_layout
+
+\end_inset
+
+How long does it take the program of exercise 13 to copy a tree with 
+\begin_inset Formula $n$
+\end_inset
+
+ nodes?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+There are 20 cycles for the initialization,
+ then 11 for every node including the header until 
+\family typewriter
+JAZ 5F
+\family default
+,
+ then 21 for each left node,
+ plus 5 to go back in C5 if needed (once for each left node or for the header),
+ plus 1 to arrive at the right node (including the header),
+ then 2 cycles per node (including the header at the end) to test for termination,
+ 20 for each right node,
+ and 3 for termination.
+\end_layout
+
+\begin_layout Standard
+In total,
+ we spend 63 cycles,
+ plus 39 cycles for each left child and 34 for each right child.
+ As said before,
+ this is just slightly less efficient than Knuth's code.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO 18,
+ 20 (2pp,
+ 0:52)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc18[25]
+\end_layout
+
+\end_inset
+
+An oriented tree specified by 
+\begin_inset Formula $n$
+\end_inset
+
+ links 
+\begin_inset Formula $\mathtt{PARENT}[j]$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq j\leq n$
+\end_inset
+
+ implicitly defines an ordered tree if the nodes in each family are oriented by their location.
+ Design an efficient algorithm that constructs a doubly linked circular list containing the nodes of this ordered tree in preorder.
+ For example,
+ given
+\begin_inset Formula 
+\[
+\begin{array}{rcccccccc}
+j= & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+\mathtt{PARENT}[j]= & 3 & 8 & 4 & 0 & 4 & 8 & 3 & 4
+\end{array}
+\]
+
+\end_inset
+
+your algorithm should produce
+\begin_inset Formula 
+\[
+\begin{array}{rcccccccc}
+\mathtt{LLINK}[j]= & 3 & 8 & 4 & 6 & 7 & 2 & 1 & 5\\
+\mathtt{RLINK}[j]= & 7 & 6 & 1 & 3 & 8 & 4 & 5 & 2
+\end{array}
+\]
+
+\end_inset
+
+and it should also report that the root node is 4.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The way to do this would be to look at the indices in decreasing order,
+ and for each index we insert the child node and its subtree to the right of the parent node,
+ as follows:
+\end_layout
+
+\begin_layout Enumerate
+[Initialize.] Set 
+\begin_inset Formula $\mathtt{LLINK}[j]\gets\mathtt{RLINK}[j]\gets j$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq j\leq n$
+\end_inset
+
+,
+ then let 
+\begin_inset Formula $j\gets n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:e23218b"
+
+\end_inset
+
+[Set parent.] If 
+\begin_inset Formula $\mathtt{PARENT}[j]=0$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $r\gets j$
+\end_inset
+
+.
+ Otherwise set 
+\begin_inset Formula $p\gets\mathtt{PARENT}[j]$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{LLINK}[\mathtt{RLINK}[p]]\gets\mathtt{LLINK}[j]$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{RLINK}[\mathtt{LLINK}[j]]\gets\mathtt{RLINK}[p]$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{RLINK}[p]\gets j$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\mathtt{LLINK}[j]\gets p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+[Are we done?] Decrease 
+\begin_inset Formula $j$
+\end_inset
+
+ by 1.
+ If 
+\begin_inset Formula $j=0$
+\end_inset
+
+,
+ terminate and report 
+\begin_inset Formula $r$
+\end_inset
+
+ as the root node.
+ Otherwise go to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e23218b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+First,
+ each element is in a circular list by its own.
+ Then,
+ in step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e23218b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+,
+ we place the circular list of the child to the right of the circular list of the parent.
+ To see that this produces a preorder,
+ we see by induction that,
+ at the end of step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e23218b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+,
+ we have the preorder of each connected component in the 
+\begin_inset Quotes eld
+\end_inset
+
+subforest
+\begin_inset Quotes erd
+\end_inset
+
+ whose edges are 
+\begin_inset Formula $(k,\mathtt{PARENT}[k])$
+\end_inset
+
+ for 
+\begin_inset Formula $j\leq k\leq n$
+\end_inset
+
+,
+ each preorder in a separate circular list.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $j=n$
+\end_inset
+
+,
+ this is easy to check.
+ For 
+\begin_inset Formula $1\leq j<n$
+\end_inset
+
+,
+ at the beginning of the step,
+ 
+\begin_inset Formula $j$
+\end_inset
+
+ will not be connected with 
+\begin_inset Formula $\mathtt{PARENT}[j]$
+\end_inset
+
+ in the graph,
+ so all the nodes in its connected component will be descendants of 
+\begin_inset Formula $j$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ will be the root of a subtree.
+ Thus connecting 
+\begin_inset Formula $j$
+\end_inset
+
+ as the leftmost child of 
+\begin_inset Formula $\mathtt{PARENT}[j]$
+\end_inset
+
+ would affect the preorder of the subtree 
+\begin_inset Formula $\mathtt{PARENT}[j]$
+\end_inset
+
+ is in by adding the preorder of the child's subtree precisely to the right of its parent.
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore,
+ since we add children from right to left,
+ the order of the subtrees is always preserved.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc20[M22]
+\end_layout
+
+\end_inset
+
+Prove that if 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are nodes of a forest,
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ is a proper ancestor of 
+\begin_inset Formula $v$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $u$
+\end_inset
+
+ precedes 
+\begin_inset Formula $v$
+\end_inset
+
+ in preorder and 
+\begin_inset Formula $u$
+\end_inset
+
+ follows 
+\begin_inset Formula $v$
+\end_inset
+
+ in postorder.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Trivial.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Certainly 
+\begin_inset Formula $u$
+\end_inset
+
+ cannot be a descendant of 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ were in different tree,
+ their relative ordering would be decided by the order of those trees,
+ not by whether we use preorder or postorder.
+ Similarly,
+ if 
+\begin_inset Formula $r$
+\end_inset
+
+ is the closest common ancestor of 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $r\neq u$
+\end_inset
+
+,
+ let 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ be the child of 
+\begin_inset Formula $r$
+\end_inset
+
+ whose subtree contains 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ that whose subtree contains 
+\begin_inset Formula $v$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $u_{1}\neq v_{1}$
+\end_inset
+
+,
+ but 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ would always have the same order if the tree is ordered.
+\end_layout
+
+\end_body
+\end_document

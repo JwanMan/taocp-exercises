@@ -1,0 +1,846 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc2[M13]
+\end_layout
+
+\end_inset
+
+Prove Eq.
+ (11).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\sum_{n\geq0}\frac{a_{n}}{n!}z^{n}\right)\left(\sum_{m\geq0}\frac{b_{m}}{m!}z^{m}\right)=\sum_{n\geq0}\left(\sum_{k}\frac{a_{k}b_{n-k}}{k!(n-k)!}\right)z^{n}=\sum_{n\geq0}\frac{1}{n!}\left(\sum_{k}\binom{n}{k}a_{k}b_{n-k}\right)z^{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc4[M01]
+\end_layout
+
+\end_inset
+
+Explain why Eq.
+ (19) is a special case of Eq.
+ (21).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Just set 
+\begin_inset Formula $t=0$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $x=1+z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc6[HM15]
+\end_layout
+
+\end_inset
+
+Find the generating function for
+\begin_inset Formula 
+\[
+\left\langle \sum_{0<k<n}\frac{1}{k(n-k)}\right\rangle ;
+\]
+
+\end_inset
+
+differentiate it and express the coefficients in terms of harmonic numbers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The generating function is
+\begin_inset Formula 
+\begin{align*}
+G(z) & \coloneqq\sum_{n\geq0}\sum_{0<k<n}\frac{1}{k(n-k)}z^{n}=\sum_{n,m\geq1}\frac{z^{n+m}}{nm}=\left(\sum_{n\geq1}\frac{z^{n}}{n}\right)\left(\sum_{m\geq1}\frac{z^{m}}{m}\right)=\left(\sum_{n\geq1}\frac{z^{n}}{n}\right)^{2}\\
+ & =\left(-\sum_{n\geq1}\frac{(-1)^{n+1}}{n}(-z)^{n}\right)^{2}=(-\ln(1+(-z)))^{2}=\ln(1-z)^{2},
+\end{align*}
+
+\end_inset
+
+by Eq.
+ (24).
+ Its derivative is
+\begin_inset Formula 
+\[
+\dot{G}(z)=-\frac{2}{1-z}\ln(1-z)=\frac{2}{1-z}\ln\left(\frac{1}{1-z}\right),
+\]
+
+\end_inset
+
+so by Eq.
+ (25) with 
+\begin_inset Formula $m=0$
+\end_inset
+
+ the coefficients are 
+\begin_inset Formula $[z^{n}]\dot{G}(z)=2(H_{n}-H_{0})\binom{n}{n}=2H_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc10[M25]
+\end_layout
+
+\end_inset
+
+An 
+\emph on
+elementary symmetric function
+\emph default
+ is defined by the formula
+\begin_inset Formula 
+\[
+e_{m}=\sum_{1\leq j_{1}<\dots<j_{m}\leq n}x_{j_{1}}\cdots x_{j_{m}}.
+\]
+
+\end_inset
+
+(This is the same as 
+\begin_inset Formula $h_{m}$
+\end_inset
+
+ of Eq.
+ (33),
+ except that equal subscripts are not allowed.) Find the generating function for 
+\begin_inset Formula $e_{m}$
+\end_inset
+
+,
+ and express 
+\begin_inset Formula $e_{m}$
+\end_inset
+
+ in terms of the 
+\begin_inset Formula $S_{j}$
+\end_inset
+
+ in Eq.
+ (34).
+ Write out the formulas for 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $e_{3}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $e_{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Here 
+\begin_inset Formula $m\leq n$
+\end_inset
+
+ or otherwise we have no elements,
+ so
+\begin_inset Formula 
+\begin{align*}
+G(z) & \coloneqq\sum_{m\geq0}e_{m}z^{m}=\sum_{m=0}^{n}\sum_{1\leq j_{1}<\dots<j_{k}\leq n}x_{j_{1}}\cdots x_{j_{m}}z^{n}=\sum_{a_{1},\dots,a_{n}\in\{0,1\}}\prod_{i=1}^{n}(x_{i}z)^{a_{i}}\\
+ & =\prod_{i=1}^{n}\sum_{a\in\{0,1\}}(x_{i}z)^{a}=\prod_{i=1}^{n}(x_{i}z+1),
+\end{align*}
+
+\end_inset
+
+as we can regard the sum as taking the product of each subset of 
+\begin_inset Formula $\{x_{i}z\}_{i}$
+\end_inset
+
+.
+ From here,
+\begin_inset Formula 
+\[
+\ln G(z)=\sum_{i=1}^{n}\ln(1+x_{i}z)=\sum_{i=1}^{n}\sum_{k\geq1}\frac{(-1)^{k+1}}{k}x_{i}^{k}z^{k}=\sum_{k\geq1}\frac{(-1)^{k+1}}{k}S_{k}z^{k},
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{align*}
+G(z) & =\text{e}^{\ln G(z)}=\exp\left(\sum_{k\geq1}\frac{(-1)^{k+1}}{k}S_{k}z^{k}\right)=\prod_{k\geq1}\text{e}^{(-1)^{k+1}S_{k}z^{k}/k}\\
+ & =\prod_{k\geq1}\sum_{j\geq0}\frac{1}{j!}\left(\frac{(-1)^{k+1}S_{k}}{k}\right)^{j}z^{jk}=\sum_{m\geq0}\left(\sum_{\begin{subarray}{c}
+j_{1},\dots,j_{m}\geq0\\
+j_{1}+2j_{2}+\dots+mj_{m}=m
+\end{subarray}}\prod_{k=1}^{m}\frac{1}{j_{k}!}\left(\frac{(-1)^{k+1}S_{k}}{k}\right)^{j_{k}}\right)z^{m}.
+\end{align*}
+
+\end_inset
+
+This gives us an explicit formulation for 
+\begin_inset Formula $e_{m}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula 
+\[
+\prod_{k=1}^{m}(-1)^{(k+1)j_{k}}=(-1)^{\sum_{k=1}^{m}kj_{k}+\sum_{k=1}^{m}j_{k}}=(-1)^{m+\sum_{k}j_{k}},
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\[
+e_{m}=\sum_{\begin{subarray}{c}
+j_{1},\dots,j_{m}\geq0\\
+j_{1}+2j_{2}+\dots+mj_{m}=m
+\end{subarray}}(-1)^{m+j_{1}+\dots+j_{m}}\prod_{k=1}^{m}\frac{S_{k}^{j_{k}}}{k^{j_{k}}j_{k}!}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For example,
+ if we call 
+\begin_inset Formula $p_{kj_{k}}$
+\end_inset
+
+ to each of the factors of the product in this latest formula,
+ using that each 
+\begin_inset Formula $p_{k0}=1$
+\end_inset
+
+ and can therefore be ignored,
+\begin_inset Formula 
+\begin{align*}
+e_{1} & =p_{11}=S_{1},\\
+e_{2} & =p_{12}+p_{21}=\frac{S_{1}^{2}}{2}-\frac{S_{2}}{2}=\frac{1}{2}(S_{1}^{2}-S_{2}),\\
+e_{3} & =p_{13}-p_{11}p_{21}+p_{31}=\frac{S_{1}^{3}}{6}-S_{1}\frac{S_{2}}{2}+\frac{S_{3}}{3}=\frac{1}{6}(S_{1}^{3}+2S_{3}-3S_{1}S_{2}),\\
+e_{4} & =p_{14}-p_{12}p_{21}+p_{11}p_{31}+p_{22}-p_{41}=\frac{S_{1}^{4}}{24}-\frac{S_{1}^{2}}{2}\frac{S_{2}}{2}+S_{1}\frac{S_{3}}{3}+\frac{S_{2}^{2}}{8}-\frac{S_{4}}{4}\\
+ & =\frac{1}{24}(S_{1}^{4}-6S_{1}^{2}S_{2}+8S_{1}S_{3}+3S_{2}^{2}-6S_{4}).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[M25]
+\end_layout
+
+\end_inset
+
+Equation (39) can also be used to express the 
+\begin_inset Formula $S$
+\end_inset
+
+'s in terms of the 
+\begin_inset Formula $h$
+\end_inset
+
+'s:
+ We find 
+\begin_inset Formula $S_{1}=h_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $S_{2}=2h_{2}-h_{1}^{2}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $S_{3}=3h_{3}-3h_{1}h_{2}+h_{1}^{3}$
+\end_inset
+
+,
+ etc.
+ What is the coefficient of 
+\begin_inset Formula $h_{1}^{k_{1}}h_{2}^{k_{2}}\cdots h_{m}^{k_{m}}$
+\end_inset
+
+ in this representation of 
+\begin_inset Formula $S_{m}$
+\end_inset
+
+,
+ when 
+\begin_inset Formula $k_{1}+2k_{2}+\dots+mk_{m}=m$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+(I had to look up the solution.)
+\end_layout
+
+\end_inset
+
+ We ignore Eq.
+ (39) and focus on Eqs.
+ (37) and (24).
+ There,
+\begin_inset Formula 
+\begin{align*}
+\sum_{k\geq1}\frac{S_{k}z^{k}}{k!} & =\ln G(z)=\ln\left(1+\sum_{j\geq1}h_{j}z^{j}\right)=\sum_{k\geq1}\frac{(-1)^{k+1}}{k}\left(\sum_{j\geq1}h_{j}z^{j}\right)^{k}\\
+ & =\sum_{k\geq1}\frac{(-1)^{k+1}}{k}\sum_{j_{1},\dots,j_{k}\geq1}h_{j_{1}}\cdots h_{j_{k}}z^{j_{1}+\dots+j_{k}}\\
+ & =\sum_{m\geq1}\sum_{\begin{subarray}{c}
+i_{1},\dots,i_{m}\geq0\\
+i_{1}+2i_{2}+\dots+mi_{m}=m
+\end{subarray}}\frac{(-1)^{i_{1}+\dots+i_{m}+1}}{i_{1}+\dots+i_{m}}\binom{i_{1}+\dots+i_{m}}{i_{1},\dots,i_{m}}h_{1}^{i_{1}}\cdots h_{m}^{i_{m}}z^{m},
+\end{align*}
+
+\end_inset
+
+so the coefficient is
+\begin_inset Formula 
+\[
+\frac{(-1)^{k_{1}+\dots+k_{m}+1}(k_{1}+\dots+k_{m})!}{k_{1}!\cdots k_{m}!}.
+\]
+
+\end_inset
+
+For the last identity,
+ we have regrouped all the terms by the value of 
+\begin_inset Formula $m\coloneqq j_{1}+\dots+j_{k}$
+\end_inset
+
+ and then by 
+\begin_inset Formula $\{i_{j}\coloneqq|\{t\mid j_{t}=j\}|\}_{j=1}^{m}$
+\end_inset
+
+,
+ that is,
+ the number of times that each 
+\begin_inset Formula $h_{j}$
+\end_inset
+
+ appears rather than the indexes of those that do.
+ When doing this,
+ we note that 
+\begin_inset Formula $k=i_{1}+\dots+i_{m}$
+\end_inset
+
+ and that 
+\begin_inset Formula $h_{j_{1}}\cdots h_{j_{k}}=h_{1}^{i_{1}}\cdots h_{m}^{i_{m}}$
+\end_inset
+
+,
+ so all the addends in a given group are the same,
+ and the number of addends is the number of orderings of the 
+\begin_inset Formula $k$
+\end_inset
+
+ indexes without considering the order of indexes that are equal,
+ of which there are 
+\begin_inset Formula $i_{1}$
+\end_inset
+
+ indexes equal to 1,
+ 
+\begin_inset Formula $i_{2}$
+\end_inset
+
+ equal to 2,
+ etc.,
+ and this is a multinomial coefficient.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc12[M20]
+\end_layout
+
+\end_inset
+
+Suppose we have a doubly subscripted sequence 
+\begin_inset Formula $\langle a_{mn}\rangle$
+\end_inset
+
+ for 
+\begin_inset Formula $m,n=0,1,\dots$
+\end_inset
+
+;
+ show how this double sequence can be represented by a 
+\emph on
+single
+\emph default
+ generating function of two variables,
+ and determine the generating function for 
+\begin_inset Formula $\langle\binom{n}{m}\rangle$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+A generating function in this case could be something like
+\begin_inset Formula 
+\[
+G(y,z)\coloneqq\sum_{m,n\geq0}a_{mn}y^{m}z^{n}=\sum_{n\geq0}\left(\sum_{m\geq0}a_{mn}y^{m}\right)z^{n}=\sum_{m\geq0}\left(\sum_{n\geq0}a_{mn}z^{n}\right)y^{m}.
+\]
+
+\end_inset
+
+In our case,
+ by the binomial theorem,
+\begin_inset Formula 
+\[
+(1+y)^{n}=\sum_{m\geq0}\binom{n}{m}y^{m},
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\[
+G(y,z)=\sum_{n\geq0}(1+y)^{n}z^{n}=\frac{1}{1-(1+y)z}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc18[M25]
+\end_layout
+
+\end_inset
+
+Given positive integers 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $r$
+\end_inset
+
+,
+ find a simple formula for the value of the following sums:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{1\leq k_{1}<k_{2}<\dots<k_{r}\leq n}k_{1}k_{2}\cdots k_{r}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{1\leq k_{1}\leq k_{2}\leq\dots\leq k_{r}\leq n}k_{1}k_{2}\cdots k_{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(For example,
+ when 
+\begin_inset Formula $n=3$
+\end_inset
+
+ and 
+\begin_inset Formula $r=2$
+\end_inset
+
+ the sums are,
+ respectively,
+ 
+\begin_inset Formula $1\cdot2+1\cdot3+2\cdot3$
+\end_inset
+
+ and 
+\begin_inset Formula $1\cdot1+1\cdot2+1\cdot3+2\cdot2+2\cdot3+3\cdot3$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Following Exercise 10 and then applying Equation (27),
+\begin_inset Formula 
+\begin{align*}
+G(z) & \coloneqq\sum_{r\geq0}\sum_{1\leq k_{1}<\dots<k_{r}\leq n}k_{1}\cdots k_{r}=\prod_{k=1}^{n}(1+kz)=z^{n}\prod_{k=1}^{n}\left(\frac{1}{z}+k\right)\\
+ & =z^{n+1}\prod_{k=0}^{n}\left(\frac{1}{z}+k\right)=z^{n+1}\sum_{k\geq0}\stirla{n+1}{k}z^{-k}\\
+ & =\sum_{k=0}^{n+1}\stirla{n+1}{k}z^{n+1-k}=\sum_{k=0}^{n+1}\stirla{n+1}{n+1-k}z^{k},
+\end{align*}
+
+\end_inset
+
+so the sum is 
+\begin_inset Formula $\stirla{n+1}{n+1-r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Doing something similar with Equations (36) and (28),
+\begin_inset Formula 
+\begin{align*}
+G(z) & \coloneqq\sum_{r\geq0}\sum_{1\leq k_{1}\leq\dots\leq k_{r}\leq n}k_{1}\cdots k_{r}=\prod_{k=1}^{n}\frac{1}{1-kz}=\frac{1}{z^{n}}\sum_{k\geq n}\stirlb{k}{n}z^{k}\\
+ & =\sum_{k}\stirlb{k+n}{n}z^{k},
+\end{align*}
+
+\end_inset
+
+so the sum is 
+\begin_inset Formula $\stirlb{n+r}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc25[M23]
+\end_layout
+
+\end_inset
+
+Evaluate the sum 
+\begin_inset Formula $\sum_{k}\binom{n}{k}\binom{2n-2k}{n-k}(-2)^{k}$
+\end_inset
+
+ by simplifying the equivalent formula 
+\begin_inset Formula $\sum_{k}[w^{k}](1-2w)^{n}[z^{n-k}](1+z)^{2n-2k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+By the binomial theorem,
+\begin_inset Formula 
+\begin{align*}
+(1-2w)^{n} & =\sum_{k\geq0}\binom{n}{k}(-2)^{k}w^{k}, & (1+z)^{2n-2k} & =\sum_{j\geq0}\binom{2n-2k}{j}z^{j},
+\end{align*}
+
+\end_inset
+
+so the second formula is indeed equivalent to the first,
+ assuming of course that 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ and therefore terms with negative 
+\begin_inset Formula $k$
+\end_inset
+
+ or 
+\begin_inset Formula $k>n$
+\end_inset
+
+ are null.
+ Now,
+ 
+\begin_inset Formula $[z^{n-k}](1+z)^{2n-2k}=[z^{n}](z^{k}(1+z)^{2n-2k})$
+\end_inset
+
+,
+ so this is
+\begin_inset Formula 
+\[
+S\coloneqq[z^{n}](1+z)^{2n}\sum_{k}[w^{k}](1-2w)^{n}\left(\frac{z}{(1+z)^{2}}\right)^{k}=[z^{n}](1+z)^{2n}\left(1-\frac{2z}{(1+z)^{2}}\right)^{n},
+\]
+
+\end_inset
+
+where we evaluating the sum by taking 
+\begin_inset Formula $\frac{z}{(1+z)^{2}}$
+\end_inset
+
+ as the argument of the generating function in 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Then,
+ we simplify to get
+\begin_inset Formula 
+\[
+S=[z^{n}]\left(\left((1+z)^{2}(1-\nicefrac{2z}{(1+z)^{2}})\right)^{n}\right)=[z^{n}]\left((1+z^{2})^{n}\right)=\binom{n}{\nicefrac{n}{2}}[n\text{ even}].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1705 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[05]
+\end_layout
+
+\end_inset
+
+Explain how to modify the idea of proof by mathematical induction,
+ in case we want to prove some statement 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ for all 
+\emph on
+nonnegative
+\emph default
+ integers—
+that is,
+ for 
+\begin_inset Formula $n=0,1,2,\dots$
+\end_inset
+
+ instead of 
+\begin_inset Formula $n=1,2,3,\dots$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We'd prove that 
+\begin_inset Formula $P(0)$
+\end_inset
+
+ holds and that,
+ for all 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+,
+ if 
+\begin_inset Formula $P(0),\dots,P(n)$
+\end_inset
+
+ hold,
+ then 
+\begin_inset Formula $P(n+1)$
+\end_inset
+
+ holds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc2[15]
+\end_layout
+
+\end_inset
+
+There must be something wrong with the following proof.
+ What is it?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+Theorem:
+
+\series default
+ Let 
+\begin_inset Formula $a$
+\end_inset
+
+ be any positive number.
+ For all positive integers 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $a^{n-1}=1$
+\end_inset
+
+.
+ 
+\emph on
+Proof.
+
+\emph default
+ If 
+\begin_inset Formula $n=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $a^{n-1}=a^{1-1}=0$
+\end_inset
+
+.
+ And by induction,
+ assuming that the theorem is true for 
+\begin_inset Formula $1,2,\dots,n$
+\end_inset
+
+,
+ we have
+\begin_inset Formula 
+\[
+a^{(n+1)-1}=a^{n}=\frac{a^{n-1}\times a^{n-1}}{a^{(n-1)-1}}=\frac{1\times1}{1}=1;
+\]
+
+\end_inset
+
+so the theorem is true for 
+\begin_inset Formula $n+1$
+\end_inset
+
+ as well.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+For 
+\begin_inset Formula $n=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $a^{(n-1)-1}=a^{0-1}$
+\end_inset
+
+,
+ but we haven't proved the theorem for 
+\begin_inset Formula $n=0$
+\end_inset
+
+,
+ and indeed,
+ 
+\begin_inset Formula $a^{0-1}=a^{-1}=\frac{1}{a}\neq1$
+\end_inset
+
+ if 
+\begin_inset Formula $a\neq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc8[25]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Prove the following theorem of Nicomachus (A.D.
+ c.
+ 100) by induction:
+ 
+\begin_inset Formula $1^{3}=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $2^{3}=3+5$
+\end_inset
+
+,
+ 
+\begin_inset Formula $3^{3}=7+9+11$
+\end_inset
+
+,
+ 
+\begin_inset Formula $4^{3}=13+15+17+19$
+\end_inset
+
+,
+ etc.
+\end_layout
+
+\begin_layout Enumerate
+Use this result to prove the remarkable formula 
+\begin_inset Formula $1^{3}+2^{3}+\dots+n^{3}=(1+2+\dots+n)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $n=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $1^{3}=1$
+\end_inset
+
+,
+ and the first number of the sequence is 
+\begin_inset Formula $n(n-1)+1=1(1-1)+1=1$
+\end_inset
+
+.
+ If these two properties are proved up to a certain number 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ then the first number of the sequence for 
+\begin_inset Formula $n+1$
+\end_inset
+
+ is 2 plus the last number of the sequence for 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ that is,
+ since the sequence for 
+\begin_inset Formula $n$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ numbers,
+ the first number of the sequence for 
+\begin_inset Formula $n+1$
+\end_inset
+
+ is 
+\begin_inset Formula $n(n-1)+1+2n=n(n-1+2)+1=(n+1)n+1=(n+1)((n-1)+1)+1$
+\end_inset
+
+.
+ Now,
+ 
+\begin_inset Formula $(n+1)^{3}=n^{3}+3n^{2}+3n+1=(n(n-1)+1)+(n(n-1)+3)+\dots+(n(n-1)+2n-1)+2n\cdot n+n^{2}+3n+1=(n(n-1)+2n+1)+\dots+(n(n-1)+2n+2n-1)+n^{2}+n+2n+1=(n(n+1)+1)+\dots+(n(n+1)+2n-1)+(n(n+1)+2n+1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1^{3}+2^{3}+\dots+n^{3}=1+3+\dots+((n+1)n+1-2)=1+3+\dots+((n+1)n-1)$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n^{2}-(n-1)^{2}=n^{2}-n^{2}+2n-1=2n-1$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $1^{3}+2^{3}+\dots+n^{3}=1+3+\dots+((n+1)n-1)=(1^{2}-0^{2})+(2^{2}-1^{2})+\dots+\left(\left(\frac{(n+1)n}{2}\right)^{2}-\left(\frac{(n+1)n}{2}-1\right)^{2}\right)=\left(\frac{(n+1)n}{2}\right)^{2}=(1+2+\dots+n)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc13[M23]
+\end_layout
+
+\end_inset
+
+Extend Algorithm E by adding a new variable 
+\begin_inset Formula $T$
+\end_inset
+
+ and adding the operation 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $T\gets T+1$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ at the beginning of each step.
+ (Thus,
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ is like a clock,
+ counting the number of steps executed.) Assume that 
+\begin_inset Formula $T$
+\end_inset
+
+ is initially zero,
+ so that assertion 
+\begin_inset Formula $A1$
+\end_inset
+
+ in Fig.
+ 4 becomes 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $m>0,n>0,T=0$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+ The additional condition 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $T=1$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ should similarly be appended to 
+\begin_inset Formula $A2$
+\end_inset
+
+.
+ Show how to append additional conditions to the assertions in such a way that any one of 
+\begin_inset Formula $A1,A2,\dots,A6$
+\end_inset
+
+ implies 
+\begin_inset Formula $T\leq3n$
+\end_inset
+
+,
+ and such that the inductive proof can still be carried out.
+ (Hence the computation must terminate in at most 
+\begin_inset Formula $3n$
+\end_inset
+
+ steps.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+At 
+\begin_inset Formula $A3$
+\end_inset
+
+,
+ we append 
+\begin_inset Formula $T\leq3(n-r)-1$
+\end_inset
+
+.
+ From 
+\begin_inset Formula $A2$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $T=2$
+\end_inset
+
+,
+ and since 
+\begin_inset Formula $c=m>0$
+\end_inset
+
+ and 
+\begin_inset Formula $d=n>0$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $r<n$
+\end_inset
+
+ and thus 
+\begin_inset Formula $3(n-r)-1\geq3\cdot1-1=2$
+\end_inset
+
+.
+ We have yet to prove this when coming from 
+\begin_inset Formula $A6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+At 
+\begin_inset Formula $A4$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $T\leq3n$
+\end_inset
+
+,
+ because,
+ coming from 
+\begin_inset Formula $A3$
+\end_inset
+
+,
+ 
+\begin_inset Formula $T\leq3(n-r)-1+1=3n$
+\end_inset
+
+.
+ At 
+\begin_inset Formula $A5$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $T\leq3(n-r)$
+\end_inset
+
+.
+ At 
+\begin_inset Formula $A6$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $T\leq3(n-d)+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now,
+ at 
+\begin_inset Formula $A3$
+\end_inset
+
+,
+ when coming from 
+\begin_inset Formula $A6$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $T\leq3(n-d)+2$
+\end_inset
+
+,
+ but 
+\begin_inset Formula $r<d$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $n-d>n-r$
+\end_inset
+
+ and 
+\begin_inset Formula $T\leq3(n-d)+2\leq3(n-r)-3+2=3(n-r)-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc15[HM28]
+\end_layout
+
+\end_inset
+
+(
+\emph on
+Generalized induction.
+\emph default
+) The text shows how to prove statements 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ that depend on a single integer 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ but it does not describe how to prove statements 
+\begin_inset Formula $P(m,n)$
+\end_inset
+
+ depending on two integers.
+ In these circumstances a proof is often given by some sort of 
+\begin_inset Quotes eld
+\end_inset
+
+double induction,
+\begin_inset Quotes erd
+\end_inset
+
+ which frequently seems confusing.
+ Actually,
+ there is an important principle more general than simple induction that applies not only in this case but also to situations in which statements are to be proved about uncountable sets—
+for example,
+ 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ for all real 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ This general principle is called 
+\emph on
+well-ordering
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\prec$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ be a relation on a set 
+\begin_inset Formula $S$
+\end_inset
+
+,
+ satisfying the following properties:
+\end_layout
+
+\begin_layout Enumerate
+Given 
+\begin_inset Formula $x$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+,
+ if 
+\begin_inset Formula $x\prec y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\prec z$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $x\prec z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Given 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+,
+ exactly one of the following three possibilities is true:
+ 
+\begin_inset Formula $x\prec y$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x=y$
+\end_inset
+
+,
+ or 
+\begin_inset Formula $y\prec x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ is any nonempty subset of 
+\begin_inset Formula $S$
+\end_inset
+
+,
+ there is an element 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+ with 
+\begin_inset Formula $x\preceq y$
+\end_inset
+
+ (that is,
+ 
+\begin_inset Formula $x\prec y$
+\end_inset
+
+ or 
+\begin_inset Formula $x=y$
+\end_inset
+
+) for all 
+\begin_inset Formula $y$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This relation is said to be a well-ordering of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ For example,
+ it is clear that the positive integers are well-ordered by the ordinary 
+\begin_inset Quotes eld
+\end_inset
+
+less than
+\begin_inset Quotes erd
+\end_inset
+
+ relation,
+ 
+\begin_inset Formula $<$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that the set of 
+\emph on
+all
+\emph default
+ integers is not well-ordered by 
+\begin_inset Formula $<$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Define a well-ordering relation on the set of all integers.
+\end_layout
+
+\begin_layout Enumerate
+Is the set of all nonnegative real numbers well-ordered by 
+\begin_inset Formula $<$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Lexicographic-order"
+
+\end_inset
+
+(
+\emph on
+Lexicographic order.
+\emph default
+) Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be well-ordered by 
+\begin_inset Formula $\prec$
+\end_inset
+
+,
+ and for 
+\begin_inset Formula $n>0$
+\end_inset
+
+,
+ let 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+ be the set of 
+\begin_inset Formula $n$
+\end_inset
+
+-tuples 
+\begin_inset Formula $(x_{1},x_{2},\dots,x_{n})$
+\end_inset
+
+ of elements 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $(x_{1},x_{2},\dots,x_{n})\prec(y_{1},y_{2},\dots,y_{n})$
+\end_inset
+
+ if there is some 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ 
+\begin_inset Formula $1\leq k\leq n$
+\end_inset
+
+,
+ such that 
+\begin_inset Formula $x_{j}=y_{j}$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq j<k$
+\end_inset
+
+,
+ but 
+\begin_inset Formula $x_{k}\prec y_{k}$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Is 
+\begin_inset Formula $\prec$
+\end_inset
+
+ a well-ordering of 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Continuing part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Lexicographic-order"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+,
+ let 
+\begin_inset Formula $T=\bigcup_{n\geq1}T_{n}$
+\end_inset
+
+;
+ define 
+\begin_inset Formula $(x_{1},\dots,x_{m})\prec(y_{1},\dots,y_{n})$
+\end_inset
+
+ if 
+\begin_inset Formula $x_{j}=y_{j}$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq j<k$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{k}\prec y_{k}$
+\end_inset
+
+,
+ for some 
+\begin_inset Formula $k\leq\min(m,n)$
+\end_inset
+
+,
+ or if 
+\begin_inset Formula $m<n$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{j}=y_{j}$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq j\leq m$
+\end_inset
+
+.
+ Is 
+\begin_inset Formula $\prec$
+\end_inset
+
+ a well-ordering of 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $\prec$
+\end_inset
+
+ is a well-ordering of 
+\begin_inset Formula $S$
+\end_inset
+
+ if and only if it satisfies (i) and (ii) above and there is no infinite sequence 
+\begin_inset Formula $x_{1},x_{2},x_{3},\dots$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{j+1}\prec x_{j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j\geq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be well-ordered by 
+\begin_inset Formula $\prec$
+\end_inset
+
+,
+ and let 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ be a statement about the element 
+\begin_inset Formula $x$
+\end_inset
+
+ of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Show that if 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ can be proved under the assumption that 
+\begin_inset Formula $P(y)$
+\end_inset
+
+ is true for all 
+\begin_inset Formula $y\prec x$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ is true for 
+\emph on
+all
+\emph default
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ is a non-empty subset of 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ and it doesn't have a first element under 
+\begin_inset Formula $<$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+,
+ we could say that 
+\begin_inset Formula $a\prec b$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $|a|<|b|$
+\end_inset
+
+,
+ or 
+\begin_inset Formula $a=-b<0$
+\end_inset
+
+,
+ so the order would be 
+\begin_inset Formula $0,1,-1,2,-2,\dots$
+\end_inset
+
+.
+ Now:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $a\prec b$
+\end_inset
+
+ and 
+\begin_inset Formula $b\prec c$
+\end_inset
+
+,
+ then either 
+\begin_inset Formula $a=-b<0$
+\end_inset
+
+ so it must be 
+\begin_inset Formula $|a|=|b|\prec|c|$
+\end_inset
+
+ because it can't be 
+\begin_inset Formula $b=-c<0$
+\end_inset
+
+ as 
+\begin_inset Formula $b>0$
+\end_inset
+
+,
+ or 
+\begin_inset Formula $|a|<|b|$
+\end_inset
+
+ so 
+\begin_inset Formula $|a|<|b|\leq|c|$
+\end_inset
+
+.
+ In both cases,
+ 
+\begin_inset Formula $a\prec c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+,
+ then either 
+\begin_inset Formula $|x|=|y|$
+\end_inset
+
+ so it must be 
+\begin_inset Formula $x\prec y$
+\end_inset
+
+ if 
+\begin_inset Formula $y<0$
+\end_inset
+
+ or 
+\begin_inset Formula $y\prec x$
+\end_inset
+
+ if 
+\begin_inset Formula $y>0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $|x|<|y|$
+\end_inset
+
+ so that 
+\begin_inset Formula $x\prec y$
+\end_inset
+
+,
+ or 
+\begin_inset Formula $|y|>|x|$
+\end_inset
+
+ so that 
+\begin_inset Formula $y\prec x$
+\end_inset
+
+.
+ It's clear that 
+\begin_inset Formula $x\prec y$
+\end_inset
+
+ implies 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\nprec x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $S\subseteq\mathbb{Z}$
+\end_inset
+
+ be nonempty,
+ then we can find the minimum element of 
+\begin_inset Formula $S$
+\end_inset
+
+ by looking at the elements of 
+\begin_inset Formula $S$
+\end_inset
+
+ with minimal absolute value,
+ which form a finite,
+ nonempty subset.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No,
+ as the nonempty subset 
+\begin_inset Formula $\{x\in\mathbb{R}:x>0\}$
+\end_inset
+
+ doesn't have a first element:
+ for each 
+\begin_inset Formula $x>0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\frac{x}{2}<x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Yes:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $(a_{1},\dots,a_{n})\prec(b_{1},\dots,b_{n})\prec(c_{1},\dots,c_{n})$
+\end_inset
+
+,
+ let 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+ be the least integer with 
+\begin_inset Formula $a_{k_{1}}\prec b_{k_{1}}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+ the least integer with 
+\begin_inset Formula $b_{k_{2}}\prec c_{k_{2}}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $q:=\min\{k_{1},k_{2}\}$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $a_{i}=b_{i}=c_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $0\leq i<q$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{q}\prec c_{q}$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $(a_{1},\dots,a_{n})\prec(c_{1},\dots,c_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $(a_{1},\dots,a_{n})\neq(b_{1},\dots,b_{n})$
+\end_inset
+
+,
+ let 
+\begin_inset Formula $k$
+\end_inset
+
+ be the least integer with 
+\begin_inset Formula $a_{k}\neq b_{k}$
+\end_inset
+
+,
+ then either 
+\begin_inset Formula $a_{k}\prec b_{k}$
+\end_inset
+
+ and so 
+\begin_inset Formula $(a_{1},\dots,a_{n})\prec(b_{1},\dots,b_{n})$
+\end_inset
+
+,
+ or 
+\begin_inset Formula $b_{k}\prec a_{k}$
+\end_inset
+
+ and so 
+\begin_inset Formula $(b_{1},\dots,b_{n})\prec(a_{1},\dots,a_{n})$
+\end_inset
+
+,
+ and we can see that no two of the three possibilities can happen at once.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A\subseteq S^{n}$
+\end_inset
+
+ be nonempty.
+ Let 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ be the set of 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ with minimal 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ the set of 
+\begin_inset Formula $a\in A_{1}$
+\end_inset
+
+ with minimal 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+,
+ etc.
+ Then the elements of 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ are lower than any 
+\emph on
+other
+\emph default
+ element in 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ the ones in 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ are lower than any other elements in 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ and thus in 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ etc.
+ But then 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ contains only one element,
+ which is the least element of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No:
+ if 
+\begin_inset Formula $S$
+\end_inset
+
+ contains two elements 
+\begin_inset Formula $a\prec b$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $\{(b),(a,b),(a,a,b),\dots\}$
+\end_inset
+
+ doesn't have a first element.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+If there were such an infinite sequence 
+\begin_inset Formula $(x_{n})_{n\geq1}$
+\end_inset
+
+,
+ then the set 
+\begin_inset Formula $\{x_{n}\}_{n\geq1}$
+\end_inset
+
+ wouldn't have a first element.
+\begin_inset Formula $\#$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a nonempty subset of 
+\begin_inset Formula $S$
+\end_inset
+
+,
+ and let 
+\begin_inset Formula $x_{1}\in A$
+\end_inset
+
+.
+ Then we take 
+\begin_inset Formula $x_{2}\in A$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{2}\prec x_{1}$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $x_{3}\in A$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{3}\prec x_{2}$
+\end_inset
+
+,
+ etc.,
+ and since there's no infinite sequence of this kind in 
+\begin_inset Formula $S$
+\end_inset
+
+,
+ then there must be an 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ in the sequence with no candidate for 
+\begin_inset Formula $x_{n+1}$
+\end_inset
+
+,
+ meaning that,
+ for all 
+\begin_inset Formula $x\in A$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x_{n}\preceq x$
+\end_inset
+
+.
+ Therefore,
+ 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ is the least element of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $P$
+\end_inset
+
+ be such a property that 
+\begin_inset Formula $\forall x\in S,(\forall y\prec x,P(y)\implies P(x))$
+\end_inset
+
+.
+ Assume there's an 
+\begin_inset Formula $x_{0}\in S$
+\end_inset
+
+ such that 
+\begin_inset Formula $P(x_{0})$
+\end_inset
+
+ doesn't hold.
+ This means there's an 
+\begin_inset Formula $x_{1}\prec x_{0}$
+\end_inset
+
+ such that 
+\begin_inset Formula $P(x_{1})$
+\end_inset
+
+ doesn't hold,
+ which means there's an 
+\begin_inset Formula $x_{2}\prec x_{1}$
+\end_inset
+
+ such that 
+\begin_inset Formula $P(x_{2})$
+\end_inset
+
+ doesn't hold,
+ etc.
+ Then 
+\begin_inset Formula $(x_{n})_{n}$
+\end_inset
+
+ is an infinite sequence of elements in 
+\begin_inset Formula $S$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{j+1}\prec x_{j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j\in\mathbb{N}$
+\end_inset
+
+,
+ but 
+\begin_inset Formula $S$
+\end_inset
+
+ is well-ordered by 
+\begin_inset Formula $\prec\#$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

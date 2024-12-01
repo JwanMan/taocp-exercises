@@ -1,0 +1,644 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc3[20]
+\end_layout
+
+\end_inset
+
+What does operation (3) do if 
+\begin_inset Formula $\mathtt{PTR}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{PTR}_{2}$
+\end_inset
+
+ are both pointing to nodes in the 
+\emph on
+same
+\emph default
+ circular list?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+It splits the list into two parts;
+ the one that goes from the right of 
+\begin_inset Formula $\mathtt{PTR}_{1}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathtt{PTR}_{2}$
+\end_inset
+
+ is preserved but the other one becomes a memory leak.
+ If the two pointers are equal,
+ nothing happens,
+ just 
+\begin_inset Formula $\mathtt{PTR}_{2}$
+\end_inset
+
+ is set to 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc5[21]
+\end_layout
+
+\end_inset
+
+Design an algorithm that takes a circular list such as (1) and reverses the direction of all the arrows.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+This is similar to exercise 2.2.3.7.
+\end_layout
+
+\begin_layout Enumerate
+Set 
+\begin_inset Formula $\mathtt{P}\gets\Lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{C}\gets\mathtt{PTR}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\mathtt{C}\neq\Lambda$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $\mathtt{N}\gets\mathtt{LINK(C)}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{LINK(C)}\gets\mathtt{P}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{P}\gets\mathtt{C}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{C}\gets\mathtt{N}$
+\end_inset
+
+,
+ and repeat.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc7[10]
+\end_layout
+
+\end_inset
+
+Why is it useful to assume that the 
+\family typewriter
+ABC
+\family default
+ fields of a polynomial list appear in decreasing order?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Many operations on polynomials require us to match monomials with equal exponents of the variables.
+ By having a total order on them it's easy to match these in linear time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc8[10]
+\end_layout
+
+\end_inset
+
+Why is it useful to have 
+\family typewriter
+Q1
+\family default
+ trailing one step behind 
+\family typewriter
+Q
+\family default
+ in Algorithm A?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We need 
+\family typewriter
+Q
+\family default
+ to advance in order to check if the next monomial has greater,
+ lower,
+ or equal coefficient than the one pointed to by 
+\family typewriter
+P
+\family default
+,
+ and if it's lower,
+ we need 
+\family typewriter
+Q1
+\family default
+ to insert the one pointed to by 
+\family typewriter
+P
+\family default
+ right before the one pointed to by 
+\family typewriter
+Q
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc9[23]
+\end_layout
+
+\end_inset
+
+Would Algorithm A work properly if 
+\begin_inset Formula $\mathtt{P}=\mathtt{Q}$
+\end_inset
+
+ (i.e.,
+ both pointer variables point at the same polynomial)?
+ Would Algorithm M work properly if 
+\begin_inset Formula $\mathtt{P}=\mathtt{M}$
+\end_inset
+
+,
+ if 
+\begin_inset Formula $\mathtt{P}=\mathtt{Q}$
+\end_inset
+
+,
+ or if 
+\begin_inset Formula $\mathtt{M}=\mathtt{Q}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Algorithm A would work properly,
+ doubling the polynomial being pointed to (this is assuming no coefficient is 0).
+ As for Algorithm M,
+ it would work for 
+\begin_inset Formula $\mathtt{P}=\mathtt{M}$
+\end_inset
+
+ since they're not mutated.
+ If 
+\begin_inset Formula $\mathtt{P}=\mathtt{Q}$
+\end_inset
+
+ it wouldn't work,
+ because if 
+\family typewriter
+M
+\family default
+ has more than one monomial then the addition of 
+\begin_inset Formula $\mathtt{P}$
+\end_inset
+
+ times the second monomial or later (the second iteration of step M2) would add the wrong value to 
+\family typewriter
+Q
+\family default
+.
+ If 
+\begin_inset Formula $\mathtt{M}=\mathtt{Q}$
+\end_inset
+
+ it wouldn't work either as,
+ for example,
+ if initially 
+\begin_inset Formula $\mathtt{M}=\mathtt{Q}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{P}=-1$
+\end_inset
+
+,
+ then addition in the first iteration of M2 would free the current monomial pointed to by 
+\begin_inset Formula $\mathtt{M}$
+\end_inset
+
+ and in the next iteration of M1,
+ 
+\begin_inset Formula $\mathtt{M}$
+\end_inset
+
+ would point to free memory with unpredictable consequences.
+ In cases where the constant coefficient of 
+\family typewriter
+P
+\family default
+ is not 
+\begin_inset Formula $-1$
+\end_inset
+
+,
+ it amazingly works,
+ as writes to 
+\family typewriter
+Q
+\family default
+ are always behind where we read from 
+\family typewriter
+M
+\family default
+ when considering monomials of 
+\family typewriter
+P
+\family default
+ with positive degree and,
+ for the constant coefficient,
+ it writes to the same position where 
+\family typewriter
+M
+\family default
+ is but only to the 
+\family typewriter
+COEF
+\family default
+ field—
+unless 
+\family typewriter
+P
+\family default
+ is 
+\begin_inset Formula $-1$
+\end_inset
+
+ in which case the node pointed to by 
+\family typewriter
+M
+\family default
+ is freed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc10[20]
+\end_layout
+
+\end_inset
+
+The algorithms in this section assume that we are using three variables 
+\begin_inset Formula $x$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ in the polynomials,
+ and that their exponents individually never exceed 
+\begin_inset Formula $b-1$
+\end_inset
+
+ (where 
+\begin_inset Formula $b$
+\end_inset
+
+ is the byte size in 
+\family typewriter
+MIX
+\family default
+'s case).
+ Suppose instead that we want to do addition and multiplication of polynomials in only one variable,
+ 
+\begin_inset Formula $x$
+\end_inset
+
+,
+ and to let its exponent take on values up to 
+\begin_inset Formula $b^{3}-1$
+\end_inset
+
+.
+ What changes should be made to Algorithms A and M?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+None,
+ as they work out of the box if we consider the 
+\family typewriter
+ABC
+\family default
+ field to hold a single coefficient.
+ The sums and comparisons made on this field in the algorithms are equally valid independently of which of the two interpretations we want to give to this field,
+ assuming no overflow.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc17[22]
+\end_layout
+
+\end_inset
+
+What advantage is there in representing polynomials with a circular list as in this section,
+ instead of with a straight linear linked list terminated by 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ as in the previous section?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Steps A2 and A5 don't need special cases to handle the end of a list,
+ only A3 does.
+ Other than that there's not much of a difference.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc18[25]
+\end_layout
+
+\end_inset
+
+Devise a way to represent circular lists inside a computer in such a way that the list can be traversed efficiently in both directions,
+ yet only one link field is used per node.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+If the link field combines the location of the next and previous fields with some monoidal operation like XOR,
+ and we have an item 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+,
+ then knowing the location of 
+\begin_inset Formula $x_{i+1}$
+\end_inset
+
+ allows us to get the location of 
+\begin_inset Formula $x_{i-1}$
+\end_inset
+
+ and vice versa,
+ so knowing the location of two consecutive items allows us to traverse the list in both directions.
+\end_layout
+
+\end_body
+\end_document

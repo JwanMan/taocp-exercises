@@ -1,0 +1,550 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[10]
+\end_layout
+
+\end_inset
+
+The text showed how to interchange the values of variables 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ using the replacement notation,
+ by setting 
+\begin_inset Formula $t\gets m$
+\end_inset
+
+,
+ 
+\begin_inset Formula $m\gets n$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n\gets t$
+\end_inset
+
+.
+ Show how the values of the 
+\emph on
+four
+\emph default
+ variables 
+\begin_inset Formula $(a,b,c,d)$
+\end_inset
+
+ can be rearranged to 
+\begin_inset Formula $(b,c,d,a)$
+\end_inset
+
+ by a sequence of replacements.
+ In other words,
+ the new value of 
+\begin_inset Formula $a$
+\end_inset
+
+ is to be the original value of 
+\begin_inset Formula $b$
+\end_inset
+
+,
+ etc.
+ Try to use the minimum number of replacements.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $t\gets a,a\gets b,b\gets c,c\gets d,d\gets t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc5[12]
+\end_layout
+
+\end_inset
+
+Show that the 
+\begin_inset Quotes eld
+\end_inset
+
+Procedure for Reading This Set of Books
+\begin_inset Quotes erd
+\end_inset
+
+ that appears in the preface actually fails to be a genuine algorithm on at least three of our five counts!
+ Also mention some differences in format between it and Algorithm E.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+It fails on finiteness (it doesn't have an ending condition),
+ definiteness (the instructions are not unambiguous),
+ and effectiveness (solving the Fermat's theorem on the exercises is not 
+\begin_inset Quotes eld
+\end_inset
+
+sufficiently basic that it can be done exactly and in a finite length of time
+\begin_inset Quotes erd
+\end_inset
+
+),
+ and it may have no output (although,
+ this time,
+ this is the output).
+ It also doesn't have a header,
+ an ending mark,
+ or a letter prefix on the steps.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc7[HM21]
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $U_{m}$
+\end_inset
+
+ be the average number of times that step E1 is executed in Algorithm E,
+ if 
+\begin_inset Formula $m$
+\end_inset
+
+ is known and 
+\begin_inset Formula $n$
+\end_inset
+
+ is allowed to range over all positive integers.
+ Show that 
+\begin_inset Formula $U_{m}$
+\end_inset
+
+ is well defined.
+ Is 
+\begin_inset Formula $U_{m}$
+\end_inset
+
+ in any way related to 
+\begin_inset Formula $T_{m}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+On average,
+ it will be the case that 
+\begin_inset Formula $n>m$
+\end_inset
+
+,
+ so after one step,
+ the two numbers will exchange positions and,
+ after two steps,
+ we'll have the same value for 
+\begin_inset Formula $m$
+\end_inset
+
+ but 
+\begin_inset Formula $n$
+\end_inset
+
+ will be the remainder of the original values of 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+,
+ which is uniformly distributed on the integers between 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $m-1$
+\end_inset
+
+.
+ This means 
+\begin_inset Formula $U_{m}$
+\end_inset
+
+ is two plus the average number of times that E1 is executed if 
+\begin_inset Formula $m$
+\end_inset
+
+ is known and 
+\begin_inset Formula $0\leq n<m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Further,
+ since after one step,
+ the two numbers interchange,
+ it is clear that 
+\begin_inset Formula $U_{m}=1+T_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc9[M30]
+\end_layout
+
+\end_inset
+
+Suppose that 
+\begin_inset Formula $C_{1}=(Q_{1},I_{1},\Omega_{1},f_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{2}=(Q_{2},I_{2},\Omega_{2},f_{2})$
+\end_inset
+
+ are computational methods.
+ For example,
+ 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ might stand for Algorithm E as in Eqs.
+ (2),
+ except that 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are restricted in magnitude,
+ and 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ might stand for a computer program implementation of Algorithm E.
+ (This 
+\begin_inset Formula $Q_{2}$
+\end_inset
+
+ might be the set of all states of the machine,
+ i.e.,
+ all possible configurations of its memory and registers;
+ 
+\begin_inset Formula $f_{2}$
+\end_inset
+
+ might be the definition of single machine actions;
+ and 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+ might be the set of initial states,
+ each including the program that determines the greatest common divisor as well as the particular values of 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+Formulate a set-theoretic definition for the concept 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ is a representation of 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ simulates 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ This is to mean intuitively that any computation sequence of 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ is mimicked by 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+,
+ except that 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ might take more steps in which to do the computation and it might retain more information in its states.
+ (We thereby obtain a rigorous interpretation of the statement,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Program 
+\begin_inset Formula $X$
+\end_inset
+
+ is an implementation of Algorithm 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We could state that 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ is a representation of 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ if there are functions 
+\begin_inset Formula $h:Q_{2}\to Q_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $g:I_{1}\to I_{2}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $j:Q_{2}\to\mathbb{N}^{*}$
+\end_inset
+
+ such that 
+\begin_inset Formula $h\circ g=\text{Id}_{I_{1}}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\Omega_{2}=h^{-1}(\Omega_{1})$
+\end_inset
+
+,
+ and for all 
+\begin_inset Formula $q\in Q_{2}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $f_{1}(h(q))=h(f_{2}^{j(q)}(q))$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

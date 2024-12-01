@@ -1,0 +1,572 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\usepackage{amsmath}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[01]
+\end_layout
+
+\end_inset
+
+What are 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $H_{2}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $H_{0}=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $H_{1}=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $H_{2}=\frac{3}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[10]
+\end_layout
+
+\end_inset
+
+Decide which of the following statements are true for all positive integers 
+\begin_inset Formula $n$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H_{n}<\ln n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H_{n}>\ln n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H_{n}>\ln n+\gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+False,
+ since 
+\begin_inset Formula $H_{2}=\frac{3}{2}>1>\ln2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+True,
+ because the next one is true.
+\end_layout
+
+\begin_layout Enumerate
+True.
+ If this wasn't true for some number 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ then it would be
+\begin_inset Formula 
+\[
+0\geq H_{n}-(\ln n+\gamma)>\frac{1}{2n}-\frac{1}{12n^{2}}+\frac{1}{12n^{4}}-\frac{1}{252n^{6}},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $\frac{1}{2n}>\frac{1}{12n^{2}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{12n^{4}}>\frac{1}{252n^{6}}$
+\end_inset
+
+ for any 
+\begin_inset Formula $n\geq1\#$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc9[M18]
+\end_layout
+
+\end_inset
+
+Theorem A applies only when 
+\begin_inset Formula $x>0$
+\end_inset
+
+;
+ what is the value of the sum considered when 
+\begin_inset Formula $x=-1$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Using Equation 1.2.6(18) in 
+\begin_inset Formula $(*)$
+\end_inset
+
+ and Exercise 1.2.6–48 in 
+\begin_inset Formula $(**)$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{multline*}
+\sum_{k=1}^{n}\binom{n}{k}(-1)^{k}H_{k}=\sum_{1\leq j\leq k\leq n}\binom{n}{k}(-1)^{k}\frac{1}{j}=\sum_{j=1}^{n}\frac{1}{j}\sum_{k=j}^{n}\binom{n}{k}(-1)^{k}=\\
+=(-1)^{n}\sum_{j=1}^{n}\frac{1}{j}\sum_{k=0}^{n-j}\binom{n}{k}(-1)^{k}\overset{(*)}{=}(-1)^{\cancel{n}}\sum_{j=1}^{n}\frac{1}{j}(-1)^{\cancel{n}-j}\binom{n-1}{n-j}=\\
+=\sum_{j=0}^{n}\frac{1}{j+1}(-1)^{-j-1}\binom{n-1}{n-j-1}=-\sum_{j=0}^{n-1}\frac{(-1)^{j}}{j+1}\binom{n-1}{j}\overset{(**)}{=}\frac{1}{\binom{n}{n-1}}=-\frac{1}{n}.
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[M21]
+\end_layout
+
+\end_inset
+
+Using summation by parts,
+ evaluate
+\begin_inset Formula 
+\[
+\sum_{1<k\leq n}\frac{1}{k(k-1)}H_{k}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We have
+\begin_inset Formula 
+\[
+\frac{1}{k(k-1)}H_{k}=\left(\frac{1}{k-1}-\frac{1}{k}\right)H_{k}=\frac{1}{k-1}\left(H_{k-1}+\frac{1}{k}\right)-\frac{1}{k}H_{k},
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{multline*}
+\sum_{k=2}^{n}\frac{H_{k}}{k(k-1)}=\sum_{k=2}^{n}\left(\frac{1}{k-1}\left(H_{k-1}+\frac{1}{k}\right)-\frac{1}{k}H_{k}\right)=1-\frac{1}{n}H_{n}+\sum_{k=2}^{n}\frac{1}{k(k-1)}=\\
+=1-\frac{H_{n}}{n}+\sum_{k=2}^{n}\left(\frac{1}{k-1}-\frac{1}{k}\right)=1-\frac{H_{n}}{n}+H_{n-1}-H_{n}+1=\\
+=1-\frac{1}{n}H_{n}\cancel{+H_{n}}-\frac{1}{n}\cancel{-H_{n}}+1=2-\frac{1}{n}(1+H_{n}).
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc12[M10]
+\end_layout
+
+\end_inset
+
+Evaluate 
+\begin_inset Formula $H_{\infty}^{(1000)}$
+\end_inset
+
+ correct to at least 100 decimal places.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{\infty}^{(1000)}=\sum_{k\geq1}\frac{1}{k^{1000}}=1\pm0.5\cdot10^{-100},
+\]
+
+\end_inset
+
+since 
+\begin_inset Formula $2^{1000}$
+\end_inset
+
+ has way more than 100 digits.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc15[M23]
+\end_layout
+
+\end_inset
+
+Express 
+\begin_inset Formula $\sum_{k=1}^{n}H_{k}^{2}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $H_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\sum_{k=1}^{n}H_{k}^{2} & =\sum_{1\leq j\leq k\leq n}\frac{1}{j}H_{k}=\sum_{j=1}^{n}\frac{1}{j}\sum_{k=j}^{n}H_{k}=\sum_{j=1}^{n}\frac{1}{j}\left(\sum_{k=1}^{n}H_{k}-\sum_{k=1}^{j-1}H_{k}\right)\\
+ & =\sum_{j=1}^{n}\frac{1}{j}\left((n+1)H_{n}-n-jH_{j-1}+j-1\right)\\
+ & =\sum_{j=1}^{n}\left(\frac{1}{j}\left((n+1)H_{n}-n-1\right)-H_{j-1}+1\right)\\
+ & =\left((n+1)H_{n}-n-1\right)H_{n}-(nH_{n-1}-n+1)+n\\
+ & =(n+1)H_{n}^{2}-(n+1)H_{n}-nH_{n}+n+n\\
+ & =(n+1)H_{n}^{2}-(2n+1)H_{n}+2n.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc23[HM20]
+\end_layout
+
+\end_inset
+
+By considering the function 
+\begin_inset Formula $\Gamma'(x)/\Gamma(x)$
+\end_inset
+
+,
+ generalize 
+\begin_inset Formula $H_{n}$
+\end_inset
+
+ to noninteger values of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ You may use the fact that 
+\begin_inset Formula $\Gamma'(1)=-\gamma$
+\end_inset
+
+,
+ anticipating the next exercise.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We have
+\begin_inset Formula 
+\begin{multline*}
+\Gamma'(x)=\lim_{m}\left(\frac{\ln m\cdot m^{x}m!}{x(x+1)\cdots(x+m)}-\frac{m^{x}m!\sum_{k=0}^{m}\frac{x(x+1)\cdots(x+m)}{(x+k)}}{(x(x+1)\cdots(x+m))^{2}}\right)=\\
+=\Gamma(x)\lim_{m}\left(\ln m-\sum_{k=0}^{m}\frac{1}{x+k}\right)=\Gamma(x)(\ln m-H_{k+m}+H_{k-1}).
+\end{multline*}
+
+\end_inset
+
+The fact given in the exercise tells us that
+\begin_inset Formula 
+\[
+-\gamma=\Gamma'(1)=\Gamma(1)\lim_{m}(\ln m-H_{m+1}),
+\]
+
+\end_inset
+
+so for 
+\begin_inset Formula $n\in\mathbb{Z}^{>0}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{\Gamma'(n)}{\Gamma(n)}=\lim_{m}(\ln m-H_{n+m}+H_{n-1})=H_{n-1}-\gamma,
+\]
+
+\end_inset
+
+and we can define
+\begin_inset Formula 
+\[
+H_{x}\coloneqq\frac{\Gamma'(x+1)}{\Gamma(x+1)}+\gamma
+\]
+
+\end_inset
+
+for any 
+\begin_inset Formula $x\in\mathbb{C}$
+\end_inset
+
+ where this expression is defined or can be extended by continuity.
+\end_layout
+
+\end_body
+\end_document

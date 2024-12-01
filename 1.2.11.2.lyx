@@ -1,0 +1,440 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[HM20]
+\end_layout
+
+\end_inset
+
+(
+\emph on
+Sums of powers.
+\emph default
+) When 
+\begin_inset Formula $f(x)=x^{m}$
+\end_inset
+
+,
+ the high-order derivatives of 
+\begin_inset Formula $f$
+\end_inset
+
+ are all zero,
+ so Euler's summation formula gives an 
+\emph on
+exact
+\emph default
+ value for the sum
+\begin_inset Formula 
+\[
+S_{m}(n)=\sum_{0\leq k<n}k^{m}
+\]
+
+\end_inset
+
+in terms of Bernoulli numbers.
+ (It was the study of 
+\begin_inset Formula $S_{m}(n)$
+\end_inset
+
+ for 
+\begin_inset Formula $m=1,2,3,\dots$
+\end_inset
+
+ that led Bernoulli and Seki to discover those numbers in the first place.) Express 
+\begin_inset Formula $S_{m}(n)$
+\end_inset
+
+ in terms of Bernoulli 
+\emph on
+polynomials
+\emph default
+.
+ Check your answer for 
+\begin_inset Formula $m=0$
+\end_inset
+
+,
+ 1,
+ and 2.
+ (Note that the desired sum is performed for 
+\begin_inset Formula $0\leq k<n$
+\end_inset
+
+ instead of 
+\begin_inset Formula $1\leq k<n$
+\end_inset
+
+;
+ Euler's summation formula may be applied with 0 replacing 1 throughout.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+For 
+\begin_inset Formula $k\geq0$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $f^{(k)}(x)=m^{\underline{k}}x^{m-k}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $k<m$
+\end_inset
+
+,
+ this is nonzero except that 
+\begin_inset Formula $f^{(k)}(0)=0$
+\end_inset
+
+;
+ if 
+\begin_inset Formula $k=m$
+\end_inset
+
+,
+ 
+\begin_inset Formula $f^{(m)}(x)\equiv1$
+\end_inset
+
+,
+ and if 
+\begin_inset Formula $k>m$
+\end_inset
+
+,
+ 
+\begin_inset Formula $f^{(k)}(x)\equiv0$
+\end_inset
+
+.
+ Using Euler's summation formula,
+ when 
+\begin_inset Formula $m\geq1$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+S_{m}(n)=\sum_{0\leq k<n}k^{m}=\int_{0}^{n}x^{m}\text{d}x+\sum_{k=1}^{m}\frac{B_{k}}{k!}m^{\underline{k-1}}n^{m-k+1}=\frac{n^{m+1}}{m+1}+\sum_{k=1}^{m}\frac{B_{k}}{m-k+1}\binom{m}{k}n^{m-k+1}.
+\]
+
+\end_inset
+
+Then,
+\begin_inset Formula 
+\[
+S'_{m}(n)=n^{m}+\sum_{k=1}^{m}B_{k}\binom{m}{k}n^{m-k}=\sum_{k}B_{k}\binom{m}{k}n^{m-k}=B_{m}(x),
+\]
+
+\end_inset
+
+which means that
+\begin_inset Formula 
+\[
+\int_{0}^{n}B_{m}=(S_{m}(n)-S_{m}(0))=S_{m}(n)
+\]
+
+\end_inset
+
+ and therefore,
+\begin_inset Formula 
+\[
+S_{m}(n)=\int_{0}^{n}B_{m}.
+\]
+
+\end_inset
+
+Now we check the solution,
+ and in particular we check that this works for 
+\begin_inset Formula $m=0$
+\end_inset
+
+ as well:
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{n}B_{0} & =\int_{0}^{n}\text{d}x=n-0=n, & S_{0}(n) & =\sum_{0\leq k<n}1=n;\\
+\int_{0}^{n}B_{1} & =\int_{0}^{n}(x-\tfrac{1}{2})\text{d}x=\frac{n^{2}-n}{2}, & S_{1}(n) & =\sum_{0\leq k<n}k=\frac{n(n-1)}{2};\\
+\int_{0}^{n}B_{2} & =\int_{0}^{n}(x^{2}-x+\tfrac{1}{6})\text{d}x=\frac{2n^{3}-3n^{2}+n}{6},
+\end{align*}
+
+\end_inset
+
+and we check the last result we use induction.
+ For 
+\begin_inset Formula $n=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $S_{2}(0)=0$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+S_{2}(n) & =\frac{1}{6}\left(2(n-1)^{3}-3(n-1)^{2}+(n-1)\right)+(n-1)^{2}\\
+ & =\frac{1}{6}\left(2n^{3}\cancel{-6n^{2}}\cancel{+6n}\cancel{-2}-3n^{2}\cancel{+6n}\cancel{-3}+n\cancel{-1}\cancel{+6n^{2}}\cancel{-12n}\cancel{+6}\right)=\int_{0}^{n}B_{2}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc9[M25]
+\end_layout
+
+\end_inset
+
+Find the asymptotic value of 
+\begin_inset Formula $\binom{2n}{n}$
+\end_inset
+
+ with a relative error of 
+\begin_inset Formula $O(n^{-3})$
+\end_inset
+
+,
+ in two ways:
+\end_layout
+
+\begin_layout Enumerate
+via Stirling's approximation;
+\end_layout
+
+\begin_layout Enumerate
+via exercise 1.2.6–47 and Eq.
+ 1.2.11.1–(16).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+We have,
+\begin_inset Formula 
+\[
+\binom{2n}{n}=\frac{(2n)!}{n!^{2}},
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula 
+\begin{multline*}
+\ln\binom{2n}{n}=\ln(2n)!-2\ln(n!)=\\
+=(2n+\tfrac{1}{2})\ln(2n)-2n+\sigma+\frac{1}{24n}-(2n+1)\ln n+2n-2\sigma-\frac{1}{6n}+O(n^{-3})=\\
+=(2n+\tfrac{1}{2})(\ln n+\ln2)-(2n+1)\ln n-\sigma-\frac{1}{8n}+O(n^{-3})=\\
+=(2n+\tfrac{1}{2})\ln2-\frac{\ln n}{2}-\sigma-\frac{1}{8n}+O(n^{-3}),
+\end{multline*}
+
+\end_inset
+
+and therefore
+\begin_inset Formula 
+\[
+\binom{2n}{n}=\exp(\cdots)=\frac{2^{2n}}{\sqrt{\pi n}}\left(1-\frac{1}{8n}+\frac{1}{128n^{2}}+O(n^{3})\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+(I had to look up the solution.)
+\end_layout
+
+\end_inset
+
+Exercise 1.2.6–47,
+ when 
+\begin_inset Formula $r=-1/2$
+\end_inset
+
+,
+ the first identity simplifies to
+\begin_inset Formula 
+\[
+(-1)^{k}\binom{-\frac{1}{2}}{k}=(-1)^{k}\binom{-k-1}{k}\Bigg/4^{k}=\binom{2k}{k}\Bigg/4^{k}.
+\]
+
+\end_inset
+
+Thus,
+ using Eq.
+ 1.2.6–(21),
+\begin_inset Formula 
+\begin{multline*}
+\binom{2n}{n}=4^{n}(-1)^{n}\binom{-\frac{1}{2}}{n}=4^{n}\binom{n-\frac{1}{2}}{n}=4^{n}\frac{\Gamma(n+\frac{1}{2})}{\Gamma(n+1)\Gamma(\frac{1}{2})}=4^{k}\frac{\Gamma(n+\frac{1}{2})}{n\Gamma(n)\sqrt{\pi}}=\\
+=\frac{4^{n}n^{\overline{1/2}}}{n\sqrt{\pi}}=\frac{2^{2n}}{n\sqrt{\pi}}\left(\stirla{1/2}{1/2}n^{1/2}+\stirla{1/2}{-1/2}n^{-1/2}+\stirla{1/2}{-3/2}n^{-3/2}+O(n^{-5/2})\right).
+\end{multline*}
+
+\end_inset
+
+Using Eqs.
+ 1.2.6–(48),
+ (49),
+ and (57),
+\begin_inset Formula 
+\begin{align*}
+\stirla{1/2}{1/2} & =1,\\
+\stirla{1/2}{-1/2} & =\binom{1/2}{2}=\frac{\frac{1}{2}(-\frac{1}{2})}{2}=-\frac{1}{8},\\
+\stirla{1/2}{-3/2} & =\binom{1/2}{4}+2\binom{3/2}{4}=\frac{-\frac{15}{16}}{24}+2\frac{\frac{9}{16}}{24}=\frac{3}{16\cdot24}=\frac{1}{128},
+\end{align*}
+
+\end_inset
+
+so in the end,
+\begin_inset Formula 
+\[
+\binom{2n}{n}=\frac{2^{2n}}{\sqrt{\pi n}}\left(1-\frac{1}{8n}+\frac{1}{128n^{2}}+O(n^{-3})\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

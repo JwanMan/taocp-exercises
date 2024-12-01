@@ -1,0 +1,4213 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[05]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Would sequence (3) still be correct if the 
+\family typewriter
+MOVE
+\family default
+ instructions were placed before the 
+\family typewriter
+JBUS
+\family default
+ instruction instead of after it?
+\end_layout
+
+\begin_layout Enumerate
+What if the 
+\family typewriter
+MOVE
+\family default
+ instructions were placed after the 
+\family typewriter
+IN
+\family default
+ command?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+No,
+ because they would be reading the old data.
+\end_layout
+
+\begin_layout Enumerate
+No,
+ because the new data would overwrite the old data while we are reading it.
+ It would probably turn out okay since the new data is probably being read at a slower pace than the 
+\family typewriter
+MOVE
+\family default
+ instructions,
+ but it's not wise to bet on it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc2[10]
+\end_layout
+
+\end_inset
+
+The instructions `
+\family typewriter
+OUT 1000(6)
+\family default
+;
+ 
+\family typewriter
+JBUS *(6)
+\family default
+' may be used to output a tape block in an unbuffered fashion,
+ just as the instructions (1) did this for input.
+ Give a method analogous to (2) and (3) that buffers this output,
+ by using 
+\family typewriter
+MOVE
+\family default
+ instructions and an auxiliary buffer in locations 2000–2099.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Every time a new block of data is ready in locations 1000–1099,
+ we want to clear it to allow other operations to write on it and write it to tape in the meantime,
+ making sure that the previous block has finished writing before that.
+ Therefore we could just run the following after each block is ready:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ENT1 2000
+\end_layout
+
+\begin_layout Plain Layout
+
+JBUS *(6)
+\end_layout
+
+\begin_layout Plain Layout
+
+MOVE 1000(50)
+\end_layout
+
+\begin_layout Plain Layout
+
+MOVE 1050(50)
+\end_layout
+
+\begin_layout Plain Layout
+
+OUT  2000(6)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc3[22]
+\end_layout
+
+\end_inset
+
+Write a buffer-swapping output subroutine analogous to (4).
+ The subroutine,
+ called 
+\family typewriter
+WORDOUT
+\family default
+,
+ should store the word in rA as the next word of output,
+ and if a buffer is full it should write 100 words onto tape unit 
+\family typewriter
+V
+\family default
+.
+ Index register 5 should be used to refer to the current buffer position.
+ Show the layout of buffer areas and explain what instructions (if any) are necessary at the beginning and end of the program to ensure that the first and last blocks are properly written.
+ The final block should be filled out with zeros if necessary.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The following code is not tested.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+WORDOUT STJ  1F
+\end_layout
+
+\begin_layout Plain Layout
+
+        STA  0,5
+\end_layout
+
+\begin_layout Plain Layout
+
+        INC5 1
+\end_layout
+
+\begin_layout Plain Layout
+
+2H      LDA  0,5
+\end_layout
+
+\begin_layout Plain Layout
+
+        DECA SENTINEL
+\end_layout
+
+\begin_layout Plain Layout
+
+1H      JAZ  *
+\end_layout
+
+\begin_layout Plain Layout
+
+        OUT  -100,5(V)
+\end_layout
+
+\begin_layout Plain Layout
+
+        LD5  1,5
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP  2B
+\end_layout
+
+\begin_layout Plain Layout
+
+OUTBUF1 ORIG *+100 
+\end_layout
+
+\begin_layout Plain Layout
+
+        CON  SENTINEL
+\end_layout
+
+\begin_layout Plain Layout
+
+        CON  OUTBUF2
+\end_layout
+
+\begin_layout Plain Layout
+
+OUTBUF2 ORIG *+100
+\end_layout
+
+\begin_layout Plain Layout
+
+        CON  SENTINEL
+\end_layout
+
+\begin_layout Plain Layout
+
+        CON  OUTBUF1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At the start of the program,
+ we would need to 
+\family typewriter
+ENT5 OUTBUF1
+\family default
+.
+ At the end,
+ we have to fill the current block with zeroes and write it 
+\emph on
+unless
+\emph default
+ we are at the beginning of the block so we have already written what we had to,
+ and then we had to wait for the remaining write to complete.
+ We can do this with the following code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+        DEC5 OUTBUF1
+\end_layout
+
+\begin_layout Plain Layout
+
+        J5Z  9H
+\end_layout
+
+\begin_layout Plain Layout
+
+        DEC5 102
+\end_layout
+
+\begin_layout Plain Layout
+
+        J5Z  9H
+\end_layout
+
+\begin_layout Plain Layout
+
+1H      STZ  0,5
+\end_layout
+
+\begin_layout Plain Layout
+
+        INC5 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        LDA  0,5
+\end_layout
+
+\begin_layout Plain Layout
+
+        DECA SENTINEL
+\end_layout
+
+\begin_layout Plain Layout
+
+        JANZ 1B
+\end_layout
+
+\begin_layout Plain Layout
+
+        OUT  -100,5(U)
+\end_layout
+
+\begin_layout Plain Layout
+
+9H      JBUS *(5)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Knuth's version is 2 words shorter and very slightly faster by comparing addresses rather than contents in a couple places.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc4[M20]
+\end_layout
+
+\end_inset
+
+Show that if a program refers to a single I/O device,
+ we might be able to cut the running time in half by buffering the I/O,
+ in favorable circumstances;
+ but we can never decrease the running time by more than a factor of two,
+ with respect to the time taken by unbuffered I/O.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+See the next exercise.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc5[M21]
+\end_layout
+
+\end_inset
+
+Generalize the situation of the preceding exercise to the case when the program refers to 
+\begin_inset Formula $n$
+\end_inset
+
+ I/O devices instead of just one.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let's assume that reads and writes on devices are so slow that the time taken for the CPU to run the I/O operations is negligible.
+ Let's also assume that the time it takes for the CPU to complete an iteration of the program is the same time that it takes for each device to read or write a block,
+ that this time is the same for all devices,
+ and that each iteration reads or writes a block on each device at the beginning which is only needed by the next iteration,
+ if at all.
+ Moreover,
+ we assume that there are enough iterations so that the time needed for initialization and finalization is negligible.
+\end_layout
+
+\begin_layout Standard
+Then the unbuffered case takes 
+\begin_inset Formula $MN(n+1)$
+\end_inset
+
+ cycles,
+ where 
+\begin_inset Formula $M$
+\end_inset
+
+ is the number of iterations and 
+\begin_inset Formula $N$
+\end_inset
+
+ is the number of cycles per iteration,
+ while the buffered case takes 
+\begin_inset Formula $MN$
+\end_inset
+
+,
+ so in this optimal case,
+ the time is divided by 
+\begin_inset Formula $n+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+On the other hand,
+ if we have a general program where the CPU takes 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ cycles and the 
+\begin_inset Formula $k$
+\end_inset
+
+th device takes 
+\begin_inset Formula $N_{k}$
+\end_inset
+
+ cycles for 
+\begin_inset Formula $k=1,\dots,n$
+\end_inset
+
+,
+ then the unbuffered version takes 
+\begin_inset Formula $N_{0}+N_{1}+\dots+N_{n}$
+\end_inset
+
+ cycles and the buffered version takes at least 
+\begin_inset Formula $\max\{N_{0},\dots,N_{n}\}\geq\frac{N_{0}+\dots+N_{n}}{n+1}$
+\end_inset
+
+ cycles,
+ so we cannot go lower than this limit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc9[21]
+\end_layout
+
+\end_inset
+
+A program that leads to the buffer contents shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:1.4.4"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ may be characterized by the following list of times:
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 1000,
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 5000,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 7000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 5000,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 7000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 5000,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 7000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 5000,
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 1000,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 2000,
+ 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ 1000.
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+sp{(
+\backslash
+linewidth)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+us{*1.0/850*
+\backslash
+sp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+tmw{75
+\backslash
+us}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+buff{*1.4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[style=dotted]
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,3.6
+\backslash
+buff)
+\end_layout
+
+\begin_layout Plain Layout
+
+    node[left,text width=1cm,align=center]{Com
+\backslash
+-puter}
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+sp},0)
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,4.2
+\backslash
+buff)
+\end_layout
+
+\begin_layout Plain Layout
+
+    node[left,text width=1cm,align=center]{Output unit}
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+sp},0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fill[fill=green]
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,0) -- (0,3
+\backslash
+buff) -- ({
+\backslash
+sp},{3
+\backslash
+buff}) -- ({
+\backslash
+sp},0);
+\end_layout
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+assignment{buffer}{tm_start}{tm_got}{tm_use}{tm_red}
+\end_layout
+
+\begin_layout Plain Layout
+
+% Buffer number,
+ time of ASSIGN,
+ time when the buffer is
+\end_layout
+
+\begin_layout Plain Layout
+
+% ready for use,
+ time of RELEASE,
+ time when output starts
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+assignment#1#2#3#4#5{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fill[fill=yellow]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#3
+\backslash
+us},{#1
+\backslash
+buff}) -- ({#4
+\backslash
+us},{#1
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++(0,-1
+\backslash
+buff) -- ({#3
+\backslash
+us},{(#1-1)
+\backslash
+buff});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fill[fill=red]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#4
+\backslash
+us},{#1
+\backslash
+buff}) -- ({#5
+\backslash
+us},{#1
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+tmw},{-1/6
+\backslash
+buff}) -- ++({-
+\backslash
+tmw},{-1/6
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+tmw},{-1/6
+\backslash
+buff}) -- ++({-
+\backslash
+tmw},{-1/6
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+tmw},{-1/6
+\backslash
+buff}) -- ++({-
+\backslash
+tmw},{-1/6
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ({#4
+\backslash
+us},{(#1-1)
+\backslash
+buff});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#2
+\backslash
+us},{3.5
+\backslash
+buff}) -- ++(0,{0.2
+\backslash
+buff}) node[above]{A}
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#3
+\backslash
+us},{3.6
+\backslash
+buff}) -- ({#4
+\backslash
+us},{3.6
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#4
+\backslash
+us},{3.7
+\backslash
+buff}) -- ++(0,{-0.2
+\backslash
+buff}) node[below]{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#5
+\backslash
+us},{4.1
+\backslash
+buff}) -- ++(0,{0.2
+\backslash
+buff}) node[above]{O}
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#5
+\backslash
+us},{4.2
+\backslash
+buff}) -- ++({75
+\backslash
+us},0);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment1{0}{0}{10}{10}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment2{20}{20}{30}{85}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment3{40}{40}{50}{160}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment1{60}{85}{95}{235}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment2{105}{160}{230}{310}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment3{280}{280}{350}{385}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment1{400}{400}{470}{470}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment2{520}{520}{590}{590}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment3{640}{640}{650}{665}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment1{660}{660}{680}{740}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,0) -- (0,3
+\backslash
+buff) -- ({
+\backslash
+sp},3
+\backslash
+buff) -- ({
+\backslash
+sp},0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+bufferlbl#1{
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,{(#1-0.5)
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+    node[left,rotate=90,anchor=south]{Buffer #1}
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,{(#1-1)
+\backslash
+buff}) -- ++({
+\backslash
+sp},0)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw 
+\backslash
+bufferlbl1 
+\backslash
+bufferlbl2 
+\backslash
+bufferlbl3;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+axis#1{({(1#1-1000)
+\backslash
+us},0) -- ++(0,-0.2) node[below,rotate=90,anchor=east]{#100}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw 
+\backslash
+axis{000} 
+\backslash
+axis{050} 
+\backslash
+axis{100} 
+\backslash
+axis{150}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+axis{200} 
+\backslash
+axis{250} 
+\backslash
+axis{300} 
+\backslash
+axis{350}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+axis{400} 
+\backslash
+axis{450} 
+\backslash
+axis{500} 
+\backslash
+axis{550}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+axis{600} 
+\backslash
+axis{650} 
+\backslash
+axis{700} 
+\backslash
+axis{750}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+axis{800} 
+\backslash
+axis{850};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:1.4.4"
+
+\end_inset
+
+Output with two buffers (exercise 9).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This list means 
+\begin_inset Quotes eld
+\end_inset
+
+assign,
+ compute for 
+\begin_inset Formula $\unit[1000]{u}$
+\end_inset
+
+,
+ release,
+ compute for 
+\begin_inset Formula $\unit[1000]{u}$
+\end_inset
+
+,
+ assign,
+ ...,
+ compute for 
+\begin_inset Formula $\unit[2000]{u}$
+\end_inset
+
+,
+ release,
+ compute for 
+\begin_inset Formula $\unit[1000]{u}$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+ The computation times given do not include any intervals during which the computer might have to wait for the output device to catch up (as at the fourth 
+\begin_inset Quotes eld
+\end_inset
+
+assign
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:1.4.4"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+).
+ The output device operates at a speed of 
+\begin_inset Formula $\unit[7500]{u}$
+\end_inset
+
+ per block.
+\end_layout
+
+\begin_layout Standard
+The following chart specifies he actions shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:1.4.4"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ as the time passes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nopagebreak
+\backslash
+hfil
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Action
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE,
+ OUT BUF1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF2)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF3)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN
+\family default
+ (wait)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+BUF1
+\family default
+ assigned,
+ 
+\family typewriter
+OUT BUF2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN
+\family default
+ (wait)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+BUF2
+\family default
+ assigned,
+ 
+\family typewriter
+OUT BUF3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+OUT BUF1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF3)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+31000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+OUT BUF2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Action
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+OUT BUF3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+46000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output stops.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE,
+ OUT BUF1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+52000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF2)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output stops.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+59000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE,
+ OUT BUF2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF3)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+65000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+66000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+66500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+OUT BUF3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+68000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+69000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Computation stops.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+OUT BUF1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+81500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output stops.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The total time required was therefore 
+\begin_inset Formula $\unit[81500]{u}$
+\end_inset
+
+;
+ the computer was idle from 6000–8500,
+ 10500–16000,
+ and 69000–81500,
+ or 
+\begin_inset Formula $\unit[20500]{u}$
+\end_inset
+
+ altogether;
+ the output unit was idle from 0–1000,
+ 46000–47000,
+ and 54500–59000,
+ or 
+\begin_inset Formula $\unit[6500]{u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Make a time-action chart like the above for the same program,
+ assuming that there are only 
+\emph on
+two
+\emph default
+ buffers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+sp{(
+\backslash
+linewidth)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+us{*1.0/900*
+\backslash
+sp}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+tmw{75
+\backslash
+us}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+buff{*1.4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[style=dotted]
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,2.6
+\backslash
+buff)
+\end_layout
+
+\begin_layout Plain Layout
+
+    node[left,text width=1cm,align=center]{Com
+\backslash
+-puter}
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+sp},0)
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,3.2
+\backslash
+buff)
+\end_layout
+
+\begin_layout Plain Layout
+
+    node[left,text width=1cm,align=center]{Output unit}
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+sp},0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fill[fill=green]
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,0) -- (0,2
+\backslash
+buff) -- ({
+\backslash
+sp},{2
+\backslash
+buff}) -- ({
+\backslash
+sp},0);
+\end_layout
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+assignment{buffer}{tm_start}{tm_got}{tm_use}{tm_red}
+\end_layout
+
+\begin_layout Plain Layout
+
+% Buffer number,
+ time of ASSIGN,
+ time when the buffer is
+\end_layout
+
+\begin_layout Plain Layout
+
+% ready for use,
+ time of RELEASE,
+ time when output starts
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+assignment#1#2#3#4#5{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fill[fill=yellow]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#3
+\backslash
+us},{#1
+\backslash
+buff}) -- ({#4
+\backslash
+us},{#1
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++(0,-1
+\backslash
+buff) -- ({#3
+\backslash
+us},{(#1-1)
+\backslash
+buff});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fill[fill=red]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#4
+\backslash
+us},{#1
+\backslash
+buff}) -- ({#5
+\backslash
+us},{#1
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+tmw},{-1/6
+\backslash
+buff}) -- ++({-
+\backslash
+tmw},{-1/6
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+tmw},{-1/6
+\backslash
+buff}) -- ++({-
+\backslash
+tmw},{-1/6
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ++({
+\backslash
+tmw},{-1/6
+\backslash
+buff}) -- ++({-
+\backslash
+tmw},{-1/6
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  -- ({#4
+\backslash
+us},{(#1-1)
+\backslash
+buff});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#2
+\backslash
+us},{2.5
+\backslash
+buff}) -- ++(0,{0.2
+\backslash
+buff}) node[above]{A}
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#3
+\backslash
+us},{2.6
+\backslash
+buff}) -- ({#4
+\backslash
+us},{2.6
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#4
+\backslash
+us},{2.7
+\backslash
+buff}) -- ++(0,{-0.2
+\backslash
+buff}) node[below]{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#5
+\backslash
+us},{3.1
+\backslash
+buff}) -- ++(0,{0.2
+\backslash
+buff}) node[above]{O}
+\end_layout
+
+\begin_layout Plain Layout
+
+  ({#5
+\backslash
+us},{3.2
+\backslash
+buff}) -- ++({75
+\backslash
+us},0);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment1{0}{0}{10}{10}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment2{20}{20}{30}{85}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment1{40}{85}{95}{160}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment2{105}{160}{170}{235}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment1{180}{235}{305}{310}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment2{355}{355}{425}{425}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment1{475}{475}{545}{545}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment2{595}{595}{665}{665}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment1{715}{715}{725}{740}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+assignment2{735}{740}{760}{815}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,0) -- (0,2
+\backslash
+buff) -- ({
+\backslash
+sp},2
+\backslash
+buff) -- ({
+\backslash
+sp},0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+bufferlbl#1{
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,{(#1-0.5)
+\backslash
+buff})
+\end_layout
+
+\begin_layout Plain Layout
+
+    node[left,rotate=90,anchor=south]{Buffer #1}
+\end_layout
+
+\begin_layout Plain Layout
+
+  (0,{(#1-1)
+\backslash
+buff}) -- ++({
+\backslash
+sp},0)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw 
+\backslash
+bufferlbl1 
+\backslash
+bufferlbl2;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+axis#1{({(1#1-1000)
+\backslash
+us},0) -- ++(0,-0.2) node[below,rotate=90,anchor=east]{#100}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw 
+\backslash
+axis{000} 
+\backslash
+axis{050} 
+\backslash
+axis{100} 
+\backslash
+axis{150}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+axis{200} 
+\backslash
+axis{250} 
+\backslash
+axis{300} 
+\backslash
+axis{350}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+axis{400} 
+\backslash
+axis{450} 
+\backslash
+axis{500} 
+\backslash
+axis{550}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+axis{600} 
+\backslash
+axis{650} 
+\backslash
+axis{700} 
+\backslash
+axis{750}
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+axis{800} 
+\backslash
+axis{850} 
+\backslash
+axis{900};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:1.4.4-1"
+
+\end_inset
+
+Output with three buffers (see exercise 9).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can do this graphically as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:1.4.4-1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+,
+ giving us the following chart:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nopagebreak
+\backslash
+hfil
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Action
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE,
+ OUT BUF1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF2)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN
+\family default
+ (wait)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+BUF1
+\family default
+ assigned,
+ 
+\family typewriter
+OUT BUF2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN
+\family default
+ (wait)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+BUF2
+\family default
+ assigned,
+ 
+\family typewriter
+OUT BUF1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN
+\family default
+ (wait)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+BUF1
+\family default
+ assigned,
+ 
+\family typewriter
+OUT BUF2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+31000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+OUT BUF1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF2)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output stops.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Action
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+42500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE,
+ OUT BUF2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output stops.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE,
+ OUT BUF1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+59500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF2)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+62000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output stops.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+65500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE,
+ OUT BUF2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN(BUF1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+72500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+73500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ASSIGN
+\family default
+ (wait)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+BUF2
+\family default
+ assigned,
+ 
+\family typewriter
+OUT BUF1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+76000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+RELEASE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+77000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Computation stops.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+81500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+OUT BUF2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+89000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output stops.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc14[20]
+\end_layout
+
+\end_inset
+
+Suppose the computational program does not alternate between 
+\family typewriter
+ASSIGN
+\family default
+ and 
+\family typewriter
+RELEASE
+\family default
+,
+ but instead gives the sequence of actions 
+\family typewriter
+...ASSIGN...ASSIGN...RELEASE...RELEASE
+\family default
+.
+ What effect does this have on the algorithms described in the text?
+ Is it possibly useful?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+It just means we would need at least two buffers or the program would stall.
+ It might be useful if the algorithm needs more data at a time than what fits in one buffer,
+ so that it doesn't have to copy the data elsewhere.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc15[22]
+\end_layout
+
+\end_inset
+
+Write a complete 
+\family typewriter
+MIX
+\family default
+ program that copies 100 blocks from tape unit 0 to tape unit 1,
+ using just three buffers.
+ The program should be as fast as possible.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The following programs have not been tested.
+ We need to use the buffers in a circle,
+ checking input and output in a loop to see if the devices are ready and if we can move to the next buffer.
+ The following program in pseudo-C might be illustrative:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void aread(char *buf),
+ awrite(char *buf);
+  // IN,
+ OUT
+\end_layout
+
+\begin_layout Plain Layout
+
+bool done_read(),
+ done_write();
+  // JBUS/JRED
+\end_layout
+
+\begin_layout Plain Layout
+
+char buf[3][100];
+\end_layout
+
+\begin_layout Plain Layout
+
+char *cin = buf[0],
+ *cout = buf[0],
+ *next(char *buf);
+\end_layout
+
+\begin_layout Plain Layout
+
+int n = 100;
+  // Remaining blocks to input
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+aread(cin);
+\end_layout
+
+\begin_layout Plain Layout
+
+while (1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (done_read() && next(cin) != cout) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			if (--n == 0)
+\end_layout
+
+\begin_layout Plain Layout
+
+				break;
+\end_layout
+
+\begin_layout Plain Layout
+
+			cin = next(cin);
+\end_layout
+
+\begin_layout Plain Layout
+
+			aread(cin);
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (done_write() && next(cout) != cin) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			cout = next(cout);
+\end_layout
+
+\begin_layout Plain Layout
+
+			awrite(cout);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+do  // Output remaining blocks
+\end_layout
+
+\begin_layout Plain Layout
+
+	awrite(cout = next(cout));
+\end_layout
+
+\begin_layout Plain Layout
+
+while (cout != cin);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We may translate this as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+        IN    BUF1(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+        ENTA  100
+\end_layout
+
+\begin_layout Plain Layout
+
+        ENT1  BUF1  ;
+ cin
+\end_layout
+
+\begin_layout Plain Layout
+
+        ENT2  BUF1  ;
+ cout
+\end_layout
+
+\begin_layout Plain Layout
+
+READ    JBUS  WRITE(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+        CMP2  100,1
+\end_layout
+
+\begin_layout Plain Layout
+
+        JEQ   WRITE
+\end_layout
+
+\begin_layout Plain Layout
+
+        DECA  1
+\end_layout
+
+\begin_layout Plain Layout
+
+        JAZ   EOUT
+\end_layout
+
+\begin_layout Plain Layout
+
+        LD1   100,1
+\end_layout
+
+\begin_layout Plain Layout
+
+        IN    0,1(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+WRITE   JBUS  READ(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        CMP1  100,2
+\end_layout
+
+\begin_layout Plain Layout
+
+        JEQ   READ
+\end_layout
+
+\begin_layout Plain Layout
+
+        LD2   100,2
+\end_layout
+
+\begin_layout Plain Layout
+
+        OUT   0,2(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP   READ
+\end_layout
+
+\begin_layout Plain Layout
+
+EOUT    LD2   100,2
+\end_layout
+
+\begin_layout Plain Layout
+
+        CMP2  100,1
+\end_layout
+
+\begin_layout Plain Layout
+
+        JAZ   END
+\end_layout
+
+\begin_layout Plain Layout
+
+        OUT   0,2(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP   EOUT
+\end_layout
+
+\begin_layout Plain Layout
+
+END     HLT
+\end_layout
+
+\begin_layout Plain Layout
+
+BUF1    ORIG  *+100
+\end_layout
+
+\begin_layout Plain Layout
+
+        CON   BUF2
+\end_layout
+
+\begin_layout Plain Layout
+
+BUF2    ORIG  *+100
+\end_layout
+
+\begin_layout Plain Layout
+
+        CON   BUF3
+\end_layout
+
+\begin_layout Plain Layout
+
+BUF3    ORIG  *+100
+\end_layout
+
+\begin_layout Plain Layout
+
+        CON   BUF1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now,
+ the behavior of this program is always the same:
+ first the input advances,
+ then the output advances,
+ and so on,
+ so we might do better (and with a lower chance of bugs) just by coding it manually and using the blocking properties of 
+\family typewriter
+IN
+\family default
+ and 
+\family typewriter
+OUT
+\family default
+ with respect to other operations in the same device:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+        IN   BUF1(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+LOOP    ENTA 33
+\end_layout
+
+\begin_layout Plain Layout
+
+        IN   BUF2(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+        OUT  BUF1(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        IN   BUF3(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+        OUT  BUF2(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        IN   BUF1(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+        OUT  BUF3(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        DECA 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        JANZ LOOP
+\end_layout
+
+\begin_layout Plain Layout
+
+        JBUS *(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+        OUT  BUF1(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        JBUS *(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        HLT
+\end_layout
+
+\begin_layout Plain Layout
+
+BUF1    ORIG *+100
+\end_layout
+
+\begin_layout Plain Layout
+
+BUF2    ORIG *+100
+\end_layout
+
+\begin_layout Plain Layout
+
+BUF3    ORIG *+100
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

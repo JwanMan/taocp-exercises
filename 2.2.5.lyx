@@ -1,0 +1,606 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc2[22]
+\end_layout
+
+\end_inset
+
+Explain why a list that is singly linked cannot allow efficient operation as a general deque;
+ the deletion of items can be done efficiently at only one end of a singly linked list.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+One could,
+ in fact,
+ implement it reasonably efficiently using the trick from Exercise 2.2.4.18.
+ If we assume a normal linked list,
+ however,
+ deletion of an element requires knowing the link to the previous element.
+ We know this for the head of the list,
+ as we just have to change the pointer to the head,
+ but we do not know it for the tail,
+ and if we cached a pointer to the second-to-last element to do this,
+ then we would need to update this pointer to point to the new second-to-last element,
+ whose address we cannot retrieve efficiently.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc3[22]
+\end_layout
+
+\end_inset
+
+The elevator system described in the text uses three call variables,
+ 
+\family typewriter
+CALLUP
+\family default
+,
+ 
+\family typewriter
+CALLCAR
+\family default
+,
+ and 
+\family typewriter
+CALLDOWN
+\family default
+,
+ for each floor,
+ representing buttons that have been pushed by the users in the system.
+ It is conceivable that the elevator actually needs only one or two binary variables for the call buttons on each floor,
+ instead of three.
+ Explain how an experimenter could push buttons in a certain sequence with this elevator system to 
+\emph on
+prove
+\emph default
+ that there are three independent binary variables for each floor (except the top and bottom floors).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We need an experiment that proves that,
+ for any given floor that is not the top or bottom one,
+ the elevator behaves differently for each of the 8 possible combinations of the 3 buttons.
+\end_layout
+
+\begin_layout Standard
+Let us denote the states by the values of 
+\family typewriter
+CALLUP
+\family default
+,
+ 
+\family typewriter
+CALLCAR
+\family default
+ and 
+\family typewriter
+CALLDOWN
+\family default
+ in sequence,
+ so for example only 
+\family typewriter
+CALLUP
+\family default
+ would be 100 and all buttons at once would be 111.
+\end_layout
+
+\begin_layout Standard
+We first note that the three buttons are not completely independent:
+ 101 and 111 are equal,
+ because the elevator would stop in both directions and then one of 
+\family typewriter
+CALLUP
+\family default
+ and 
+\family typewriter
+CALLDOWN
+\family default
+ is cleared at the same time as 
+\family typewriter
+CALLCAR
+\family default
+ is,
+ so there's no observable difference,
+ but this state and all others are pairwise different,
+ as we shall see.
+\end_layout
+
+\begin_layout Standard
+000 is trivially different from all the other states since,
+ if the elevator is in another floor,
+ any other combination would take it to our floor.
+ If the elevator is in the lower floor and we call 001 in the current and above floors,
+ it would go to the floor above and then to the current one,
+ the opposite of what would happen if in the current floor we would call any combination involving 
+\family typewriter
+CALLUP
+\family default
+ or 
+\family typewriter
+CALLCAR
+\family default
+.
+ The opposite experiment (calling 100 in the current and below floors with the elevator in the one above,
+ and then changing what we call in the current floor) shows that 100 is also different from all the others.
+\end_layout
+
+\begin_layout Standard
+To see that 010 and 101 are different,
+ we press 
+\family typewriter
+CALLCAR
+\family default
+ in the current floor with the elevator in the one above and,
+ while it's going down,
+ press 
+\family typewriter
+CALLUP
+\family default
+ in the floor below and tell it to go two floors up.
+ Our design wouldn't stop in our floor when going up,
+ but it would if we had pressed both 
+\family typewriter
+CALLUP
+\family default
+ and 
+\family typewriter
+CALLDOWN
+\family default
+ since 
+\family typewriter
+CALLUP
+\family default
+ would still be 1 after stopping when going down.
+ Actually,
+ this shows that 010 and 011 are different from 101,
+ 110,
+ and 111,
+ and the opposite experiment shows that 010 and 110 are different from 101,
+ 011,
+ and 111.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[21]
+\end_layout
+
+\end_inset
+
+(
+\emph on
+A sparse-update memory.
+\emph default
+) The following problem often arises in 
+\emph on
+synchronous
+\emph default
+ simulations:
+ The system has 
+\begin_inset Formula $n$
+\end_inset
+
+ variables 
+\begin_inset Formula $\mathtt{V[}1\mathtt{]},\dots,\mathtt{V[}n\mathtt{]}$
+\end_inset
+
+,
+ and at every simulated step new values for some of them are calculated from the old values.
+ These calculations are assumed to be done 
+\begin_inset Quotes eld
+\end_inset
+
+simultaneously
+\begin_inset Quotes erd
+\end_inset
+
+ in the sense that the variables do not change to their new values until after all assignments have been made.
+ Thus,
+ the two statements
+\begin_inset Formula 
+\begin{align*}
+\mathtt{V[}1\mathtt{]} & \gets\mathtt{V[}2\mathtt{]} &  & \text{and} &  & \mathtt{V[}2\mathtt{]}\gets\mathtt{V[}1\mathtt{]}
+\end{align*}
+
+\end_inset
+
+appearing at the same simulated time would interchange the values of 
+\begin_inset Formula $\mathtt{V[}1\mathtt{]}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{V[}2\mathtt{]}$
+\end_inset
+
+;
+ this is quite different from what would happen in a sequential calculation.
+\end_layout
+
+\begin_layout Standard
+The desired action can of course be simulated by keeping an additional table 
+\begin_inset Formula $\mathtt{NEWV[}1\mathtt{]},\dots,\mathtt{NEWV[}n\mathtt{]}$
+\end_inset
+
+.
+ Before each simulated step,
+ we could set 
+\begin_inset Formula $\mathtt{NEWV[}k\mathtt{]}\gets\mathtt{V[}k\mathtt{]}$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq k\leq n$
+\end_inset
+
+,
+ then record all changes of 
+\begin_inset Formula $\mathtt{V[}k\mathtt{]}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathtt{NEWV[}k\mathtt{]}$
+\end_inset
+
+,
+ and finally,
+ after the step we could set 
+\begin_inset Formula $\mathtt{V[}k\mathtt{]}\gets\mathtt{NEWV[}k\mathtt{]}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $1\leq k\leq n$
+\end_inset
+
+.
+ But this 
+\begin_inset Quotes eld
+\end_inset
+
+brute force
+\begin_inset Quotes erd
+\end_inset
+
+ approach is not completely satisfactory,
+ for the following reasons:
+\end_layout
+
+\begin_layout Enumerate
+Often 
+\begin_inset Formula $n$
+\end_inset
+
+ is very large,
+ but the number of variables changed per step is rather small.
+\end_layout
+
+\begin_layout Enumerate
+The variables are often not arranged in a nice table 
+\begin_inset Formula $\mathtt{V[}1\mathtt{]},\dots,\mathtt{V[}n\mathtt{]}$
+\end_inset
+
+,
+ but are scattered throughout memory in a rather chaotic fashion.
+\end_layout
+
+\begin_layout Enumerate
+This method does not detect the situation (usually an error in the model) when one variable is given two values in the same simulated stop.
+\end_layout
+
+\begin_layout Enumerate
+Assuming that the number of variables changed per step is rather small,
+ design an efficient algorithm that simulates the desired actions,
+ using two auxiliary tables 
+\begin_inset Formula $\mathtt{NEWV[}k\mathtt{]}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{LINK[}k\mathtt{]}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $1\leq k\leq n$
+\end_inset
+
+.
+ If possible,
+ your algorithm should give an error stop if the same variables is being given two different values in the same step.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The idea,
+ of course,
+ would be to make a linked list with the 
+\family typewriter
+LINK
+\family default
+ table.
+ If we assume the table is initially set to 0,
+ we could use 
+\begin_inset Formula $-1$
+\end_inset
+
+ to signify the end of the linked list.
+\end_layout
+
+\begin_layout Enumerate
+[Initialize.] (This step only happens at the beginning of the simulation.) Set 
+\begin_inset Formula $\mathtt{LINK[}k\mathtt{]}\gets0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $1\leq k\leq n$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{Q}\gets-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:25521b"
+
+\end_inset
+
+[Advance time.] Advance to the next step of the synchronous simulation.
+\end_layout
+
+\begin_layout Enumerate
+[Run the current state.] For each calculation that needs to be done,
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is the variable to be updated,
+ raise an error if 
+\begin_inset Formula $\mathtt{LINK[}k\mathtt{]}\neq0$
+\end_inset
+
+,
+ calculate the new value,
+ store it in 
+\begin_inset Formula $\mathtt{NEWV[}k\mathtt{]}$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $\mathtt{LINK[}k\mathtt{]}\gets\mathtt{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{Q}\gets k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+[Update variables.] If 
+\begin_inset Formula $\mathtt{Q}>0$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $\mathtt{V[Q]}\gets\mathtt{NEWV[Q]}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{Q2}\gets\mathtt{LINK[Q]}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{LINK[Q]}\gets0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{Q}\gets\mathtt{LINK[Q]}$
+\end_inset
+
+,
+ and repeat this step.
+ Otherwise go to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:25521b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc12[22]
+\end_layout
+
+\end_inset
+
+Why is it a good idea to use doubly linked lists instead of singly linked or sequential lists in the simulation program of this section?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+This is because we often delete nodes from the middle of the list without knowing the predecessor or successor,
+ like an user who was tired of waiting,
+ and doubly linked lists are the only kind that allows doing this efficiently.
+\end_layout
+
+\end_body
+\end_document

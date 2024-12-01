@@ -1,0 +1,294 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO 3,
+ 4,
+ 7 (1p,
+ 1:09)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc3[10]
+\end_layout
+
+\end_inset
+
+The previous exercise suggests having the trace program write its output onto tape.
+ Discuss why this would be preferable to printing it directly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The output of the tracer would be large,
+ and so it would need to be analyzed by another program in order to focus on interesting parts or gather some statistics.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[25]
+\end_layout
+
+\end_inset
+
+What would happen if the trace routine were tracing 
+\emph on
+itself
+\emph default
+?
+ Specifically,
+ consider the behavior if the two instructions 
+\family typewriter
+ENTX LEAVEX
+\family default
+;
+ 
+\family typewriter
+JMP *+1
+\family default
+ were placed just before 
+\family typewriter
+ENTER
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Unfortunately this wouldn't work,
+ as the registers A and J of the tracing tracing program and the traced traced program would be stored in the same addresses.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc7[25]
+\end_layout
+
+\end_inset
+
+Discuss how to write an efficient 
+\emph on
+jump trace
+\emph default
+ routine,
+ which emits much less output than a normal trace.
+ Instead of displaying the register contents,
+ a jump trace simply records the jumps that occur.
+ It outputs a sequence of pairs 
+\begin_inset Formula $(x_{1},y_{1}),(x_{2},y_{2}),\dots$
+\end_inset
+
+,
+ meaning that the program jumped from location 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ to 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+,
+ then (after performing the instructions in locations 
+\begin_inset Formula $y_{1},y_{1}+1,\dots,x_{2}$
+\end_inset
+
+) it jumped from 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ to 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+,
+ etc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We could save this information right at the 
+\family typewriter
+JUMP
+\family default
+ label.
+ At this point,
+ 
+\family typewriter
+PREG
+\family default
+ contains the current instruction and 
+\family typewriter
+INST1
+\family default
+ contains the instruction to jump to,
+ so it should be easy to move those to values to a buffer and call a subroutine to write to tape when the buffer is full.
+\end_layout
+
+\begin_layout Standard
+If the code wasn't self-modifying,
+ we could just scan up to the next jump instruction,
+ modify that one,
+ and run up to that point,
+ and the solution from the book specifies just that except that it allows 
+\family typewriter
+STJ
+\family default
+ to modify jump calls by handling this case separately during the scan.
+ Since modern processors can raise an exception when modifying their own code (W^X),
+ it should be possible to save all the jump calls in some table and substitute them by calls to a debugger routine before running,
+ accepting that the program may detect that it's being debugged by looking at its own jump calls.
+\end_layout
+
+\end_body
+\end_document

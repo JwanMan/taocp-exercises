@@ -1,0 +1,3599 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\usepackage{amsmath}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\stirla}[2]{\genfrac[]{0pt}{}{#1}{#2}}
+{\begin{bmatrix}{\textstyle #1}\\
+{\textstyle #2}
+\end{bmatrix}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\stirlb}[2]{\genfrac\{\}{0pt}{}{#1}{#2}}
+{\begin{Bmatrix}{\textstyle #1}\\
+{\textstyle #2}
+\end{Bmatrix}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[00]
+\end_layout
+
+\end_inset
+
+How many combinations of 
+\begin_inset Formula $n$
+\end_inset
+
+ things taken 
+\begin_inset Formula $n-1$
+\end_inset
+
+ at a time are possible?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\binom{n}{n-1}=\frac{n!}{1!(n-1)!}=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc2[00]
+\end_layout
+
+\end_inset
+
+What is 
+\begin_inset Formula $\binom{0}{0}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\binom{0}{0}=\frac{1!}{1!1!}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc3[00]
+\end_layout
+
+\end_inset
+
+How many bridge hands (13 cards out of a 52-card deck) are possible?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\binom{52}{13}=635013559600$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc4[10]
+\end_layout
+
+\end_inset
+
+Give the answer to exercise 3 as a product of prime numbers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We have 
+\begin_inset Formula $\binom{52}{13}=\frac{52!}{13!39!}$
+\end_inset
+
+.
+ Using Equation 1.2.5.8:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+52! & =2^{49}3^{23}5^{12}7^{8}11^{4}13^{4}17^{3}19^{2}23^{2}\cdot29\cdot31\cdot37\cdot41\cdot43\cdot47,\\
+39! & =2^{35}3^{18}5^{8}7^{5}11^{3}13^{3}17^{2}19^{2}\cdot23\cdot29\cdot31\cdot37\\
+13! & =2^{10}3^{5}5^{2}\cdot7\cdot11\cdot13\\
+\hline \binom{52}{13} & =2^{4}5^{2}7^{2}\cdot17\cdot23\cdot41\cdot43\cdot47.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc5[05]
+\end_layout
+
+\end_inset
+
+Use Pascal's triangle to explain the fact that 
+\begin_inset Formula $11^{4}=14641$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $11^{4}=(10+1)^{4}=\binom{4}{0}10^{4}1^{0}+\binom{4}{1}10^{3}1^{1}+\binom{4}{2}10^{2}1^{2}+\binom{4}{3}10^{1}1^{3}+\binom{4}{4}10^{0}1^{4}=14641$
+\end_inset
+
+.
+ The pattern works for the number 11 in any given base until the number 10 or higher appears,
+ which in this case happens in the next row.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc6[10]
+\end_layout
+
+\end_inset
+
+Pascal's triangle (Table 1) can be extended in all directions by use of the addition formula,
+ Eq.
+ (9).
+ Find the three rows that go on 
+\emph on
+top
+\emph default
+ of Table 1 (i.e.
+ for 
+\begin_inset Formula $r=-1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $-2$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $-3$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The table is based on the properties that 
+\begin_inset Formula $\binom{r}{k}=\binom{r-1}{k}+\binom{r-1}{k-1}$
+\end_inset
+
+ and that 
+\begin_inset Formula $\binom{r}{k}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $k<0$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $\binom{r}{0}=1$
+\end_inset
+
+ for any 
+\begin_inset Formula $r\in\mathbb{Z}$
+\end_inset
+
+ (really for any 
+\begin_inset Formula $r\in\mathbb{R}$
+\end_inset
+
+) and that 
+\begin_inset Formula $\binom{r-1}{k}=\binom{r}{k}-\binom{r-1}{k-1}$
+\end_inset
+
+ (the one below in the table minus the one on the left).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="11">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{r}{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $15$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-21$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $28$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-36$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $45$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-55$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc8[00]
+\end_layout
+
+\end_inset
+
+What property of Pascal's triangle is reflected in the 
+\begin_inset Quotes eld
+\end_inset
+
+symmetry condition,
+\begin_inset Quotes erd
+\end_inset
+
+ Eq.
+ (6)?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The symmetry of each row 
+\begin_inset Formula $r$
+\end_inset
+
+ with center in 
+\begin_inset Formula $k=\frac{r}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc9[01]
+\end_layout
+
+\end_inset
+
+What is the value of 
+\begin_inset Formula $\binom{n}{n}$
+\end_inset
+
+?
+ (Consider all integers 
+\begin_inset Formula $n$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+For 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\binom{n}{n}=\frac{n!}{n!1!}=1$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $n<0$
+\end_inset
+
+,
+ by definition 
+\begin_inset Formula $\binom{n}{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc10[M25]
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $p$
+\end_inset
+
+ is prime,
+ show that:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{n}{p}\equiv\left\lfloor \frac{n}{p}\right\rfloor \pmod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{p}{k}\equiv0\pmod p$
+\end_inset
+
+,
+ for 
+\begin_inset Formula $1\leq k\leq p-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{p-1}{k}\equiv(-1)^{k}\pmod p$
+\end_inset
+
+,
+ for 
+\begin_inset Formula $0\leq k\leq p-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{p+1}{k}\equiv0\pmod p$
+\end_inset
+
+,
+ for 
+\begin_inset Formula $2\leq k\leq p-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+(É.
+ Lucas,
+ 1877.)
+\begin_inset Formula 
+\[
+\binom{n}{k}\equiv\binom{\lfloor n/p\rfloor}{\lfloor k/p\rfloor}\binom{n\bmod p}{k\bmod p}\pmod p.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If the representations of 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ in the 
+\begin_inset Formula $p$
+\end_inset
+
+-ary number system are
+\begin_inset Formula 
+\begin{eqnarray*}
+\begin{array}{rlc}
+n & = & a_{r}p^{r}+\dots+a_{1}p+a_{0},\\
+k & = & b_{r}p^{r}+\dots+b_{1}p+b_{0},
+\end{array} & \text{then} & \binom{n}{k}\equiv\binom{a_{r}}{b_{r}}\cdots\binom{a_{1}}{b_{1}}\binom{a_{0}}{b_{0}}\pmod p.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We assume 
+\begin_inset Formula $n\in\mathbb{Z}$
+\end_inset
+
+ and 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Using part 5,
+\begin_inset Formula 
+\[
+\binom{n}{p}\equiv\binom{\lfloor n/p\rfloor}{\lfloor p/p\rfloor}\binom{n\bmod p}{p\bmod p}=\binom{\lfloor n/p\rfloor}{1}\binom{n\bmod p}{0}=\left\lfloor \frac{n}{p}\right\rfloor \cdot1.
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Since we know 
+\begin_inset Formula $\binom{n}{p}=\frac{n(n-1)\cdots(n-p+1)}{1\cdot2\cdot\cdots\cdot p}\in\mathbb{Z}$
+\end_inset
+
+ (because of the addition formula),
+ and since 
+\begin_inset Formula $p$
+\end_inset
+
+ appears once in the denominator,
+ there must be a 
+\begin_inset Formula $k\in\{0,\dots,p-1\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\mid n-k$
+\end_inset
+
+,
+ and it obviously must be unique.
+ It's then easy to see that 
+\begin_inset Formula $\lfloor\frac{n}{p}\rfloor=\frac{n-k}{p}$
+\end_inset
+
+,
+ and so
+\begin_inset Formula 
+\[
+\binom{n}{p}\equiv\left\lfloor \frac{n}{p}\right\rfloor \frac{n(n-1)\cdots(n-k+1)(n-k-1)\cdots(n-p+1)}{1\cdot2\cdots(p-1)}\pmod p.
+\]
+
+\end_inset
+
+Let us call 
+\begin_inset Formula $b$
+\end_inset
+
+ the numerator in the fraction of the above formula,
+ we just need to prove that 
+\begin_inset Formula $\frac{b}{(p-1)!}\equiv1\pmod p$
+\end_inset
+
+,
+ which by rule 1.2.4–C is equivalent to 
+\begin_inset Formula $b\equiv(p-1)!\bmod p!$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $b$
+\end_inset
+
+ is a multiple of 
+\begin_inset Formula $(p-1)!$
+\end_inset
+
+ (otherwise 
+\begin_inset Formula $\binom{n}{p}$
+\end_inset
+
+ would be an integer),
+ 
+\begin_inset Formula $b\equiv0\equiv(p-1)!\bmod(p-1)!$
+\end_inset
+
+,
+ and since 
+\begin_inset Formula $\{(n-j)\bmod p\}_{0\leq j<p}^{j\neq k}=\{1,\dots,p-1\}$
+\end_inset
+
+,
+ we have
+\begin_inset Formula 
+\[
+b=\prod_{\begin{subarray}{c}
+0\leq j<p\\
+j\neq k
+\end{subarray}}(n-j)\equiv\prod_{j=1}^{p-1}j=(p-1)!\pmod p.
+\]
+
+\end_inset
+
+Therefore,
+ since 
+\begin_inset Formula $(p-1)!\bot p$
+\end_inset
+
+,
+ rule 1.2.4–D gives us the result.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{p}{k}=\frac{p!}{k!(p-k)!}$
+\end_inset
+
+,
+ but neither 
+\begin_inset Formula $k!$
+\end_inset
+
+ nor 
+\begin_inset Formula $(p-k)!$
+\end_inset
+
+ divide 
+\begin_inset Formula $p$
+\end_inset
+
+ while 
+\begin_inset Formula $p!$
+\end_inset
+
+ does,
+ so 
+\begin_inset Formula $p\mid\binom{p}{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+We prove it by induction on 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $k=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\binom{p-1}{0}=1=(-1)^{0}$
+\end_inset
+
+,
+ so the equation holds.
+ For 
+\begin_inset Formula $1\leq k\leq p-1$
+\end_inset
+
+,
+ 
+\begin_inset Formula 
+\[
+\binom{p-1}{k}=\binom{p}{k}-\binom{p-1}{k-1}\equiv0-(-1)^{k-1}=(-1)^{k}\pmod p,
+\]
+
+\end_inset
+
+ where for the equivalence we use the previous part of the exercise and the induction hypothesis.
+\end_layout
+
+\begin_layout Enumerate
+Using part 2,
+\begin_inset Formula 
+\[
+\binom{p+1}{k}=\binom{p}{k}+\binom{p}{k-1}\equiv0-0=0\pmod k.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k<0$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $\binom{n}{k}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\binom{\lfloor n/p\rfloor}{\lfloor k/p\rfloor}=0$
+\end_inset
+
+.
+ Now let's prove this for 
+\begin_inset Formula $k\geq0$
+\end_inset
+
+.
+ First,
+ note that,
+ if 
+\begin_inset Formula $a,b,c,d\in\mathbb{Z}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\frac{a}{b},\frac{c}{d}\in\mathbb{Z}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $a\equiv c$
+\end_inset
+
+ and 
+\begin_inset Formula $0\not\equiv b\equiv d\pmod p$
+\end_inset
+
+,
+ then 
+\begin_inset Formula 
+\[
+\frac{a}{b}\equiv\frac{c}{d}\pmod p.
+\]
+
+\end_inset
+
+Effectively,
+ let 
+\begin_inset Formula $a=jp+b$
+\end_inset
+
+ 
+\begin_inset Formula $c=kp+d$
+\end_inset
+
+ for some integers 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ then 
+\begin_inset Formula 
+\[
+\frac{a}{b}-\frac{c}{d}=\frac{ad-bc}{bd}=\frac{(jd-bk)p}{bd},
+\]
+
+\end_inset
+
+which is a multiple of 
+\begin_inset Formula $p$
+\end_inset
+
+ because it's an integer and,
+ since 
+\begin_inset Formula $bd\nmid p$
+\end_inset
+
+,
+ it follows that 
+\begin_inset Formula $bd\mid jd-bk$
+\end_inset
+
+.
+ Now,
+ let 
+\begin_inset Formula $n\eqqcolon n'p+n_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $k\eqqcolon k'p+k_{0}$
+\end_inset
+
+ with 
+\begin_inset Formula $n',n_{0},k',k_{0}\in\mathbb{Z}$
+\end_inset
+
+ and 
+\begin_inset Formula $0\leq n_{0},k_{0}<p$
+\end_inset
+
+.
+ Clearly 
+\begin_inset Formula $n_{0}\equiv n$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{0}\equiv k$
+\end_inset
+
+ (modulo 
+\begin_inset Formula $p$
+\end_inset
+
+),
+ and then
+\begin_inset Formula 
+\begin{align*}
+\binom{n}{k} & =\prod_{j=1}^{k}\frac{n+1-j}{j}=\left(\prod_{j=1}^{pk'}\frac{n+1-j}{j}\right)\left(\prod_{j=1}^{k_{0}}\frac{pn'+n_{0}+1-pk'-j}{j+pk'}\right)\\
+ & \equiv\left(\prod_{j=1}^{pk'}\frac{n+1-j}{j}\right)\left(\prod_{j=1}^{k_{0}}\frac{n_{0}+1-j}{j}\right)=\binom{n}{pk'}\binom{n_{0}}{k_{0}}\pmod p,
+\end{align*}
+
+\end_inset
+
+where for the equivalence we used that both 
+\begin_inset Formula $\binom{n}{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\binom{n}{pk'}\binom{n_{0}}{k_{0}}$
+\end_inset
+
+ are integers.
+ Now we have to prove that 
+\begin_inset Formula $\binom{n}{pk'}\equiv\binom{n'}{k'}$
+\end_inset
+
+.
+ This coefficient can be factored as
+\begin_inset Formula 
+\[
+\binom{n}{pk'}=\prod_{j=0}^{k'-1}\left(\prod_{i=1}^{p}\frac{n+1-jp-i}{jp+i}\right)=\prod_{j=0}^{k'-1}\prod_{i=1}^{p}\frac{(n'-j)p+n_{0}+1-i}{jp+i}.
+\]
+
+\end_inset
+
+Each of the 
+\begin_inset Formula $k'$
+\end_inset
+
+ groups of factors has exactly one factor whose numerator is a multiple of 
+\begin_inset Formula $p$
+\end_inset
+
+ (when 
+\begin_inset Formula $i=s\coloneqq(n_{0}+1)\bmod p$
+\end_inset
+
+),
+ and one whose denominator is.
+ Canceling the 
+\begin_inset Formula $p$
+\end_inset
+
+ in them and taking congruences on the other factors,
+ we get
+\begin_inset Formula 
+\begin{align*}
+\binom{n}{pk'} & \equiv\prod_{j=0}^{k'-1}\left(\frac{n'-j}{j+1}\frac{\prod_{\begin{subarray}{c}
+1\leq i\leq p\\
+i\neq s
+\end{subarray}}(n_{0}+1-i)}{(p-1)!}\right)=\prod_{j=0}^{k'-1}\left(\frac{n'-j}{j+1}\frac{(p-1)!}{(p-1)!}\right)=\\
+ & =\prod_{j=1}^{k'}\frac{n'+1+j}{j}=\binom{n'}{k'}\pmod p.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+From part 5 by induction on 
+\begin_inset Formula $r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[M20]
+\end_layout
+
+\end_inset
+
+(E.
+ Kummer,
+ 1852.) Let 
+\begin_inset Formula $p$
+\end_inset
+
+ be prime.
+ Show that if 
+\begin_inset Formula $p^{n}$
+\end_inset
+
+ divides
+\begin_inset Formula 
+\[
+\binom{a+b}{a}
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $p^{n+1}$
+\end_inset
+
+ does not,
+ then 
+\begin_inset Formula $n$
+\end_inset
+
+ is equal to the number of 
+\emph on
+carries
+\emph default
+ that occur when 
+\begin_inset Formula $a$
+\end_inset
+
+ is added to 
+\begin_inset Formula $b$
+\end_inset
+
+ in the 
+\begin_inset Formula $p$
+\end_inset
+
+-ary number system.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Because of the way the exercise is written,
+ we may assume that both 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are natural numbers (non-negative integers),
+ and therefore 
+\begin_inset Formula $\binom{a+b}{a}=\frac{(a+b)!}{a!b!}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $s_{a}$
+\end_inset
+
+ be the sum of the digits of 
+\begin_inset Formula $a$
+\end_inset
+
+ in base 
+\begin_inset Formula $p$
+\end_inset
+
+ and let 
+\begin_inset Formula $\mu_{a}=\frac{a-s_{a}}{p-1}$
+\end_inset
+
+ be the number of times 
+\begin_inset Formula $p$
+\end_inset
+
+ appears in the prime factorization of 
+\begin_inset Formula $a$
+\end_inset
+
+,
+ by Exercise 1.2.5–12.
+ Define 
+\begin_inset Formula $s_{b}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mu_{b}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $s_{c}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\mu_{c}$
+\end_inset
+
+ in a similar manner,
+ with 
+\begin_inset Formula $c\coloneqq a+b$
+\end_inset
+
+.
+ Then the number of times 
+\begin_inset Formula $p$
+\end_inset
+
+ appears in the prime factorization of 
+\begin_inset Formula $\binom{a+b}{a}$
+\end_inset
+
+ is precisely
+\begin_inset Formula 
+\[
+\mu_{c}-\mu_{a}-\mu_{b}=\frac{\cancel{c-a-b}-s_{c}+s_{a}+s_{b}}{p-1},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $s_{c}$
+\end_inset
+
+ is precisely the sum of 
+\begin_inset Formula $s_{a}$
+\end_inset
+
+ plus 
+\begin_inset Formula $s_{b}$
+\end_inset
+
+ except that,
+ every time we do a carry in the sum in base 
+\begin_inset Formula $p$
+\end_inset
+
+,
+ we have to subtract 
+\begin_inset Formula $p$
+\end_inset
+
+ and add 1,
+ that is,
+ we subtract 
+\begin_inset Formula $p-1$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $s_{a}+s_{b}-s_{c}$
+\end_inset
+
+ is precisely 
+\begin_inset Formula $p-1$
+\end_inset
+
+ times the number of carries and this proves the result.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc17[M18]
+\end_layout
+
+\end_inset
+
+Prove the Chu-Vandermonde formula (21) from Eq.
+ (15),
+ using that 
+\begin_inset Formula $(1+x)^{r+s}=(1+x)^{r}(1+x)^{s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $n$
+\end_inset
+
+ is negative,
+ either 
+\begin_inset Formula $k$
+\end_inset
+
+ or 
+\begin_inset Formula $n-k$
+\end_inset
+
+ is negative for any 
+\begin_inset Formula $k$
+\end_inset
+
+ so both sides of the equation are 0.
+ Otherwise,
+ for 
+\begin_inset Formula $x\in(-1,1)$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{multline*}
+\sum_{n}\binom{r+s}{n}x^{n}=(1+x)^{r+s}=(1+x)^{r}(1+x)^{s}=\sum_{k}\binom{r}{k}x^{k}\sum_{m}\binom{s}{m}x^{m}=\\
+=\sum_{k}\binom{r}{k}x^{k}\sum_{n}\binom{s}{n-k}x^{n-k}=\sum_{n}\left(\sum_{k}\binom{r}{k}\binom{s}{n-k}\right)x^{n}.
+\end{multline*}
+
+\end_inset
+
+If 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ are integers,
+ the sums are finite and therefore we have polynomials in 
+\begin_inset Formula $x$
+\end_inset
+
+ in both side,
+ but since they are both equal in a nonempty open interval,
+ the coefficients are all equal and we have proved the result.
+ If 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ are not integers,
+ since
+\begin_inset Formula 
+\[
+\binom{r+s}{n}-\sum_{k}\binom{r}{k}\binom{s}{n-k}=0
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $r,s\in\mathbb{Z}$
+\end_inset
+
+,
+ and the left hand side is a polynomial on 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+,
+ it follows that the polynomial is 0 everywhere.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc21[05]
+\end_layout
+
+\end_inset
+
+Both sides of Eq.
+ (25) are polynomials in 
+\begin_inset Formula $s$
+\end_inset
+
+;
+ why isn't that equation an identity in 
+\begin_inset Formula $s$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We know the equation to be valid for 
+\begin_inset Formula $n+1$
+\end_inset
+
+ values of 
+\begin_inset Formula $s$
+\end_inset
+
+,
+ namely 
+\begin_inset Formula $0,1,\dots,n$
+\end_inset
+
+,
+ but while the polynomial on the left has degree 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ the one on the right has degree 
+\begin_inset Formula $m+n+1\geq n+1$
+\end_inset
+
+,
+ so we cannot apply the reasoning below Eq.
+ (8).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc30[M24]
+\end_layout
+
+\end_inset
+
+Show that there is a better way to solve Example 3 than the way used in the text,
+ by manipulating the sum so that Eq.
+ (26) applies.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+First,
+ we note that the terms are nonzero when 
+\begin_inset Formula $k\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $m+2k\leq n+k$
+\end_inset
+
+,
+ which happens precisely when 
+\begin_inset Formula $0\leq k\leq n-m$
+\end_inset
+
+,
+ and in particular we may assume 
+\begin_inset Formula $n\geq m$
+\end_inset
+
+ since otherwise the sum is 0.
+\end_layout
+
+\begin_layout Standard
+We start by negating the upper index (rule G) in the second factor and using symmetry (rule B) on the first,
+ and noting that all factors with negative 
+\begin_inset Formula $k$
+\end_inset
+
+ are 0:
+\begin_inset Formula 
+\[
+\sum_{k}\binom{n+k}{m+2k}\binom{2k}{k}\frac{(-1)^{k}}{k+1}=\sum_{k\geq0}\binom{n+k}{n-m-k}\binom{-k-1}{k}\frac{1}{k+1}.
+\]
+
+\end_inset
+
+We have the left hand side of Eq.
+ (26) with 
+\begin_inset Formula $t\mapsto1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $r\mapsto-1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n\mapsto n-m$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $s\mapsto2n-m$
+\end_inset
+
+,
+ so this is equal to
+\begin_inset Formula 
+\[
+\binom{-1+2n-m-n+m}{n-m}=\binom{n-1}{n-m}=\binom{n-1}{m-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc31[M20]
+\end_layout
+
+\end_inset
+
+Evaluate
+\begin_inset Formula 
+\[
+\sum_{k}\binom{m-r+s}{k}\binom{n+r-s}{n-k}\binom{r+k}{m+n}
+\]
+
+\end_inset
+
+in terms of 
+\begin_inset Formula $r$
+\end_inset
+
+,
+ 
+\begin_inset Formula $s$
+\end_inset
+
+,
+ 
+\begin_inset Formula $m$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ given that 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are integers.
+ Begin by replacing
+\begin_inset Formula 
+\begin{eqnarray*}
+\binom{r+k}{m+n} & \text{ by } & \sum_{j}\binom{r}{m+n-j}\binom{k}{j}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We start assuming that 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ are also integers.
+ The replacement suggested is given directly by Equation 21,
+ and we get
+\begin_inset Formula 
+\begin{align*}
+S & \coloneqq\sum_{k}\binom{m-r+s}{k}\binom{n+r-s}{n-k}\binom{r+k}{m+n}\\
+ & =\sum_{k}\sum_{j}\binom{m-r+s}{k}\binom{n+r-s}{n-k}\binom{r}{m+n-j}\binom{k}{j} & \text{Eq. (21)}\\
+ & =\sum_{j}\binom{r}{m+n-j}\binom{m-r+s}{j}\sum_{k}\binom{n+r-s}{n-k}\binom{m-r+s-j}{k-j} & \text{Eq. (20)}\\
+ & =\sum_{j}\binom{r}{m+n-j}\binom{m-r+s}{j}\sum_{k}\binom{n+r-s}{k+r-s}\binom{m-r+s-j}{k-j} & \text{Eq. (6)*}\\
+ & =\sum_{j}\binom{r}{m+n-j}\binom{m-r+s}{j}\binom{m+n-j}{n-j} & \text{Eq. (22)*}\\
+ & =\sum_{j}\binom{r}{m+n-j}\binom{m-r+s}{j}\binom{m+n-j}{m} & \text{Eq. (6)**}\\
+ & =\binom{r}{m}\sum_{j}\binom{m-r+s}{j}\binom{r-m}{n-j} & \text{Eq. (20)}\\
+ & =\binom{r}{m}\binom{s}{n}.
+\end{align*}
+
+\end_inset
+
+ In (**),
+ we use that,
+ for nonzero addends,
+ 
+\begin_inset Formula $m+n-j\geq0$
+\end_inset
+
+ and therefore we can apply Equation 6.
+ In (*),
+ we assume 
+\begin_inset Formula $s\leq m-r$
+\end_inset
+
+.
+ This is not important,
+ since,
+ by the reasoning about polynomials,
+ this has been proved for infinite values of 
+\begin_inset Formula $r$
+\end_inset
+
+ and infinite values of 
+\begin_inset Formula $s$
+\end_inset
+
+ and therefore applies to all 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc36[M10]
+\end_layout
+
+\end_inset
+
+What is the sum 
+\begin_inset Formula $\sum_{k}\binom{n}{k}$
+\end_inset
+
+ of the numbers in each row of Pascal's triangle?
+ What is the sum of these numbers with alternating signs,
+ 
+\begin_inset Formula $\sum_{k}\binom{n}{k}(-1)^{k}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\sum_{k}\binom{n}{k}=\sum_{k}\binom{n}{k}1^{k}1^{n-k} & =(1+1)^{n}=2^{n},\\
+\sum_{k}\binom{n}{k}(-1)^{k}=\sum_{k}\binom{n}{k}(-1)^{k}1^{n-k} & =(1-1)^{n}=0^{n}=\delta_{n0}.
+\end{align*}
+
+\end_inset
+
+If 
+\begin_inset Formula $n<0$
+\end_inset
+
+ the value is generally undefined,
+ as evidenced by Exercise 6.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc37[M10]
+\end_layout
+
+\end_inset
+
+From the answers to the preceding exercise,
+ deduce the value of the sum of every other entry in a row,
+ 
+\begin_inset Formula $\binom{n}{0}+\binom{n}{2}+\binom{n}{4}+\dots$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{k}\binom{n}{2k}=\sum_{k}\binom{n}{k}[k\text{ even}]=\sum_{k}\binom{n}{k}\frac{1+(-1)^{k}}{2}=\frac{2^{n}+\delta_{n0}}{2}=\left\{ \begin{array}{rl}
+1, & n=0;\\
+2^{n-1}, & n>0.
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc39[M10]
+\end_layout
+
+\end_inset
+
+What is the sum 
+\begin_inset Formula $\sum_{k}\stirla nk$
+\end_inset
+
+ of the numbers in each row of Stirling's first triangle?
+ What is the sum of these numbers with alternating signs?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We can use Equation 44:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\sum_{k}\stirla nk=(-1)^{-n}\sum_{k}(-1)^{n-k}\stirla nk(-1)^{k}=(-1)^{n}(-1)^{\underline{n}}=\\
+=(-1)^{n}(-1)(-2)\cdots(-n)=n!,
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{k}\stirla nk(-1)^{k}=\sum_{k}\stirla nk(-1)^{-k}=(-1)^{-n}\sum_{k}(-1)^{n-k}\stirla nk1^{k}=(-1)^{n}1^{\underline{n}}=\delta_{n0}-\delta_{n1}.
+\]
+
+\end_inset
+
+The first equation makes sense,
+ as it is the number of permutations of 
+\begin_inset Formula $n$
+\end_inset
+
+ symbols irrespective of the number 
+\begin_inset Formula $k$
+\end_inset
+
+ of cycles.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc42[HM10]
+\end_layout
+
+\end_inset
+
+Express the binomial coefficient 
+\begin_inset Formula $\binom{r}{k}$
+\end_inset
+
+ in terms of the beta function defined above.
+ (This gives us a way to extend the definition to all real values of 
+\begin_inset Formula $k$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+For integers 
+\begin_inset Formula $r\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $k\neq0$
+\end_inset
+
+,
+ 
+\begin_inset Formula 
+\[
+\binom{r}{k}=\frac{r!}{k!(r-k)!}=\frac{\Gamma(r+1)}{\Gamma(k+1)\Gamma(r-k)}=\frac{\Gamma(r+1)}{k\Gamma(k)\Gamma(r-k+1)}=(kB(k,r-k+1))^{-1}.
+\]
+
+\end_inset
+
+We can extend this function to the points where it is not defined by taking limits.
+\end_layout
+
+\begin_layout Standard
+We are not required to evaluate the domain of this function,
+ but we have to see that it matches our definition for 
+\begin_inset Formula $r\in\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+,
+ we first see that 
+\begin_inset Formula 
+\begin{multline*}
+\lim_{(x,y)\to(r,k)}\frac{\Gamma(x-y+1)}{\Gamma(x-k+1)}=\lim_{(x,y)\to(r,k)}\frac{\lim_{m}\frac{m^{x-y}m!}{(x-y+1)\cdots(x-y+m)}}{\lim_{m}\frac{m^{x-k}m!}{(x-k+1)\cdots(x-k+m)}}=\\
+=\lim_{(x,y)\to(r,k)}\lim_{m}m^{k-y}\prod_{i=1}^{m}\frac{x+m-y}{x+m-k}=1,
+\end{multline*}
+
+\end_inset
+
+where I don't remember enough of my calculus lessons to know why the last step is correct but it has to do with exchanging limits.
+ With this,
+ if we successively apply the fact that 
+\begin_inset Formula $\Gamma(x+1)=x\Gamma(x)$
+\end_inset
+
+,
+ 
+\begin_inset Formula 
+\begin{multline*}
+\lim_{(x,y)\to(r,k)}\frac{\Gamma(x+1)}{y\Gamma(y)\Gamma(x-y+1)}=\lim_{(x,y)\to(r,k)}\frac{x(x-1)\cdots(x-k+1)}{y\Gamma(y)\frac{\Gamma(x-y+1)}{\Gamma(x-k+1)}}=\\
+=\frac{r(r-1)\cdots(r-k+1)}{k!}.
+\end{multline*}
+
+\end_inset
+
+If 
+\begin_inset Formula $k\in\mathbb{Z}^{-}$
+\end_inset
+
+,
+ for 
+\begin_inset Formula $r\notin\mathbb{Z}^{-}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\Gamma(r+1)$
+\end_inset
+
+ is bounded in an open set around 
+\begin_inset Formula $(r,k)$
+\end_inset
+
+,
+ and since 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ is continuous and has no zeros,
+ the denominator tends to infinity,
+ so the corresponding limit correctly evaluates to 0.
+ If 
+\begin_inset Formula $k,r\in\mathbb{Z}^{-}$
+\end_inset
+
+ I can't find if the value is defined,
+ but if it is then its value is 0.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc44[HM20]
+\end_layout
+
+\end_inset
+
+Using the generalized binomial coefficient suggested in exercise 42,
+ show that
+\begin_inset Formula 
+\[
+\binom{r}{1/2}=2^{2r+1}\bigg/\binom{2r}{r}\pi.
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+From the definition,
+\begin_inset Formula 
+\[
+\binom{r}{\frac{1}{2}}=\frac{1}{\frac{1}{2}B(\frac{1}{2},r+\frac{1}{2})}=\frac{2\Gamma(r+1)}{\Gamma(\frac{1}{2})\Gamma(r+\frac{1}{2})}.
+\]
+
+\end_inset
+
+Now,
+ we know 
+\begin_inset Formula $\frac{\sqrt{\pi}}{2}=(\frac{1}{2})!=\frac{1}{2}\Gamma(\frac{1}{2})$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $\Gamma(\frac{1}{2})=\sqrt{\pi}$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\binom{r}{\frac{1}{2}}=\frac{2r!}{\sqrt{\pi}(r-\frac{1}{2})(r-\frac{3}{2})\cdots(\frac{1}{2})\sqrt{\pi}}=\frac{2r!2^{r}}{\pi(2r-1)(2r-3)\cdots1}.
+\]
+
+\end_inset
+
+We see that 
+\begin_inset Formula $(2r)!=((2r)(2r-2)\cdots2)((2r-1)(2r-3)\cdots1)$
+\end_inset
+
+.
+ We already have the second factor,
+ and the first one is precisely 
+\begin_inset Formula $2^{r}r!$
+\end_inset
+
+,
+ so we multiply both numerator and denominator by this factor to get that
+\begin_inset Formula 
+\[
+\binom{r}{\frac{1}{2}}=\frac{2r!2^{r}2^{r}r!}{\pi(2r)!}=\frac{2^{2r+1}}{\binom{2r}{r}\pi}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc46[M21]
+\end_layout
+
+\end_inset
+
+Using Stirling's approximation,
+ Eq.
+ 1.2.5–(7),
+ find an approximate value of 
+\begin_inset Formula $\binom{x+y}{y}$
+\end_inset
+
+,
+ assuming that both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are large.
+ In particular,
+ find the approximate size of 
+\begin_inset Formula $\binom{2n}{n}$
+\end_inset
+
+ when 
+\begin_inset Formula $n$
+\end_inset
+
+ is large.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+For large 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{multline*}
+\binom{x+y}{y}=\frac{(x+y)!}{x!y!}\approx\frac{\sqrt{2\pi(x+y)}\left(\frac{x+y}{\text{e}}\right)^{x+y}}{\sqrt{2\pi x}\sqrt{2\pi y}\left(\frac{x}{\text{e}}\right)^{x}\left(\frac{y}{\text{e}}\right)^{y}}=\sqrt{\frac{x+y}{2\pi xy}}\left(\frac{(x+y)^{x+y}}{x^{x}y^{y}}\right)=\\
+=\frac{(x+y)^{x+y+\nicefrac{1}{2}}}{\sqrt{2\pi}x^{x+\nicefrac{1}{2}}y^{y+\nicefrac{1}{2}}}=\sqrt{\frac{1}{2\pi}\left(\frac{1}{x}+\frac{1}{y}\right)}\left(1+\frac{y}{x}\right)^{x}\left(1+\frac{x}{y}\right)^{y}.
+\end{multline*}
+
+\end_inset
+
+Then,
+ for large 
+\begin_inset Formula $n$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\binom{2n}{n}=\frac{(2n)^{2n+\nicefrac{1}{2}}}{\sqrt{2\pi}n^{2n+1}}=\frac{2^{2n}\sqrt{2}n^{2n}\sqrt{n}}{\sqrt{2\pi}n^{2n}n}=\frac{4^{n}}{\sqrt{\pi n}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc48[M25]
+\end_layout
+
+\end_inset
+
+Show that
+\begin_inset Formula 
+\[
+\sum_{k\geq0}\binom{n}{k}\frac{(-1)^{k}}{k+x}=\frac{n!}{x(x+1)\cdots(x+n)}=\frac{1}{x\binom{n+x}{n}},
+\]
+
+\end_inset
+
+if the denominators are not zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The second equality is obvious.
+ For the first one,
+ since the way the formula is written assumes 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+,
+ we can prove this by induction.
+ For 
+\begin_inset Formula $n=0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\sum_{k\geq0}\binom{0}{k}\frac{(-1)^{k}}{k+x}=\frac{1}{x}=\frac{0!}{x}.
+\]
+
+\end_inset
+
+For 
+\begin_inset Formula $n>0$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{multline*}
+\sum_{k\geq0}\binom{n}{k}\frac{(-1)^{k}}{k+x}=\sum_{k\geq0}\binom{n-1}{k}\frac{(-1)^{k}}{k+x}+\sum_{k\geq0}\binom{n-1}{k-1}\frac{(-1)^{k}}{k+x}=\\
+=\sum_{k\geq0}\binom{n-1}{k}\frac{(-1)^{k}}{k+x}+\sum_{k\geq0}\binom{n-1}{k}\frac{(-1)^{k+1}}{k+1+x}=\frac{1}{x\binom{n-1+x}{n-1}}-\frac{1}{(x+1)\binom{n+x}{n-1}}=\\
+=\frac{(n-1)!}{x(x+1)\cdots(x+n-1)}-\frac{(n-1)!}{(x+1)(x+2)\cdots(x+n)}=\frac{(n-1)!((\cancel{x+}n)\cancel{-x})}{x(x+1)\cdots(x+n)}.
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc57[M22]
+\end_layout
+
+\end_inset
+
+Show that the coefficient 
+\begin_inset Formula $a_{m}$
+\end_inset
+
+ in Stirling's attempt at generalizing the factorial function,
+ Eq.
+ 1.2.5–(12),
+ is
+\begin_inset Formula 
+\[
+\frac{(-1)^{m}}{m!}\sum_{k\geq1}(-1)^{k}\binom{m-1}{k-1}\ln k.
+\]
+
+\end_inset
+
+Also find 
+\begin_inset Formula $q$
+\end_inset
+
+-nomial generalizations of the fundamental identities (17) and (21).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The sum in Stirling's attempt is
+\begin_inset Formula 
+\begin{eqnarray*}
+S_{n} & = & \sum_{k\geq0}a_{k+1}\prod_{j=0}^{k}(n-j)=\sum_{m\geq1}a_{m}\prod_{j=0}^{m-1}(n-j)\\
+ & = & \sum_{m\geq1}\frac{(-1)^{m}}{m!}\left(\sum_{k\geq1}(-1)^{k}\binom{m-1}{k-1}\ln k\right)\prod_{j=0}^{m-1}(n-j)\\
+ & = & \sum_{k\geq1}\left(\sum_{m\geq1}(-1)^{m+k}\binom{n}{m}\binom{m-1}{k-1}\right)\ln k.
+\end{eqnarray*}
+
+\end_inset
+
+There are several things happening in the last line.
+ First,
+ note that both sums are bounded,
+ for 
+\begin_inset Formula $m$
+\end_inset
+
+ must be at most 
+\begin_inset Formula $n$
+\end_inset
+
+ because otherwise the product would contain a factor 
+\begin_inset Formula $n-n=0$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ must be lower than 
+\begin_inset Formula $m$
+\end_inset
+
+,
+ and therefore lower than 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ because otherwise the factor 
+\begin_inset Formula $\binom{m-1}{k-1}$
+\end_inset
+
+ would be 0.
+ This allows us to swap the sums and extract a factor that only depends on 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Moreover,
+\begin_inset Formula 
+\[
+\frac{\prod_{j=0}^{m-1}(n-j)}{m!}=\frac{\prod_{j=1}^{m}(n-j+1)}{\prod_{j=1}^{m}j}=\binom{n}{m}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ be the value of the inner sum for a given 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ we know that 
+\begin_inset Formula $A_{k}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $k>n$
+\end_inset
+
+,
+ and if we prove that 
+\begin_inset Formula $A_{k}=1$
+\end_inset
+
+ for 
+\begin_inset Formula $k\leq n$
+\end_inset
+
+,
+ we would have
+\begin_inset Formula 
+\[
+S_{n}=\sum_{k=1}^{n}\ln k=\ln\prod_{k=1}^{n}k=\ln n!
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now,
+ we have
+\begin_inset Formula 
+\begin{align*}
+A_{k} & =\sum_{m\geq1}(-1)^{m+k}\binom{n}{m}\binom{m-1}{k-1}\\
+ & =\sum_{m}(-1)^{m+k}\binom{n}{m}\binom{m-1}{k-1}-(-1)^{k}\binom{-1}{k-1} & (*)\\
+ & =\sum_{m}(-1)^{n-m-k}\binom{n}{n-m}\binom{n-m-1}{k-1}+1 & (**)\\
+ & =-\sum_{m}(-1)^{n-m}\binom{n}{m}\binom{k-1-n+m}{k-1}+1 & \text{Rules B, G}\\
+ & =-\binom{k-1-n}{k-1-n}+1=1, & \text{Eq. (23)}
+\end{align*}
+
+\end_inset
+
+where in 
+\begin_inset Formula $(*)$
+\end_inset
+
+ we expand the domain of 
+\begin_inset Formula $m$
+\end_inset
+
+ to all integers and subtract the case when 
+\begin_inset Formula $m=0$
+\end_inset
+
+ to compensate for that (this is the only nonzero term that wasn't considered already) and in 
+\begin_inset Formula $(**)$
+\end_inset
+
+ we change 
+\begin_inset Formula $m$
+\end_inset
+
+ to 
+\begin_inset Formula $n-m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the second part of the exercise,
+ we start by writing the identities (17) and (21) in 
+\begin_inset Formula $q$
+\end_inset
+
+-nomial notation.
+ For (17),
+ this would be
+\begin_inset Formula 
+\begin{eqnarray*}
+\binom{r}{k,r-k}=(-1)^{k}\binom{k-r-1}{k,-r-1}, & \text{ or } & \binom{a+b}{a,b}=(-1)^{a}\binom{-b-1}{a,-(a+b)-1}.
+\end{eqnarray*}
+
+\end_inset
+
+That is,
+ this allows us to change the sum on top to something resembling just one of the numbers that were on the bottom part.
+ To generalize this,
+\begin_inset Formula 
+\begin{align*}
+\binom{k_{1}+\dots+k_{m}}{k_{1},\dots,k_{m}} & =\binom{k_{1}+k_{2}}{k_{1}}\cdots\binom{k_{1}+\dots+k_{m}}{k_{1}+\dots+k_{m-1}}\\
+ & =(-1)^{k_{1}+\dots+k_{m-1}}\binom{k_{1}+k_{2}}{k_{1}}\cdots\binom{k_{1}+\dots+k_{m-1}}{k_{1}+\dots+k_{m-2}}\binom{-k_{m}-1}{k_{1}+\dots+k_{m-1}}\\
+ & =(-1)^{k_{1}+\dots+k_{m-1}}\binom{-k_{m}-1}{k_{1},\dots,k_{m-1},-(k_{1}+\dots+k_{m})-1}.
+\end{align*}
+
+\end_inset
+
+We are abusing notation here,
+ since the book only defines multinomial coefficients for 
+\begin_inset Formula $k_{i}\geq0$
+\end_inset
+
+,
+ but we can define them for any 
+\begin_inset Formula $k_{i}\in\mathbb{Z}$
+\end_inset
+
+ by using the property that relates them to binomial coefficients,
+ at the cost of symmetry with respect to the order of the 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For (21),
+ this would be
+\begin_inset Formula 
+\[
+\sum_{k}\binom{r}{k,r-k}\binom{s}{n-k,s-n+k}=\binom{r+s}{n,r+s-n}.
+\]
+
+\end_inset
+
+That is,
+ in this case we would add up all the numbers on each component.
+ This clearly holds if we place 
+\begin_inset Formula $k,r-k$
+\end_inset
+
+ and 
+\begin_inset Formula $n-k,s-n+k$
+\end_inset
+
+ as the two last components of the multinomial coefficient.
+ There must be a better (less silly) generalization but I've already spent way too much time in this exercise.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc60[M23]
+\end_layout
+
+\end_inset
+
+We have seen that 
+\begin_inset Formula $\binom{n}{k}$
+\end_inset
+
+ is the number of combinations of 
+\begin_inset Formula $n$
+\end_inset
+
+ things,
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ at a time,
+ namely the number of ways to choose 
+\begin_inset Formula $k$
+\end_inset
+
+ different things out of a set of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ The 
+\emph on
+combinations with repetitions
+\emph default
+ are similar to ordinary combinations,
+ except that we may choose each object any number of times.
+ Thus,
+ the list (1) would be extended to include also 
+\begin_inset Formula $aaa$
+\end_inset
+
+,
+ 
+\begin_inset Formula $aab$
+\end_inset
+
+,
+ 
+\begin_inset Formula $aac$
+\end_inset
+
+,
+ 
+\begin_inset Formula $aad$
+\end_inset
+
+,
+ 
+\begin_inset Formula $aae$
+\end_inset
+
+,
+ 
+\begin_inset Formula $abb$
+\end_inset
+
+,
+ etc.,
+ if we were considering combinations with repetition.
+ How many 
+\begin_inset Formula $k$
+\end_inset
+
+-combinations of 
+\begin_inset Formula $n$
+\end_inset
+
+ objects are there,
+ if repetition is allowed?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We can draw a bijection between 
+\begin_inset Formula $k$
+\end_inset
+
+-combinations of 
+\begin_inset Formula $\{1,\dots,n\}$
+\end_inset
+
+ with repetition and 
+\begin_inset Formula $k$
+\end_inset
+
+-combinations of 
+\begin_inset Formula $\{1,\dots,n+k-1\}$
+\end_inset
+
+ without repetition by the following assignment:
+\begin_inset Formula 
+\begin{eqnarray*}
+1\leq a_{1}\leq a_{2}\leq\dots\leq a_{k}\leq n & \mapsto & 1\leq a_{1}<a_{2}+1<\dots<a_{k}+k-1\leq n+k-1\\
+1\leq b_{1}\leq b_{2}-1\leq\dots\leq b_{k}-k+1\leq n & \mapsfrom & 1\leq b_{1}<b_{2}<\dots<b_{k}\leq n+k-1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus the answer is
+\begin_inset Formula 
+\[
+\binom{n+k-1}{k}=(-1)^{k}\binom{-n}{k}=\frac{n^{\overline{k}}}{k!}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc62[M23]
+\end_layout
+
+\end_inset
+
+The text gives formulas for sums involving a product of two binomial coefficients.
+ Of the sums involving a product of three binomial coefficients,
+ the following one and the identity of exercise 31 seem to be the most useful:
+\begin_inset Formula 
+\begin{align*}
+\sum_{k}(-1)^{k}\binom{l+m}{l+k}\binom{m+n}{m+k}\binom{n+l}{n+k} & =\frac{(l+m+n)!}{l!m!n!}, & \text{integer }l,m,n & \geq0.
+\end{align*}
+
+\end_inset
+
+(The sum includes both positive and negative values of 
+\begin_inset Formula $k$
+\end_inset
+
+.) Prove this identity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+(Looking at the solution.)
+\end_layout
+
+\end_inset
+
+We may assume that 
+\begin_inset Formula $l\leq m,n$
+\end_inset
+
+,
+ since we can always rename coefficients to make it this way.
+ Then the application of the identity in exercise 31 is actually from right to left:
+ we add a new variable 
+\begin_inset Formula $j$
+\end_inset
+
+,
+ change the last factor 
+\begin_inset Formula $\binom{n+l}{n+k}$
+\end_inset
+
+ to 
+\begin_inset Formula $\binom{n+k}{l-k}$
+\end_inset
+
+ by symmetry,
+ and apply the aforementioned exercise to the last two factors to get that
+\begin_inset Formula 
+\[
+S\coloneqq\sum_{k}(-1)^{k}\binom{l+m}{l+k}\binom{m+n}{m+k}\binom{n+l}{n+k}=\sum_{j,k}(-1)^{k}\binom{l+m}{k+l}\binom{k+l}{j}\binom{m-k}{l-k-j}\binom{m+n+j}{m+l}.
+\]
+
+\end_inset
+
+Using that in general 
+\begin_inset Formula $\binom{n}{k}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $k\notin\{0,\dots,n\}$
+\end_inset
+
+,
+ nonzero addends here must follow
+\begin_inset Formula 
+\begin{align*}
+-l & \leq k\leq m, & -m & \leq k\leq n, & -n & \leq k\leq l, & 0 & \leq j\leq l+k, & l-m & \leq j\leq l-k;
+\end{align*}
+
+\end_inset
+
+that is,
+ 
+\begin_inset Formula $\vert k\vert\leq\min\{m,n,l\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\max\{l-m,0\}\leq j\leq l-\vert k\vert$
+\end_inset
+
+,
+ which simplifies to 
+\begin_inset Formula $\vert k\vert\leq l$
+\end_inset
+
+ and 
+\begin_inset Formula $0\leq j\leq l-\vert k\vert$
+\end_inset
+
+ using the conditions at the beginning and then to only 
+\begin_inset Formula $0\leq j\leq l-\vert k\vert$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This means that,
+ in all the binomial coefficients in the right hand side of the above equation,
+ the upper and lower parts are non-negative,
+ so we can substitute them to fractions of coefficients and,
+ after canceling out,
+ we get
+\begin_inset Formula 
+\begin{align*}
+S & =\sum_{0\leq j\leq l-\vert k\vert}(-1)^{k}\frac{(m+n+j)!}{j!(l+k-j)!(l-k-j)!(m-l+j)!(n-l+j)!}\\
+ & =\sum_{0\leq j\leq l}\sum_{\vert k\vert\leq l-j}(-1)^{k}\binom{2l-2j}{l+k-j}\frac{(m+n+j)!}{(2l-2j)!j!(m-l+j)!(n-l+j)!},
+\end{align*}
+
+\end_inset
+
+but then the sum of 
+\begin_inset Formula $(-1)^{k}\binom{2l-2j}{l+k-j}$
+\end_inset
+
+ across all 
+\begin_inset Formula $k$
+\end_inset
+
+ is 0 unless 
+\begin_inset Formula $j=l$
+\end_inset
+
+,
+ so we just take the term with 
+\begin_inset Formula $j=l$
+\end_inset
+
+ and 
+\begin_inset Formula $k=0$
+\end_inset
+
+ to get
+\begin_inset Formula 
+\[
+S=(-1)^{0}\binom{2l-2l}{l+0-l}\frac{(m+n+l)!}{(2l-2l)!l!(m-l+l)!(n-l+l)!}=\frac{(l+m+n)!}{l!m!n!}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc64[M20]
+\end_layout
+
+\end_inset
+
+Show that 
+\begin_inset Formula $\stirlb nm$
+\end_inset
+
+ is the number of ways to partition a set of 
+\begin_inset Formula $n$
+\end_inset
+
+ elements into 
+\begin_inset Formula $m$
+\end_inset
+
+ nonempty disjoint subsets.
+ For example,
+ the set 
+\begin_inset Formula $\{1,2,3,4\}$
+\end_inset
+
+ can be partitioned into two subsets in 
+\begin_inset Formula $\stirlb 42=7$
+\end_inset
+
+ ways:
+ 
+\begin_inset Formula $\{1,2,3\}\{4\}$
+\end_inset
+
+;
+ 
+\begin_inset Formula $\{1,2,4\}\{3\}$
+\end_inset
+
+;
+ 
+\begin_inset Formula $\{1,3,4\}\{2\}$
+\end_inset
+
+;
+ 
+\begin_inset Formula $\{2,3,4\}\{1\}$
+\end_inset
+
+;
+ 
+\begin_inset Formula $\{1,2\}\{3,4\}$
+\end_inset
+
+;
+ 
+\begin_inset Formula $\{1,3\}\{2,4\}$
+\end_inset
+
+;
+ 
+\begin_inset Formula $\{1,4\}\{2,3\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $n,m\in\mathbb{N}$
+\end_inset
+
+,
+ we prove this by induction in 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $n=0$
+\end_inset
+
+,
+ there is 
+\begin_inset Formula $1=\stirlb 00$
+\end_inset
+
+ way to partition 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ into 0 nonempty disjoint subsets and 
+\begin_inset Formula $0=\stirlb 0m$
+\end_inset
+
+ ways to partition it into 
+\begin_inset Formula $m\geq1$
+\end_inset
+
+ nonempty subsets,
+ which matches Equation 48.
+ For 
+\begin_inset Formula $m=0$
+\end_inset
+
+ and 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+,
+ there are 
+\begin_inset Formula $0=\stirlb n0$
+\end_inset
+
+ ways to divide a set of 
+\begin_inset Formula $n$
+\end_inset
+
+ elements into 0 nonempty subsets.
+ 
+\end_layout
+
+\begin_layout Standard
+Now,
+ for the induction step,
+ if 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ and 
+\begin_inset Formula $m\geq1$
+\end_inset
+
+,
+ a partition of a set like 
+\begin_inset Formula $\{1,\dots,n\}$
+\end_inset
+
+ into nonempty subsets can be thought of as a partition of 
+\begin_inset Formula $\{1,\dots,n-1\}$
+\end_inset
+
+ to which 
+\begin_inset Formula $n$
+\end_inset
+
+ has been added either to one of the elements of a partition or in a separate singleton set.
+ If the partition of 
+\begin_inset Formula $\{1,\dots,n\}$
+\end_inset
+
+ has 
+\begin_inset Formula $m$
+\end_inset
+
+ nonempty subsets,
+ for the first option we might add 
+\begin_inset Formula $n$
+\end_inset
+
+ to any of the subsets of a partition of 
+\begin_inset Formula $\{1,\dots,n-1\}$
+\end_inset
+
+ with 
+\begin_inset Formula $m$
+\end_inset
+
+ subsets,
+ and for the second one,
+ we would need a partition of 
+\begin_inset Formula $\{1,\dots,n-1\}$
+\end_inset
+
+ with 
+\begin_inset Formula $m-1$
+\end_inset
+
+ subsets.
+ Thus we would need
+\begin_inset Formula 
+\[
+\stirlb nm=m\stirlb{n-1}m+\stirlb{n-1}{m-1},
+\]
+
+\end_inset
+
+but this is precisely Equation 46.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc67[M20]
+\end_layout
+
+\end_inset
+
+We often need to know that binomial coefficients aren't too large.
+ Prove the easy-to-remember upper bound
+\begin_inset Formula 
+\begin{align*}
+\binom{n}{k} & \leq\left(\frac{n\text{e}}{k}\right)^{k}, & \text{when }n\geq k & \geq0.
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+From Exercise 1.2.5–21,
+ if 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $k!\geq\frac{k^{k}}{\text{e}^{k-1}}$
+\end_inset
+
+,
+ so
+\begin_inset Formula 
+\[
+\binom{n}{k}=\frac{n(n-1)\cdots(n-k+1)}{k!}\leq\frac{n(n-1)\cdots(n-k+1)}{\frac{k^{k}}{\text{e}^{k-1}}}\leq\frac{n^{k}\text{e}^{k-1}}{k^{k}}\leq\left(\frac{n\text{e}}{k}\right)^{k}.
+\]
+
+\end_inset
+
+For 
+\begin_inset Formula $k=0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\lim_{k\to0}\left(\frac{n\text{e}}{k}\right)^{k}=\lim_{k\to\infty}\sqrt[k]{n\text{e}k}=1=\binom{n}{0}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

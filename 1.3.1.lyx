@@ -1,0 +1,2356 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\listings_params "basicstyle={\ttfamily}"
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[00]
+\end_layout
+
+\end_inset
+
+If 
+\family typewriter
+MIX
+\family default
+ were a ternary (base 3) computer,
+ how many 
+\begin_inset Quotes eld
+\end_inset
+
+trits
+\begin_inset Quotes erd
+\end_inset
+
+ would there be per byte?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The only power of 3 between 64 and 100 is 
+\begin_inset Formula $3^{4}=81$
+\end_inset
+
+,
+ so there would be 4 trits.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc2[02]
+\end_layout
+
+\end_inset
+
+If a value to be represented within 
+\family typewriter
+MIX
+\family default
+ may get as large as 99999999,
+ how many adjacent bytes should be used to contain this quantity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Since 
+\begin_inset Formula $\lg99999999\in(26,27)$
+\end_inset
+
+,
+ we'd need 27 bits,
+ so 5 bytes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc3[02]
+\end_layout
+
+\end_inset
+
+Give the partial field specifications,
+ 
+\begin_inset Formula $(L:R)$
+\end_inset
+
+,
+ for the (a) address field,
+ (b) index field,
+ (c) field field,
+ and (d) operation code field for a 
+\family typewriter
+MIX
+\family default
+ instruction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(0:2)$
+\end_inset
+
+,
+ 
+\begin_inset Formula $(3:3)$
+\end_inset
+
+,
+ 
+\begin_inset Formula $(4:4)$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $(5:5)$
+\end_inset
+
+,
+ respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc4[00]
+\end_layout
+
+\end_inset
+
+The last example in (5) is `
+\family typewriter
+LDA -2000,4
+\family default
+'.
+ How can this be legitimate,
+ in view of the fact that memory addresses should not be negative?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Because we're assuming that 
+\family typewriter
+r4
+\family default
+ is at least 2000.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc5[10]
+\end_layout
+
+\end_inset
+
+What symbolic notation,
+ analogous to (4),
+ corresponds to (6) if (6) is regarded as a 
+\family typewriter
+MIX
+\family default
+ instruction?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+DIV -80,3
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc6[10]
+\end_layout
+
+\end_inset
+
+Assume that location 3000 contains
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mixbox{
+\backslash
+byte+
+\backslash
+byte5
+\backslash
+byte1
+\backslash
+twobytes{200}
+\backslash
+byte{15}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What is the result of the following instructions?
+ (State if any of them are undefined or only partially defined.)
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+LDAN 3000
+\family default
+;
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+LD2N 3000(3:4)
+\family default
+;
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+LDX 3000(1:3)
+\family default
+;
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+LD6 3000
+\family default
+;
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+LDXN 3000(0:0)
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set A to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mixbox{
+\backslash
+byte-
+\backslash
+byte5
+\backslash
+byte1
+\backslash
+twobytes{200}
+\backslash
+byte{15}}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Set I2 to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mixsmbox{
+\backslash
+byte-
+\backslash
+twobytes{200}}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Set X to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mixbox{
+\backslash
+byte+
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte5
+\backslash
+byte1
+\backslash
+byte?}
+\end_layout
+
+\end_inset
+
+ (the last byte is undefined).
+\end_layout
+
+\begin_layout Enumerate
+Undefined.
+\end_layout
+
+\begin_layout Enumerate
+Set X to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mixbox{
+\backslash
+byte-
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte0}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc9[15]
+\end_layout
+
+\end_inset
+
+List all the 
+\family typewriter
+MIX
+\family default
+ operators that can possibly affect the setting of the overflow toggle.
+ (Don not include floating point operators.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+ADD
+\family default
+,
+ 
+\family typewriter
+SUB
+\family default
+,
+ 
+\family typewriter
+DIV
+\family default
+,
+ 
+\family typewriter
+INCA
+\family default
+,
+ 
+\family typewriter
+INCX
+\family default
+,
+ 
+\family typewriter
+DECA
+\family default
+,
+ 
+\family typewriter
+DECX
+\family default
+,
+ 
+\family typewriter
+NUM
+\family default
+,
+ 
+\family typewriter
+JOV
+\family default
+,
+ 
+\family typewriter
+JNOV
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[15]
+\end_layout
+
+\end_inset
+
+List all the 
+\family typewriter
+MIX
+\family default
+ operators that can possibly affect the setting of rI1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+MOVE
+\family default
+,
+ 
+\family typewriter
+LD1
+\family default
+,
+ 
+\family typewriter
+LD1N
+\family default
+,
+ 
+\family typewriter
+INC1
+\family default
+,
+ 
+\family typewriter
+DEC1
+\family default
+,
+ 
+\family typewriter
+ENT1
+\family default
+,
+ 
+\family typewriter
+ENN1
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc12[10]
+\end_layout
+
+\end_inset
+
+Find a single instruction that has the effect of multiplying the current contents of rI3 by two and leaving the result in rI3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+INC3 0,3
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc13[10]
+\end_layout
+
+\end_inset
+
+Suppose location 1000 contains the instruction `
+\family typewriter
+JOV 1001
+\family default
+'.
+ This instruction turns off the overflow toggle if it is on (and the next instruction executed will be in location 1001,
+ in any case).
+ If this instruction were changed to `
+\family typewriter
+JNOV 1001
+\family default
+',
+ would there be any difference?
+ What if it were changed to `
+\family typewriter
+JOV 1000
+\family default
+' or `
+\family typewriter
+JNOV 1000
+\family default
+'?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+There wouldn't be any difference after changing it to `
+\family typewriter
+JNOV 1001
+\family default
+' aside from the contents of register J.
+ If it's changed to `
+\family typewriter
+JOV 1000
+\family default
+',
+ the only difference would be the timing,
+ but if it's changed to `
+\family typewriter
+JNOV 1000
+\family default
+',
+ an infinite loop would occur if the overflow toggle wasn't previously on.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc15[10]
+\end_layout
+
+\end_inset
+
+How many 
+\emph on
+alphameric characters
+\emph default
+ are there in a typewriter or paper-tape block?
+ in a card-reader or card-punch block?
+ in a 
+\nospellcheck on
+line-printer
+\nospellcheck default
+ block?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+70 characters in a typewriter or paper-tape block,
+ 80 in a card-reader or card-punch block,
+ and 120 in a line-printer block.
+ This is because each word can hold up to 5 characters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc18[22]
+\end_layout
+
+\end_inset
+
+After the following 
+\begin_inset Quotes eld
+\end_inset
+
+number one
+\begin_inset Quotes erd
+\end_inset
+
+ program has been executed,
+ what changes to registers,
+ toggles,
+ and memory have taken place?
+ (For example,
+ what is the setting of rI1?
+ of rX?
+ of the overflow an comparison indicators?
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+STZ  1
+\end_layout
+
+\begin_layout Plain Layout
+
+ENNX 1
+\end_layout
+
+\begin_layout Plain Layout
+
+STX  1(0:1)
+\end_layout
+
+\begin_layout Plain Layout
+
+SLAX 1
+\end_layout
+
+\begin_layout Plain Layout
+
+ENNA 1
+\end_layout
+
+\begin_layout Plain Layout
+
+INCX 1
+\end_layout
+
+\begin_layout Plain Layout
+
+ENT1 1
+\end_layout
+
+\begin_layout Plain Layout
+
+SRC  1
+\end_layout
+
+\begin_layout Plain Layout
+
+ADD  1
+\end_layout
+
+\begin_layout Plain Layout
+
+DEC1 -1
+\end_layout
+
+\begin_layout Plain Layout
+
+STZ  1
+\end_layout
+
+\begin_layout Plain Layout
+
+CMPA 1
+\end_layout
+
+\begin_layout Plain Layout
+
+MOVE -1,1(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+NUM  1
+\end_layout
+
+\begin_layout Plain Layout
+
+CHAR 1
+\end_layout
+
+\begin_layout Plain Layout
+
+HLT  1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Assuming the program doesn't start at 0000,
+ the result is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+soffsets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Position
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Content
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+Address 1
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+Address 2
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+rX
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte-
+\backslash
+byte{31}
+\backslash
+byte{30}
+\backslash
+byte{30}
+\backslash
+byte{30}
+\backslash
+byte{30}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+rA
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte-
+\backslash
+byte{30}
+\backslash
+byte{30}
+\backslash
+byte{30}
+\backslash
+byte{30}
+\backslash
+byte{30}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Position
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Content
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+rI1
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+byte0
+\backslash
+byte2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+Overflow
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+ON
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+Comparison
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+EQUAL
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eoffsets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc19[14]
+\end_layout
+
+\end_inset
+
+What is the execution time of the program in the preceding exercise,
+ not counting the 
+\family typewriter
+HLT
+\family default
+ instruction?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+42 units of time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc21[24]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Can the J-register ever be zero?
+\end_layout
+
+\begin_layout Enumerate
+Write a program that,
+ given a number 
+\begin_inset Formula $N$
+\end_inset
+
+ in rI4,
+ sets register J equal to 
+\begin_inset Formula $N$
+\end_inset
+
+,
+ assuming that 
+\begin_inset Formula $0<N\leq3000$
+\end_inset
+
+.
+ Your program should start in location 3000.
+ When your program has finished its execution,
+ the contents of all memory cells must be unchanged.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Maybe at startup,
+ but then only before the first jump is executed.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+LDX  -1,4
+\end_layout
+
+\begin_layout Plain Layout
+
+ENTA 3006
+\end_layout
+
+\begin_layout Plain Layout
+
+SLA  3
+\end_layout
+
+\begin_layout Plain Layout
+
+INCA 39 ;
+ [|+||3006|0|0|39| -> JMP 3006]
+\end_layout
+
+\begin_layout Plain Layout
+
+STA  -1,4
+\end_layout
+
+\begin_layout Plain Layout
+
+JMP  -1,4
+\end_layout
+
+\begin_layout Plain Layout
+
+STX  -1,4 ;
+ position 3006
+\end_layout
+
+\begin_layout Plain Layout
+
+HLT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc22[28]
+\end_layout
+
+\end_inset
+
+Location 2000 contains an integer number,
+ 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Write two programs that compute 
+\begin_inset Formula $X^{13}$
+\end_inset
+
+ and halt with the result in register 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ One program should use the minimum number of 
+\family typewriter
+MIX
+\family default
+ memory locations;
+ the other should require the minimum execution time possible.
+ Assume that 
+\begin_inset Formula $X^{13}$
+\end_inset
+
+ fits into a single word.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Minimum time,
+ since the conditions imply 
+\begin_inset Formula $|X|\leq5$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+LD1 2000
+\end_layout
+
+\begin_layout Plain Layout
+
+LDA 3500,1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then at positions 3495 to 3505 we'd have a table of precomputed results.
+ This uses a total of 2 words for the instructions and 11 words for the table.
+\end_layout
+
+\begin_layout Standard
+Minimum number of memory locations,
+ assuming the program starts at position 0:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+LDA  2000
+\end_layout
+
+\begin_layout Plain Layout
+
+ENT1   12
+\end_layout
+
+\begin_layout Plain Layout
+
+MUL  2000
+\end_layout
+
+\begin_layout Plain Layout
+
+SLAX    5
+\end_layout
+
+\begin_layout Plain Layout
+
+DEC1    1
+\end_layout
+
+\begin_layout Plain Layout
+
+J1NZ    2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This uses a total of 6 words for the instructions but no additional memory.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc25[30]
+\end_layout
+
+\end_inset
+
+Suppose that the manufacturer of 
+\family typewriter
+MIX
+\family default
+ wishes to come out with a more powerful computer (
+\begin_inset Quotes eld
+\end_inset
+
+Mixmaster
+\begin_inset Quotes erd
+\end_inset
+
+?),
+ and he wants to convince as many people as possible of those people now owning a 
+\family typewriter
+MIX
+\family default
+ computer to invest in the more expensive machine.
+ He wants to design this new hardware to be an 
+\emph on
+extension
+\emph default
+ of 
+\family typewriter
+MIX
+\family default
+,
+ in the sense that all programs correctly written for 
+\family typewriter
+MIX
+\family default
+ will work on the new machines without change.
+ Suggest desirable things that could be incorporated in this extension.
+ (For example,
+ can you make better use of the I-field of an instruction?)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Some of the ways that 
+\family typewriter
+MIX
+\family default
+ could be extended would be:
+\end_layout
+
+\begin_layout Enumerate
+Make the machine work faster through pipelining and other techniques.
+\end_layout
+
+\begin_layout Enumerate
+Allocate additional memory.
+ A way to do this would be to expand the size of the index registers to be one full word,
+ allowing for 
+\begin_inset Formula $\unit[1]{Gword}$
+\end_inset
+
+ (equivalent to 
+\begin_inset Formula $\unit[4]{GB}$
+\end_inset
+
+ by modern standards).
+ Then we'd have 8 full-word registers,
+ a bare minimum for modern processors.
+\end_layout
+
+\begin_layout Enumerate
+For normal instructions,
+ instead of having the I-field specify a range,
+ it could be used to specify which of the six fields are being used,
+ since we are warrantied at least six bits,
+ allocating the corresponding floating point instructions in the F-field value that doesn't select any of the fields (the null value).
+ For compatibility,
+ we can't use the trivial binary representation for this,
+ so we have to use a non-trivial mapping.
+\end_layout
+
+\begin_layout Enumerate
+Many more floating-point instructions could be allocated in the null value of the I-field,
+ such as square root,
+ sine,
+ cosine,
+ etc.
+ These could be allocated on instruction code 5 (special).
+\end_layout
+
+\begin_layout Enumerate
+8-bit compatibility would be desirable,
+ but on a binary 
+\family typewriter
+MIX
+\family default
+,
+ we only have 31 bits per word.
+ One way to achieve compatibility is to add an extra bit per word that's not used by legacy 
+\family typewriter
+MIX
+\family default
+ programs and extend the F-field in the following way:
+ if the value in the field is at least 48,
+ we take the 4 least significant bits and divide that into two groups:
+ one for the lower part of the range,which would be specified in bytes,
+ and one for the upper part.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This would allow operating on bytes,
+ and it would be incompatible with the previous proposal to extend the F-field.
+ For other values of the I-field,
+ the extra bit would be ignored.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+In the case the 8-bit compatibility is implemented,
+ it'd be nice to have a way to address individual bytes and half-words without case distinctions or code modifications.
+ This could be done with a special value 6 (half-word) and 7 (byte) for the F-field in load and store instructions,
+ which would use the full 32-bits of the specified index register.
+\end_layout
+
+\begin_layout Enumerate
+Values 7 and 8 for the I-field could be used to mean registers A and X.
+\end_layout
+
+\begin_layout Enumerate
+Values 16 to 24 for the I-field could be used for register to register arithmetic.
+ Then the I-field minus 16 would be the destination operand and the source operand would be the one specified by the first part of the address with the fields given by the second part,
+ with the same format than an F-field.
+\end_layout
+
+\begin_layout Enumerate
+Memory protection and memory management could be implemented by changing the F-field of the 
+\family typewriter
+NOP
+\family default
+ operation,
+ with the instructions shown in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:e13125"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="10text%">
+<column alignment="center" valignment="top" width="5text%">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+PSET
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Set the beginning of the privileged section to 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ By default,
+ it's 0.
+ When an exception occurs,
+ A is saved to the first word in the privileged section,
+ the next word contains the reason of the exception,
+ the next contains a pointer to the instruction that was being run and the next contains the start of the exception-processing code,
+ to be run in privileged mode.
+ Exceptions are disabled by default.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+PGET
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Copy the address of the privileged section start to rI1.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+PUSR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Change to user (non-privileged) mode;
+ jump to 
+\begin_inset Formula $M$
+\end_inset
+
+ and set J to 0.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+VCAL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Change to kernel (privileged) code;
+ like an exception,
+ with the reason being 0 in 0:0.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+VSET
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enable virtual memory,
+ switch to the page table 
+\begin_inset Formula $M$
+\end_inset
+
+ and flush the TLB.
+ Virtual memory addresses are 12-12-10 and each word in a table contains the address (1:4),
+ an enable/disable flag (0:0),
+ and read-write permissions (least significant 2 bits on 4:4),
+ plus anything the OS wants to put in 5:5.
+ When a page fault occurs,
+ an exception happens with reason 1 in 0:0.
+ Changes in an active page mapping have unspecified behavior when trying to access a page that depends on that before flushing the TLB.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+VFLS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Flush the TLB.
+ The I-field must be 0.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+VDIS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Disable virtual memory and jump to 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+EINT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enable/disable interrupts for the device in the I-field,
+ depending on whether the sign is positive or negative.
+ Interrupts are exceptions with reason 3 in 0:0 and the device ID in 1:1.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+AEX
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enable/disable all exceptions,
+ depending on whether the sign is positive or negative.
+ The result of triggering an exception that's not an interrupt is unspecified.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+WAIT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wait until some device is ready.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:e13125"
+
+\end_inset
+
+System instructions for MIXMaster.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All of those instructions except 
+\family typewriter
+VCAL
+\family default
+ are illegal in user mode,
+ along with 
+\family typewriter
+HLT
+\family default
+,
+ 
+\family typewriter
+JBUS
+\family default
+,
+ 
+\family typewriter
+IOC
+\family default
+,
+ 
+\family typewriter
+IN
+\family default
+,
+ 
+\family typewriter
+OUT
+\family default
+,
+ and 
+\family typewriter
+JRED
+\family default
+.
+ Instructions that had unspecified behavior now cause an exception with type 4 in 0:0,
+ provided that exceptions are enabled.
+ Nonetheless,
+ the operating system is expected to treat those exceptions and act accordingly,
+ usually by checking for authorization and simulating the effects of the instructions as if they were system calls.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Bitwise operations and shifts could be added.
+\end_layout
+
+\begin_layout Enumerate
+An 
+\family typewriter
+IOC
+\family default
+ number could be used to return the number of bytes per chunk for a device,
+ and another number could be self-describing,
+ to tell the type of the device.
+ This would allow for more device types to be added,
+ such as USB,
+ Ethernet,
+ PCI,
+ video,
+ timer,
+ etc.,
+ given a standard for differentiating those.
+\end_layout
+
+\end_body
+\end_document

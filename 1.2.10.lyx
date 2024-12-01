@@ -1,0 +1,1006 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[10]
+\end_layout
+
+\end_inset
+
+Determine the value of 
+\begin_inset Formula $p_{n0}$
+\end_inset
+
+ from Eqs.
+ (4) and (5) and interpret this result from the standpoint of Algorithm M.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+For 
+\begin_inset Formula $n=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $p_{10}=1$
+\end_inset
+
+,
+ and for 
+\begin_inset Formula $n>1$
+\end_inset
+
+,
+ 
+\begin_inset Formula 
+\[
+p_{n0}=\frac{1}{n}p_{(n-1)(-1)}+\frac{n-1}{n}p_{(n-1)0}=\frac{n-1}{n}p_{(n-1)0}=\dots=\frac{n-1}{n}\frac{n-2}{n-1}\cdots\frac{1}{2}p_{10}=\frac{1}{n},
+\]
+
+\end_inset
+
+so in general the probability that step M4 is never run (which happens when 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ is already the maximum value) is 
+\begin_inset Formula $p_{n0}=\frac{1}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc4[M10]
+\end_layout
+
+\end_inset
+
+Give an explicit,
+ closed formula for the values of 
+\begin_inset Formula $p_{nk}$
+\end_inset
+
+ in the coin-tossing experiment,
+ Eq.
+ (17).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $p_{nk}=\binom{n}{k}p^{k}q^{n-k}$
+\end_inset
+
+.
+ To show that this derives from Eq.
+ (17),
+ we see that,
+ when 
+\begin_inset Formula $n=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $p_{0k}=\delta_{k0}$
+\end_inset
+
+,
+ matching the formula,
+ and then,
+ by induction,
+\begin_inset Formula 
+\[
+p_{nk}=pp_{n-1,k-1}+qp_{n-1,k}=\binom{n-1}{k-1}p^{k}q^{n-k}+\binom{n-1}{k}p^{k}q^{n-k}=\binom{n}{k}p^{k}q^{n-k}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc8[M20]
+\end_layout
+
+\end_inset
+
+Suppose that each 
+\begin_inset Formula $X[k]$
+\end_inset
+
+ is taken at random from a set of 
+\begin_inset Formula $M$
+\end_inset
+
+ distinct elements,
+ so that each of the 
+\begin_inset Formula $M^{n}$
+\end_inset
+
+ possible choices for 
+\begin_inset Formula $X[1],X[2],\dots,X[n]$
+\end_inset
+
+ is considered equally likely.
+ What is the probability that all the 
+\begin_inset Formula $X[k]$
+\end_inset
+
+ will be distinct?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We need calculate the number of choices out of those 
+\begin_inset Formula $M^{n}$
+\end_inset
+
+ that do not repeat numbers.
+ These choices can be considered as taking a subset of 
+\begin_inset Formula $n$
+\end_inset
+
+ elements from those 
+\begin_inset Formula $M$
+\end_inset
+
+ (if 
+\begin_inset Formula $n>M$
+\end_inset
+
+ then we must necessarily repeat) and then ordering them somehow,
+ so the total number of choices is 
+\begin_inset Formula $\binom{M}{n}n!$
+\end_inset
+
+,
+ and the probability is
+\begin_inset Formula 
+\[
+\frac{\binom{M}{n}n!}{M^{n}}=\frac{M(M-1)\cdots(M-n+1)}{M^{n}}=\frac{M^{\underline{n}}}{M^{n}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[M15]
+\end_layout
+
+\end_inset
+
+What happens to the semi-invariants of a distribution if we change 
+\begin_inset Formula $G(z)$
+\end_inset
+
+ to 
+\begin_inset Formula $F(z)=z^{n}G(z)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $H(z)\coloneqq z^{n}$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $h(t)\coloneqq\ln H(\text{e}^{t})=\ln\text{e}^{nt}=nt$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $\dot{h}(t)=n$
+\end_inset
+
+ and 
+\begin_inset Formula $\ddot{h}(t)=\dddot{h}(t)=\dots=0$
+\end_inset
+
+.
+ Therefore
+\begin_inset Formula 
+\begin{align*}
+\kappa_{1} & =\dot{h}(0)=n; & \kappa_{n} & =h^{(n)}(0)=0, & n & >1.
+\end{align*}
+
+\end_inset
+
+Thus,
+ by Theorem A,
+ the mean increases by 
+\begin_inset Formula $n$
+\end_inset
+
+ and all the other semi-invariants stay the same.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc20[M22]
+\end_layout
+
+\end_inset
+
+Suppose we want to calculate 
+\begin_inset Formula $\max\{|a_{1}-b_{1}|,|a_{2}-b_{2}|,\dots,|a_{n}-b_{n}|\}$
+\end_inset
+
+ when 
+\begin_inset Formula $b_{1}\leq b_{2}\leq\dots\leq b_{n}$
+\end_inset
+
+.
+ Show that it is sufficient to calculate 
+\begin_inset Formula $\max\{m_{\text{L}},m_{\text{R}}\}$
+\end_inset
+
+,
+ where
+\begin_inset Formula 
+\begin{align*}
+m_{\text{L}} & =\max\{a_{k}-b_{k}\mid a_{k}\text{ is a left-to-right maximum of }a_{1}a_{2}\cdots a_{n}\},\\
+m_{\text{R}} & =\max\{b_{k}-a_{k}\mid a_{k}\text{ is a right-to-left minimum of }a_{1}a_{2}\cdots a_{n}\}.
+\end{align*}
+
+\end_inset
+
+(Thus,
+ if the 
+\begin_inset Formula $a$
+\end_inset
+
+'s are in random order,
+ the number of 
+\begin_inset Formula $k$
+\end_inset
+
+'s for which a subtraction must be performed is only about 
+\begin_inset Formula $2\ln n$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We interpret the concepts of 
+\begin_inset Quotes eld
+\end_inset
+
+directional
+\begin_inset Quotes erd
+\end_inset
+
+ maximum and minimum as meaning that 
+\begin_inset Formula $a_{k}\geq a_{k-1},\dots,a_{1}$
+\end_inset
+
+ or that 
+\begin_inset Formula $a_{k}\leq a_{k+1},\dots,a_{n}$
+\end_inset
+
+,
+ respectively.
+ Then,
+ if 
+\begin_inset Formula $a_{j}$
+\end_inset
+
+ is not a left-to-right maximum,
+ there is a 
+\begin_inset Formula $k<j$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{k}>a_{j}$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $a_{k}-b_{k}>a_{j}-b_{j}$
+\end_inset
+
+ (as 
+\begin_inset Formula $b_{k}\leq b_{j}$
+\end_inset
+
+),
+ so 
+\begin_inset Formula $a_{j}-b_{j}$
+\end_inset
+
+ is not a maximum of 
+\begin_inset Formula $\{a_{k}-b_{k}\}$
+\end_inset
+
+.
+ Similarly,
+ if 
+\begin_inset Formula $a_{j}$
+\end_inset
+
+ is not a right-to-left minimum,
+ there is a 
+\begin_inset Formula $k>j$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{k}<a_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{k}-a_{k}>b_{j}-a_{j}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $m_{\text{L}}=\max\{a_{k}-b_{k}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{\text{R}}=\max\{b_{k}-a_{k}\}$
+\end_inset
+
+.
+ Since at least one of them is non-negative,
+ 
+\begin_inset Formula $\max\{m_{\text{L}},m_{\text{R}}\}$
+\end_inset
+
+ is also non-negative and it is therefore 
+\begin_inset Formula $|a_{k}-b_{k}|$
+\end_inset
+
+ for some 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ and it is no lower than any 
+\begin_inset Formula $|a_{j}-b_{j}|$
+\end_inset
+
+ as those are either 
+\begin_inset Formula $a_{j}-b_{j}$
+\end_inset
+
+ or 
+\begin_inset Formula $b_{j}-a_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc21[HM21]
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be the number of heads that occur when a random coin is flipped 
+\begin_inset Formula $n$
+\end_inset
+
+ times,
+ with generating function (18).
+ Use (25) to prove that
+\begin_inset Formula 
+\[
+\text{Pr}(X\geq n(p+\epsilon))\leq\text{e}^{-\epsilon^{2}n/(2q)}
+\]
+
+\end_inset
+
+when 
+\begin_inset Formula $\epsilon\geq0$
+\end_inset
+
+,
+ and obtain a similar estimate for 
+\begin_inset Formula $\text{Pr}(X\leq n(p-\epsilon))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+First,
+ we tackle the edge cases.
+ If 
+\begin_inset Formula $n=0$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $X=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{Pr}(X\geq0)\leq1$
+\end_inset
+
+ trivially,
+ so we may consider 
+\begin_inset Formula $n>0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $p=0$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $\text{Pr}(X=0)=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{Pr}(X\geq n\epsilon)\leq\text{e}^{-\epsilon^{2}n/2}$
+\end_inset
+
+ trivially,
+ so we may consider 
+\begin_inset Formula $p>0$
+\end_inset
+
+.
+ Finally,
+ if 
+\begin_inset Formula $\epsilon>q$
+\end_inset
+
+ then 
+\begin_inset Formula $\text{Pr}(X\geq n(p+\epsilon))=0\leq\text{e}^{-\epsilon^{2}n/(2q)}$
+\end_inset
+
+ and if 
+\begin_inset Formula $\epsilon=q$
+\end_inset
+
+ then 
+\begin_inset Formula $\text{Pr}(X\geq n)=p^{n}\leq(\text{e}^{-q})^{n}\leq\text{e}^{-qn/2}$
+\end_inset
+
+,
+ using the fact that 
+\begin_inset Formula $t\leq\text{e}^{t-1}$
+\end_inset
+
+ for every 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+,
+ so we may consider 
+\begin_inset Formula $\epsilon<q$
+\end_inset
+
+ and in particular 
+\begin_inset Formula $q>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now let 
+\begin_inset Formula $r=n(p+\epsilon)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\text{Pr}(X\geq n(p+\epsilon))\leq x^{-n(p+\epsilon)}(q+px)^{n}$
+\end_inset
+
+,
+ and we just need to find 
+\begin_inset Formula $x\geq1$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\ln(q+px)-(p+\epsilon)\ln x\leq-\frac{\epsilon^{2}}{2q}.
+\]
+
+\end_inset
+
+ 
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+(I had to look at the solution,
+ esp.
+ for the right value of 
+\begin_inset Formula $x$
+\end_inset
+
+.)
+\end_layout
+
+\end_inset
+
+ If 
+\begin_inset Formula $x\coloneqq\frac{p+\epsilon}{p}\frac{q}{q-\epsilon}$
+\end_inset
+
+,
+ we have
+\begin_inset Formula 
+\begin{multline*}
+\ln(q+px)-(p+\epsilon)\ln x=\ln\left(q+(p+\epsilon)\frac{q}{q-\epsilon}\right)-(p+\epsilon)\ln\left(\frac{p+\epsilon}{p}\frac{q}{q-\epsilon}\right)=\\
+=\ln q-\ln(q-\epsilon)-(p+\epsilon)(\ln q-\ln(q-\epsilon)+\ln(p+\epsilon)-\ln p)=\\
+=(q-\epsilon)\ln\frac{q}{q-\epsilon}-(p+\epsilon)\ln\frac{p+\epsilon}{p},
+\end{multline*}
+
+\end_inset
+
+where we are assuming that 
+\begin_inset Formula $\epsilon<q$
+\end_inset
+
+.
+ Now,
+ by Eq.
+ 1.2.9(24),
+ let 
+\begin_inset Formula $v\coloneqq\frac{\epsilon}{q}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{multline*}
+(q-\epsilon)\ln\frac{q}{q-\epsilon}=q(1-v)\ln\frac{1}{1-v}=q(v-1)\ln(1-v)=\\
+=q(v-1)\sum_{k\geq1}\frac{(-1)^{k+1}}{k}(-v)^{k}=q(1-v)\sum_{k\geq1}\frac{v^{k}}{k}=q\left(\sum_{k\geq1}\frac{v^{k}}{k}-\sum_{k\geq2}\frac{v^{k}}{k-1}\right)=\\
+=q\left(v-\sum_{k\geq2}\frac{v^{k}}{k(k-1)}\right)=\epsilon-\frac{\epsilon^{2}}{2q}-\frac{\epsilon^{3}}{6q^{2}}-\frac{\epsilon^{4}}{12q^{3}}-\dots\leq\epsilon-\frac{\epsilon^{2}}{2q}.
+\end{multline*}
+
+\end_inset
+
+In addition,
+\begin_inset Formula 
+\[
+-(p+\epsilon)\ln\frac{p+\epsilon}{p}=(p+\epsilon)\ln\frac{p}{p+\epsilon}=(p+\epsilon)\ln\left(1-\frac{\epsilon}{p+\epsilon}\right)\leq-\epsilon,
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $-(p+\epsilon)\ln\frac{p+\epsilon}{p}\leq\epsilon$
+\end_inset
+
+ and,
+ putting it all together,
+\begin_inset Formula 
+\[
+\ln(q+px)-(p+\epsilon)\ln x\leq\cancel{\epsilon}-\frac{\epsilon^{2}}{2q}\cancel{-\epsilon}.
+\]
+
+\end_inset
+
+For the second part,
+ switching the roles of heads and tails,
+ let 
+\begin_inset Formula $Y\coloneqq n-X$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\text{Pr}(X\leq n(p-\epsilon))=\text{Pr}(Y\geq n(q+\epsilon))\leq\text{e}^{-\epsilon^{2}n/(2p)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc22[HM22]
+\end_layout
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $X$
+\end_inset
+
+ has the generating function 
+\begin_inset Formula $(q_{1}+p_{1}z)(q_{2}+p_{2}z)\cdots(q_{n}+p_{n}z)$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $p_{k}+q_{k}=1$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq k\leq n$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mu=EX=p_{1}+p_{2}+\dots+p_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Prove that
+\begin_inset Formula 
+\begin{align*}
+\text{Pr}(X\leq\mu r) & \leq(r^{-r}\text{e}^{r-1})^{\mu}, & \text{when }0 & <r\leq1;\\
+\text{Pr}(X\geq\mu r) & \leq(r^{-r}\text{e}^{r-1})^{\mu}, & \text{when }r & \geq1.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Express the right-hand sides of these estimates in convenient form when 
+\begin_inset Formula $r\approx1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that if 
+\begin_inset Formula $r$
+\end_inset
+
+ is sufficiently large we have 
+\begin_inset Formula $\text{Pr}(X\geq\mu r)\leq2^{-\mu r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For the first equation,
+ using Eq.
+ (24) with 
+\begin_inset Formula $x=r$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{multline*}
+\text{Pr}(X\leq\mu r)\leq r^{-\mu r}(q_{1}+p_{1}r)\cdots(q_{n}+p_{n}r)=r^{-\mu r}\prod_{k}(q_{k}+p_{k}r)=\\
+=r^{-\mu r}\prod_{k}(1+p_{k}(r-1))\leq r^{-\mu r}\prod_{k}\text{e}^{p_{k}(r-1)}=r^{-\mu r}\text{e}^{\mu(r-1)}=(r^{-r}\text{e}^{r-1})^{\mu}.
+\end{multline*}
+
+\end_inset
+
+For the second equation,
+ repeat the same steps but using Eq.
+ (25).
+\end_layout
+
+\begin_layout Enumerate
+When 
+\begin_inset Formula $r\approx1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $r\approx\text{e}^{r-1}$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $(r^{-r}\text{e}^{r-1})^{\mu}\approx r^{\mu(1-r)}$
+\end_inset
+
+.
+ The inequality still holds for 
+\begin_inset Formula $r<2$
+\end_inset
+
+ since,
+ in the previous proof,
+ we can see that 
+\begin_inset Formula $1+p_{k}(r-1)\leq r^{p_{k}}$
+\end_inset
+
+ by taking the Taylor series of the logarithms:
+\begin_inset Formula 
+\begin{multline*}
+\ln(1+p_{k}(r-1))=p_{k}(r-1)-\frac{p_{k}^{2}(r-1)^{2}}{2}+\frac{p_{k}^{3}(r-1)^{3}}{3}-\frac{p_{k}^{4}(r-1)^{4}}{4}+\dots\leq\\
+\leq p_{k}(r-1)-\frac{p_{k}(r-1)^{2}}{2}+\frac{p_{k}(r-1)^{3}}{3}-\frac{p_{k}(r-1)^{4}}{4}+\dots=p_{k}\ln r.
+\end{multline*}
+
+\end_inset
+
+Using this inequality instead of the one we used gives the proper result.
+\end_layout
+
+\begin_layout Enumerate
+Clearly 
+\begin_inset Formula $1+p_{k}(r-1)\leq r$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $r^{-\mu r}\prod_{k}(1+p_{k}(r-1))\leq r^{-\mu r}r^{n}$
+\end_inset
+
+,
+ and we want to see that this in turn is less than 
+\begin_inset Formula $2^{-\mu r}$
+\end_inset
+
+ for large enough 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Now,
+\begin_inset Formula 
+\[
+\frac{r^{n}r^{-\mu r}}{2^{-\mu r}}=r^{n}\left(\frac{2}{r}\right)^{\mu r},
+\]
+
+\end_inset
+
+and since 
+\begin_inset Formula $\left(\frac{2}{r}\right)^{\mu r}$
+\end_inset
+
+ decreases faster than 
+\begin_inset Formula $r^{n}$
+\end_inset
+
+ increases,
+ there exist 
+\begin_inset Formula $r_{0}$
+\end_inset
+
+ such that,
+ for 
+\begin_inset Formula $r>r_{0}$
+\end_inset
+
+,
+ this fraction is less than 1.
+\end_layout
+
+\end_body
+\end_document

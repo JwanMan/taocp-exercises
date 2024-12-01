@@ -1,0 +1,403 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[10]
+\end_layout
+
+\end_inset
+
+State the characteristics of subroutine (5),
+ just as (4) gives the characteristics of Subroutine 1.3.2M.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left.\begin{array}{ll}
+\text{Calling sequences:} & \text{\texttt{JMP MAX100} if \ensuremath{n=100}, or \texttt{JMP MAXN}}.\\
+\text{Entry conditions:} & \text{For \texttt{MAXN}, }\text{rI3}=n;\ n\geq1.\\
+\text{Exit conditions:} & \text{rA}=\max_{k=1}^{n}\mathtt{CONTENTS(X}+k\mathtt{)}=\mathtt{CONTENTS(X}+\text{rI2}\mathtt{)};\\
+ & \text{rI3}=0.
+\end{array}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc2[10]
+\end_layout
+
+\end_inset
+
+Suggest code to substitute for (6) without using the 
+\family typewriter
+JSJ
+\family default
+ instruction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+MAX50   ENT3 50
+\end_layout
+
+\begin_layout Plain Layout
+
+        STJ  EXIT
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP  MAXN
+\end_layout
+
+\begin_layout Plain Layout
+
+EXIT    JMP  *
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[21]
+\end_layout
+
+\end_inset
+
+White a subroutine that generalizes 
+\family typewriter
+MAXN
+\family default
+ by finding the maximum value of 
+\begin_inset Formula $\mathtt{X[}a\mathtt{]},\mathtt{X[}a+r\mathtt{]},\mathtt{X[}a+2r\mathtt{]},\dots,\mathtt{X[}n\mathtt{]}$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are parameters and 
+\begin_inset Formula $a$
+\end_inset
+
+ is the smallest positive number with 
+\begin_inset Formula $a\equiv n\pmod r$
+\end_inset
+
+,
+ namely 
+\begin_inset Formula $a=1+(n-1)\bmod r$
+\end_inset
+
+.
+ Give a special entrance for the case 
+\begin_inset Formula $r=1$
+\end_inset
+
+.
+ List the characteristics of your subroutine,
+ as in (4).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+MAXIMUM ENT1 1
+\end_layout
+
+\begin_layout Plain Layout
+
+MAXMOD  STJ  9F
+\end_layout
+
+\begin_layout Plain Layout
+
+        JMP  2F
+\end_layout
+
+\begin_layout Plain Layout
+
+1H      CMPA X,3
+\end_layout
+
+\begin_layout Plain Layout
+
+        JGE  3F
+\end_layout
+
+\begin_layout Plain Layout
+
+2H      ENT2 0,3
+\end_layout
+
+\begin_layout Plain Layout
+
+        LDA  X,3
+\end_layout
+
+\begin_layout Plain Layout
+
+3H      DEC3 0,1
+\end_layout
+
+\begin_layout Plain Layout
+
+        J3P  1B
+\end_layout
+
+\begin_layout Plain Layout
+
+9H      JMP  *
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left.\begin{array}{ll}
+\text{Calling sequences:} & \text{\texttt{JMP MAXIMUM} if \ensuremath{r=1}, or \texttt{JMP MAXMOD}}.\\
+\text{Entry conditions:} & \text{rI3}=n;\text{ for \texttt{MAXMOD}, }\text{rI1}=r;\ n,r\geq1.\\
+\text{Exit conditions:} & \text{rA}=\max_{k=1}^{\lfloor(n-1)/r\rfloor}\mathtt{CONTENTS(X}+n-kr\mathtt{)}=\mathtt{CONTENTS(X}+\text{rI2}\mathtt{)};\\
+ & \text{rI3}\leq0.
+\end{array}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc7[20]
+\end_layout
+
+\end_inset
+
+Why is self-modifying code now frowned upon?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Modern computers have separate instruction and data caches for efficiency,
+ and typically several instructions are being processed at once,
+ so modifying one of these instructions means emptying the instruction cache and pipeline,
+ severely degrading performance.
+ 
+\end_layout
+
+\begin_layout Standard
+These computers also support a security measure that works by preventing pieces of code intended to be executed from being written to,
+ in order to avoid attackers executing code by overriding some buffer due to a bug in the application,
+ and self-modifying code would need to have that protection disabled.
+ 
+\end_layout
+
+\begin_layout Standard
+Third,
+ typically these computers are running several processes or threads which may share code,
+ and if the code is self-modifying we would need to keep several copies of it,
+ which wastes memory.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally,
+ self-modifying code is difficult to reason about unless it is restricted to a few well known patterns,
+ but these patterns can be easily replaced by constructions like stacks which do not suffer from the problems above and allow techniques like recursion.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,2031 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\usepackage{calc}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc1[20]
+\end_layout
+
+\end_inset
+
+If we had only 
+\family typewriter
+LTAG
+\family default
+,
+ 
+\family typewriter
+INFO
+\family default
+ and 
+\family typewriter
+RTAG
+\family default
+ fields (not 
+\family typewriter
+LLINK
+\family default
+) in a level order sequential representation like (8),
+ would it be possible to reconstruct the 
+\family typewriter
+LLINK
+\family default
+s?
+ (In other words,
+ are the 
+\family typewriter
+LLINK
+\family default
+s redundant in (8),
+ as the 
+\family typewriter
+RLINK
+\family default
+s are in (3)?)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Yes,
+ although the traversal might be less efficient.
+ First,
+ we would have to collect the roots of the trees to form the first level.
+ These roots are precisely the first family,
+ that is,
+ the first sequence of nodes up to an including one with 
+\begin_inset Formula $\mathtt{RTAG}=1$
+\end_inset
+
+.
+ We count the number of such nodes that have children,
+ which are the ones with 
+\begin_inset Formula $\mathtt{LTAG}=0$
+\end_inset
+
+.
+ For the second level,
+ we take as many families as nodes with children in the first level.
+ Each of those families corresponds to the children of one of those nodes,
+ in order.
+ For the third level,
+ we take as many families as nodes with children in the second level,
+ and so on.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc3[24]
+\end_layout
+
+\end_inset
+
+Modify Algorithm 2.3.2D so that it follows the ideas of Algorithm F,
+ placing the derivatives it computes as intermediate results on a stack,
+ instead of recording their locations in an anomalous fashion as is done in step D3.
+ (See exercise 2.3.2–21.) The stack may be maintained by using the 
+\family typewriter
+RLINK
+\family default
+ field in the root of each derivative.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+[Initalize.] Set 
+\begin_inset Formula $\mathtt{P}\gets\mathtt{Y}\$$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:e23324b"
+
+\end_inset
+
+[Differentiate.] Set 
+\begin_inset Formula $d\gets\mathtt{DEGREE(P)}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $d=0$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $\mathtt{ARGS}\gets0$
+\end_inset
+
+,
+ otherwise set 
+\begin_inset Formula $t\gets\mathtt{RLINK}^{d-1}\mathtt{(LLINK(DY))}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{DY}\gets\mathtt{RLINK(}t\mathtt{)}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\mathtt{RLINK(}t\mathtt{)}\gets\Lambda$
+\end_inset
+
+.
+ Then perform the routine 
+\begin_inset Formula $\mathtt{DIFF[TYPE(P)]}$
+\end_inset
+
+.
+ (This routine uses 
+\family typewriter
+P
+\family default
+ and 
+\family typewriter
+ARGS
+\family default
+ as its arguments and it is in change of freeing the nodes of 
+\family typewriter
+ARGS
+\family default
+ that will not be part of the result,
+ which it should store in 
+\family typewriter
+Q
+\family default
+.)
+\end_layout
+
+\begin_layout Enumerate
+[Save link.] Set 
+\begin_inset Formula $\mathtt{RLINK(Q)}\gets\mathtt{LLINK(DY)}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{LLINK(DY)}\gets\mathtt{Q}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\mathtt{P}\gets\mathtt{P}\$$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+[Done?] If 
+\begin_inset Formula $\mathtt{P}=\mathtt{Y}$
+\end_inset
+
+,
+ terminate.
+ Otherwise go back to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e23324b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc6[24]
+\end_layout
+
+\end_inset
+
+Suppose that the nodes of an 
+\emph on
+oriented
+\emph default
+ forest have three link fields,
+ 
+\family typewriter
+PARENT
+\family default
+,
+ 
+\family typewriter
+LCHILD
+\family default
+,
+ and 
+\family typewriter
+RLINK
+\family default
+,
+ but only the 
+\family typewriter
+PARENT
+\family default
+ link has been set up to indicate the tree structure.
+ The 
+\family typewriter
+LCHILD
+\family default
+ field of each node is 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ and the 
+\family typewriter
+RLINK
+\family default
+ fields are set as a linear list that simply links the nodes together in some order.
+ The link variable 
+\family typewriter
+FIRST
+\family default
+ points to the first node,
+ and the last node has 
+\begin_inset Formula $\mathtt{RLINK}=\Lambda$
+\end_inset
+
+.
+ Design an algorithm that goes through these nodes and fills in the 
+\family typewriter
+LCHILD
+\family default
+ and 
+\family typewriter
+RLINK
+\family default
+ fields compatible with the 
+\family typewriter
+PARENT
+\family default
+ links,
+ so that a triply linked tree representation like that in Fig.
+ 26 is obtained.
+ Also,
+ reset 
+\family typewriter
+FIRST
+\family default
+ so that it now points to the root of the first tree in the representation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+[Initialize.] Set 
+\begin_inset Formula $\mathtt{C}\gets\mathtt{FIRST}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{FIRST}\gets\Lambda$
+\end_inset
+
+ (we haven't found any root yet).
+\end_layout
+
+\begin_layout Enumerate
+[Done?] If 
+\begin_inset Formula $\mathtt{C}=\Lambda$
+\end_inset
+
+,
+ terminate.
+\end_layout
+
+\begin_layout Enumerate
+[Add child.] Set 
+\begin_inset Formula $p\gets\mathtt{PARENT(C)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{N}\gets\mathtt{RLINK(C)}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $p=\Lambda$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $\mathtt{RLINK(C)}\gets\mathtt{FIRST}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{FIRST}\gets\mathtt{C}$
+\end_inset
+
+,
+ otherwise set 
+\begin_inset Formula $\mathtt{RLINK(C)}\gets\mathtt{FCHILD(}p\mathtt{)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{FCHILD(}p\mathtt{)}\gets\mathtt{C}$
+\end_inset
+
+.
+ (In assembly we might just set 
+\begin_inset Formula $p$
+\end_inset
+
+ to some function of 
+\family typewriter
+LOC(FIRST)
+\family default
+ whenever 
+\begin_inset Formula $p=\Lambda$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Enumerate
+[Advance.] Set 
+\begin_inset Formula $\mathtt{C}\gets\mathtt{N}$
+\end_inset
+
+ and go to the previous step.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[24]
+\end_layout
+
+\end_inset
+
+(
+\emph on
+Equivalence declarations.
+\emph default
+) Several compiler languages,
+ notably FORTRAN,
+ provide a facility for overlapping the memory locations assigned to sequentially stored tables.
+ The programmer gives the compiler a set of relations of the form 
+\begin_inset Formula $\mathtt{X[}j\mathtt{]}\equiv\mathtt{Y[}k\mathtt{]}$
+\end_inset
+
+,
+ which means that variable 
+\begin_inset Formula $\mathtt{X[}j+s\mathtt{]}$
+\end_inset
+
+ is to be assigned to the same location as variable 
+\begin_inset Formula $\mathtt{Y[}k+s\mathtt{]}$
+\end_inset
+
+ for all 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Each variable is also given a range of allowable subscripts:
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\family typewriter
+ARRAY X[
+\begin_inset Formula $l:u$
+\end_inset
+
+]
+\family default
+
+\begin_inset Quotes erd
+\end_inset
+
+ means that space is to be set aside in memory for the table entries 
+\family typewriter
+X[
+\begin_inset Formula $l$
+\end_inset
+
+]
+\family default
+,
+ 
+\family typewriter
+X[
+\begin_inset Formula $l+1$
+\end_inset
+
+]
+\family default
+,
+ ...,
+ 
+\family typewriter
+X[
+\begin_inset Formula $u$
+\end_inset
+
+]
+\family default
+.
+ For each equivalence class of variables,
+ the compiler reserves as small a block of consecutive memory locations as possible,
+ to contain all the table entries for the allowable subscript values of these variables.
+\end_layout
+
+\begin_layout Standard
+For example,
+ suppose we have 
+\family typewriter
+ARRAY X[
+\begin_inset Formula $0:10$
+\end_inset
+
+]
+\family default
+,
+ 
+\family typewriter
+ARRAY Y[
+\begin_inset Formula $3:10$
+\end_inset
+
+]
+\family default
+,
+ 
+\family typewriter
+ARRAY A[
+\begin_inset Formula $1:1$
+\end_inset
+
+]
+\family default
+,
+ and 
+\family typewriter
+ARRAY Z[
+\begin_inset Formula $-2:0$
+\end_inset
+
+]
+\family default
+,
+ plus the equivalences 
+\begin_inset Formula $\mathtt{X[}7\mathtt{]}\equiv\mathtt{Y[}3\mathtt{]}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{Z[}0\mathtt{]}\equiv\mathtt{A[}0\mathtt{]}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\mathtt{Y[}1\mathtt{]}\equiv\mathtt{A[}8\mathtt{]}$
+\end_inset
+
+.
+ We must set aside 20 consecutive locations
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=0.55,circle dotted/.style={
+\end_layout
+
+\begin_layout Plain Layout
+
+  dash pattern=on 0 off .55cm,
+ line cap=round}]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\backslash
+def
+\backslash
+sep{0.15}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+ab#1#2{++(1cm,
+\backslash
+sep) node[above]{$
+\backslash
+mathtt{#2}_{#1}$} ++(0,-
+\backslash
+sep)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+be#1#2{++(1cm,-
+\backslash
+sep) node[below]{$
+\backslash
+mathtt{#2}_{#1}$} ++(0,
+\backslash
+sep)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+abe#1#2#3#4{++(1cm,
+\backslash
+sep) node[above]{$
+\backslash
+mathtt{#2}_{#1}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+               ++(0,-2*
+\backslash
+sep) node[below]{$
+\backslash
+mathtt{#4}_{#3}$} ++(0,
+\backslash
+sep)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width = 3,circle dotted] (0,0) -- (19cm,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (-1,0)
+\backslash
+be{-2}Z
+\backslash
+be{-1}Z
+\backslash
+be0Z
+\backslash
+be1A ++(1cm,0)
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+ab0X
+\backslash
+ab1X
+\backslash
+ab2X
+\backslash
+ab3X
+\backslash
+ab4X
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+ab5X
+\backslash
+ab6X
+\backslash
+abe7X3Y
+\backslash
+abe8X4Y
+\backslash
+abe9X5Y
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+abe{10}X6Y
+\backslash
+be7Y
+\backslash
+be8Y
+\backslash
+be9Y
+\backslash
+be{10}Y;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+for these variables.
+ (The location following 
+\begin_inset Formula $\mathtt{A[}1\mathtt{]}$
+\end_inset
+
+ is not an allowable subscript value for any of the arrays,
+ but it must be reserved anyway.)
+\end_layout
+
+\begin_layout Standard
+The object of this exercise is to modify Algorithm E so that it applies to the more general situation just described.
+ Assume that we are writing a compiler for such a language,
+ and the tables inside our compiler program itself have one node for each array,
+ containing the fields 
+\family typewriter
+NAME
+\family default
+,
+ 
+\family typewriter
+PARENT
+\family default
+,
+ 
+\family typewriter
+DELTA
+\family default
+,
+ 
+\family typewriter
+LBD
+\family default
+,
+ and 
+\family typewriter
+UBD
+\family default
+.
+ Assume that the compiler program has previously processed all the 
+\family typewriter
+ARRAY
+\family default
+ declarations,
+ so that if 
+\family typewriter
+ARRAY X[
+\begin_inset Formula $l:u$
+\end_inset
+
+]
+\family default
+ has appeared and if 
+\family typewriter
+P
+\family default
+ points to the node for 
+\family typewriter
+X
+\family default
+,
+ then
+\begin_inset Formula 
+\begin{align*}
+\mathtt{NAME(P)} & =\text{``\texttt{X}''}, & \mathtt{PARENT(P)} & =\Lambda, & \mathtt{DELTA(P)} & =0,\\
+\mathtt{LBD(P)} & =l, & \mathtt{UBD(P)} & =u.
+\end{align*}
+
+\end_inset
+
+The problem is to design an algorithm that processes the equivalence declarations,
+ so that,
+ after this algorithm has been performed,
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\mathtt{PARENT(P)}=\Lambda$
+\end_inset
+
+ means that locations 
+\begin_inset Formula $\mathtt{X[LBD(P)]},...,\mathtt{X[UBD(P)]}$
+\end_inset
+
+ are to be reserved in memory for this equivalence class;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\mathtt{PARENT(P)}=\mathtt{Q}\neq\Lambda$
+\end_inset
+
+ means that location 
+\begin_inset Formula $\mathtt{X[}k\mathtt{]}$
+\end_inset
+
+ equals location 
+\begin_inset Formula $\mathtt{Y[}k+\mathtt{DELTA(P)]}$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $\mathtt{NAME(Q)}=\text{``\texttt{Y}''}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
+For example,
+ before the equivalences listed above we might have the nodes
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+NAME(P)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+PARENT(P)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+DELTA(P)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+LBD(P)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+UBD(P)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Z
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{4pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent 
+\end_layout
+
+\end_inset
+
+After the equivalences are processed,
+ the nodes might appear thus:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{\makebox[\widthof{\texttt{P}}][c]{\ensuremath{\alpha}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{\makebox[\widthof{\texttt{NAME(P)}}][c]{\texttt{X}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{\makebox[\widthof{\texttt{PARENT(P)}}][c]{\ensuremath{\Lambda}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{\makebox[\widthof{\texttt{DELTA(P)}}][c]{\ensuremath{*}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{\makebox[\widthof{\texttt{LBD(P)}}][c]{\ensuremath{-5}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{\makebox[\widthof{\texttt{UBD(P)}}][c]{14}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $*$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $*$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $*$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $*$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Z
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $*$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $*$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent 
+\end_layout
+
+\end_inset
+
+(
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $*$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ denotes irrelevant information.)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Design an algorithm that makes this transformation.
+ Assume that inputs to your algorithm have the form 
+\begin_inset Formula $(\mathtt{P},j,\mathtt{Q},k)$
+\end_inset
+
+,
+ denoting 
+\begin_inset Formula $\mathtt{X[}j\mathtt{]}\equiv\mathtt{Y[}k\mathtt{]}$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $\mathtt{NAME(P)}=\text{``X''}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{NAME(Q)}=\text{``Y''}$
+\end_inset
+
+.
+ Be sure to check whether the equivalences are contradictory;
+ for example,
+ 
+\begin_inset Formula $\mathtt{X[}1\mathtt{]}\equiv\mathtt{Y[}2\mathtt{]}$
+\end_inset
+
+ contradicts 
+\begin_inset Formula $\mathtt{X[}2\mathtt{]}\equiv\mathtt{Y[}1\mathtt{]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:e23311a"
+
+\end_inset
+
+[Read input.] Read a line 
+\begin_inset Formula $(\mathtt{P},j,\mathtt{Q},k)$
+\end_inset
+
+,
+ but if there are no more lines,
+ terminate the algorithm.
+\end_layout
+
+\begin_layout Enumerate
+[Find roots.] If 
+\begin_inset Formula $\mathtt{PARENT(P)}\neq\Lambda$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $j\gets j+\mathtt{DELTA(P)}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{P}\gets\mathtt{PARENT(P)}$
+\end_inset
+
+,
+ and repeat this step.
+ If 
+\begin_inset Formula $\mathtt{PARENT(Q)}\neq\Lambda$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $k\gets k+\mathtt{DELTA(Q)}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{Q}\gets\mathtt{PARENT(Q)}$
+\end_inset
+
+,
+ and repeat this step.
+\end_layout
+
+\begin_layout Enumerate
+[Merge trees.] If 
+\begin_inset Formula $\mathtt{P}\neq\mathtt{Q}$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $\mathtt{PARENT(P)}\gets\mathtt{Q}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathtt{DELTA(P)}\gets k-j$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{LBD(Q)}\gets\min\{\mathtt{LBD(Q)},\mathtt{LBD(P)}+\mathtt{DELTA(P)}\}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{UBD(Q)}\gets\max\{\mathtt{UBD(Q)},\mathtt{UBD(P)}+\mathtt{DELTA(P)}\}$
+\end_inset
+
+.
+ Otherwise,
+ if 
+\begin_inset Formula $j\neq k$
+\end_inset
+
+,
+ notify a contradiction and terminate the algorithm.
+ Finally go to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e23311a"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc17[25]
+\end_layout
+
+\end_inset
+
+Algorithm F evaluates a 
+\begin_inset Quotes eld
+\end_inset
+
+bottom-up
+\begin_inset Quotes erd
+\end_inset
+
+ locally defined function,
+ namely,
+ one that should be evaluated at the children of a node before it is evaluated at the node.
+ A 
+\begin_inset Quotes eld
+\end_inset
+
+top-down
+\begin_inset Quotes erd
+\end_inset
+
+ locally defined function 
+\begin_inset Formula $f$
+\end_inset
+
+ is one in which the value of 
+\begin_inset Formula $f$
+\end_inset
+
+ at a node 
+\begin_inset Formula $x$
+\end_inset
+
+ depends only on 
+\begin_inset Formula $x$
+\end_inset
+
+ and the value of 
+\begin_inset Formula $f$
+\end_inset
+
+ at the 
+\emph on
+parent
+\emph default
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Using an auxiliary stack,
+ design an algorithm analogous to Algorithm F that evaluates a 
+\begin_inset Quotes eld
+\end_inset
+
+top-down
+\begin_inset Quotes erd
+\end_inset
+
+ function 
+\begin_inset Formula $f$
+\end_inset
+
+ at each node of a tree.
+ (Like Algorithm F,
+ your algorithm should work efficiently on trees that have been stored in 
+\emph on
+postorder
+\emph default
+ with degrees,
+ as in (9).)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+[Initialize.] Set the stack to the single element 
+\begin_inset Formula $(\infty,\Lambda)$
+\end_inset
+
+,
+ and let 
+\family typewriter
+P
+\family default
+ point to the 
+\emph on
+last
+\emph default
+ ode of the forest in post-order.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:e23317b"
+
+\end_inset
+
+[Evaluate 
+\begin_inset Formula $f$
+\end_inset
+
+.] Let 
+\begin_inset Formula $(d,v)$
+\end_inset
+
+ be the value at the top of the stack.
+ Evaluate 
+\begin_inset Formula $f(\mathtt{NODE(P)},v)$
+\end_inset
+
+ and save the result as 
+\begin_inset Formula $\mathtt{VALUE(P)}$
+\end_inset
+
+.
+ Then push 
+\begin_inset Formula $(\mathtt{DEGREE(P)},\mathtt{VALUE(P)})$
+\end_inset
+
+ to the stack.
+\end_layout
+
+\begin_layout Enumerate
+[Update the stack.] Pop the element 
+\begin_inset Formula $(p,v)$
+\end_inset
+
+ from the stack.
+ If 
+\begin_inset Formula $p=0$
+\end_inset
+
+,
+ repeat this step.
+ Otherwise push 
+\begin_inset Formula $(p-1,v)$
+\end_inset
+
+ into the stack.
+\end_layout
+
+\begin_layout Enumerate
+[Advance.] If 
+\family typewriter
+P
+\family default
+ is the first node in postorder,
+ terminate the algorithm.
+ Otherwise set 
+\family typewriter
+P
+\family default
+ to its predecessor in postorder and return to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e23317b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

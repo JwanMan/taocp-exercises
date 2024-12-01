@@ -1,0 +1,1329 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[00]
+\end_layout
+
+\end_inset
+
+What is the smallest positive rational number?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+There isn't.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc2[00]
+\end_layout
+
+\end_inset
+
+Is 
+\begin_inset Formula $1+0.239999999\dots$
+\end_inset
+
+ a decimal expansion?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Yes,
+ as long as it means a number 
+\begin_inset Formula $x$
+\end_inset
+
+ with 
+\begin_inset Formula $1.239999999\leq x<1.24$
+\end_inset
+
+,
+ that is,
+ as long as it doesn't end with an infinite number of nines.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc3[02]
+\end_layout
+
+\end_inset
+
+What is 
+\begin_inset Formula $(-3)^{-3}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(-3)^{-3}=\frac{1}{(-3)^{3}}=\frac{1}{-27}=-\frac{1}{27}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[05]
+\end_layout
+
+\end_inset
+
+What is 
+\begin_inset Formula $(0.125)^{-2/3}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(0.125)^{-2/3}=(\frac{1}{8})^{-2/3}=\sqrt[3]{(\frac{1}{8})^{-2}}=\sqrt[3]{8^{2}}=\sqrt[3]{64}=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc5[05]
+\end_layout
+
+\end_inset
+
+We defined real numbers in terms of a decimal expansion.
+ Discuss how we could have defined them in terms of a binary expansion instead,
+ and give a definition to replace Eq.
+ (2).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+A decimal expansion would have the form 
+\begin_inset Formula $x=n+0.b_{1}b_{2}b_{3}\dots$
+\end_inset
+
+,
+ where each 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ would be a binary digit,
+ 0 or 1,
+ and this would mean that
+\begin_inset Formula 
+\[
+n+\frac{b_{1}}{2}+\frac{b_{2}}{4}+\dots+\frac{b_{k}}{2^{k}}\leq x<n+\frac{b_{1}}{2}+\frac{b_{2}}{4}+\dots+\frac{b_{k}}{2^{k}}+\frac{1}{10^{k}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc6[10]
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $x=m+0.d_{1}d_{2}\dots$
+\end_inset
+
+ and 
+\begin_inset Formula $y=n+0.e_{1}e_{2}\dots$
+\end_inset
+
+ be real numbers,
+ Give a rule for determining whether 
+\begin_inset Formula $x=y$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x<y$
+\end_inset
+
+,
+ or 
+\begin_inset Formula $x>y$
+\end_inset
+
+,
+ based on the decimal representation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We say that 
+\begin_inset Formula $x=y$
+\end_inset
+
+ if 
+\begin_inset Formula $m=n$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{k}=e_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ and that 
+\begin_inset Formula $x<y$
+\end_inset
+
+ if 
+\begin_inset Formula $m<n$
+\end_inset
+
+ or if 
+\begin_inset Formula $m=n$
+\end_inset
+
+ and there's a 
+\begin_inset Formula $k$
+\end_inset
+
+ such that 
+\begin_inset Formula $d_{j}=e_{j}$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq j<k$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{k}<e_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[10]
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $b=10$
+\end_inset
+
+ and 
+\begin_inset Formula $x\approx\log_{10}2$
+\end_inset
+
+,
+ to how many decimal places of accuracy will we need to know the value of 
+\begin_inset Formula $x$
+\end_inset
+
+ in order to determine the first three decimal places of the decimal expansion of 
+\begin_inset Formula $b^{x}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Potentially infinite.
+ Because 
+\begin_inset Formula $10^{\log_{10}2}=2$
+\end_inset
+
+,
+ 
+\begin_inset Formula $10^{x}=2.0\dots$
+\end_inset
+
+ if 
+\begin_inset Formula $x\geq\log_{10}2$
+\end_inset
+
+ or 
+\begin_inset Formula $10^{x}=1.9\dots$
+\end_inset
+
+ if 
+\begin_inset Formula $x\leq\log_{10}2$
+\end_inset
+
+,
+ but since 
+\begin_inset Formula $\log_{10}2$
+\end_inset
+
+ is irrational,
+ its decimal expansion is infinite and,
+ in the worst case that 
+\begin_inset Formula $x=\log_{10}2$
+\end_inset
+
+,
+ we can't determine by an algorithm that 
+\begin_inset Formula $x\geq\log_{10}2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc12[02]
+\end_layout
+
+\end_inset
+
+Explain why Eq.
+ (10) follows from Eqs.
+ (8).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Because logarithms are strictly increasing,
+ continuous functions,
+ and we have that 
+\begin_inset Formula $10^{0.30102999}<2<10^{0.30103000}$
+\end_inset
+
+,
+ we can take logarithms on the expression to get 
+\begin_inset Formula $0.30102999<\log_{10}2<0.30103000$
+\end_inset
+
+,
+ and so 
+\begin_inset Formula $\log_{10}2=0.30102999$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc13[M23]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Given that 
+\begin_inset Formula $x$
+\end_inset
+
+ is a positive real number and 
+\begin_inset Formula $n$
+\end_inset
+
+ is a positive integer,
+ prove the inequality 
+\begin_inset Formula $\sqrt[n]{1+x}-1\leq x/n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Use this fact to justify the remarks following (7).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $f(x):=\sqrt[n]{1+x}-1-\frac{x}{n}$
+\end_inset
+
+,
+ we have to prove that,
+ if 
+\begin_inset Formula $n$
+\end_inset
+
+ is a positive integer and 
+\begin_inset Formula $x>0$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $f(x)\leq0$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula 
+\[
+f'(x)=\frac{1}{n\sqrt[n]{1+x}}-\frac{1}{n}=\frac{1}{n}\left(\frac{1}{\sqrt[n]{1+x}-1}\right),
+\]
+
+\end_inset
+
+but since
+\begin_inset Formula $\sqrt[n]{1+x}>1$
+\end_inset
+
+ for 
+\begin_inset Formula $x>0$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ is strictly decreasing on 
+\begin_inset Formula $(0,+\infty)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $f(0)=0$
+\end_inset
+
+,
+ this proves the result.
+\end_layout
+
+\begin_layout Enumerate
+It's clear that 
+\begin_inset Formula $b^{n+d_{1}/10+\dots+d_{k}/10^{k}}\leq b^{n+1}$
+\end_inset
+
+,
+ and then,
+ taken 
+\begin_inset Formula $x=b-1>0$
+\end_inset
+
+ and 
+\begin_inset Formula $n=10^{k}$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $\sqrt[10^{k}]{1+b-1}=b^{1/10^{k}}\leq(b-1)/10^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc15[10]
+\end_layout
+
+\end_inset
+
+Prove or disprove:
+\begin_inset Formula 
+\begin{align*}
+\log_{b}x/y & =\log_{b}x-\log_{b}y, & \text{if }x,y & >0.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $\alpha:=\log_{b}x$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta:=\log_{b}y$
+\end_inset
+
+,
+ we have
+\begin_inset Formula 
+\[
+\frac{b^{\alpha}}{b^{\beta}}=b^{\alpha}b^{-\beta}=b^{\alpha-\beta},
+\]
+
+\end_inset
+
+and taking logarithms,
+ we get 
+\begin_inset Formula $\log_{b}\frac{b^{\alpha}}{b^{\beta}}=\log_{b}\frac{x}{y}=\log_{b}b^{\alpha-\beta}=\alpha-\beta=\log_{b}x-\log_{b}y.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc16[00]
+\end_layout
+
+\end_inset
+
+How can 
+\begin_inset Formula $\log_{10}x$
+\end_inset
+
+ be expressed in terms of 
+\begin_inset Formula $\ln x$
+\end_inset
+
+ and 
+\begin_inset Formula $\ln10$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\log_{10}x=\frac{\log_{e}x}{\log_{e}10}=\frac{\ln x}{\ln10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc17[05]
+\end_layout
+
+\end_inset
+
+What is 
+\begin_inset Formula $\lg32$
+\end_inset
+
+?
+ 
+\begin_inset Formula $\log_{\pi}\pi$
+\end_inset
+
+?
+ 
+\begin_inset Formula $\ln e$
+\end_inset
+
+?
+ 
+\begin_inset Formula $\log_{b}1$
+\end_inset
+
+?
+ 
+\begin_inset Formula $\log_{b}(-1)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lg32=5$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\log_{\pi}\pi=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\ln e=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\log_{b}1=0$
+\end_inset
+
+.
+ As for 
+\begin_inset Formula $\log_{b}(-1)$
+\end_inset
+
+,
+ it would be an 
+\begin_inset Formula $x$
+\end_inset
+
+ such that 
+\begin_inset Formula $b^{x}=-1$
+\end_inset
+
+,
+ which is not a real number most of the time.
+ As a complex number,
+ it would be 
+\begin_inset Formula $\log_{b}(-1)=\frac{\ln(-1)}{\ln b}=\frac{i\pi}{\ln b}$
+\end_inset
+
+,
+ since 
+\begin_inset Formula $e^{i\pi}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc18[10]
+\end_layout
+
+\end_inset
+
+Prove or disprove:
+ 
+\begin_inset Formula $\log_{8}x=\frac{1}{2}\lg x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\log_{8}x=\frac{\lg x}{\lg8}$
+\end_inset
+
+,
+ but 
+\begin_inset Formula $\lg8=3\neq2$
+\end_inset
+
+,
+ so this is false in the general case (this is only true when 
+\begin_inset Formula $x=1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc19[20]
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $n$
+\end_inset
+
+ is an integer whose decimal representation is 14 digits long,
+ will the value of 
+\begin_inset Formula $n$
+\end_inset
+
+ fit in a computer word with a capacity of 47 bits and a sign bit?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The number of possibilities for a number with up to 14 digits is 
+\begin_inset Formula $10^{14}$
+\end_inset
+
+,
+ and the number for 47 bits is 
+\begin_inset Formula $2^{47}\approx1.3\cdot2^{14}$
+\end_inset
+
+,
+ so it would fit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc20[10]
+\end_layout
+
+\end_inset
+
+Is there any simple relation between 
+\begin_inset Formula $\log_{10}2$
+\end_inset
+
+ and 
+\begin_inset Formula $\log_{2}10$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\log_{10}2=\frac{\log_{2}2}{\log_{2}10}=\frac{1}{\log_{2}10}$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $\log_{10}2\log_{2}10=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc22[20]
+\end_layout
+
+\end_inset
+
+(R.
+ W.
+ Hamming.) Prove that
+\begin_inset Formula 
+\[
+\lg x\approx\ln x+\log_{10}x,
+\]
+
+\end_inset
+
+with less than 
+\begin_inset Formula $\unit[1]{\%}$
+\end_inset
+
+ error!
+ (Thus a table of natural logarithms and of common logarithms can be used to get approximate values of binary logarithms as well.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\ln x+\log_{10}x=\frac{\lg x}{\lg e}+\frac{\lg x}{\lg10}=\lg x\left(\frac{1}{\lg e}+\frac{1}{\lg10}\right)\cong0.994\lg x\approx\lg x,
+\]
+
+\end_inset
+
+and this gives us about 
+\begin_inset Formula $\unit[0.6]{\%}$
+\end_inset
+
+ error.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc27[M25]
+\end_layout
+
+\end_inset
+
+Consider the method for calculating 
+\begin_inset Formula $\log_{10}x$
+\end_inset
+
+ discussed in the text.
+ Let 
+\begin_inset Formula $x'_{k}$
+\end_inset
+
+ denote the computed approximation to 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+,
+ determined as follows:
+ 
+\begin_inset Formula $x(1-\delta)\leq10^{n}x'_{0}\leq x(1+\epsilon)$
+\end_inset
+
+;
+ and in the determination of 
+\begin_inset Formula $x'_{k}$
+\end_inset
+
+ by Eqs.
+ (18),
+ the quantity 
+\begin_inset Formula $y_{k}$
+\end_inset
+
+ is used in place of 
+\begin_inset Formula $(x'_{k-1})^{2}$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $(x'_{k-1})^{2}(1-\delta)\leq y_{k}\leq(x'_{k-1})^{2}(1+\epsilon)$
+\end_inset
+
+ and 
+\begin_inset Formula $1\leq y_{k}<100$
+\end_inset
+
+.
+ Here 
+\begin_inset Formula $\delta$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ are small constants that reflect the upper and lower errors due to rounding or truncation.
+ If 
+\begin_inset Formula $\log^{\prime}x$
+\end_inset
+
+ denotes the result of the calculations,
+ show that after 
+\begin_inset Formula $k$
+\end_inset
+
+ steps we have
+\begin_inset Formula 
+\[
+\log_{10}x+2\log_{10}(1-\delta)-1/2^{k}<\log^{\prime}x\leq\log_{10}x+2\log_{10}(1+\epsilon).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We first prove by induction that
+\begin_inset Formula 
+\[
+x^{2^{k}}(1-\delta)^{2^{k+1}-1}\leq10^{2^{k}(n+b_{1}/2+\dots+b_{k}/2^{k})}x'_{k}\leq x^{2^{k}}(1+\epsilon)^{2^{k+1}-1}.
+\]
+
+\end_inset
+
+For 
+\begin_inset Formula $k=0$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $x(1-\delta)\leq10^{n}x'_{0}\leq x(1+\epsilon)$
+\end_inset
+
+,
+ which is given.
+ If this holds up to a certain 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ then if 
+\begin_inset Formula $(x'_{k})^{2}<10$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $b_{k+1}=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $(1-\delta)(x'_{k})^{2}\leq x'_{k+1}\leq(1+\epsilon)(x'_{k})^{2}$
+\end_inset
+
+ and
+\begin_inset Formula 
+\begin{eqnarray*}
+x^{2^{k+1}}(1-\delta)^{2^{k+2}-1} & = & (x^{2^{k+1}}(1-\delta)^{2^{k+1}-1})^{2}(1-\delta)\\
+ & \leq & (10^{2^{k}(n+b_{1}/2+\dots+b_{k}/2^{k})}x'_{k})^{2}(1-\delta)\\
+ & \leq & 10^{2^{k+1}(n+b_{1}/2+\dots+b_{k}/2^{k}+b_{k+1}/2^{k+1})}x'_{k+1}\\
+ & \leq & (10^{2^{k}(n+b_{1}/2+\dots+b_{k}/2^{k})}x'_{k})^{2}(1+\epsilon)\\
+ & \leq & (x^{2^{k}}(1+\epsilon)^{2^{k+1}-1})^{2}(1+\epsilon)=x^{2^{k+1}}(1+\epsilon)^{2^{k+2}-1}.
+\end{eqnarray*}
+
+\end_inset
+
+If 
+\begin_inset Formula $(x'_{k})^{2}\geq10$
+\end_inset
+
+,
+ we have 
+\begin_inset Formula $b_{k+1}=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $(1-\delta)(x'_{k})^{2}\leq10x'_{k+1}\leq(1+\epsilon)(x'_{k})^{2}$
+\end_inset
+
+ and
+\begin_inset Formula 
+\begin{eqnarray*}
+x^{2^{k+1}}(1-\delta)^{2^{k+2}-1} & \leq & (10^{2^{k}(n+b_{1}/2+\dots+b_{k}/2^{k})}x'_{k})^{2}(1-\delta)\\
+ & \leq & 10^{2^{k+1}(n+b_{1}/2+\dots+b_{k}/2^{k})}10x'_{k+1}\\
+ & = & 10^{2^{k+1}(n+b_{1}/2+\dots+b_{k}/2^{k}+b_{k+1}/2^{k+1})}x'_{k+1}\\
+ & \leq & (10^{2^{k}(n+b_{1}/2+\dots+b_{k}/2^{k})}x'_{k})^{2}(1+\epsilon)\\
+ & \leq & x^{2^{k+1}}(1+\epsilon)^{2^{k+2}-1}.
+\end{eqnarray*}
+
+\end_inset
+
+Then,
+ by taking logarithms on the expression,
+ we get
+\begin_inset Formula 
+\[
+2^{k}\log x+(2^{k+1}-1)\log(1-\delta)\leq2^{k}\log^{\prime}x+\log x'_{k}\leq2^{k}\log x+(2^{k+1}-1)\log(1+\epsilon).
+\]
+
+\end_inset
+
+Finally,
+ subtracting 
+\begin_inset Formula $\log x'_{k}$
+\end_inset
+
+ from all sides,
+ using that 
+\begin_inset Formula $-1<-\log(1-\delta)-\log x'_{k}=-\log(x'_{k}(1-\delta))$
+\end_inset
+
+,
+ because 
+\begin_inset Formula $x'_{k}(1-\delta)<10$
+\end_inset
+
+,
+ using that 
+\begin_inset Formula $-\log(1+\epsilon)-\log x'_{k}=-\log(x'_{k}(1+\epsilon))\leq0$
+\end_inset
+
+,
+ because 
+\begin_inset Formula $x'_{k}(1+\epsilon)\geq1$
+\end_inset
+
+,
+ and dividing everything by 
+\begin_inset Formula $2^{k}$
+\end_inset
+
+,
+ we get
+\begin_inset Formula 
+\[
+\log x+2\log(1-\delta)-\frac{1}{2^{k}}<\log^{\prime}x\leq\log x+2\log(1+\epsilon),
+\]
+
+\end_inset
+
+which is precisely what we wanted to prove.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,859 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[M20]
+\end_layout
+
+\end_inset
+
+The concept of 
+\emph on
+topological sorting
+\emph default
+ can be defined for any finite directed graph 
+\begin_inset Formula $G$
+\end_inset
+
+ as a linear arrangement of the vertices 
+\begin_inset Formula $V_{1}V_{2}\dots V_{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\text{init}(e)$
+\end_inset
+
+ precedes 
+\begin_inset Formula $\text{fin}(e)$
+\end_inset
+
+ in the ordering for all arcs 
+\begin_inset Formula $e$
+\end_inset
+
+ of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ (See Section 2.2.3,
+ Figs.
+ 6 and 7.) Not all finite directed graphs can be topologically sorted;
+ which ones can be?
+ (Use the terminology of this section to give the answer.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Only the ones with no directed cycles,
+ except possibly for cycles of length 1.
+ If 
+\begin_inset Formula $G$
+\end_inset
+
+ has a cycle (of length 2 or more),
+ the nodes in the cycle cannot be topologically ordered;
+ otherwise the transitive closure of the edges of the graph is a partial ordering between the vertices,
+ so they can be topologically ordered.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc7[M22]
+\end_layout
+
+\end_inset
+
+True or false:
+ A directed graph satisfying properties (a) and (b) of the definition of oriented tree,
+ and having no oriented cycles,
+ is an oriented tree.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+True for finite graphs.
+ If there were cycles,
+ they would be oriented because no vertex is the initial vertex of two arcs,
+ and a graph with no cycles and exactly one edge less than the number of vertices is a free tree.
+ Then the way to orient the edges such that (a) and (b) follow is unique,
+ which can be proved by induction on the distance of a node to the root,
+ and we know that this way follows (c).
+\end_layout
+
+\begin_layout Standard
+False for infinite graphs.
+ A graph whose vertices are 
+\begin_inset Formula $R,V_{1},V_{2},\dots,V_{n},\dots$
+\end_inset
+
+ and whose edges are 
+\begin_inset Formula $V_{1}\to V_{2}\to V_{3}\to\dots$
+\end_inset
+
+ follows (a) and (b) and has no cycles but it doesn't follow (c).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc13[M24]
+\end_layout
+
+\end_inset
+
+Prove that if 
+\begin_inset Formula $R$
+\end_inset
+
+ is a root of a (possibly infinite) directed graph 
+\begin_inset Formula $G$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $G$
+\end_inset
+
+ contains an oriented subtree with the same vertices as 
+\begin_inset Formula $G$
+\end_inset
+
+ and with root 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ (As a consequence,
+ it is always possible to choose the free subtree in flow charts like Fig.
+ 32 of Section 2.3.4.1 so that it is actually an 
+\emph on
+oriented
+\emph default
+ subtree;
+ this would be the case in that diagram if we had selected 
+\begin_inset Formula $e''_{13}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $e''_{19}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $e_{20}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $e_{17}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $e'_{13}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $e'_{19}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $e_{23}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $e_{15}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We prove by induction that there is a family of oriented subtrees 
+\begin_inset Formula $\{T_{n}\}_{n\geq0}$
+\end_inset
+
+ of 
+\begin_inset Formula $G$
+\end_inset
+
+ with root 
+\begin_inset Formula $R$
+\end_inset
+
+ such that 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+ contains exactly all the vertices 
+\begin_inset Formula $V$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ such that there is an oriented path from 
+\begin_inset Formula $V$
+\end_inset
+
+ to 
+\begin_inset Formula $R$
+\end_inset
+
+ of length at most 
+\begin_inset Formula $n$
+\end_inset
+
+ and,
+ furthermore,
+ 
+\begin_inset Formula $T_{n-1}\subseteq T_{n}$
+\end_inset
+
+ for every 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+.
+ It is easy to check that the union of this family of trees is a tree with all the vertices in 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $n=0$
+\end_inset
+
+,
+ we just take the trivial oriented tree,
+ which only contains 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+,
+ and for every node 
+\begin_inset Formula $V$
+\end_inset
+
+ such that the shortest oriented path from 
+\begin_inset Formula $V$
+\end_inset
+
+ to 
+\begin_inset Formula $R$
+\end_inset
+
+ has length 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ we choose one such path 
+\begin_inset Formula $VV_{1}\cdots V_{n-1}R$
+\end_inset
+
+,
+ which we can do for all such vertices because of the axiom of choice.
+ Since 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ is in 
+\begin_inset Formula $T_{n-1}$
+\end_inset
+
+,
+ we just have to add 
+\begin_inset Formula $V$
+\end_inset
+
+ and the arc 
+\begin_inset Formula $(V,V_{1})$
+\end_inset
+
+ to 
+\begin_inset Formula $T_{n-1}$
+\end_inset
+
+,
+ for all such 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO 16,
+ 24
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc16[M24]
+\end_layout
+
+\end_inset
+
+In a popular solitaire game called 
+\begin_inset Quotes eld
+\end_inset
+
+clock,
+\begin_inset Quotes erd
+\end_inset
+
+ the 52 cards of an ordinary deck of playing cards are dealt face down into 13 piles of four each;
+ 12 piles are arranged in a circle like the 12 hours of a clock and the thirteenth pile goes in the center.
+ The solitaire game now proceeds by turning up the top card of the center pile,
+ and then if its face value is 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ by placing it next to the 
+\begin_inset Formula $k$
+\end_inset
+
+th pile.
+ (The numbers 
+\begin_inset Formula $1,2,\dots,13$
+\end_inset
+
+ are equivalent to 
+\begin_inset Formula $\text{A},2,\dots,10,\text{J},\text{Q},\text{K}$
+\end_inset
+
+.) Play continues by turning up the top card of the 
+\begin_inset Formula $k$
+\end_inset
+
+th pile and putting it next to 
+\emph on
+its
+\emph default
+ pile,
+ etc.,
+ until we reach a point where we cannot continue since there are no more cards to turn up on the designated pile.
+ (The player has no choice in the game,
+ since the rules completely specify what to do.) The game is won if all cards are face up when the play terminates.
+\end_layout
+
+\begin_layout Standard
+Show that the game will be won if and only if the following directed graph is an oriented tree:
+ The vertices are 
+\begin_inset Formula $V_{1},V_{2},\dots,V_{13}$
+\end_inset
+
+;
+ the arcs are 
+\begin_inset Formula $e_{1},e_{2},\dots,e_{12}$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+ goes from 
+\begin_inset Formula $V_{j}$
+\end_inset
+
+ to 
+\begin_inset Formula $V_{k}$
+\end_inset
+
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ is the 
+\emph on
+bottom
+\emph default
+ card in pile 
+\begin_inset Formula $j$
+\end_inset
+
+ after the deal.
+\end_layout
+
+\begin_layout Standard
+(In particular,
+ if the bottom card of pile 
+\begin_inset Formula $j$
+\end_inset
+
+ is a 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $j$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+,
+ for 
+\begin_inset Formula $j\neq13$
+\end_inset
+
+,
+ it is easy to see that the game is certainly lost,
+ since this card could never be turned up.
+ The result proved in this exercise gives a much faster way to play the game!)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+First we note that this graph already follows conditions (a) and (b) of the definition of an oriented tree,
+ so it will be a tree if an only if 
+\begin_inset Formula $V_{13}$
+\end_inset
+
+ is a root,
+ if and only if there are no cycles (see Exercise 7).
+ We also note that,
+ since there are only 4 cards of each denomination,
+ and we only take a card from a pile when we find its denomination except from one from 
+\begin_inset Formula $V_{13}$
+\end_inset
+
+ at the start of the game,
+ the only case where we cannot continue is after finding the last card with face value K.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Assume that the game is not an oriented tree,
+ then there is a cycle 
+\begin_inset Formula $V_{k_{1}}\cdots V_{k_{m}}$
+\end_inset
+
+.
+ We can assume that the 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+th pile is the first whose bottom card we turn up.
+ Since clearly 
+\begin_inset Formula $k_{1}\neq13$
+\end_inset
+
+,
+ this means that we had already turned up all cards with denomination 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+,
+ but we had not turned up 
+\begin_inset Formula $k_{m}\#$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Assume we lost 
+\begin_inset CommandInset href
+LatexCommand href
+name "the game"
+target "https://en.wikipedia.org/wiki/The_Game_(mind_game)"
+literal "false"
+
+\end_inset
+
+,
+ which means that we have turned up all the cards with face value 13 and that,
+ furthermore,
+ we have turned up as many cards from the 
+\begin_inset Formula $k$
+\end_inset
+
+th pile as cards with face value 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ This means that,
+ if
+\begin_inset Formula 
+\[
+U\coloneqq\{V_{j}\mid\text{the }j\text{th pile's bottom card is down}\},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $V_{13}\notin U$
+\end_inset
+
+ and each vertex of 
+\begin_inset Formula $U$
+\end_inset
+
+ has one outgoing edge that points to another vertex in 
+\begin_inset Formula $U$
+\end_inset
+
+,
+ as we have already turned up all the cards with face value 
+\begin_inset Formula $k$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{k}\notin U$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $V_{13}$
+\end_inset
+
+ is not a root.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc24[M20]
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a connected digraph with arcs 
+\begin_inset Formula $e_{0},e_{1},\dots,e_{m}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $E_{0},E_{1},\dots,E_{m}$
+\end_inset
+
+ be a set of positive integers that satisfy Kirchhoff's law for 
+\begin_inset Formula $G$
+\end_inset
+
+;
+ that is,
+ for each vertex 
+\begin_inset Formula $V$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\sum_{\text{init}(e_{j})=V}E_{j}=\sum_{\text{fin}(e_{j})=V}E_{j}.
+\]
+
+\end_inset
+
+Assume further that 
+\begin_inset Formula $E_{0}=1$
+\end_inset
+
+.
+ Prove that there is an oriented walk in 
+\begin_inset Formula $G$
+\end_inset
+
+ from 
+\begin_inset Formula $\text{init}(e_{0})$
+\end_inset
+
+ such that edge 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+ appears exactly 
+\begin_inset Formula $E_{j}$
+\end_inset
+
+ times,
+ for 
+\begin_inset Formula $1\leq j\leq m$
+\end_inset
+
+,
+ while edge 
+\begin_inset Formula $e_{0}$
+\end_inset
+
+ does not appear.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We apply Theorem G to the graph whose vertices are those of 
+\begin_inset Formula $G$
+\end_inset
+
+ and whose edges are the 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+ repeated 
+\begin_inset Formula $E_{j}$
+\end_inset
+
+ times.
+ This is valid,
+ since we could as well place an intermediate vertex among each edge to avoid repeating edges,
+ and it would give us an Eulerian cycle in that graph that goes through 
+\begin_inset Formula $e_{0}$
+\end_inset
+
+ once.
+ Coalescing the repeated edges into one gives us back graph 
+\begin_inset Formula $G$
+\end_inset
+
+ and a cycle though 
+\begin_inset Formula $G$
+\end_inset
+
+ that goes though edge 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+ exactly 
+\begin_inset Formula $E_{j}$
+\end_inset
+
+ times,
+ and we just have to remove the only appearance of 
+\begin_inset Formula $e_{0}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

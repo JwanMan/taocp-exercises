@@ -1,0 +1,796 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO 5,
+ 10,
+ 14,
+ 21 (3pp.,
+ 1:08)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc5[M25]
+\end_layout
+
+\end_inset
+
+(A.
+ Cayley.) Let 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+ be the number of (unlabeled) oriented trees having 
+\begin_inset Formula $n$
+\end_inset
+
+ leaves (namely,
+ vertices with in-degree zero) and having at least two subtrees at every other vertex.
+ Thus 
+\begin_inset Formula $c_{3}=2$
+\end_inset
+
+,
+ by virtue of the two trees
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+dot#1{node(#1){
+\backslash
+textbullet}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (0,1) 
+\backslash
+dot R (-.5,0) 
+\backslash
+dot A (0,0) 
+\backslash
+dot B (.5,0) 
+\backslash
+dot C
+\end_layout
+
+\begin_layout Plain Layout
+
+      (0,-1) node{};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (A) -> (R);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (B) -> (R);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (C) -> (R);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (0,1) 
+\backslash
+dot R (-.5,0) 
+\backslash
+dot A (.5,0) 
+\backslash
+dot B
+\end_layout
+
+\begin_layout Plain Layout
+
+                   (-1,-1) 
+\backslash
+dot C (0,-1) 
+\backslash
+dot D;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (C) -> (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (D) -> (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (B) -> (R);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (A) -> (R);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+Find a formula analogous to (3) for the generating function
+\begin_inset Formula 
+\[
+C(z)=\sum_{n}c_{n}z^{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Every tree has at least one leaf,
+ so 
+\begin_inset Formula $c_{0}=0$
+\end_inset
+
+.
+ This includes subtrees,
+ so 
+\begin_inset Formula $c_{1}=1$
+\end_inset
+
+ as,
+ if the root weren't also a leaf,
+ it would have at least two children and therefore two trees.
+ For 
+\begin_inset Formula $n>1$
+\end_inset
+
+,
+ the root has a tree and various subtrees.
+ Let 
+\begin_inset Formula $j_{k}$
+\end_inset
+
+ be the number of subtrees with 
+\begin_inset Formula $k$
+\end_inset
+
+ leaves,
+ 
+\begin_inset Formula $1\leq k<n$
+\end_inset
+
+,
+ for those subtrees we may choose up to
+\begin_inset Formula 
+\[
+\binom{c_{k}+j_{k}-1}{j_{k}}
+\]
+
+\end_inset
+
+possibilities,
+ since these are combinations with repetition (see exercise 1.2.6–60),
+ so
+\begin_inset Formula 
+\[
+c_{n}=\sum_{\begin{subarray}{c}
+j_{1},\dots,j_{n-1}\geq0\\
+j_{1}+2j_{2}+\dots+(n-1)j_{n-1}=n
+\end{subarray}}\binom{c_{1}+j_{1}-1}{j_{1}}\cdots\binom{c_{n-1}+j_{n-1}-1}{j_{n-1}}.
+\]
+
+\end_inset
+
+Note that this is like (2) except that we have 
+\begin_inset Formula $n$
+\end_inset
+
+ under the sum instead of 
+\begin_inset Formula $n-1$
+\end_inset
+
+.
+ Thus,
+ using the same identity as in the derivation of (3),
+\begin_inset Formula 
+\begin{align*}
+C(z) & =c_{0}+c_{1}z+\sum_{n\geq2}\sum_{\begin{subarray}{c}
+j_{1},\dots,j_{n-1}\geq0\\
+j_{1}+2j_{2}+\dots+(n-1)j_{n-1}=n
+\end{subarray}}\prod_{k=1}^{n-1}\binom{c_{k}+j_{k}-1}{j_{k}}z^{kj_{k}}\\
+ & =z+\sum_{(j_{n})_{n}\in\mathbb{N}^{(\mathbb{N}^{*})}}\prod_{n\geq1}\binom{c_{n}+j_{n}-1}{j_{n}}z^{nj_{n}}-\sum_{n\geq1}c_{n}z^{n}-1\\
+ & =\prod_{n\geq1}\sum_{j\geq1}\binom{c_{n}+j-1}{j}z^{nj_{n}}-C(z)+z-1\\
+ & =\frac{1}{(1-z)^{c_{1}}(1-z^{2})^{c_{2}}\cdots(1-z^{n})^{c_{n}}\cdots}-C(z)+z-1,
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbb{N}^{(\mathbb{N}^{*})}$
+\end_inset
+
+ is the set of sequences of natural numbers starting at 
+\begin_inset Formula $j_{1}$
+\end_inset
+
+ and with a finite amount of nonzero coefficients;
+ the subtracted term 
+\begin_inset Formula $\sum_{n\geq1}c_{n}z^{n}$
+\end_inset
+
+ is there to cancel the terms which correspond to nodes having just one child,
+ and likewise for 
+\begin_inset Formula $-1$
+\end_inset
+
+ for the term with all zeroes.
+\end_layout
+
+\begin_layout Standard
+Thus,
+\begin_inset Formula 
+\[
+C(z)=\frac{1}{2}\left(\prod_{n\geq1}\frac{1}{(1-z^{n})^{c_{n}}}+z-1\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc10[M22]
+\end_layout
+
+\end_inset
+
+Prove that a free tree with 
+\begin_inset Formula $n$
+\end_inset
+
+ vertices and two centroids consists of two free trees with 
+\begin_inset Formula $n/2$
+\end_inset
+
+ vertices,
+ joined by an edge.
+ Conversely,
+ if two free trees with 
+\begin_inset Formula $m$
+\end_inset
+
+ vertices are joined by an edge,
+ we obtain a free tree with 
+\begin_inset Formula $2m$
+\end_inset
+
+ vertices and two centroids.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ be the two centroids,
+ with weight 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $u$
+\end_inset
+
+ had weight 
+\begin_inset Formula $m$
+\end_inset
+
+ from an edge that wasn't the one that leads to 
+\begin_inset Formula $v$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $v$
+\end_inset
+
+ would have weight at least 
+\begin_inset Formula $m+1$
+\end_inset
+
+,
+ owing to the 
+\begin_inset Formula $m$
+\end_inset
+
+ nodes that stem from that edge in 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ itself.
+\begin_inset Formula $\#$
+\end_inset
+
+ By a similar argument,
+ if there were an intermediate node 
+\begin_inset Formula $w\neq u,v$
+\end_inset
+
+ in the path connecting 
+\begin_inset Formula $u$
+\end_inset
+
+ with 
+\begin_inset Formula $v$
+\end_inset
+
+,
+ its weight must necessarily be at most 
+\begin_inset Formula $m-1\#$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are the only centroids,
+ they are connected with an edge and the subtrees that result from removing that edge have 
+\begin_inset Formula $m$
+\end_inset
+
+ nodes each.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ be the two nodes that are newly connected,
+ then 
+\begin_inset Formula $u$
+\end_inset
+
+ has weight 
+\begin_inset Formula $m$
+\end_inset
+
+ because of its connection with 
+\begin_inset Formula $v$
+\end_inset
+
+,
+ 
+\begin_inset Formula $v$
+\end_inset
+
+ has weight 
+\begin_inset Formula $m$
+\end_inset
+
+ because of its connection with 
+\begin_inset Formula $u$
+\end_inset
+
+,
+ and any other node has weight at least 
+\begin_inset Formula $m+1$
+\end_inset
+
+ because of their connection to 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc14[10]
+\end_layout
+
+\end_inset
+
+True or false:
+ The last entry,
+ 
+\begin_inset Formula $f(V_{n-1})$
+\end_inset
+
+,
+ in the canonical representation of an oriented tree is always the root of that tree.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+True.
+ After each removal step,
+ we still have a tree with the same root,
+ and by the end the tree has no edges and therefore it only has one node,
+ which is the root.
+ Just before that,
+ it only has one edge,
+ which must connect a direct child of the root to the root.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc21[M20]
+\end_layout
+
+\end_inset
+
+Enumerate the number of labeled oriented trees in which each vertex has in-degree zero or two.
+ (See exercise 20 and exercise 2.3–20.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+These are precisely the 0-2-trees in exercise 2.3–20.
+ We know 0-2-trees always have an odd number of nodes.
+ Let 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ be the number of such trees with 
+\begin_inset Formula $2n+1$
+\end_inset
+
+ nodes,
+ then 
+\begin_inset Formula $b_{0}=1$
+\end_inset
+
+ and,
+ for 
+\begin_inset Formula $n>0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+b_{n}=\sum_{m=0}^{n-1}b_{m}b_{n-m-1},
+\]
+
+\end_inset
+
+as the root would have 
+\begin_inset Formula $2m+1$
+\end_inset
+
+ nodes in the left side and 
+\begin_inset Formula $2(n-m-1)+1=2n-2m-1$
+\end_inset
+
+ nodes in the right side.
+ Then,
+\begin_inset Formula 
+\[
+B(z)\coloneqq\sum_{n\geq0}b_{n}z^{n}=1+\sum_{n\geq1}\sum_{m=0}^{n-1}b_{m}b_{n-m-1}z^{n}=1+z\sum_{m,k\geq0}b_{m}b_{k}z^{m+k}=1+zB(z)^{2},
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $zB(z)^{2}-B(z)+1=0$
+\end_inset
+
+ and 
+\begin_inset Formula $B(z)=\frac{1-\sqrt{1-4z}}{2z}$
+\end_inset
+
+,
+ where we take the negative sign as it is the one where the solution converges at 
+\begin_inset Formula $z=0$
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

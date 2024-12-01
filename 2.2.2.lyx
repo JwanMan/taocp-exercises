@@ -1,0 +1,563 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc1[15]
+\end_layout
+
+\end_inset
+
+In the queue operations given by (6a) and (7a),
+ how many items can be in the queue at one time without 
+\family typewriter
+OVERFLOW
+\family default
+ occurring?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathtt{M}-1$
+\end_inset
+
+,
+ since 
+\family typewriter
+R
+\family default
+ and 
+\family typewriter
+F
+\family default
+ range between 1 and 
+\family typewriter
+M
+\family default
+ and 
+\begin_inset Formula $\mathtt{R}=\mathtt{F}$
+\end_inset
+
+ is used to signal an empty queue.
+ Since only the relative value of the two indexes matters,
+ this leaves us with a number of elements between 0 and 
+\begin_inset Formula $\mathtt{M}-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc2[22]
+\end_layout
+
+\end_inset
+
+Generalize the method of (6a) and (7a) so that it will apply to any deque with fewer than 
+\begin_inset Formula $\mathtt{M}$
+\end_inset
+
+ elements.
+ In other words,
+ give specifications for the other two operations,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+delete from rear
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+insert at front.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathtt{Y}\leftarrowtail\mathtt{X}\text{ (delete from rear):} & \left\{ \begin{array}{l}
+\text{if }\mathtt{F}=\mathtt{R},\text{ then }\mathtt{UNDERFLOW};\\
+\mathtt{Y\gets X[R]};\\
+\text{if }\mathtt{R}=1,\text{ then }\mathtt{R\gets M},\text{ otherwise }\mathtt{R}\gets\mathtt{R}-1.
+\end{array}\right.\\
+\mathtt{X}\leftarrowtail\mathtt{Y}\text{ (insert at front):} & \left\{ \begin{array}{l}
+\mathtt{X[F]\gets Y};\\
+\text{if }\mathtt{F=1},\text{ then }\mathtt{F\gets M},\text{ otherwise }\mathtt{F}\gets\mathtt{F}-1.\\
+\text{if }\mathtt{F}=\mathtt{R},\text{ then }\mathtt{OVERFLOW};
+\end{array}\right.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc6[10]
+\end_layout
+
+\end_inset
+
+Starting with the memory configuration shown in Fig.
+ 4,
+ determine which of the following sequences of operations causes overflow or underflow:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:e2226a"
+
+\end_inset
+
+
+\begin_inset Formula $I_{1}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:e2226b"
+
+\end_inset
+
+
+\begin_inset Formula $I_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:e2226c"
+
+\end_inset
+
+
+\begin_inset Formula $I_{3}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:e2226d"
+
+\end_inset
+
+
+\begin_inset Formula $I_{4}I_{4}I_{4}I_{4}I_{4}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:e2226e"
+
+\end_inset
+
+
+\begin_inset Formula $D_{2}D_{2}I_{2}I_{2}I_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Only 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e2226a"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e2226b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+,
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e2226d"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ are valid;
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e2226c"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ causes an overflow and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:e2226e"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ causes an underflow in the second instruction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc19[16]
+\end_layout
+
+\end_inset
+
+(
+\emph on
+0-origin indexing.
+\emph default
+) Experienced programmers learn that it is generally wise to denote the elements of a linear list by 
+\begin_inset Formula $\mathtt{X[\text{\ensuremath{0}}]}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{X[\text{\ensuremath{1}}]}$
+\end_inset
+
+,
+ ...,
+ 
+\begin_inset Formula $\mathtt{X[\text{\ensuremath{n-1}}]}$
+\end_inset
+
+,
+ instead of using the more traditional notation 
+\begin_inset Formula $\mathtt{X[}1\mathtt{]}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{X[}2\mathtt{]}$
+\end_inset
+
+,
+ ...,
+ 
+\begin_inset Formula $\mathtt{X[}n\mathtt{]}$
+\end_inset
+
+.
+ Then,
+ for example,
+ the base address 
+\begin_inset Formula $\mathtt{L}_{0}$
+\end_inset
+
+ in (1) points to the smallest cell of the array.
+\end_layout
+
+\begin_layout Standard
+Revise the insertion and deletion methods (2a),
+ (3a),
+ (6a),
+ and (7a) for stacks and queues so that they conform to this convention.
+ In other words,
+ change them so that the list elements will appear in the array 
+\begin_inset Formula $\mathtt{X[}0\mathtt{]}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{X[}1\mathtt{]}$
+\end_inset
+
+,
+ ...,
+ 
+\begin_inset Formula $\mathtt{X[M}-1\mathtt{]}$
+\end_inset
+
+,
+ instead of 
+\begin_inset Formula $\mathtt{X[}1\mathtt{]}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{X[}2\mathtt{]}$
+\end_inset
+
+,
+ ...,
+ 
+\begin_inset Formula $\mathtt{X[M]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+For the stack,
+ since we want 
+\family typewriter
+T
+\family default
+ to be non-negative,
+ we have to consider 
+\begin_inset Formula $\mathtt{T}=0$
+\end_inset
+
+ to represent an empty stack,
+ so 
+\begin_inset Formula $\mathtt{T}$
+\end_inset
+
+ still ranges from 0 to 
+\family typewriter
+M
+\family default
+ but now 
+\family typewriter
+T
+\family default
+ represents one past the top element.
+ For the queue,
+ we don't need much adaptation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathtt{X}\Leftarrow\mathtt{Y}\text{ (insert into stack):} & \left\{ \begin{array}{l}
+\text{if }\mathtt{T}=\mathtt{M},\text{ then }\mathtt{OVERFLOW};\\
+\mathtt{X[T]}\gets\mathtt{Y};\\
+\mathtt{T}\gets\mathtt{T}+1.
+\end{array}\right.\\
+\mathtt{Y}\Leftarrow\mathtt{X}\text{ (delete from stack):} & \left\{ \begin{array}{l}
+\text{if }\mathtt{T}=0,\text{ then }\mathtt{UNDERFLOW};\\
+\mathtt{T}\gets\mathtt{T}-1;\\
+\mathtt{Y}\gets\mathtt{X[T]}.
+\end{array}\right.\\
+\mathtt{X}\Leftarrow\mathtt{Y}\text{ (insert into queue):} & \left\{ \begin{array}{l}
+\mathtt{R}\gets(\mathtt{R}+1)\bmod\mathtt{M};\\
+\text{if }\mathtt{R}=\mathtt{F},\text{ then }\mathtt{OVERFLOW};\\
+\mathtt{X[R]}\gets\mathtt{Y}.
+\end{array}\right.\\
+\mathtt{Y}\Leftarrow\mathtt{X}\text{ (delete from queue):} & \left\{ \begin{array}{l}
+\text{if }\mathtt{F}=\mathtt{R},\text{ then }\mathtt{UNDERFLOW};\\
+\mathtt{F}\gets(\mathtt{F}+1)\bmod\mathtt{M};\\
+\mathtt{Y}\gets\mathtt{X[F]}.
+\end{array}\right.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

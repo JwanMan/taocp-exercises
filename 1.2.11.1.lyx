@@ -1,0 +1,556 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO 1,
+ 2,
+ 4,
+ 6,
+ 11,
+ 13 (1 p.) (est.
+ 0:21:19)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[HM01]
+\end_layout
+
+\end_inset
+
+What is 
+\begin_inset Formula $\lim_{n\to\infty}O(n^{-1/3})$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+0.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc2[M10]
+\end_layout
+
+\end_inset
+
+Mr.
+ B.
+ C.
+ Dull obtained astonishing results by using the 
+\begin_inset Quotes eld
+\end_inset
+
+self-evident
+\begin_inset Quotes erd
+\end_inset
+
+ formula 
+\begin_inset Formula $O(f(n))-O(f(n))=0$
+\end_inset
+
+.
+ What was his mistake,
+ and what should the right-hand side of his formula has been?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $O(f(n))$
+\end_inset
+
+ is a set of functions,
+ not a single function,
+ so the two 
+\begin_inset Formula $O(f(n))$
+\end_inset
+
+ do not cancel out (for example,
+ the first 
+\begin_inset Formula $O(f(n))$
+\end_inset
+
+ could represent 
+\begin_inset Formula $f(n)$
+\end_inset
+
+ and the second one could be 0).
+ The right hand side should be another 
+\begin_inset Formula $O(f(n))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[M15]
+\end_layout
+
+\end_inset
+
+Give an asymptotic expansion of 
+\begin_inset Formula $n(\sqrt[n]{a}-1)$
+\end_inset
+
+,
+ if 
+\begin_inset Formula $a>0$
+\end_inset
+
+,
+ to terms 
+\begin_inset Formula $O(1/n^{3})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We can do this by considering the function in terms of 
+\begin_inset Formula $x\coloneqq\frac{1}{n}$
+\end_inset
+
+,
+ which would be 
+\begin_inset Formula $\frac{1}{x}(a^{x}-1)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $a^{x}=\text{e}^{x\ln a}=1+x\ln a+\frac{1}{2}x^{2}\ln^{2}a+\frac{1}{6}x^{3}\ln^{3}a+O(x^{4}\ln^{4}a)$
+\end_inset
+
+,
+ so
+\begin_inset Formula 
+\[
+a^{x}-1=x\ln a+\frac{x^{2}\ln^{2}a}{2}+\frac{x^{3}\ln^{3}a}{6}+O(x^{4})=\frac{\ln a}{n}+\frac{\ln^{2}a}{2n^{2}}+\frac{\ln^{3}a}{6n^{3}}+O(n^{-4})
+\]
+
+\end_inset
+
+and finally
+\begin_inset Formula 
+\[
+n(\sqrt[n]{a}-1)=\ln a+\frac{\ln^{2}a}{2n}+\frac{\ln^{3}a}{6n^{2}}+O(n^{-3}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc6[M20]
+\end_layout
+
+\end_inset
+
+What is wrong with the following arguments?
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Since 
+\begin_inset Formula $n=O(n)$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $2n=O(n)$
+\end_inset
+
+,
+ ...,
+ we have
+\begin_inset Formula 
+\[
+\sum_{k=1}^{n}kn=\sum_{k=1}^{n}O(n)=O(n^{2}).\text{''}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The second expression does not make sense.
+ It is a sum of 
+\begin_inset Formula $n$
+\end_inset
+
+ functions each of which has 
+\begin_inset Formula $n$
+\end_inset
+
+ as a parameter,
+ but if 
+\begin_inset Formula $n$
+\end_inset
+
+ is a parameter,
+ it cannot be an 
+\begin_inset Quotes eld
+\end_inset
+
+external
+\begin_inset Quotes erd
+\end_inset
+
+ parameter of the function represented by 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ as well.
+ In this case,
+ it is invalid to move the big O inside the sum as the range of the sum depends on 
+\begin_inset Formula $n$
+\end_inset
+
+ and so does the domain of values 
+\begin_inset Formula $k$
+\end_inset
+
+ can take,
+ so 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ which depends on 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ cannot be treated like a constant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[M11]
+\end_layout
+
+\end_inset
+
+Explain why Eq.
+ (18) is true.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The first identity is because 
+\begin_inset Formula $\sqrt[n]{n}=\text{e}^{\ln\sqrt[n]{n}}=\text{e}^{\ln n^{1/n}}=\text{e}^{\ln n/n}$
+\end_inset
+
+,
+ taking the power 
+\begin_inset Formula $1/n$
+\end_inset
+
+ out of the logarithm.
+ The second identity is a direct application of Eq.
+ (12),
+ using that 
+\begin_inset Formula $\ln n/n\to0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc13[M10]
+\end_layout
+
+\end_inset
+
+Prove or disprove:
+ 
+\begin_inset Formula $g(n)=\Omega(f(n))$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $f(n)=O(g(n))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $g(n)=\Omega(f(n))$
+\end_inset
+
+ if and only if there exist 
+\begin_inset Formula $n_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+ such that 
+\begin_inset Formula $|g(n)|\geq L|f(n)|$
+\end_inset
+
+ for each 
+\begin_inset Formula $n\geq n_{0}$
+\end_inset
+
+,
+ but this is the same as saying that,
+ for all such 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ 
+\begin_inset Formula $|f(n)|\leq\frac{1}{L}|g(n)|$
+\end_inset
+
+,
+ which is to say that 
+\begin_inset Formula $f(n)=O(g(n))$
+\end_inset
+
+.
+ Since arguably this 
+\begin_inset Formula $L$
+\end_inset
+
+ must be positive (otherwise the statement is trivial),
+ taking 
+\begin_inset Formula $\frac{1}{L}$
+\end_inset
+
+ is valid,
+ and likewise,
+ if 
+\begin_inset Formula $|f(n)|\leq M|g(n)|$
+\end_inset
+
+ for each 
+\begin_inset Formula $n\geq n_{0}$
+\end_inset
+
+ and some 
+\begin_inset Formula $M$
+\end_inset
+
+,
+ we can always make this 
+\begin_inset Formula $M$
+\end_inset
+
+ positive to make the reverse argument.
+\end_layout
+
+\end_body
+\end_document

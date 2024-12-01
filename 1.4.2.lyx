@@ -1,0 +1,465 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[10]
+\end_layout
+
+\end_inset
+
+Explain why short,
+ simple examples of coroutines are hard for the author of a textbook to find.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Coroutines appear when there are several parts of the program coordinating among them,
+ where each part performs a higher level task.
+ While simple coroutines appear in higher level languages such as Python (in the form of generators),
+ in languages such as assembly where they is no builtin support for them,
+ they are more complex and slower than equivalent code that doesn't use coroutines,
+ so their utility is not evident from these simple cases.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc2[20]
+\end_layout
+
+\end_inset
+
+The program in the text starts up the 
+\family typewriter
+OUT
+\family default
+ coroutine first.
+ What would happen if 
+\family typewriter
+IN
+\family default
+ were the first to be executed—
+that is,
+ if line 60 where changed from `
+\family typewriter
+JMP OUT1
+\family default
+' to `
+\family typewriter
+JMP IN1
+\family default
+'?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The first parsed character would be ignored,
+ since the 
+\family typewriter
+OUT
+\family default
+ coroutine doesn't expect a character to be loaded already when it begins.
+ Here 
+\family typewriter
+IN
+\family default
+ acts effectively like a generator for 
+\family typewriter
+OUT
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc6[22]
+\end_layout
+
+\end_inset
+
+Give coroutine linkage analogous to (1) for the case of 
+\emph on
+three
+\emph default
+ coroutines,
+ 
+\family typewriter
+A
+\family default
+,
+ 
+\family typewriter
+B
+\family default
+,
+ and 
+\family typewriter
+C
+\family default
+,
+ each of which can jump to either of the other two.
+ (Whenever a coroutine is activated,
+ it begins where it last left off.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+In principle,
+ this would require us to extend the code to 
+\emph on
+six
+\emph default
+ coroutine linkages,
+ like below:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+tt
+\backslash
+hfil
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "25col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+BTOA  STJ  BX
+\end_layout
+
+\begin_layout Plain Layout
+      JMP  AX
+\end_layout
+
+\begin_layout Plain Layout
+CTOA  STJ  CX
+\end_layout
+
+\begin_layout Plain Layout
+AX    JMP  A1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "25col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+ATOB  STJ  AX
+\end_layout
+
+\begin_layout Plain Layout
+      JMP  BX
+\end_layout
+
+\begin_layout Plain Layout
+CTOB  STJ  CX
+\end_layout
+
+\begin_layout Plain Layout
+BX    JMP  B1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "25col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+ATOC  STJ  AX
+\end_layout
+
+\begin_layout Plain Layout
+      JMP  CX
+\end_layout
+
+\begin_layout Plain Layout
+BTOC  STJ  BX
+\end_layout
+
+\begin_layout Plain Layout
+      JMP  C1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can then elide the code for jumps that never happen.
+ When the number of coroutines is large,
+ typically each one only communicates with the next or they communicate with a central,
+ coordinating coroutine that decides which to call next based on some protocol (maybe coroutines store the index of the next coroutine to run in some register,
+ or coroutines are polled in order based on which has input data available,
+ for example.)
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,3414 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[00]
+\end_layout
+
+\end_inset
+
+The text remarked that `
+\family typewriter
+X EQU 1000
+\family default
+' does not assemble any instruction that sets the value of a variable.
+ Suppose that you are writing a 
+\family typewriter
+MIX
+\family default
+ program in which the algorithm is supposed to set the value contained in certain memory cell (whose symbolic name is 
+\family typewriter
+X
+\family default
+) equal to 1000.
+ How could you express this in 
+\family typewriter
+MIXAL
+\family default
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ENTA 1000
+\end_layout
+
+\begin_layout Plain Layout
+
+STA  X
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc2[10]
+\end_layout
+
+\end_inset
+
+Line 12 of program M says `
+\family typewriter
+JMP *
+\family default
+',
+ where 
+\family typewriter
+*
+\family default
+ denotes the location of that line.
+ Why doesn't the program go into an infinite loop,
+ endlessly repeating this instruction?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Because,
+ at the entry point of the function,
+ the code self-modifies,
+ changing that instruction to a jump to the next instruction of the routine that called program M.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc3[23]
+\end_layout
+
+\end_inset
+
+What is the effect of the following program,
+ if it is used in conjunction with Program M?
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+START IN   X+1(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+      JBUS *(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+      ENT1 100
+\end_layout
+
+\begin_layout Plain Layout
+
+1H    JMP  MAXIMUM
+\end_layout
+
+\begin_layout Plain Layout
+
+      LDX  X,1
+\end_layout
+
+\begin_layout Plain Layout
+
+      STA  X,1
+\end_layout
+
+\begin_layout Plain Layout
+
+      STX  X,2
+\end_layout
+
+\begin_layout Plain Layout
+
+      DEC1 1
+\end_layout
+
+\begin_layout Plain Layout
+
+      J1P  1B
+\end_layout
+
+\begin_layout Plain Layout
+
+      OUT  X+1(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+      HLT
+\end_layout
+
+\begin_layout Plain Layout
+
+      END  START
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+It reads 100 numbers from tape 0 and prints them sorted in nondecreasing order to tape 1.
+ It first reads the 100 numbers,
+ and then it finds the maximum of the elements,
+ exchanges it with the last element in the list and repeats that with the list made of of all the remaining elements.
+ Finally,
+ it outputs the result.
+ This is known as 
+\emph on
+bubble sort
+\emph default
+,
+ the slowest sensible sorting algorithm,
+ with complexity 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[25]
+\end_layout
+
+\end_inset
+
+Assemble Program P by hand.
+ (It won't take as long as you think.) What are the actual numerical contents of memory,
+ corresponding to that symbolic program?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+See figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:e1234"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+soffsets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="20" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\family typewriter
+3000
+\family default
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes0
+\backslash
+byte0
+\backslash
+byte{18}
+\backslash
+byte{35}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{2051}
+\backslash
+byte0
+\backslash
+byte5
+\backslash
+byte9
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{2050}
+\backslash
+byte0
+\backslash
+byte5
+\backslash
+byte{10}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3003
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes1
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte{49}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3004
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{499}
+\backslash
+byte1
+\backslash
+byte5
+\backslash
+byte{26}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3005
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{3016}
+\backslash
+byte0
+\backslash
+byte1
+\backslash
+byte{41}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3006
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes2
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte{50}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3007
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes2
+\backslash
+byte0
+\backslash
+byte2
+\backslash
+byte{51}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3008
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes0
+\backslash
+byte0
+\backslash
+byte2
+\backslash
+byte{48}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3009
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes0
+\backslash
+byte2
+\backslash
+byte2
+\backslash
+byte{55}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3010
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte-
+\backslash
+twobytes1
+\backslash
+byte3
+\backslash
+byte5
+\backslash
+byte4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3011
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{3006}
+\backslash
+byte0
+\backslash
+byte1
+\backslash
+byte{47}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3012
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte-
+\backslash
+twobytes1
+\backslash
+byte3
+\backslash
+byte5
+\backslash
+byte{56}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3013
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes1
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte{51}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3014
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{3008}
+\backslash
+byte0
+\backslash
+byte6
+\backslash
+byte{39}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3015
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{3003}
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte{39}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3016
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{1995}
+\backslash
+byte0
+\backslash
+byte{18}
+\backslash
+byte{37}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3017
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{2035}
+\backslash
+byte0
+\backslash
+byte2
+\backslash
+byte{52}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3018
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte-
+\backslash
+twobytes{50}
+\backslash
+byte0
+\backslash
+byte2
+\backslash
+byte{53}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3019
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{501}
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte{53}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfil{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="20" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\family typewriter
+3020
+\family default
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte-
+\backslash
+twobytes1
+\backslash
+byte5
+\backslash
+byte5
+\backslash
+byte8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3021
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes0
+\backslash
+byte0
+\backslash
+byte1
+\backslash
+byte5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3022
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes0
+\backslash
+byte4
+\backslash
+byte{12}
+\backslash
+byte{31}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3023
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes1
+\backslash
+byte0
+\backslash
+byte1
+\backslash
+byte{52}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3024
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{50}
+\backslash
+byte0
+\backslash
+byte1
+\backslash
+byte{53}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3025
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{3020}
+\backslash
+byte0
+\backslash
+byte2
+\backslash
+byte{45}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3026
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes0
+\backslash
+byte4
+\backslash
+byte{18}
+\backslash
+byte{37}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3027
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{24}
+\backslash
+byte4
+\backslash
+byte5
+\backslash
+byte{12}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3028
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes{3019}
+\backslash
+byte0
+\backslash
+byte0
+\backslash
+byte{45}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3029
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+twobytes0
+\backslash
+byte0
+\backslash
+byte2
+\backslash
+byte5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+0000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+fivebytes2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+1995
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+byte6
+\backslash
+byte9
+\backslash
+byte{19}
+\backslash
+byte{22}
+\backslash
+byte{23}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+1996
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+byte0
+\backslash
+byte6
+\backslash
+byte9
+\backslash
+byte{25}
+\backslash
+byte5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+1997
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+byte0
+\backslash
+byte8
+\backslash
+byte{24}
+\backslash
+byte{15}
+\backslash
+byte4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+1998
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+byte{19}
+\backslash
+byte5
+\backslash
+byte4
+\backslash
+byte0
+\backslash
+byte{17}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+1999
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+byte{19}
+\backslash
+byte9
+\backslash
+byte{14}
+\backslash
+byte5
+\backslash
+byte{22}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+2024
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+fivebytes{2035}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+2049
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+fivebytes{2010}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+2050
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte+
+\backslash
+fivebytes3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+2051
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+byte-
+\backslash
+fivebytes{499}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eoffsets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:e1234"
+
+\end_inset
+
+Machine code for Program P.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc7[10]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is the meaning of `
+\family typewriter
+4B
+\family default
+' in line 34 of Program P?
+\end_layout
+
+\begin_layout Enumerate
+What effect,
+ if any,
+ would be cause if the location of line 15 were changed to `
+\family typewriter
+2H
+\family default
+' and the address of line 20 were changed to `
+\family typewriter
+2B
+\family default
+'?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+It references the address at line 29,
+ the first previous line with label `
+\family typewriter
+4H
+\family default
+'.
+\end_layout
+
+\begin_layout Enumerate
+Line 14 would reference line 15 instead of line 25 and line 24 would reference line 15 instead of line 12.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc8[24]
+\end_layout
+
+\end_inset
+
+What does the following program do?
+ (Do not run it on a computer,
+ figure it out by hand!)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+* MYSTERY PROGRAM
+\end_layout
+
+\begin_layout Plain Layout
+
+BUF ORIG *+3000
+\end_layout
+
+\begin_layout Plain Layout
+
+1H  ENT1 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    ENT2 0
+\end_layout
+
+\begin_layout Plain Layout
+
+    LDX  4F
+\end_layout
+
+\begin_layout Plain Layout
+
+2H  ENT3 0,1
+\end_layout
+
+\begin_layout Plain Layout
+
+3H  STZ  BUF,2
+\end_layout
+
+\begin_layout Plain Layout
+
+    INC2 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    DEC3 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    J3P  3B
+\end_layout
+
+\begin_layout Plain Layout
+
+    STX  BUF,2
+\end_layout
+
+\begin_layout Plain Layout
+
+    INC2 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    INC1 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    CMP1 =75=
+\end_layout
+
+\begin_layout Plain Layout
+
+    JL   2B
+\end_layout
+
+\begin_layout Plain Layout
+
+    ENN2 2400
+\end_layout
+
+\begin_layout Plain Layout
+
+    OUT  BUF+2400,2(18)
+\end_layout
+
+\begin_layout Plain Layout
+
+    INC2 24
+\end_layout
+
+\begin_layout Plain Layout
+
+    J2N  *-2
+\end_layout
+
+\begin_layout Plain Layout
+
+    HLT
+\end_layout
+
+\begin_layout Plain Layout
+
+4H  ALF  AAAAA
+\end_layout
+
+\begin_layout Plain Layout
+
+    END  1B
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+An analysis shows that the code is not self-modifying and that it's equivalent to the following pseudo-C:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+r2 = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+x = *
+\begin_inset Quotes erd
+\end_inset
+
+AAAAA
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+for (r1 = 1;
+ r1 < 75;
+ r1++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+     for (or3m75 = 0;
+ or3m75 < r1;
+ or3m75++)
+\end_layout
+
+\begin_layout Plain Layout
+
+          *r2++ = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+     *r2++ = x;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+for (f2i24p100 = 0;
+ r2i24p100 < 100;
+ r2i24p100++)
+\end_layout
+
+\begin_layout Plain Layout
+
+     write(PRINTER,
+ r2i24p100 * 24);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The program code begins at position 3000,
+ and the programs writes until position
+\begin_inset Formula 
+\[
+(2+\dots+75)-1=(1+\dots+74)+74-1=\frac{74\cdot75}{2}+74-1=\frac{74\cdot77}{2}-1=2848,
+\]
+
+\end_inset
+
+so the code is indeed not self-modifying.
+ For each iteration 
+\begin_inset Formula $i$
+\end_inset
+
+ from 1 to 74,
+ the code stores 
+\begin_inset Formula $5i$
+\end_inset
+
+ spaces and then 5 A's,
+ and then the code prints the first 12000 characters from those.
+\end_layout
+
+\begin_layout Standard
+As an aside,
+ the same effect can be obtained with the following actual C code,
+ provided there are no runtime errors:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <string.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+     char buffer[15000];
+\end_layout
+
+\begin_layout Plain Layout
+
+     int i,
+ j,
+ k = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+     for (i = 1;
+ i < 75;
+ i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+          for (j = 0;
+ j < i;
+ j++)
+\end_layout
+
+\begin_layout Plain Layout
+
+               strcpy(buffer + 5*(k++),
+ "     ");
+\end_layout
+
+\begin_layout Plain Layout
+
+          strcpy(buffer + 5*(k++),
+ "AAAAA");
+\end_layout
+
+\begin_layout Plain Layout
+
+     }
+\end_layout
+
+\begin_layout Plain Layout
+
+     for (i = 0;
+ i < 100;
+ i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+          fwrite(buffer + 120*i,
+ 120,
+ 1,
+ stdout);
+\end_layout
+
+\begin_layout Plain Layout
+
+          putchar('
+\backslash
+n');
+\end_layout
+
+\begin_layout Plain Layout
+
+     }
+\end_layout
+
+\begin_layout Plain Layout
+
+     return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc9[25]
+\end_layout
+
+\end_inset
+
+Location 
+\family typewriter
+INST
+\family default
+ contains a 
+\family typewriter
+MIX
+\family default
+ word that purportedly is a 
+\family typewriter
+MIX
+\family default
+ instruction.
+ Write a 
+\family typewriter
+MIX
+\family default
+ program that jumps to location 
+\family typewriter
+GOOD
+\family default
+ if the word has a valid C-field,
+ valid 
+\begin_inset Formula $\pm\text{AA}$
+\end_inset
+
+-field,
+ valid I-field,
+ and valid F-field,
+ according to Table 1.3.1–1;
+ your program should jump to location 
+\family typewriter
+BAD
+\family default
+ otherwise.
+ Remember that the test for a valid F-field depends on the C-field;
+ for example,
+ if 
+\begin_inset Formula $\text{C}=7$
+\end_inset
+
+ (
+\family typewriter
+MOVE
+\family default
+),
+ any F-field is acceptable,
+ but if 
+\begin_inset Formula $\text{C}=8$
+\end_inset
+
+ (
+\family typewriter
+LDA
+\family default
+),
+ the F-field must have the form 
+\begin_inset Formula $8L+R$
+\end_inset
+
+ where 
+\begin_inset Formula $0\leq L\leq R\leq5$
+\end_inset
+
+.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\pm\text{AA}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+-field is to be considered valid 
+\emph on
+unless
+\emph default
+ C specifies an instruction requiring a memory address and 
+\begin_inset Formula $\text{I}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\pm\text{AA}$
+\end_inset
+
+ is not a valid memory address.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Note
+\emph default
+:
+ Inexperienced programmers tend to tackle a problem like this by writing a long series of tests on the C-field,
+ such as `
+\family typewriter
+LDA C
+\family default
+;
+ 
+\family typewriter
+JAZ 1F
+\family default
+;
+ 
+\family typewriter
+DECA 5
+\family default
+;
+ 
+\family typewriter
+JAN 2F
+\family default
+;
+ 
+\family typewriter
+JAZ 3F
+\family default
+;
+ 
+\family typewriter
+DECA 2
+\family default
+;
+ 
+\family typewriter
+JAN 4F
+\family default
+;
+ ...'.
+ This is 
+\emph on
+not
+\emph default
+ good practice!
+ The best way to make multiway decisions is to prepare an auxiliary 
+\emph on
+table
+\emph default
+ containing information that encapsulates the desired logic.
+ If there were,
+ for example,
+ a table of 64 entries,
+ we could write `
+\family typewriter
+LD1 C
+\family default
+;
+ 
+\family typewriter
+LD1 TABLE,1
+\family default
+;
+ 
+\family typewriter
+JMP 0,1
+\family default
+'—
+thereby jumping very speedily to the desired routine.
+ Other useful information can also be kept in such a table.
+ A tabular approach to the present problem makes the program only a little bit longer (including the table) and greatly increases its speed and flexibility.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ADDR  EQU 0:2
+\end_layout
+
+\begin_layout Plain Layout
+
+INDEX EQU 3:3
+\end_layout
+
+\begin_layout Plain Layout
+
+FIELD EQU 4:4
+\end_layout
+
+\begin_layout Plain Layout
+
+CODE  EQU 5:5
+\end_layout
+
+\begin_layout Plain Layout
+
+      LD1  INST(CODE)
+\end_layout
+
+\begin_layout Plain Layout
+
+      LD3  INST(INDEX) ;
+ Load I-field
+\end_layout
+
+\begin_layout Plain Layout
+
+      ENTA -6,3        ;
+ Check if I-field > 6
+\end_layout
+
+\begin_layout Plain Layout
+
+      JAP  BAD
+\end_layout
+
+\begin_layout Plain Layout
+
+      J3NZ 2F          ;
+ I-field nonzero,
+ skip AA test
+\end_layout
+
+\begin_layout Plain Layout
+
+      LDX  TABLE,1(0:0)
+\end_layout
+
+\begin_layout Plain Layout
+
+      ENTX 1(5:5)      ;
+ 1 when AA is address,
+ -1 otherwise
+\end_layout
+
+\begin_layout Plain Layout
+
+      JXN  2F
+\end_layout
+
+\begin_layout Plain Layout
+
+      LDA  INST(ADDR)
+\end_layout
+
+\begin_layout Plain Layout
+
+      JAN  BAD         ;
+ Addr relevant,
+ index 0,
+ addr negative
+\end_layout
+
+\begin_layout Plain Layout
+
+2H    LDA  INST(FIELD) ;
+ Field test:
+ dispatch
+\end_layout
+
+\begin_layout Plain Layout
+
+      LD1  TABLE,1(4:5)
+\end_layout
+
+\begin_layout Plain Layout
+
+      JMP  0,1
+\end_layout
+
+\begin_layout Plain Layout
+
+BOUND CMPA TABLE,1(3:3);
+ F-field in [0,CONTENTS(TABLE,1(3:3))]
+\end_layout
+
+\begin_layout Plain Layout
+
+      JL   GOOD
+\end_layout
+
+\begin_layout Plain Layout
+
+      JMP  BAD
+\end_layout
+
+\begin_layout Plain Layout
+
+RANSX CMPA =6=         ;
+ F-field in range or 6
+\end_layout
+
+\begin_layout Plain Layout
+
+      JE   GOOD
+\end_layout
+
+\begin_layout Plain Layout
+
+RANGE SRAX 5    ;
+ rAX is the F-field
+\end_layout
+
+\begin_layout Plain Layout
+
+      DIV  =8=  ;
+ rA:rX is the F-field
+\end_layout
+
+\begin_layout Plain Layout
+
+      CMPA FIVE
+\end_layout
+
+\begin_layout Plain Layout
+
+      JG   BAD
+\end_layout
+
+\begin_layout Plain Layout
+
+      CMPX FIVE
+\end_layout
+
+\begin_layout Plain Layout
+
+      JG   BAD
+\end_layout
+
+\begin_layout Plain Layout
+
+      STA  *+1(0:2) ;
+ rX -= rA
+\end_layout
+
+\begin_layout Plain Layout
+
+      DECX *
+\end_layout
+
+\begin_layout Plain Layout
+
+      JXN  BAD ;
+ If rX < rA,
+ dat's bad
+\end_layout
+
+\begin_layout Plain Layout
+
+      JMP  GOOD
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+ Format is Sign(0:0),
+ F-field test (4:5),
+ where Sign is
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+ positive iff the +/-AA field represents an address and
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+ F-field test jumps to GOOD if the F-field is valid for the
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+ given case or to BAD otherwise.
+ Fields 1:3 may contain
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+ specific information
+\end_layout
+
+\begin_layout Plain Layout
+
+IODEV EQU  21(0:3),BOUND(4:5) ;
+ Field is I/O device
+\end_layout
+
+\begin_layout Plain Layout
+
+JMPBY EQU  6(0:3),BOUND(4:5)  ;
+ Field is Jx+
+\end_layout
+
+\begin_layout Plain Layout
+
+IMMAT EQU  4(0:3),BOUND(4:5)  ;
+ Field is INCx/DECx/ENTx/ENNx
+\end_layout
+
+\begin_layout Plain Layout
+
+TABLE CON  -GOOD  ;
+ NOP
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANSX  ;
+ ADD/FADD
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANSX  ;
+ SUB/FSUB
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANSX  ;
+ MUL/FMUL
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANSX  ;
+ DIV/FDIV
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  -3(0:3),BOUND(4:5) ;
+ NUM/CHAR/HLT
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  -6(0:3),BOUND(4:5) ;
+ SLA/SRA/SLAX/SRAX/SLC/SRC
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  GOOD   ;
+ MOVE
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LDA
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD1
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD2
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD3
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD4
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD5
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD6
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LDX
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LDAN
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD1N
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD2N
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD3N
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD4N
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD5N
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LD6N
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ LDXN
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ STA
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ ST1
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ ST2
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ ST3
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ ST4
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ ST5
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ ST6
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ STX
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ STJ
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ STZ
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IODEV  ;
+ JBUS
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  -IODEV ;
+ IOC
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IODEV  ;
+ IN
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IODEV  ;
+ OUT
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IODEV  ;
+ JRED
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  10(0:3),BOUND(4:5) ;
+ JMP/JSJ/JOV/JNOV/*
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  JMPBY  ;
+ JA+
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  JMPBY  ;
+ J1+
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  JMPBY  ;
+ J2+
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  JMPBY  ;
+ J3+
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  JMPBY  ;
+ J4+
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  JMPBY  ;
+ J5+
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  JMPBY  ;
+ J6+
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  JMPBY  ;
+ JX+
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IMMAT  ;
+ INCA/DECA/ENTA/ENNA
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IMMAT  ;
+ INC1/...
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IMMAT  ;
+ INC2/...
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IMMAT  ;
+ INC3/...
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IMMAT  ;
+ INC4/...
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IMMAT  ;
+ INC5/...
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IMMAT  ;
+ INC6/...
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  IMMAT  ;
+ INC7/...
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANSX  ;
+ CMPA/FCMP
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ CMP1
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ CMP2
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ CMP3
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ CMP4
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ CMP5
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGE  ;
+ CMP6
+\end_layout
+
+\begin_layout Plain Layout
+
+      CON  RANGe  ;
+ CMPX
+\end_layout
+
+\begin_layout Plain Layout
+
+FIVE  CON 5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

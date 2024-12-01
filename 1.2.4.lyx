@@ -1,0 +1,2433 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[00]
+\end_layout
+
+\end_inset
+
+What are 
+\begin_inset Formula $\lfloor1.1\rfloor$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\lfloor-1.1\rfloor$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\lceil-1.1\rceil$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\lfloor0.99999\rfloor$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\lfloor\lg35\rfloor$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lfloor1.1\rfloor=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\lfloor-1.1\rfloor=-2$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\lceil-1.1\rceil=-1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\lfloor0.99999\rfloor=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\lfloor\lg35\rfloor=5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc2[01]
+\end_layout
+
+\end_inset
+
+What is 
+\begin_inset Formula $\lceil\lfloor x\rfloor\rceil$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The same as 
+\begin_inset Formula $\lfloor x\rfloor$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc3[10]
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $n$
+\end_inset
+
+ be an integer,
+ and let 
+\begin_inset Formula $x$
+\end_inset
+
+ be a real number.
+ Prove that
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lfloor x\rfloor<n$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x<n$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n\leq\lfloor x\rfloor$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $n\leq x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lceil x\rceil\leq n$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x\leq n$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n<\lceil x\rceil$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $n<x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lfloor x\rfloor=n$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x-1<n\leq x$
+\end_inset
+
+,
+ and if and only if 
+\begin_inset Formula $n\leq x<n+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lceil x\rceil=n$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x\leq n<x+1$
+\end_inset
+
+,
+ and if and only if 
+\begin_inset Formula $n-1<x\leq n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+By contraposition,
+ if 
+\begin_inset Formula $x\geq n$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $n$
+\end_inset
+
+ is an integer less than or equal to 
+\begin_inset Formula $x$
+\end_inset
+
+ and so 
+\begin_inset Formula $\lfloor x\rfloor\geq n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lfloor x\rfloor\leq x<n$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+It's the contrapositive of the previous statement.
+\end_layout
+
+\begin_layout Enumerate
+Derived from the previous statement replacing 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ with 
+\begin_inset Formula $-x$
+\end_inset
+
+ and 
+\begin_inset Formula $-n$
+\end_inset
+
+ and using that 
+\begin_inset Formula $\lfloor-x\rfloor=-\lceil x\rceil$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+It's the contrapositive of the previous statement.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $1\implies2]$
+\end_inset
+
+ Obviously 
+\begin_inset Formula $n=\lfloor x\rfloor\leq x$
+\end_inset
+
+,
+ and if 
+\begin_inset Formula $x-1\geq n$
+\end_inset
+
+ then it would be 
+\begin_inset Formula $x\geq n+1\in\mathbb{Z}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lfloor x\rfloor\geq n+1>n\#$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $2\implies3]$
+\end_inset
+
+ Multiply the inequality by 
+\begin_inset Formula $-1$
+\end_inset
+
+ and add 
+\begin_inset Formula $x+n$
+\end_inset
+
+ to each member.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $3\implies1]$
+\end_inset
+
+ 
+\begin_inset Formula $n\leq x$
+\end_inset
+
+ and any 
+\begin_inset Formula $m\in\mathbb{Z}$
+\end_inset
+
+ with 
+\begin_inset Formula $m\leq x$
+\end_inset
+
+ has 
+\begin_inset Formula $m<n+1$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $m\leq n$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $n=\max\{m\in\mathbb{Z}\mid m\leq x\}=\lfloor x\rfloor$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Derived from the previous statement by replacing 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ with 
+\begin_inset Formula $-x$
+\end_inset
+
+ and 
+\begin_inset Formula $-n$
+\end_inset
+
+ and using that 
+\begin_inset Formula $-\lceil x\rceil=\lfloor-x\rfloor$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[M10]
+\end_layout
+
+\end_inset
+
+Using the previous exercise,
+ prove that 
+\begin_inset Formula $\lfloor-x\rfloor=-\lceil x\rceil$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Since that would be circular reasoning (I did the previous exercise before reading the statement of this one),
+ we'll prove it directly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\lfloor-x\rfloor=n & \iff\forall m\in\mathbb{Z},(m\leq-x\implies m\leq n)\\
+ & \iff\forall m\in\mathbb{Z},(-m\geq x\implies-m\geq-n)\\
+ & \iff\forall m\in\mathbb{Z},(m\geq x\implies m\geq-n)\iff-n=\lceil x\rceil\iff n=-\lceil x\rceil.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc6[20]
+\end_layout
+
+\end_inset
+
+Which of the following equations are true for all positive real numbers 
+\begin_inset Formula $x$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\lfloor \sqrt{\lfloor x\rfloor}\right\rfloor =\lfloor\sqrt{x}\rfloor$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\lceil \sqrt{\lceil x\rceil}\right\rceil =\lceil\sqrt{x}\rceil$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\lceil \sqrt{\lfloor x\rfloor}\right\rceil =\lceil\sqrt{x}\rceil$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+True,
+ if 
+\begin_inset Formula $n=\lfloor\sqrt{x}\rfloor$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $n\leq\sqrt{x}<n+1$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $n^{2}\leq\lfloor x\rfloor\leq x<(n+1)^{2}$
+\end_inset
+
+ and so 
+\begin_inset Formula $n\leq\sqrt{\lfloor x\rfloor}<n+1$
+\end_inset
+
+ and 
+\begin_inset Formula $n=\left\lfloor \sqrt{\lfloor x\rfloor}\right\rfloor $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+True,
+ if 
+\begin_inset Formula $n=\lceil\sqrt{x}\rceil$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $n-1<\sqrt{x}\leq n$
+\end_inset
+
+ and 
+\begin_inset Formula $(n-1)^{2}<x\leq\lceil x\rceil\leq n$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $n-1<\sqrt{\lceil x\rceil}\leq n$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\left\lceil \sqrt{\lceil x\rceil}\right\rceil =n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+False,
+ for example 
+\begin_inset Formula $\left\lceil \sqrt{\lfloor\frac{9}{2}\rfloor}\right\rceil =\lceil\sqrt{4}\rceil=2$
+\end_inset
+
+ but 
+\begin_inset Formula $\lceil\sqrt{\frac{9}{2}}\rceil=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc8[00]
+\end_layout
+
+\end_inset
+
+What are 
+\begin_inset Formula $100\bmod3$
+\end_inset
+
+,
+ 
+\begin_inset Formula $100\bmod7$
+\end_inset
+
+,
+ 
+\begin_inset Formula $-100\bmod7$
+\end_inset
+
+,
+ 
+\begin_inset Formula $-100\bmod0$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $100\bmod3=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $100\bmod7=2$
+\end_inset
+
+,
+ 
+\begin_inset Formula $-100\bmod7=-2\bmod7=5$
+\end_inset
+
+,
+ 
+\begin_inset Formula $-100\bmod0=-100$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc9[05]
+\end_layout
+
+\end_inset
+
+What are 
+\begin_inset Formula $5\bmod-3$
+\end_inset
+
+,
+ 
+\begin_inset Formula $18\bmod-3$
+\end_inset
+
+,
+ 
+\begin_inset Formula $-2\bmod-3$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $5\bmod-3=5-(-3)\lfloor\frac{5}{-3}\rfloor=5+3(-2)=5-6=-1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $18\bmod-3=18-(-3)(-6)=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $-2\bmod-3=-2-(-3)\lfloor\frac{-2}{-3}\rfloor=-2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc10[10]
+\end_layout
+
+\end_inset
+
+What are 
+\begin_inset Formula $1.1\bmod1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $0.11\bmod.1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $0.11\bmod-.1$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+1.1\bmod1 & = & 1.1-\lfloor1.1\rfloor=.1,\\
+0.11\bmod.1 & = & .11-.1\lfloor1.1\rfloor=.01,\\
+0.11\bmod-.1 & = & .11-(-.1)\lfloor-1.1\rfloor=-.09.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc11[00]
+\end_layout
+
+\end_inset
+
+What does 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $x\equiv y\bmod0$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ mean by our conventions?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+It means 
+\begin_inset Formula $x=x\bmod0=y\bmod0=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc12[00]
+\end_layout
+
+\end_inset
+
+What integers are relatively prime to 1?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+All of them,
+ since 
+\begin_inset Formula $\gcd\{a,1\}=1$
+\end_inset
+
+ for any 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc13[M00]
+\end_layout
+
+\end_inset
+
+By convention,
+ we say that the greatest common divisor of 0 and 
+\begin_inset Formula $n$
+\end_inset
+
+ is 
+\begin_inset Formula $|n|$
+\end_inset
+
+.
+ What integers are relatively prime to 0?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Only 1 and 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc14[12]
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $x\bmod3=2$
+\end_inset
+
+ and 
+\begin_inset Formula $x\bmod5=3$
+\end_inset
+
+,
+ what is 
+\begin_inset Formula $x\bmod15$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+This is a simple Diophantine equation,
+ there exist 
+\begin_inset Formula $n,m\in\mathbb{Z}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+x=3n+2=5m+3,
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $3n-5m=1$
+\end_inset
+
+ and one solution is 
+\begin_inset Formula $n=2$
+\end_inset
+
+ and 
+\begin_inset Formula $m=1$
+\end_inset
+
+.
+ In this case 
+\begin_inset Formula $x\bmod15=(3n+2)\bmod15=8$
+\end_inset
+
+,
+ and the Chinese remainder theorem tells us that this is the only possibility.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc15[10]
+\end_layout
+
+\end_inset
+
+Prove that 
+\begin_inset Formula $z(x\bmod y)=(zx)\bmod(zy)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $z=0$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $z(x\bmod y)=0=0\bmod0=(zx)\bmod(zy)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $y=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $z(x\bmod y)=zx=(zx)\bmod(zy)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $y,z\neq0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+(zx)\bmod(zy)=zx-zy\left\lfloor \frac{zx}{zy}\right\rfloor =zx-zy\left\lfloor \frac{x}{y}\right\rfloor =z\left(x-y\left\lfloor \frac{x}{y}\right\rfloor \right)=z(x\bmod y).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc16[M10]
+\end_layout
+
+\end_inset
+
+Assume that 
+\begin_inset Formula $y>0$
+\end_inset
+
+.
+ Show that if 
+\begin_inset Formula $(x-z)/y$
+\end_inset
+
+ is an integer and if 
+\begin_inset Formula $0\leq z<y$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $z=x\bmod y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+In this case,
+ there exists an integer 
+\begin_inset Formula $k$
+\end_inset
+
+ such that 
+\begin_inset Formula $x-z=ky$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $z=x-ky$
+\end_inset
+
+ and we just have to show that 
+\begin_inset Formula $k=\lfloor\frac{x}{y}\rfloor$
+\end_inset
+
+.
+ But since 
+\begin_inset Formula $0\leq z<y$
+\end_inset
+
+,
+ 
+\begin_inset Formula $0\leq\frac{z}{y}<1$
+\end_inset
+
+ and,
+ multiplying this formula by 
+\begin_inset Formula $-1$
+\end_inset
+
+ and adding 
+\begin_inset Formula $\frac{x}{y}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\frac{x}{y}-1<\frac{x}{y}-\frac{z}{y}=k\leq\frac{x}{y}$
+\end_inset
+
+,
+ which means that 
+\begin_inset Formula $k=\lfloor\frac{x}{y}\rfloor$
+\end_inset
+
+ by Exercise 3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc19[M10]
+\end_layout
+
+\end_inset
+
+(
+\emph on
+Law of inverses.
+\emph default
+) If 
+\begin_inset Formula $n\bot m$
+\end_inset
+
+,
+ there is an integer 
+\begin_inset Formula $n'$
+\end_inset
+
+ such that 
+\begin_inset Formula $nn'\equiv1$
+\end_inset
+
+ (modulo 
+\begin_inset Formula $m$
+\end_inset
+
+).
+ Prove this,
+ using the extension of Euclid's algorithm (Algorithm 1.2.1E).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We already know that the algorithm terminates and that returns 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ such that 
+\begin_inset Formula $am+bn=d\coloneqq\gcd\{n,m\}$
+\end_inset
+
+.
+ But in this case 
+\begin_inset Formula $d=1$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $bn=d-am=1-am=1$
+\end_inset
+
+ (modulo 
+\begin_inset Formula $m$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc22[M10]
+\end_layout
+
+\end_inset
+
+Give an example to show that Law B is not always true if 
+\begin_inset Formula $a$
+\end_inset
+
+ is not relatively prime to 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $a=b=3$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x=2$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y=4$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $m=6$
+\end_inset
+
+ in Law B,
+ then 
+\begin_inset Formula $ax=6\equiv12=by$
+\end_inset
+
+ and 
+\begin_inset Formula $a=3=b$
+\end_inset
+
+ but 
+\begin_inset Formula $x=2\not\equiv4=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc23[M10]
+\end_layout
+
+\end_inset
+
+Give an example to show that Law D is not always true if 
+\begin_inset Formula $r$
+\end_inset
+
+ is not relatively prime to 
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $a=6$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=12$
+\end_inset
+
+,
+ 
+\begin_inset Formula $r=3$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $s=6$
+\end_inset
+
+,
+ in Law D,
+ then 
+\begin_inset Formula $a=6\equiv12=b$
+\end_inset
+
+ modulo 
+\begin_inset Formula $r=3$
+\end_inset
+
+ and modulo 
+\begin_inset Formula $s=6$
+\end_inset
+
+ but not modulo 
+\begin_inset Formula $rs=18$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc24[M20]
+\end_layout
+
+\end_inset
+
+To what extent can Laws A,
+ B,
+ C,
+ and D be generalized to apply to arbitrary real numbers instead of integers?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let's check the laws one by one.
+\end_layout
+
+\begin_layout Description
+Law
+\begin_inset space ~
+\end_inset
+
+A If 
+\begin_inset Formula $a,b,x,y,m\in\mathbb{R}$
+\end_inset
+
+,
+ if 
+\begin_inset Formula $m=0$
+\end_inset
+
+ the law is trivial.
+ If not,
+ we have 
+\begin_inset Formula $a-m\lfloor\frac{a}{m}\rfloor=b-m\lfloor\frac{b}{m}\rfloor$
+\end_inset
+
+ and 
+\begin_inset Formula $x-m\lfloor\frac{x}{m}\rfloor=y-m\lfloor\frac{y}{m}\rfloor$
+\end_inset
+
+,
+ and for addition
+\begin_inset Formula 
+\begin{multline*}
+a+x-m\left\lfloor \frac{a+x}{m}\right\rfloor =b+y-m\left\lfloor \frac{b+y}{m}\right\rfloor \iff\\
+\iff m\left(\left\lfloor \frac{a+x}{m}\right\rfloor -\left\lfloor \frac{b+y}{m}\right\rfloor \right)=\\
+=a+x-b-y=m\left(\left\lfloor \frac{a}{m}\right\rfloor +\left\lfloor \frac{x}{m}\right\rfloor -\left\lfloor \frac{b}{m}\right\rfloor -\left\lfloor \frac{y}{m}\right\rfloor \right)\iff\\
+\iff\left\lfloor \frac{a+x}{m}\right\rfloor -\left\lfloor \frac{a}{m}\right\rfloor -\left\lfloor \frac{x}{m}\right\rfloor =\left\lfloor \frac{b+y}{m}\right\rfloor -\left\lfloor \frac{b}{m}\right\rfloor -\left\lfloor \frac{y}{m}\right\rfloor .
+\end{multline*}
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\[
+\left\lfloor \frac{a}{m}\right\rfloor +\left\lfloor \frac{x}{m}\right\rfloor \leq\frac{a+x}{m}<\left\lfloor \frac{a}{m}\right\rfloor +\left\lfloor \frac{x}{m}\right\rfloor +2,
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $\left\lfloor \frac{a+x}{m}\right\rfloor $
+\end_inset
+
+ is either 
+\begin_inset Formula $\left\lfloor \frac{a}{m}\right\rfloor +\left\lfloor \frac{x}{m}\right\rfloor $
+\end_inset
+
+ or 
+\begin_inset Formula $\left\lfloor \frac{a}{m}\right\rfloor +\left\lfloor \frac{x}{m}\right\rfloor +1$
+\end_inset
+
+,
+ and similarly for 
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ But
+\begin_inset Formula 
+\begin{multline*}
+\left\lfloor \frac{a+x}{m}\right\rfloor =\left\lfloor \frac{a}{m}\right\rfloor +\left\lfloor \frac{x}{m}\right\rfloor \iff\left\lfloor \frac{a}{m}\right\rfloor +\left\lfloor \frac{x}{m}\right\rfloor \leq\frac{a+x}{m}<\left\lfloor \frac{a}{m}\right\rfloor +\left\lfloor \frac{x}{m}\right\rfloor +1\iff\\
+\iff a+x<m\left\lfloor \frac{a}{m}\right\rfloor +m\left\lfloor \frac{x}{m}\right\rfloor +m\iff\\
+\iff(a\bmod m)+(x\bmod m)=(b\bmod m)+(x\bmod m)<m\iff\\
+\iff\left\lfloor \frac{b+y}{m}\right\rfloor =\left\lfloor \frac{b}{m}\right\rfloor +\left\lfloor \frac{y}{m}\right\rfloor ,
+\end{multline*}
+
+\end_inset
+
+which proves the equality in the last line of the first formula.
+ For subtraction,
+ we have to see that 
+\begin_inset Formula $-x\equiv-y\bmod m$
+\end_inset
+
+ and so 
+\begin_inset Formula $a-x=a+(-x)\equiv a+(-y)=a-y\pmod m$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x\bmod m=0$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $\frac{x}{m}\in\mathbb{Z}$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $-\frac{x}{m}\in\mathbb{Z}$
+\end_inset
+
+ and 
+\begin_inset Formula $-x\bmod m=0$
+\end_inset
+
+,
+ and similarly 
+\begin_inset Formula $y\bmod m=0$
+\end_inset
+
+ and so 
+\begin_inset Formula $-y\bmod m=0$
+\end_inset
+
+.
+ Otherwise 
+\begin_inset Formula $\frac{x}{m}\notin\mathbb{Z}$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $\lceil\frac{x}{m}\rceil=\lfloor\frac{x}{m}\rfloor+1$
+\end_inset
+
+,
+ but by Exercise 4,
+ 
+\begin_inset Formula 
+\begin{align*}
+-x\bmod m & =-x-m\left\lfloor \frac{-x}{m}\right\rfloor =-x+m\left\lceil \frac{x}{m}\right\rceil =-x+m\left\lfloor \frac{x}{m}\right\rfloor +m=\\
+ & =m-(x\bmod m)=m-(y\bmod m)=-y\bmod m.
+\end{align*}
+
+\end_inset
+
+For multiplication this doesn't hold;
+ for example,
+ if 
+\begin_inset Formula $m=2.5$
+\end_inset
+
+,
+ 
+\begin_inset Formula $a=0.5$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=-2$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $x=y=2.2$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $ax\bmod m=1.1\bmod2.5=1.1$
+\end_inset
+
+ but 
+\begin_inset Formula $by\bmod m=-4.4\bmod2.5=0.6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Law
+\begin_inset space ~
+\end_inset
+
+B Obviously 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+ must be integers,
+ otherwise the statement wouldn't make sense.
+ Even then,
+ however,
+ if 
+\begin_inset Formula $a=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=-2$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x=\frac{4}{3}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y=\frac{7}{3}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $m=3$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $ax=\frac{4}{3}\equiv-\frac{14}{3}=by$
+\end_inset
+
+ and 
+\begin_inset Formula $a=1\equiv-2=b$
+\end_inset
+
+,
+ but 
+\begin_inset Formula $\frac{4}{3}\not\equiv\frac{7}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Law
+\begin_inset space ~
+\end_inset
+
+C Using Exercise 15,
+ for 
+\begin_inset Formula $a,b,m,n\in\mathbb{R}$
+\end_inset
+
+ with 
+\begin_inset Formula $n\neq0$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{multline*}
+a\equiv b\bmod m\iff a\bmod m=b\bmod m\iff\\
+\iff an\bmod mn=n(a\bmod m)=n(b\bmod m)=bn\bmod mn\iff\\
+\iff an\equiv bn\bmod mn.
+\end{multline*}
+
+\end_inset
+
+Note that the second double implication would not hold in the left direction for 
+\begin_inset Formula $n=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Law
+\begin_inset space ~
+\end_inset
+
+D Here 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ must be integers.
+ Then,
+ if 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+ with 
+\begin_inset Formula $a\equiv b$
+\end_inset
+
+ modulo 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+,
+ if 
+\begin_inset Formula $r=0$
+\end_inset
+
+ or 
+\begin_inset Formula $s=0$
+\end_inset
+
+,
+ the statement is obvious,
+ and otherwise 
+\begin_inset Formula $a-r\lfloor\frac{a}{r}\rfloor=b-r\lfloor\frac{b}{r}\rfloor$
+\end_inset
+
+ and so 
+\begin_inset Formula $a-b=r(\lfloor\frac{a}{r}\rfloor-\lfloor\frac{b}{r}\rfloor)\eqqcolon d\in\mathbb{Z}$
+\end_inset
+
+.
+ By Law A,
+ since 
+\begin_inset Formula $a\equiv b$
+\end_inset
+
+ and 
+\begin_inset Formula $b\equiv b$
+\end_inset
+
+,
+ 
+\begin_inset Formula $d=a-b\equiv b-b=0$
+\end_inset
+
+ modulo both 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+,
+ so from Law D for integers we have 
+\begin_inset Formula $a-b\equiv0$
+\end_inset
+
+ modulo 
+\begin_inset Formula $rs$
+\end_inset
+
+ (assuming 
+\begin_inset Formula $r\bot s$
+\end_inset
+
+) and so 
+\begin_inset Formula $a\equiv b$
+\end_inset
+
+ modulo 
+\begin_inset Formula $rs$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus,
+ Law A holds for addition and subtraction,
+ Law C always holds,
+ and Law D holds if we still maintain 
+\begin_inset Formula $r,s\in\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc25[M02]
+\end_layout
+
+\end_inset
+
+Show that,
+ according to Theorem F,
+ 
+\begin_inset Formula $a^{p-1}\bmod p=[a\text{ is not a multiple of }p]$
+\end_inset
+
+,
+ whenever 
+\begin_inset Formula $p$
+\end_inset
+
+ is a prime number.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $a$
+\end_inset
+
+ is a multiple of 
+\begin_inset Formula $p$
+\end_inset
+
+,
+ then so is 
+\begin_inset Formula $a^{p-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a^{p-1}\bmod p=0$
+\end_inset
+
+.
+ Otherwise 
+\begin_inset Formula $a\bot p$
+\end_inset
+
+,
+ so we can cancel out in 
+\begin_inset Formula $a^{p}\equiv a\pmod p$
+\end_inset
+
+ to get 
+\begin_inset Formula $a^{p-1}\equiv1\pmod p$
+\end_inset
+
+ and so 
+\begin_inset Formula $a^{p-1}\bmod p=1\bmod p=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc28[M25]
+\end_layout
+
+\end_inset
+
+Show that the method used to prove Theorem F can be used to prove the following extension,
+ called 
+\emph on
+Euler's theorem
+\emph default
+:
+ 
+\begin_inset Formula $a^{\varphi(m)}\equiv1\pmod m$
+\end_inset
+
+,
+ for 
+\emph on
+any
+\emph default
+ positive integer 
+\begin_inset Formula $m$
+\end_inset
+
+,
+ when 
+\begin_inset Formula $a\bot m$
+\end_inset
+
+.
+ (In particular,
+ the number 
+\begin_inset Formula $n'$
+\end_inset
+
+ in exercise 19 may be taken to be 
+\begin_inset Formula $n^{\varphi(m)-1}\bmod m$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+First,
+ 
+\begin_inset Formula $\gcd\{x,y\}\equiv\gcd\{x+ky,y\}$
+\end_inset
+
+ for any 
+\begin_inset Formula $x,y,k\in\mathbb{Z}$
+\end_inset
+
+,
+ because if 
+\begin_inset Formula $z\mid x$
+\end_inset
+
+ and 
+\begin_inset Formula $z\mid y$
+\end_inset
+
+ then obviously 
+\begin_inset Formula $z\mid x+ky$
+\end_inset
+
+ and if 
+\begin_inset Formula $z\mid x+ky$
+\end_inset
+
+ and 
+\begin_inset Formula $z\mid y$
+\end_inset
+
+ then 
+\begin_inset Formula $z\mid x$
+\end_inset
+
+,
+ so the set of common divisors is the same.
+ It's also clear that if 
+\begin_inset Formula $x\bot z$
+\end_inset
+
+ and 
+\begin_inset Formula $y\bot z$
+\end_inset
+
+ then 
+\begin_inset Formula $xy\bot z$
+\end_inset
+
+,
+ since neither 
+\begin_inset Formula $x$
+\end_inset
+
+ nor 
+\begin_inset Formula $y$
+\end_inset
+
+ has common divisors with 
+\begin_inset Formula $z$
+\end_inset
+
+ and so neither does 
+\begin_inset Formula $xy$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+With these lemmas,
+ we are ready to prove the statement.
+ Let 
+\begin_inset Formula 
+\[
+\{x_{1},\dots,x_{\varphi(m)}\}\coloneqq\{x\in\{0,\dots,m-1\}\mid x\bot m\},
+\]
+
+\end_inset
+
+ then the 
+\begin_inset Formula $x_{i}a\bmod m$
+\end_inset
+
+ are all distinct,
+ for if 
+\begin_inset Formula $x_{i}a\bmod m=x_{j}a\bmod m$
+\end_inset
+
+,
+ since 
+\begin_inset Formula $a\bot m$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $x_{i}=x_{i}\bmod m=x_{j}\bmod m=x_{j}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x_{i},a\bot m$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x_{i}a\bot m$
+\end_inset
+
+ and also 
+\begin_inset Formula $(x_{i}a\bmod m)\bot m$
+\end_inset
+
+,
+ so all the 
+\begin_inset Formula $x_{i}a\bmod m$
+\end_inset
+
+ are different and relatively prime to 
+\begin_inset Formula $m$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\{x_{i}a\bmod m\}_{i}=\{x_{i}\}_{i}$
+\end_inset
+
+.
+ Thus
+\begin_inset Formula 
+\[
+\prod_{i}x_{i}\equiv\prod_{i}(x_{i}a\bmod m)\equiv\prod_{i}x_{i}a\equiv a^{\varphi(m)}\prod_{i}x_{i}\pmod m,
+\]
+
+\end_inset
+
+and therefore using Law B with the fact that 
+\begin_inset Formula $\prod_{i}x_{i}\bot m$
+\end_inset
+
+ gives us the result.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc34[M21]
+\end_layout
+
+\end_inset
+
+What conditions on the real number 
+\begin_inset Formula $b>1$
+\end_inset
+
+ are necessary and sufficient to guarantee that 
+\begin_inset Formula $\lfloor\log_{b}x\rfloor=\left\lfloor \log_{b}\lfloor x\rfloor\right\rfloor $
+\end_inset
+
+ for all real 
+\begin_inset Formula $x\geq1$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+It happens if and only if 
+\begin_inset Formula $b\in\mathbb{Z}$
+\end_inset
+
+.
+ To prove this,
+ observe that,
+ since the logarithm in base 
+\begin_inset Formula $b>1$
+\end_inset
+
+ is strictly increasing,
+ 
+\begin_inset Formula $\log_{b}\lfloor x\rfloor<\log_{b}x$
+\end_inset
+
+,
+ so 
+\begin_inset Formula $\lfloor\log_{b}x\rfloor\neq\left\lfloor \log_{b}\lfloor x\rfloor\right\rfloor $
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\left\lfloor \log_{b}\lfloor x\rfloor\right\rfloor <\lfloor\log_{b}x\rfloor$
+\end_inset
+
+,
+ that is,
+ if there exists an integer 
+\begin_inset Formula $k$
+\end_inset
+
+ (namely 
+\begin_inset Formula $\lfloor\log_{b}x\rfloor$
+\end_inset
+
+) such that 
+\begin_inset Formula $\log_{b}\lfloor x\rfloor<k\leq\log_{b}x$
+\end_inset
+
+,
+ if and only if 
+\begin_inset Formula $\lfloor x\rfloor<b^{k}\leq x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $b\in\mathbb{Z}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b^{k}\in\mathbb{Z}$
+\end_inset
+
+ as well,
+ so that would mean that 
+\begin_inset Formula $\lfloor x\rfloor+1\leq b^{k}\leq x\#$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $b\notin\mathbb{Z}$
+\end_inset
+
+,
+ we just have to set 
+\begin_inset Formula $x=b$
+\end_inset
+
+ and 
+\begin_inset Formula $k=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc35[M20]
+\end_layout
+
+\end_inset
+
+Given that 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are integers and 
+\begin_inset Formula $n>0$
+\end_inset
+
+,
+ prove that
+\begin_inset Formula 
+\[
+\lfloor(x+m)/n\rfloor=\left\lfloor (\lfloor x\rfloor+m)/n\right\rfloor 
+\]
+
+\end_inset
+
+for all real 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ (When 
+\begin_inset Formula $m=0$
+\end_inset
+
+,
+ we have an important special case.) Does an analogous result hold for the ceiling function?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Clearly 
+\begin_inset Formula $\left\lfloor \frac{\lfloor x\rfloor+m}{n}\right\rfloor \leq\left\lfloor \frac{x+m}{n}\right\rfloor $
+\end_inset
+
+.
+ If this inequality were strict,
+ however,
+ there would be an integer 
+\begin_inset Formula $k$
+\end_inset
+
+ such that 
+\begin_inset Formula $\frac{\lfloor x\rfloor+m}{n}<k\leq\frac{x+m}{n}$
+\end_inset
+
+,
+ and so 
+\begin_inset Formula $\lfloor x\rfloor<nk-m\leq x$
+\end_inset
+
+,
+ but this is impossible because 
+\begin_inset Formula $nk-m\in\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the ceiling,
+ clearly 
+\begin_inset Formula $\left\lceil \frac{\lceil x\rceil+m}{n}\right\rceil \geq\left\lceil \frac{x+m}{n}\right\rceil $
+\end_inset
+
+,
+ but if this inequality were strict,
+ there would be an integer 
+\begin_inset Formula $k$
+\end_inset
+
+ (namely 
+\begin_inset Formula $\left\lceil \frac{x+m}{n}\right\rceil $
+\end_inset
+
+) such that 
+\begin_inset Formula $\frac{x+m}{n}\leq k<\frac{\lceil x\rceil+m}{n}$
+\end_inset
+
+,
+ and so 
+\begin_inset Formula $x\leq nk-m<\lceil x\rceil$
+\end_inset
+
+,
+ an absurdity because 
+\begin_inset Formula $nk-m\in\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1732 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc1[10]
+\end_layout
+
+\end_inset
+
+The text says that 
+\begin_inset Formula $a_{1}+a_{2}+\dots+a_{0}=0$
+\end_inset
+
+.
+ What then,
+ is 
+\begin_inset Formula $a_{2}+\dots+a_{0}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We could set that to be 
+\begin_inset Formula $-a_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc2[01]
+\end_layout
+
+\end_inset
+
+What does the notation 
+\begin_inset Formula $\sum_{1\leq j\leq n}a_{j}$
+\end_inset
+
+ mean,
+ if 
+\begin_inset Formula $n=3.14$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{1}+a_{2}+a_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc3[13]
+\end_layout
+
+\end_inset
+
+Without using the 
+\begin_inset Formula $\sum$
+\end_inset
+
+-notation,
+ write out the equivalent of
+\begin_inset Formula 
+\[
+\sum_{0\leq n\leq5}\frac{1}{2n+1},
+\]
+
+\end_inset
+
+and also the equivalent of
+\begin_inset Formula 
+\[
+\sum_{0\leq n^{2}\leq5}\frac{1}{2n^{2}+1}.
+\]
+
+\end_inset
+
+Explain why the two results are different,
+ in spite of rule (b).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{0\leq n\leq5}\frac{1}{2n+1} & = & \frac{1}{1}+\frac{1}{3}+\frac{1}{5}+\frac{1}{7}+\frac{1}{9}+\frac{1}{11},\\
+\sum_{0\leq n^{2}\leq5}\frac{1}{2n^{2}+1} & = & \frac{1}{9}+\frac{1}{3}+\frac{1}{1}+\frac{1}{3}+\frac{1}{9},
+\end{eqnarray*}
+
+\end_inset
+
+as the integers with 
+\begin_inset Formula $0\leq n^{2}\leq5$
+\end_inset
+
+ are 
+\begin_inset Formula $\{-2,-1,0,1,2\}$
+\end_inset
+
+.
+ Rule (b) states that a permutation of the integers satisfying the condition doesn't alter the result,
+ but because 
+\begin_inset Formula $n\mapsto n^{2}$
+\end_inset
+
+ is not a permutation of such 
+\emph on
+integers
+\emph default
+,
+ the rule doesn't apply.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc4[10]
+\end_layout
+
+\end_inset
+
+Without using the 
+\begin_inset Formula $\sum$
+\end_inset
+
+-notation,
+ write out the equivalent of each side of Eq.
+ (10) as a sum of sums for the case 
+\begin_inset Formula $n=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{11}+a_{21}+a_{22}+a_{31}+a_{32}+a_{33}=a_{11}+a_{21}+a_{31}+a_{22}+a_{32}+a_{33}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc5[HM20]
+\end_layout
+
+\end_inset
+
+Prove that rule (a) is valid for arbitrary infinite series,
+ provided that the series converge.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Since infinite series are defined for cases where the total number of nonzero elements is at most countable,
+ we might assume that the series are indexed by positive integers.
+ Thus,
+ we'd have to prove that
+\begin_inset Formula 
+\[
+\left(\sum_{i=1}^{\infty}a_{i}\right)\left(\sum_{j=1}^{\infty}b_{j}\right)=\sum_{i=1}^{\infty}\sum_{j=1}^{\infty}a_{i}b_{j},
+\]
+
+\end_inset
+
+assuming that the relevant series converge.
+ We have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\sum_{i=0}^{\infty}a_{i}\right)\left(\sum_{j=0}^{\infty}b_{j}\right)=\sum_{i=0}^{\infty}\left(a_{i}\sum_{j=0}^{\infty}b_{j}\right)=\sum_{i=0}^{\infty}\sum_{j=0}^{\infty}b_{j},
+\]
+
+\end_inset
+
+by entering the second series as a constant into the first series (because it converges) and then entering the element of the first series,
+ considered as a constant,
+ into the inner series.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc9[05]
+\end_layout
+
+\end_inset
+
+Is the derivation of Eq.
+ (14) valid even if 
+\begin_inset Formula $n=-1$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+The result is
+\begin_inset Formula 
+\[
+\sum_{0\leq j\leq-1}ax^{j}=0=a\left(\frac{1-x^{0}}{1-x}\right),
+\]
+
+\end_inset
+
+which is correct.
+ However,
+ the derivation is not correct as the rule (d) cannot be applied,
+ because the applications in the derivation assume 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc10[05]
+\end_layout
+
+\end_inset
+
+Is the derivation of Eq.
+ (14) valid even if 
+\begin_inset Formula $n=-2$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+No (see previous exercise).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc11[03]
+\end_layout
+
+\end_inset
+
+What should the right-hand side of Eq.
+ (14) be if 
+\begin_inset Formula $x=1$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Mere substitution in the original formula yields an undefined result,
+ but it's clear that
+\begin_inset Formula 
+\[
+\sum_{0\leq j\leq n}a\cdot1^{j}=\sum_{0\leq j\leq n}a=(n+1)a.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc12[10]
+\end_layout
+
+\end_inset
+
+What is 
+\begin_inset Formula $1+\frac{1}{7}+\frac{1}{49}+\frac{1}{343}+\dots+\left(\frac{1}{7}\right)^{n}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+By Eq.
+ (14),
+ this is
+\begin_inset Formula 
+\[
+\sum_{k=0}^{n}\left(\frac{1}{7}\right)^{k}=\left(\frac{1-\left(\frac{1}{7}\right)^{n+1}}{1-\frac{1}{7}}\right)=\frac{1-\left(\frac{1}{7}\right)^{n+1}}{\frac{6}{7}}=\frac{7}{6}\left(1-\frac{1}{7^{n+1}}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc13[10]
+\end_layout
+
+\end_inset
+
+Using Eq.
+ (15) and assuming that 
+\begin_inset Formula $m\leq n$
+\end_inset
+
+,
+ evaluate 
+\begin_inset Formula $\sum_{j=m}^{n}j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\sum_{m\leq j\leq n}j=\sum_{m\leq j+m\leq n}(j+m)=\sum_{0\leq j\leq n-m}(m+j)=\\
+=m(n-m+1)+\frac{1}{2}(n-m)(n-m+1)=\frac{1}{2}(n(n+1)-m(m-1)).
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc14[11]
+\end_layout
+
+\end_inset
+
+Using the result of the previous exercise,
+ evaluate 
+\begin_inset Formula $\sum_{j=m}^{n}\sum_{k=r}^{s}jk$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\sum_{j=m}^{n}\sum_{k=r}^{s}jk=\left(\sum_{j=m}^{n}j\right)\left(\sum_{k=r}^{s}k\right)=\\
+=\frac{1}{4}(n(n+1)-m(m-1))(s(s+1)-r(r-1)).
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc15[M22]
+\end_layout
+
+\end_inset
+
+Compute the sum 
+\begin_inset Formula $1\times2+2\times2^{2}+3\times2^{3}+\dots+n\times2^{n}$
+\end_inset
+
+ for small values of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Do you see the pattern developing in these numbers?
+ If not,
+ discover it by manipulations similar to those leading up to Eq.
+ (14).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $\tau(n)$
+\end_inset
+
+ be such a such sum
+\begin_inset Formula 
+\begin{align*}
+\tau(1) & =2, & \tau(2) & =2+8=10, & \tau(3) & =10+24=34,\\
+\tau(4) & =34+64=98, & \tau(5) & =98+160=258, &  & \dots
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now,
+\begin_inset Formula 
+\begin{align*}
+\tau(n) & =\sum_{1\leq k\leq n}k2^{k} &  & \text{by definition}\\
+ & =\sum_{0\leq k\leq n-1}(k+1)2^{k+1} &  & \text{by rule (b)}\\
+ & =2\sum_{0\leq k\leq n-1}(k+1)2^{k} &  & \text{by a special case of (a)}\\
+ & =2\left(\sum_{0\leq k\leq n-1}k2^{k}+\sum_{0\leq k\leq n-1}2^{k}\right) &  & \text{by rule (c)}\\
+ & =2\left(\sum_{0\leq k\leq n}k2^{k}-n2^{n}+(2^{n}-1)\right) &  & \text{by rule (d) and Eq. (14)}\\
+ & =2\left(\sum_{1\leq k\leq n}k2^{k}-n2^{n}+(2^{n}-1)\right) &  & \text{by rule (d)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This means 
+\begin_inset Formula $\tau(n)=2(\tau(n)-n2^{n}+2^{n}-1)=2\tau(n)-n2^{n+1}+2^{n+1}-2$
+\end_inset
+
+,
+ so 
+\begin_inset Formula 
+\[
+\tau(n)=n2^{n+1}-2^{n+1}+2=(n-1)2^{n+1}+2.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc17[M00]
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a set of integers.
+ What is 
+\begin_inset Formula $\sum_{j\in S}1$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $|S|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc20[25]
+\end_layout
+
+\end_inset
+
+Dr.
+ I.
+ J.
+ Matrix has observed a remarkable sequence of formulas:
+\begin_inset Formula 
+\begin{align*}
+9\times1+2 & =11, & 9\times12+3 & =111,\\
+9\times123+4 & =1111, & 9\times1234+5 & =11111.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Write the good doctor's great discovery in terms of the 
+\begin_inset Formula $\sum$
+\end_inset
+
+-notation.
+\end_layout
+
+\begin_layout Enumerate
+Your answer to part (a) undoubtedly involves the number 10 as base of the decimal system;
+ generalize this formula so that you get a formula that will perhaps work in any base 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Prove your formula from part (b) by using formulas derived in the text or in exercise 16 above.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+,
+ 
+\begin_inset Formula 
+\[
+9\sum_{j=0}^{n-1}10^{j}(n-j)+n+1=\sum_{j=0}^{n}10^{j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+(b-1)\sum_{j=0}^{n-1}b^{j}(n-j)+n+1=\sum_{j=0}^{n}b^{j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+We have
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{j=0}^{n-1}b^{j}(n-j) & = & n\sum_{j=0}^{n-1}b^{j}-\sum_{j=0}^{n-1}jb^{j}\\
+ & = & n\frac{1-b^{n}}{1-b}-\frac{(n-1)b^{n+1}-nb^{n}+b}{(b-1)^{2}}\\
+ & = & n\frac{b^{n}-1}{b-1}-\frac{(n-1)b^{n+1}-nb^{n}+b}{(b-1)^{2}},
+\end{eqnarray*}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{align*}
+ & (b-1)\sum_{j=0}^{n-1}b^{j}(n-j)+n+1\\
+ & =n(b^{n}-1)-\frac{(n-1)b^{n+1}-nb^{n}+b}{b-1}+n+1\\
+ & =\frac{n(b^{n}-1)(b-1)-(n-1)b^{n+1}+nb^{n}-b+n(b-1)+b-1}{b-1}\\
+ & =\frac{nb^{n+1}-nb^{n}-nb+n-nb^{n+1}+b^{n+1}+nb^{n}-b+nb-n+b-1}{b-1}\\
+ & =\frac{b^{n+1}-1}{b-1}=\frac{1-b^{n+1}}{b-1}=\sum_{j=0}^{n}b^{j}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc21[M25]
+\end_layout
+
+\end_inset
+
+Derive rule (d) from (8) and (17).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\sum_{R(j)}a_{j}+\sum_{S(j)}a_{j}=\sum_{j}a_{j}[R(j)]+\sum_{j}a_{j}[S(j)]=\sum_{j}a_{j}([R(j)]+[S(j)])=\\
+\sum_{j}a_{j}([R(j)\lor S(j)]+[R(j)\land S(j)])=\sum_{R(j)\lor S(j)}a_{j}+\sum_{R(j)\land S(j)}a_{j}.
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc22[20]
+\end_layout
+
+\end_inset
+
+State the appropriate analogs of Eqs.
+ (5),
+ (7),
+ (8),
+ and (11) for 
+\emph on
+products
+\emph default
+ instead of sums.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\prod_{R(i)}a_{i} & =\prod_{R(j)}a_{j}=\prod_{R(p(j))}a_{p(j)}, & \prod_{R(i)}\prod_{S(j)}a_{ij} & =\prod_{S(j)}\prod_{R(i)}a_{ij},\\
+\prod_{R(i)}b_{i}c_{i} & =\prod_{R(i)}b_{i}+\prod_{R(i)}c_{i}, & \prod_{R(j)}a_{j}\prod_{S(j)}a_{j} & =\prod_{R(j)\lor S(j)}a_{j}\prod_{R(j)\land S(j)}a_{j}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc23[10]
+\end_layout
+
+\end_inset
+
+Explain why it is a good idea to define 
+\begin_inset Formula $\sum_{R(j)}a_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\prod_{R(j)}a_{j}$
+\end_inset
+
+ as zero and one,
+ respectively,
+ when no integers satisfy 
+\begin_inset Formula $R(j)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Zero and one are the neutral terms for sum and product,
+ respectively,
+ so by defining it this way,
+ rule (d) (among others) applies independently of whether there are integers satisfying the properties or not.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc25[15]
+\end_layout
+
+\end_inset
+
+Consider the following derivation;
+ is anything amiss?
+\begin_inset Formula 
+\[
+\left(\sum_{i=1}^{n}a_{i}\right)\left(\sum_{j=1}^{n}\frac{1}{a_{j}}\right)=\sum_{1\leq i\leq n}\sum_{1\leq j\leq n}\frac{a_{i}}{a_{j}}=\sum_{1\leq i\leq n}\sum_{1\leq i\leq n}\frac{a_{i}}{a_{i}}=\sum_{i=1}^{n}1=n.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+First,
+ the change of variable on the second equality is invalid since it changes to a bound variable,
+ not to a free variable.
+ Second,
+ it then converts the double summation into a single summation,
+ which is invalid too.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc29[M30]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Express 
+\begin_inset Formula $\sum_{i=0}^{n}\sum_{j=0}^{i}\sum_{k=0}^{j}a_{i}a_{j}a_{k}$
+\end_inset
+
+ in terms of the multiple-sum notation explained at the end of the section.
+\end_layout
+
+\begin_layout Enumerate
+Express the same sum in terms of 
+\begin_inset Formula $\sum_{i=0}^{n}a_{i}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\sum_{i=0}^{n}a_{i}^{2}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\sum_{i=0}^{n}a_{i}^{3}$
+\end_inset
+
+ [see Eq.
+ (13)].
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\sum_{0\leq k\leq j\leq i\leq n}a_{i}a_{j}a_{k}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+We have
+\begin_inset Formula 
+\begin{align*}
+S & :=\sum_{i=0}^{n}\sum_{j=0}^{i}\sum_{k=0}^{j}a_{i}a_{j}a_{k}=\sum_{i=0}^{n}\sum_{j=0}^{i}\sum_{k=j}^{i}a_{i}a_{j}a_{k}\\
+ & =\sum_{i=0}^{n}\sum_{j=i}^{n}\sum_{k=0}^{i}a_{i}a_{j}a_{k}=\sum_{i=0}^{n}\sum_{j=0}^{i}\sum_{k=i}^{n}a_{i}a_{j}a_{k}\\
+ & =\sum_{i=0}^{n}\sum_{j=i}^{n}\sum_{k=i}^{j}a_{i}a_{j}a_{k}=\sum_{i=0}^{n}\sum_{j=i}^{n}\sum_{k=j}^{n}a_{i}a_{j}a_{k}.
+\end{align*}
+
+\end_inset
+
+Thus,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bgroup
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+6S & = & \sum_{i=0}^{n}\sum_{j=0}^{i}\left(\sum_{k=0}^{j}a_{i}a_{j}a_{k}+\sum_{k=j}^{i}a_{i}a_{j}a_{k}+\sum_{k=i}^{n}a_{i}a_{j}a_{k}\right)\\
+ &  & +\sum_{i=0}^{n}\sum_{j=i}^{n}\left(\sum_{k=0}^{i}a_{i}a_{j}a_{k}+\sum_{k=i}^{j}a_{i}a_{j}a_{k}+\sum_{i=j}^{n}a_{i}a_{j}a_{k}\right)\\
+ & = & \sum_{i=0}^{n}\left(\sum_{j=0}^{i}\left(\sum_{k=0}^{n}a_{i}a_{j}a_{k}+a_{i}a_{j}^{2}+a_{i}^{2}a_{j}\right)+\sum_{j=i}^{n}\left(\sum_{k=0}^{n}a_{i}a_{j}a_{k}+a_{i}a_{j}^{2}+a_{j}^{2}a_{i}\right)\right)\\
+ & = & \sum_{i=0}^{n}\left(\sum_{j=0}^{n}\left(\sum_{k=0}^{n}a_{i}a_{j}a_{k}+a_{i}a_{j}^{2}+a_{i}^{2}a_{j}\right)+\sum_{k=0}^{n}a_{i}^{2}a_{k}+a_{i}^{3}+a_{i}^{3}\right)\\
+ & = & \sum_{i=0}^{n}\sum_{j=0}^{n}\sum_{k=0}^{n}a_{i}a_{j}a_{k}+\sum_{i=0}^{n}\sum_{j=0}^{n}a_{i}a_{j}^{2}+\sum_{i=0}^{n}\sum_{j=0}^{n}a_{i}^{2}a_{j}+\sum_{i=0}^{n}\sum_{k=0}^{n}a_{i}^{2}a_{k}+2\sum_{i=0}^{n}a_{i}^{3}\\
+ & = & \left(\sum_{i=0}^{n}a_{i}\right)^{3}+\left(\sum_{i=0}^{n}a_{i}\right)\left(\sum_{i=0}^{n}a_{i}^{2}\right)+\left(\sum_{i=0}^{n}a_{i}^{2}\right)\left(\sum_{i=0}^{n}a_{i}\right)\\
+ &  & +\left(\sum_{i=0}^{n}a_{i}^{2}\right)\left(\sum_{i=0}^{n}a_{i}\right)+2\sum_{i=0}^{n}a_{i}^{3}\\
+ & = & \left(\sum_{i=0}^{n}a_{i}\right)^{3}+3\left(\sum_{i=0}^{n}a_{i}\right)\left(\sum_{i=0}^{n}a_{i}^{2}\right)+2\left(\sum_{i=0}^{n}a_{i}^{3}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+egroup 
+\end_layout
+
+\end_inset
+
+This means
+\begin_inset Formula 
+\[
+S=\frac{1}{6}\left(\sum_{i=0}^{n}a_{i}\right)^{3}+\frac{1}{2}\left(\sum_{i=0}^{n}a_{i}\right)\left(\sum_{i=0}^{n}a_{i}^{2}\right)+\frac{1}{3}\left(\sum_{i=0}^{n}a_{i}^{3}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc30[M23]
+\end_layout
+
+\end_inset
+
+(J.
+ Binet,
+ 1812.) Without using induction,
+ prove the identity 
+\begin_inset Formula 
+\[
+\left(\sum_{j=1}^{n}a_{j}x_{j}\right)\left(\sum_{j=1}^{n}b_{j}y_{j}\right)=\left(\sum_{j=1}^{n}a_{j}y_{j}\right)\left(\sum_{j=1}^{n}b_{j}x_{j}\right)+\sum_{1\leq j<k\leq n}(a_{j}b_{k}-a_{k}b_{j})(x_{j}y_{k}-x_{k}y_{j}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\sum_{j=1}^{n}a_{j}x_{j}\right)\left(\sum_{j=1}^{n}b_{j}y_{j}\right) & = & \sum_{i=1}^{n}\sum_{j=1}^{n}a_{i}b_{j}x_{i}y_{j}\\
+ & = & \sum_{i=1}^{n}\sum_{j=1}^{n}a_{i}b_{j}(x_{j}y_{i}-x_{j}y_{i}+x_{i}y_{j})\\
+ & = & \sum_{i=1}^{n}\sum_{j=1}^{n}a_{i}b_{j}x_{j}y_{i}+\sum_{i=1}^{n}\sum_{j=1}^{n}a_{i}b_{j}(x_{i}y_{j}-x_{j}y_{i})\\
+ & = & \left(\sum_{j=1}^{n}a_{j}y_{j}\right)\left(\sum_{j=1}^{n}b_{j}x_{j}\right)+\sum_{i=1}^{n}\sum_{j=1}^{n}a_{i}b_{j}(x_{i}y_{j}-x_{j}y_{i}),
+\end{eqnarray*}
+
+\end_inset
+
+but
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i=1}^{n}\sum_{j=1}^{n}a_{i}b_{j}(x_{i}y_{j}-x_{j}y_{i}) & = & \sum_{1\leq j<i\leq n}a_{i}b_{j}(x_{i}y_{j}-x_{j}y_{i})+\sum_{1\leq i<j\leq n}a_{i}b_{j}(x_{i}y_{j}-x_{j}y_{i})\\
+ & = & \sum_{1\leq i<j\leq n}(a_{j}b_{i}(x_{j}y_{i}-x_{i}y_{j})+a_{i}b_{j}(x_{i}y_{j}-x_{j}y_{i}))\\
+ & = & \sum_{1\leq j<k\leq n}(a_{j}b_{k}-a_{k}b_{j})(x_{j}y_{k}-x_{k}y_{j}).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc33[M30]
+\end_layout
+
+\end_inset
+
+One evening Dr.
+ Matrix discovered some formulas that might even be classed as more remarkable than those of exercise 20:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{(a-b)(a-c)}+\frac{1}{(b-a)(b-c)}+\frac{1}{(c-a)(c-b)} & =0,\\
+\frac{a}{(a-b)(a-c)}+\frac{b}{(b-a)(b-c)}+\frac{c}{(c-a)(c-b)} & =0,\\
+\frac{a^{2}}{(a-b)(a-c)}+\frac{b^{2}}{(b-a)(b-c)}+\frac{c^{2}}{(c-a)(c-b)} & =1,\\
+\frac{a^{3}}{(a-b)(a-c)}+\frac{b^{3}}{(b-a)(b-c)}+\frac{c^{3}}{(c-a)(c-b)} & =a+b+c.
+\end{align*}
+
+\end_inset
+
+Prove that these formulas are a special case of a general law;
+ let 
+\begin_inset Formula $x_{1},x_{2},\dots,x_{n}$
+\end_inset
+
+ be distinct numbers,
+ and show that
+\begin_inset Formula 
+\[
+\sum_{j=1}^{n}\Bigg(x_{j}^{r}\Bigg/\prod_{\begin{subarray}{c}
+1\leq k\leq n\\
+k\neq j
+\end{subarray}}(x_{j}-x_{k})\Bigg)=\begin{cases}
+0, & \text{if }0\leq r<n-1;\\
+1, & \text{if }r=n-1;\\
+{\textstyle \sum_{j=1}^{n}x_{j}}, & \text{if }r=n.
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc37[M24]
+\end_layout
+
+\end_inset
+
+Show that the determinant of Vandermonde's matrix is
+\begin_inset Formula 
+\[
+\prod_{1\leq j\leq n}x_{j}\prod_{1\leq i<j\leq n}(x_{j}-x_{i}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We show this by induction.
+ For 
+\begin_inset Formula $n=1$
+\end_inset
+
+,
+ this is obvious.
+ For 
+\begin_inset Formula $n>1$
+\end_inset
+
+,
+ assuming this holds for 
+\begin_inset Formula $n-1$
+\end_inset
+
+,
+ subtracting from each row the previous one multiplied by 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+,
+ expanding by cofactors,
+ factoring out,
+ and applying the induction hypothesis,
+ we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\left|\begin{array}{cccc}
+x_{1} & x_{2} & \cdots & x_{n}\\
+x_{1}^{2} & x_{2}^{2} & \cdots & x_{n}^{2}\\
+\vdots & \vdots &  & \vdots\\
+x_{1}^{n} & x_{2}^{n} & \cdots & x_{n}^{n}
+\end{array}\right| & = & \left|\begin{array}{cccc}
+x_{1} & x_{2} & \cdots & x_{n}\\
+0 & x_{2}(x_{2}-x_{1}) & \cdots & x_{n}(x_{n}-x_{1})\\
+\vdots & \vdots &  & \vdots\\
+0 & x_{2}^{n-1}(x_{2}-x_{1}) & \cdots & x_{n}^{n-1}(x_{n}-x_{1})
+\end{array}\right|\\
+ & = & x_{1}\left|\begin{array}{ccc}
+x_{2}(x_{2}-x_{1}) & \cdots & x_{n}(x_{n}-x_{1})\\
+\vdots &  & \vdots\\
+x_{2}^{n-1}(x_{2}-x_{1}) & \cdots & x_{n}^{n-1}(x_{n}-x_{1})
+\end{array}\right|\\
+ & = & x_{1}(x_{2}-x_{1})\cdots(x_{n}-x_{1})\left|\begin{array}{ccc}
+x_{2} & \cdots & x_{n}\\
+\vdots &  & \vdots\\
+x_{2}^{n-1} & \cdots & x_{n}^{n-1}
+\end{array}\right|\\
+ & = & x_{1}\prod_{2\leq j\leq n}(x_{j}-x_{1})\prod_{2\leq j\leq n}x_{j}\prod_{2\leq i<j\leq n}(x_{j}-x_{i})\\
+ & = & \prod_{1\leq j\leq n}x_{j}\prod_{1\leq i<j\leq n}(x_{j}-x_{i}).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc38[M25]
+\end_layout
+
+\end_inset
+
+Show that the determinant of Cauchy's matrix is
+\begin_inset Formula 
+\[
+\prod_{1\leq i<j\leq n}(x_{j}-x_{i})(y_{j}-y_{i})\Bigg/\prod_{1\leq i,j\leq n}(x_{i}+y_{j}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We prove it by induction.
+ For 
+\begin_inset Formula $n=1$
+\end_inset
+
+,
+ this is obvious.
+ Now assume 
+\begin_inset Formula $n>1$
+\end_inset
+
+ and that the hypothesis holds for 
+\begin_inset Formula $n-1$
+\end_inset
+
+.
+ Multiplying each row 
+\begin_inset Formula $i$
+\end_inset
+
+ by 
+\begin_inset Formula $\frac{x_{1}+y_{1}}{x_{i}+y_{1}}$
+\end_inset
+
+ times the first row,
+ we get
+\begin_inset Formula 
+\begin{multline*}
+\left|\begin{array}{cccc}
+\frac{1}{x_{1}+y_{1}} & \frac{1}{x_{1}+y_{2}} & \cdots & \frac{1}{x_{1}+y_{n}}\\
+\frac{1}{x_{2}+y_{1}} & \frac{1}{x_{2}+y_{2}} & \cdots & \frac{1}{x_{2}+y_{n}}\\
+\vdots & \vdots &  & \vdots\\
+\frac{1}{x_{n}+y_{1}} & \frac{1}{x_{n}+y_{2}} & \cdots & \frac{1}{x_{n}+y_{n}}
+\end{array}\right|=\\
+=\left|\begin{array}{cccc}
+\frac{1}{x_{1}+y_{1}} & \frac{1}{x_{1}+y_{2}} & \cdots & \frac{1}{x_{1}+y_{n}}\\
+0 & \frac{1}{x_{2}+y_{2}}-\frac{x_{1}+y_{1}}{(x_{1}+y_{2})(x_{2}+y_{1})} & \cdots & \frac{1}{x_{2}+y_{n}}-\frac{x_{1}+y_{1}}{(x_{1}+y_{n})(x_{2}+y_{1})}\\
+\vdots & \vdots &  & \vdots\\
+0 & \frac{1}{x_{n}+y_{2}}-\frac{x_{1}+y_{1}}{(x_{1}+y_{2})(x_{n}+y_{1})} & \cdots & \frac{1}{x_{n}+y_{n}}-\frac{x_{1}+y_{1}}{(x_{1}+y_{n})(x_{n}+y_{1})}
+\end{array}\right|=\\
+=\frac{1}{x_{1}+y_{1}}\left|\begin{array}{ccc}
+\frac{1}{x_{2}+y_{2}}-\frac{x_{1}+y_{1}}{(x_{1}+y_{2})(x_{2}+y_{1})} & \cdots & \frac{1}{x_{2}+y_{n}}-\frac{x_{1}+y_{1}}{(x_{1}+y_{n})(x_{2}+y_{1})}\\
+\vdots &  & \vdots\\
+\frac{1}{x_{n}+y_{2}}-\frac{x_{1}+y_{1}}{(x_{1}+y_{2})(x_{n}+y_{1})} & \cdots & \frac{1}{x_{n}+y_{n}}-\frac{x_{1}+y_{1}}{(x_{1}+y_{n})(x_{n}+y_{1})}
+\end{array}\right|.
+\end{multline*}
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\begin{multline*}
+\frac{1}{x_{i}+y_{j}}-\frac{x_{1}+y_{1}}{(x_{1}+y_{j})(x_{i}+y_{1})}=\frac{(x_{1}+y_{j})(x_{i}+y_{1})-(x_{1}+y_{1})(x_{i}+y_{j})}{(x_{i}+y_{j})(x_{1}+y_{j})(x_{i}+y_{1})}=\\
+=\frac{1}{x_{i}+y_{j}}\frac{x_{1}y_{1}+x_{i}y_{j}-x_{1}y_{j}-x_{i}y_{1}}{(x_{1}+y_{j})(x_{i}+y_{1})}=\frac{1}{x_{i}+y_{j}}\frac{(x_{i}-x_{1})(y_{j}-y_{1})}{(x_{1}+y_{j})(x_{i}+y_{1})},
+\end{multline*}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{multline*}
+\left|\begin{array}{cccc}
+\frac{1}{x_{1}+y_{1}} & \frac{1}{x_{1}+y_{2}} & \cdots & \frac{1}{x_{1}+y_{n}}\\
+\frac{1}{x_{2}+y_{1}} & \frac{1}{x_{2}+y_{2}} & \cdots & \frac{1}{x_{2}+y_{n}}\\
+\vdots & \vdots &  & \vdots\\
+\frac{1}{x_{n}+y_{1}} & \frac{1}{x_{n}+y_{2}} & \cdots & \frac{1}{x_{n}+y_{n}}
+\end{array}\right|=\\
+=\frac{1}{x_{1}+y_{1}}\left|\begin{array}{ccc}
+\frac{1}{x_{2}+y_{2}}\frac{(x_{2}-x_{1})(y_{2}-y_{1})}{(x_{1}+y_{2})(x_{2}+y_{1})} & \cdots & \frac{1}{x_{2}+y_{n}}\frac{(x_{2}-x_{1})(y_{n}-y_{1})}{(x_{1}+y_{n})(x_{2}+y_{1})}\\
+\vdots &  & \vdots\\
+\frac{1}{x_{n}+y_{2}}\frac{(x_{n}-x_{1})(y_{2}-y_{1})}{(x_{1}+y_{2})(x_{n}+y_{1})} & \cdots & \frac{1}{x_{n}+y_{n}}\frac{(x_{n}-x_{1})(y_{n}-y_{1})}{(x_{1}+y_{n})(x_{n}+y_{1})}
+\end{array}\right|=\\
+=\frac{1}{x_{1}+y_{1}}\prod_{i=2}^{n}\frac{x_{i}-x_{1}}{x_{i}+y_{1}}\prod_{j=2}^{n}\frac{y_{j}-y_{1}}{x_{1}+y_{j}}\left|\begin{array}{ccc}
+\frac{1}{x_{2}+y_{2}} & \cdots & \frac{1}{x_{2}+y_{n}}\\
+\vdots &  & \vdots\\
+\frac{1}{x_{n}+y_{2}} & \cdots & \frac{1}{x_{n}+y_{n}}
+\end{array}\right|=\\
+=\frac{\prod_{j=2}^{n}(x_{j}-x_{1})(y_{j}-y_{1})}{(x_{1}+y_{1})\prod_{i=2}^{n}(x_{j}+y_{1})\prod_{j=2}^{n}(x_{1}+y_{j})}\frac{\prod_{2\leq i<j\leq n}(x_{j}-x_{i})(y_{j}-y_{i})}{\prod_{2\leq i,j\leq n}(x_{i}+y_{j})}=\\
+=\prod_{1\leq i<j\leq n}(x_{j}-x_{i})(y_{j}-y_{i})\Bigg/\prod_{1\leq i,j\leq n}(x_{i}+y_{j}).
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc45[M25]
+\end_layout
+
+\end_inset
+
+A 
+\emph on
+Hilbert matrix
+\emph default
+,
+ sometimes called an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ segment of 
+\emph on
+the
+\emph default
+ (infinite) Hilbert matrix,
+ is a matrix for which 
+\begin_inset Formula $a_{ij}=1/(i+j-1)$
+\end_inset
+
+.
+ Show that this is a special case of Cauchy's matrix,
+ find its inverse,
+ show that each element of the inverse is an integer and show that the sum of all elements of the inverse is 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+.
+ The solution to this problem requires an elementary knowledge of factorial and binomial coefficients,
+ which are discussed in sections 1.2.5 and 1.2.6.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Clearly this is the Cauchy's matrix 
+\begin_inset Formula $a_{ij}=1/(x_{i}+y_{j})$
+\end_inset
+
+ where 
+\begin_inset Formula $x_{i}=i$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{j}=j-1$
+\end_inset
+
+.
+ Then the elements of the inverse,
+ by exercise 41,
+ are given by
+\begin_inset Formula 
+\begin{align*}
+b_{ij} & =\left(\prod_{1\leq k\leq n}(x_{j}+y_{k})(x_{k}+y_{i})\right)\Bigg/(x_{j}+y_{i})\Bigg(\prod_{\begin{subarray}{c}
+1\leq k\leq n\\
+k\neq j
+\end{subarray}}(x_{j}-x_{k})\Bigg)\Bigg(\prod_{\begin{subarray}{c}
+1\leq k\leq n\\
+k\neq i
+\end{subarray}}(y_{i}-y_{k})\Bigg)\\
+ & =\left(\prod_{k}(j+k-1)(i+k-1)\right)\Bigg/(i+j-1)\Bigg(\prod_{k\neq j}(j-k)\Bigg)\Bigg(\prod_{k\neq i}(i-k)\Bigg)\\
+ & =\frac{(j+n-1)!(i+n-1)!}{(j-1)!(i-1)!}\bigg/(i+j-1)(-1)^{i+j}(n-j)!(j-1)!(n-i)!(i-1)!\\
+ & =(-1)^{i+j}\frac{(j+n-1)!(i+n-1)!}{(i+j-1)(n-j)!(n-i)!(j-1)!^{2}(i-1)!^{2}}.
+\end{align*}
+
+\end_inset
+
+We have used that
+\begin_inset Formula 
+\begin{multline*}
+\prod_{k\neq j}(j-k)=(-1)^{n}\prod_{k\neq j}(k-j)=(-1)^{n}\prod_{j<k\leq n}(k-j)\prod_{1\leq k<j}(k-j)=\\
+=(-1)^{n+j}(n-j)!(j-1)!,
+\end{multline*}
+
+\end_inset
+
+and the same happens to 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{align*}
+b_{ij} & =\frac{(-1)^{i+j}ij}{i+j-1}\frac{(i+n-1)!(j+n-1)!}{i!(i-1)!(n-i)!j!(j-1)!(n-j)!}\\
+ & =\frac{(-1)^{i+j}ij}{i+j-1}\binom{n}{i}\frac{(i+n-1)!}{n!(i-1)!}\binom{n}{j}\frac{(j+n-1)!}{n!}\\
+ & =\frac{(-1)^{i+j}ij}{i+j-1}\binom{n}{i}\binom{i+n-1}{n}\binom{n}{j}\binom{j+n-1}{n}\\
+ & =\frac{(-1)^{i+j}ij}{i+j-1}\binom{n}{i}\binom{-i}{n}\binom{n}{j}\binom{-j}{n}\\
+ & =\frac{(-1)^{i+j}ij}{i+j-1}\binom{-j}{i}\binom{-j-i}{n-i}\binom{-i}{n}\binom{n}{j}\\
+ & =\frac{(-1)^{i+j}ij}{i+j-1}\binom{i+j-1}{i}\binom{n+j-1}{n-i}\binom{n+i-1}{n}\binom{n}{j}\\
+ & =(-1)^{i+j}\binom{i+j-2}{i-1}\binom{i+n-1}{i-1}\binom{j+n-1}{n-1}\binom{n}{j}\in\mathbb{Z}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally,
+ from exercise 44,
+\begin_inset Formula 
+\[
+\sum_{i,j}b_{ij}=\sum_{i=1}^{n}i+\sum_{j=1}^{n}(j-1)=\frac{n(n+1)}{2}+\frac{n(n-1)}{2}=n^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

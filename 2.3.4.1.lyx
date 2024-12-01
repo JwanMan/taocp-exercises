@@ -1,0 +1,760 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[M20]
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $G'$
+\end_inset
+
+ be a finite free tree in which arrows have been drawn on its edges 
+\begin_inset Formula $e_{1},\dots,e_{n-1}$
+\end_inset
+
+;
+ let 
+\begin_inset Formula $E_{1},\dots,E_{n-1}$
+\end_inset
+
+ be numbers satisfying Kirchhoff's law (1) in 
+\begin_inset Formula $G'$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $E_{1}=\dots=E_{n-1}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We prove this by induction on 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $n=1$
+\end_inset
+
+ it is trivial.
+ For 
+\begin_inset Formula $n>1$
+\end_inset
+
+,
+ there always exists a node of degree 1 (in an oriented tree,
+ this would be a leaf).
+ Let 
+\begin_inset Formula $e_{r}$
+\end_inset
+
+ be the only edge connected to that node,
+ clearly 
+\begin_inset Formula $E_{r}=0$
+\end_inset
+
+,
+ so removing 
+\begin_inset Formula $e_{r}$
+\end_inset
+
+ leaves us with an isolated node and a free tree of degree 0 which follows Kirchhoff's law and has 
+\begin_inset Formula $n-1$
+\end_inset
+
+ nodes,
+ but then by the induction hypothesis all the other 
+\begin_inset Formula $E_{k}$
+\end_inset
+
+ are also 0.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc8[M25]
+\end_layout
+
+\end_inset
+
+When applying Kirchhoff's first law to program flow charts,
+ we usually are interested only in the 
+\emph on
+vertex flows
+\emph default
+ (the number of times each box of the flow chart is performed),
+ not the edge flows analyzed in the text.
+ For example,
+ in the graph of exercise 7,
+ the vertex flows are 
+\begin_inset Formula $A=E_{2}+E_{4}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $B=E_{5}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $C=E_{3}+E_{7}+E_{8}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $D=E_{6}+E_{9}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If we group some vertices together,
+ treating them as one 
+\begin_inset Quotes eld
+\end_inset
+
+supervertex,
+\begin_inset Quotes erd
+\end_inset
+
+ we can combine edge flows that correspond to the same vertex flow.
+ For example,
+ edges 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{4}$
+\end_inset
+
+ can be combined in the flow chart above if we also put 
+\begin_inset Formula $B$
+\end_inset
+
+ with 
+\begin_inset Formula $D$
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance=2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[circle,draw](Start){Start};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[rectangle,draw,right of=Start](A){$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[rectangle,draw,right of=A](BD){$B,D$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[rectangle,draw,right of=BD](C){$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[circle,draw,right of=C](Stop){Stop};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (Start) -- node[above]{$e_1$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (A) -- node[below]{$e_2+e_4$} (BD);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,transform canvas={yshift=2pt}] (BD)--node[above]{$e_5$}(C);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,transform canvas={yshift=-2pt}] (C)--node[below]{$e_7$}(BD);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (C) -- node[above]{$e_8$} (Stop);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (BD) to[bend right] node[below]{$e_9$} (Stop);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (BD) to[loop below] node[left]{$e_6$} (BD);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (C) to[bend right] node[above]{$e_3$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (Stop) to[bend right] node[above]{$e_0$} (Start);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+(Here 
+\begin_inset Formula $e_{0}$
+\end_inset
+
+ has also been added from Stop to Start,
+ as in the text.) Continuing this procedure,
+ we can combine 
+\begin_inset Formula $e_{3}+e_{7}$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $(e_{3}+e_{7})+e_{8}$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $e_{6}+e_{9}$
+\end_inset
+
+,
+ until we obtain the 
+\emph on
+reduced flow chart
+\emph default
+ having edges 
+\begin_inset Formula $s=e_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $a=e_{2}+e_{4}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=e_{5}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $c=e_{3}+e_{7}+e_{8}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $d=e_{6}+e_{9}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $t=e_{0}$
+\end_inset
+
+,
+ precisely one edge for each vertex in the original flow chart:
+\begin_inset Formula $\text{}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance=3cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[circle,draw](S){Start};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[rectangle,draw,right of=S](M){$A,B,D,
+\backslash
+text{Stop}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[rectangle,draw,right of=M](C){$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,transform canvas={yshift=2pt}] (S) -- node[above]{$s$} (M);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,transform canvas={yshift=-2pt}] (M) -- node[below]{$t$} (S);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,transform canvas={yshift=2pt}] (M) -- node[above]{$b$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,transform canvas={yshift=-2pt}] (C) -- node[below]{$c$} (M);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (M) to[out=120,in=60,looseness=4] node[left]{$a$
+\backslash
+ 
+\backslash
+ } (M);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->] (M) to[out=300,in=240,looseness=4] node[right]{
+\backslash
+ $d$} (M);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By construction,
+ Kirchhoff's law holds in this reduced flow chart.
+ The new edge flows are the vertex flows of the original;
+ hence the analysis in the text,
+ applied to the reduced flow chart,
+ shows how the original vertex flows depend on each other.
+\end_layout
+
+\begin_layout Standard
+Prove that this reduction process can be reversed,
+ in the sense that any set of flows 
+\begin_inset Formula $\{a,b,\dots\}$
+\end_inset
+
+ satisfying Kirchhoff's law in the reduced flow chart can be 
+\begin_inset Quotes eld
+\end_inset
+
+split up
+\begin_inset Quotes erd
+\end_inset
+
+ into a set of edge flows 
+\begin_inset Formula $\{e_{0},e_{1},\dots\}$
+\end_inset
+
+ in the original flow chart.
+ These flows 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+ satisfy Kirchhoff's law and combine to yield the given flows 
+\begin_inset Formula $\{a,b,\dots\}$
+\end_inset
+
+;
+ some of them might,
+ however,
+ be negative.
+ (Although the reduction procedure has been illustrated for only one particular flow chart,
+ your proof should be valid in general.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+(I had to look up the solution,
+ this one is difficult.)
+\end_layout
+
+\end_inset
+
+ We only have to show that there exists an assignment in the original flowchart that produces any given set of flows in the reduced flowchart.
+\end_layout
+
+\begin_layout Standard
+Since we get from one to the other by reductions,
+ we only have to prove that we can reverse reductions.
+ In these reductions,
+ there are two arrows 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ from vertex or supervertex 
+\begin_inset Formula $a$
+\end_inset
+
+ to 
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ from 
+\begin_inset Formula $a$
+\end_inset
+
+ to 
+\begin_inset Formula $c$
+\end_inset
+
+,
+ to get an edge 
+\begin_inset Formula $f=e_{1}+e_{2}$
+\end_inset
+
+ from 
+\begin_inset Formula $a$
+\end_inset
+
+ to 
+\begin_inset Formula $b,c$
+\end_inset
+
+,
+ and reverting means recovering 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ from 
+\begin_inset Formula $f$
+\end_inset
+
+ and the other edges.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $b=c$
+\end_inset
+
+,
+ we can just make up 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ and set 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ to 
+\begin_inset Formula $f-e_{1}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $a=b\neq c$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ must be such that Kirchhoff's law is preserved for 
+\begin_inset Formula $c$
+\end_inset
+
+,
+ and we can just set 
+\begin_inset Formula $e_{1}=f-e_{2}$
+\end_inset
+
+.
+ The situation 
+\begin_inset Formula $a=c\neq b$
+\end_inset
+
+ is symmetrical.
+ Finally,
+ if the three nodes are distinct,
+ setting 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ such that they follow Kirchhoff's law for 
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ makes 
+\begin_inset Formula $e_{1}+e_{2}$
+\end_inset
+
+ follow Kirchhoff's law in 
+\begin_inset Formula $b,c$
+\end_inset
+
+ in the reduced flowchart.
+\end_layout
+
+\end_body
+\end_document

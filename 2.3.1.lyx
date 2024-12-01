@@ -1,0 +1,1075 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc1[01]
+\end_layout
+
+\end_inset
+
+In the binary tree (2),
+ let 
+\family typewriter
+INFO(P)
+\family default
+ denote the letter stored in 
+\family typewriter
+NODE(P)
+\family default
+.
+ What is 
+\begin_inset Formula $\mathtt{INFO(LLINK(RLINK(RLINK(T))))}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[20]
+\end_layout
+
+\end_inset
+
+The text defines three basic orders for traversing a binary tree;
+ another alternative would be to proceed in three steps as follows:
+\end_layout
+
+\begin_layout Enumerate
+Visit the root,
+\end_layout
+
+\begin_layout Enumerate
+traverse the right subtree,
+\end_layout
+
+\begin_layout Enumerate
+traverse the left subtree,
+\end_layout
+
+\begin_layout Standard
+using the same rule recursively on all nonempty subtrees.
+ Does this new order bear any simple relation to the three orders already discussed?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Yes,
+ this is the same as postorder but backwards.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc10[20]
+\end_layout
+
+\end_inset
+
+What is the largest number of entries that can be in the stack at once,
+ during the execution of Algorithm T,
+ if the binary tree has 
+\begin_inset Formula $n$
+\end_inset
+
+ nodes?
+ (The answer to this question is very important for storage allocation,
+ if the stack is being stored consecutively.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+There can be up to 
+\begin_inset Formula $n$
+\end_inset
+
+ nodes in the stack,
+ in the case that all the right links are null and the tree is just a linked list using the 
+\begin_inset Formula $\mathtt{RLINK}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc13[24]
+\end_layout
+
+\end_inset
+
+Design an algorithm analogous to Algorithm T that traverses a binary tree in 
+\emph on
+preorder
+\emph default
+,
+ and prove that your algorithm is correct.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+[Initialize.] Set stack 
+\family typewriter
+A
+\family default
+ empty,
+ and set the link variable 
+\begin_inset Formula $\mathtt{P}\gets\mathtt{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:23113b"
+
+\end_inset
+
+[
+\begin_inset Formula $\mathtt{P}=\Lambda$
+\end_inset
+
+?] If 
+\begin_inset Formula $\mathtt{P}=\Lambda$
+\end_inset
+
+,
+ go to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:23113d"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:23113c"
+
+\end_inset
+
+[Visit 
+\begin_inset Formula $\mathtt{P}$
+\end_inset
+
+.] Visit 
+\begin_inset Formula $\mathtt{NODE(P)}$
+\end_inset
+
+.
+ Do 
+\begin_inset Formula $\mathtt{A}\Leftarrow\mathtt{RLINK(P)}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{P}\gets\mathtt{LLINK(P)}$
+\end_inset
+
+,
+ and return to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:23113b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:23113d"
+
+\end_inset
+
+[Visit right hand side.] If 
+\family typewriter
+A
+\family default
+ is empty,
+ the algorithm terminates.
+ Otherwise set 
+\begin_inset Formula $\mathtt{P}\Leftarrow\mathtt{A}$
+\end_inset
+
+ and return to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:23113b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We now prove by induction on the number of nodes that,
+ if we start in step 2,
+ we traverse the subtree starting at 
+\begin_inset Formula $\mathtt{P}$
+\end_inset
+
+ in preorder,
+ leave the stack unchanged,
+ and proceed to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:23113d"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+,
+ which clearly would show that the algorithm is correct.
+\end_layout
+
+\begin_layout Standard
+For an empty tree,
+ this is obvious.
+ For a tree with 
+\begin_inset Formula $n$
+\end_inset
+
+ nodes,
+ that we start with the root is obvious,
+ we do that at step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:23113c"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ with the stack empty.
+ After that step,
+ setting 
+\begin_inset Formula $\mathtt{P}\gets\mathtt{LLINK(P)}$
+\end_inset
+
+ and returning to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:23113b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ means that we get to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:23113d"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ after traversing the left subtree,
+ which by the induction hypothesis would leave us on step 4 with the stack like it was before but adding the node 
+\begin_inset Formula $\mathtt{RLINK(P)}$
+\end_inset
+
+.
+ Then step 4 clearly means to traverse 
+\begin_inset Formula $\mathtt{RLINK(P)}$
+\end_inset
+
+ and leave 
+\family typewriter
+A
+\family default
+ like it was before starting processing 
+\family typewriter
+P
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc16[22]
+\end_layout
+
+\end_inset
+
+The diagrams in Fig.
+ 24 help to provide an intuitive characterization of the position of 
+\begin_inset Formula $\mathtt{NODE(Q}\$\mathtt{)}$
+\end_inset
+
+ in a binary tree,
+ in terms of the structure near 
+\begin_inset Formula $\mathtt{NODE(Q)}$
+\end_inset
+
+:
+ If 
+\begin_inset Formula $\mathtt{NODE(Q)}$
+\end_inset
+
+ has a nonempty right subtree,
+ consider 
+\begin_inset Formula $\mathtt{Q}=\$\mathtt{P}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{Q}\$=\mathtt{P}$
+\end_inset
+
+ in the upper diagrams;
+ 
+\begin_inset Formula $\mathtt{NODE(Q}\$\mathtt{)}$
+\end_inset
+
+ is the 
+\begin_inset Quotes eld
+\end_inset
+
+leftmost
+\begin_inset Quotes erd
+\end_inset
+
+ node of that right subtree.
+ If 
+\family typewriter
+
+\begin_inset Formula $\mathtt{NODE(Q)}$
+\end_inset
+
+
+\family default
+ has an empty right subtree,
+ consider 
+\begin_inset Formula $\mathtt{Q}=\mathtt{P}$
+\end_inset
+
+ in the lower diagrams;
+ 
+\begin_inset Formula $\mathtt{NODE(Q}\$\mathtt{)}$
+\end_inset
+
+ is located by proceeding upward in the tree until after the first upward step to the right.
+\end_layout
+
+\begin_layout Standard
+Give a similar 
+\begin_inset Quotes eld
+\end_inset
+
+intuitive
+\begin_inset Quotes erd
+\end_inset
+
+ rule for finding the position of 
+\begin_inset Formula $\mathtt{NODE(Q}*\mathtt{)}$
+\end_inset
+
+ in a binary tree in terms of the structure near 
+\family typewriter
+NODE(Q)
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $\mathtt{NODE(Q)}$
+\end_inset
+
+ has a nonempty left subtree,
+ consider 
+\begin_inset Formula $\mathtt{Q}=*\mathtt{P}$
+\end_inset
+
+ in the upper diagrams;
+ then 
+\begin_inset Formula $\mathtt{Q}*=\mathtt{P}$
+\end_inset
+
+ is the left child of 
+\begin_inset Formula $\mathtt{Q}$
+\end_inset
+
+.
+ Otherwise,
+ if 
+\begin_inset Formula $\mathtt{NODE(Q)}$
+\end_inset
+
+ has a nonempty right subtree,
+ 
+\begin_inset Formula $\mathtt{Q}*$
+\end_inset
+
+ is the right child of 
+\begin_inset Formula $\mathtt{Q}$
+\end_inset
+
+.
+ Otherwise both subtrees are empty and 
+\begin_inset Formula $\mathtt{Q}*$
+\end_inset
+
+ can be found by going upward until finding a node that is a left child (which could be 
+\begin_inset Formula $\mathtt{Q}$
+\end_inset
+
+ itself) and taking its right sibling.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc17[22]
+\end_layout
+
+\end_inset
+
+Give an algorithm analogous to Algorithm S for determining 
+\begin_inset Formula $\mathtt{P}*$
+\end_inset
+
+ in a threaded binary tree.
+ Assume that the tree has a list head as in (8),
+ (9),
+ and (10).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+If 
+\family typewriter
+P
+\family default
+ points to a node of a threaded binary tree,
+ this algorithm sets 
+\begin_inset Formula $\mathtt{Q}\gets\mathtt{P}*$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+[Is the left subtree nonempty?] If 
+\begin_inset Formula $\mathtt{LTAG(P)}=1$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $\mathtt{Q}\gets\mathtt{LLINK(P)}$
+\end_inset
+
+ and terminate the algorithm.
+\end_layout
+
+\begin_layout Enumerate
+[Search to the right.] Set 
+\begin_inset Formula $\mathtt{Q}\gets\mathtt{RLINK(P)}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathtt{RTAG(P)}=1$
+\end_inset
+
+,
+ terminate the algorithm.
+ Otherwise set 
+\begin_inset Formula $\mathtt{P}\gets\mathtt{Q}$
+\end_inset
+
+ and repeat this step.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc28[00]
+\end_layout
+
+\end_inset
+
+After Algorithm C has been used to make a copy of a tree,
+ is the new binary tree 
+\emph on
+equivalent
+\emph default
+ to the original,
+ or 
+\emph on
+similar
+\emph default
+ to it?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+It's equivalent (and similar).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc30[22]
+\end_layout
+
+\end_inset
+
+Design an algorithm that threads an unthreaded tree;
+ for example,
+ it should transform (2) into (10).
+ 
+\emph on
+Note:
+
+\emph default
+ Always use notations like 
+\begin_inset Formula $\mathtt{P}*$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{P}\$$
+\end_inset
+
+ when possible,
+ instead of repeating the steps for traversal algorithms like Algorithm T.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+This algorithm threads an unthreaded tree 
+\begin_inset Formula $\mathtt{T}$
+\end_inset
+
+.
+ The fields 
+\begin_inset Formula $\mathtt{LTAG}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{RTAG}$
+\end_inset
+
+ in the nodes of 
+\begin_inset Formula $\mathtt{T}$
+\end_inset
+
+ are considered to initially contain arbitrary values that we do not need to preserve.
+\end_layout
+
+\begin_layout Enumerate
+[Initialize list head and variables.] Get 
+\begin_inset Formula $\mathtt{P}\Leftarrow\mathtt{AVAIL}$
+\end_inset
+
+ and set 
+\begin_inset Formula $\mathtt{LTAG(P)}\gets\mathtt{RTAG(P)}\gets0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{LLINK(P)}\gets\mathtt{T}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{RLINK(P)}\gets\mathtt{P}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{T}\gets\mathtt{P}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\mathtt{Q}\gets\mathtt{P}\$$
+\end_inset
+
+.
+ 
+\emph on
+(We'll use 
+\begin_inset Formula $\mathtt{Q}$
+\end_inset
+
+ as a pointer to the node being considered and 
+\begin_inset Formula $\mathtt{P}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{R}$
+\end_inset
+
+ as pointers to the next and previous nodes,
+ respectively.
+ We only ever compute the next node in inorder from the last node calculated this way,
+ which makes it trivial to use algorithm T as a coroutine.)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:23122b"
+
+\end_inset
+
+[Are we over?] If 
+\begin_inset Formula $\mathtt{RLINK(Q)}=\mathtt{Q}$
+\end_inset
+
+,
+ the algorithm terminates.
+ 
+\emph on
+(This loop only happens in the list head.)
+\end_layout
+
+\begin_layout Enumerate
+[Step.] Set 
+\begin_inset Formula $\mathtt{R}\gets\mathtt{Q}\$$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathtt{LLINK(Q)}=\Lambda$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $\mathtt{LTAG(Q)}\gets0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{LLINK(Q)}\gets\mathtt{P}$
+\end_inset
+
+,
+ otherwise set 
+\begin_inset Formula $\mathtt{LTAG(Q)}\gets1$
+\end_inset
+
+.
+ Similarly,
+ if 
+\begin_inset Formula $\mathtt{RLINK(Q)}=\Lambda$
+\end_inset
+
+,
+ set 
+\begin_inset Formula $\mathtt{RTAG(Q)}\gets0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{RLINK(Q)}\gets\mathtt{R}$
+\end_inset
+
+,
+ otherwise set 
+\begin_inset Formula $\mathtt{RTAG(Q)}\gets1$
+\end_inset
+
+.
+ Finally set 
+\begin_inset Formula $\mathtt{P}\gets\mathtt{Q}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{Q}\gets\mathtt{R}$
+\end_inset
+
+,
+ and return to step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:23122b"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc37[24]
+\end_layout
+
+\end_inset
+
+(D.
+ Ferguson.) If two computer words are necessary to contain two link fields and an 
+\begin_inset Formula $\mathtt{INFO}$
+\end_inset
+
+ field,
+ representation (2) requires 
+\begin_inset Formula $2n$
+\end_inset
+
+ words of memory for a tree with 
+\begin_inset Formula $n$
+\end_inset
+
+ nodes.
+ Design a representation scheme for binary trees that uses less space,
+ assuming that 
+\emph on
+one
+\emph default
+ link and an 
+\begin_inset Formula $\mathtt{INFO}$
+\end_inset
+
+ field will fit in a single computer word.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+If we allow for a second null value (call it 
+\begin_inset Formula $\lambda$
+\end_inset
+
+,
+ which could be e.g.
+ a pointer to a specific word in the program code or to a sentinel constant,
+ or 4001 in MIX,
+ or 1 in MMIX),
+ then we could implement the solution in the book,
+ which is that,
+ if 
+\begin_inset Formula $\mathtt{LINK(P)}=\Lambda$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $\mathtt{LLINK(P)}=\mathtt{RLINK(P)}=\Lambda$
+\end_inset
+
+,
+ and otherwise 
+\begin_inset Formula $\mathtt{LLINK(P)}=\mathtt{LINK(P)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathtt{RLINK(P)}=\mathtt{LINK(P)}+1$
+\end_inset
+
+ (or 
+\begin_inset Formula $+\mathtt{sizeof(int)}$
+\end_inset
+
+),
+ except that if 
+\begin_inset Formula $\mathtt{LINK(LINK(P))}=\lambda$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathtt{LINK(LINK(P)}+1\mathtt{)}=\lambda$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathtt{LLINK(P)}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathtt{RLINK(P)}$
+\end_inset
+
+ is respectively 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

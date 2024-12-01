@@ -1,0 +1,577 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input defs
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc[21]
+\end_layout
+
+\end_inset
+
+Formulas (5) and (6) have been derived from the assumption that 
+\begin_inset Formula $0\leq\mathtt{I}_{r}\leq d_{r}$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq r\leq k$
+\end_inset
+
+.
+ Give a general formula that applies to the case 
+\begin_inset Formula $l_{r}\leq\mathtt{I}_{r}\leq u_{r}$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $l_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{r}$
+\end_inset
+
+ are any lower and upper bounds on the dimensionality.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathtt{LOC(A[}\mathtt{I}_{1},\mathtt{I}_{2},\dots,\mathtt{I}_{k}\mathtt{])} & =\mathtt{LOC(A[}l_{1},l_{2},\dots,l_{k}\mathtt{])}+\sum_{1\leq r\leq k}a_{r}(\mathtt{I}_{r}-l_{r})=\\
+ & =\left(\mathtt{LOC(A[}l_{1},l_{2},\dots,l_{k}\mathtt{])}-\sum_{1\leq r\leq k}a_{r}l_{r}\right)+\sum_{1\leq r\leq k}a_{r}\mathtt{I}_{r},
+\end{align*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+a_{r}=c\prod_{r<s\leq k}(u_{s}-l_{s}+1).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc6[24]
+\end_layout
+
+\end_inset
+
+Consider the 
+\begin_inset Quotes eld
+\end_inset
+
+tetrahedral arrays
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\mathtt{A[}i\mathtt{,}j\mathtt{,}k\mathtt{]},$
+\end_inset
+
+
+\begin_inset Formula $\mathtt{B[}i\mathtt{,}j\mathtt{,}k\mathtt{]}$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $0\leq k\leq j\leq i\leq n$
+\end_inset
+
+ in 
+\family typewriter
+A
+\family default
+,
+ and 
+\begin_inset Formula $0\leq i\leq j\leq k\leq n$
+\end_inset
+
+ in 
+\family typewriter
+B
+\family default
+.
+ Suppose that both of these arrays are stored in consecutive memory locations in lexicographic order of the indices;
+ show that 
+\begin_inset Formula $\mathtt{LOC(A[I,J,K])}=a_{0}+f_{1}\mathtt{(I)}+f_{2}\mathtt{(J)}+f_{3}\mathtt{(K)}$
+\end_inset
+
+ for certain functions 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $f_{2}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $f_{3}$
+\end_inset
+
+.
+ Can 
+\begin_inset Formula $\mathtt{LOC(B[I,J,K])}$
+\end_inset
+
+ be expressed in a similar manner?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $c$
+\end_inset
+
+ be the size of an entry,
+ 
+\begin_inset Formula $a_{0}\coloneqq\mathtt{LOC(A[}0\mathtt{,}0\mathtt{,}0\mathtt{])}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $x(i,j,k)$
+\end_inset
+
+ be the number of positions from 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathtt{LOC(A[}i\mathtt{,}j\mathtt{,}k\mathtt{])}$
+\end_inset
+
+,
+ so that 
+\begin_inset Formula $\mathtt{LOC(A[}i\mathtt{,}j\mathtt{,}k\mathtt{])}=a_{0}+cx(i,j,k)$
+\end_inset
+
+,
+ then
+\begin_inset Formula 
+\[
+x(i,j,k)=x(i,0,0)+(x(i,j,0)-x(i,0,0))+(x(i,j,k)-x(i,j,0)),
+\]
+
+\end_inset
+
+but
+\begin_inset Formula 
+\begin{align*}
+x(i,j,k)-x(i,j,0) & =k,\\
+x(i,j,0)-x(i,0,0) & =\sum_{p=0}^{j-1}(x(i,p+1,0)-x(i,p,0))=\sum_{p=0}^{j-1}(p+1)=\sum_{p=1}^{j}p=\frac{j(j+1)}{2},
+\end{align*}
+
+\end_inset
+
+and 
+\begin_inset Formula $x(i,0,0)$
+\end_inset
+
+ is already a function of 
+\begin_inset Formula $i$
+\end_inset
+
+,
+ so in fact locations can be put in this form.
+\end_layout
+
+\begin_layout Standard
+Now let 
+\begin_inset Formula $b_{0}\coloneqq\mathtt{LOC(B[}0\mathtt{,}0\mathtt{,}0\mathtt{])}$
+\end_inset
+
+ and 
+\begin_inset Formula $y(i,j,k)\coloneqq\frac{\mathtt{LOC(B[}0\mathtt{,}0\mathtt{,}0\mathtt{])}-\mathtt{LOC(B[}i\mathtt{,}j\mathtt{,}k\mathtt{])}}{c}$
+\end_inset
+
+,
+ the functions,
+ if they exist,
+ would depend on 
+\begin_inset Formula $n$
+\end_inset
+
+,
+ since 
+\begin_inset Formula $y(0,1,1)=y(0,0,n)+1=n+1$
+\end_inset
+
+,
+ but still
+\begin_inset Formula 
+\begin{align*}
+y(i,j,k) & =y(i,n,n)+(y(i,j,n)-y(i,n,n))+(y(i,j,k)-y(i,j,n))
+\end{align*}
+
+\end_inset
+
+with
+\begin_inset Formula 
+\begin{align*}
+y(i,j,k)-y(i,j,n) & =n-k,\\
+y(i,j,n)-y(i,n,n) & =\sum_{p=j+1}^{n}(y(i,p-1,n)-y(i,p,n))=\sum_{p=j+1}^{n}(1+y(i,p,p)-y(i,p,n))\\
+ & =\sum_{p=j+1}^{n}(n-p+1)=\sum_{p=1}^{n-p}p,
+\end{align*}
+
+\end_inset
+
+and 
+\begin_inset Formula $y(i,n,n)$
+\end_inset
+
+ is already a function of 
+\begin_inset Formula $i$
+\end_inset
+
+ (and 
+\begin_inset Formula $n$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc12[20]
+\end_layout
+
+\end_inset
+
+What are 
+\family typewriter
+VAL(Q0)
+\family default
+,
+ 
+\family typewriter
+VAL(P0)
+\family default
+,
+ and 
+\family typewriter
+VAL(P1)
+\family default
+ at the beginning of step S7,
+ in terms of the notation 
+\begin_inset Formula $a$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b$
+\end_inset
+
+,
+ 
+\begin_inset Formula $c$
+\end_inset
+
+,
+ 
+\begin_inset Formula $d$
+\end_inset
+
+ used in (13)?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathtt{VAL(P1)}=d$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{VAL(Q0)}=c$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\mathtt{VAL(P0)}=b/a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc13[22]
+\end_layout
+
+\end_inset
+
+Why were circular lists used in Fig.
+ 14 instead of straight linear lists?
+ Could Algorithm S be rewritten so that it does not make use of the circular linkage?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Circular lists are used as an optimization and simplification:
+ since many lists have to be traversed many times,
+ it is advantageous to not have to reset the pointer to the list every time as the pointer is already situated at the beginning of the list by the time the previous iteration ends.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc24[25]
+\end_layout
+
+\end_inset
+
+(
+\emph on
+The sparse array trick.
+\emph default
+) Suppose you want to use a large array for random access,
+ although you won't actually be referring to very many of its entries.
+ You want 
+\begin_inset Formula $\mathtt{A[}k\mathtt{]}$
+\end_inset
+
+ to be zero the first time you access it,
+ yet you don't want to spend the time to set every location to zero.
+ Explain how it is possible to read and write any desired elements 
+\begin_inset Formula $\mathtt{A[}k\mathtt{]}$
+\end_inset
+
+ reliably,
+ given 
+\begin_inset Formula $k$
+\end_inset
+
+,
+ without assuming anything about the actual initial memory contents,
+ by doing only a small fixed number of additional operations per array access.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+One could have an auxiliary array 
+\family typewriter
+L
+\family default
+ containing pairs of index and value,
+ and have 
+\family typewriter
+A
+\family default
+ contain pointers to 
+\family typewriter
+L
+\family default
+.
+ If the pointer is within bounds and 
+\family typewriter
+L
+\family default
+ contains the index 
+\begin_inset Formula $k$
+\end_inset
+
+ in that position,
+ then the value contained is the value of 
+\begin_inset Formula $\mathtt{A[}k\mathtt{]}$
+\end_inset
+
+,
+ otherwise the value is 0.
+ 
+\family typewriter
+L
+\family default
+ could actually be the size of 
+\family typewriter
+A
+\family default
+ but have an upper limit 
+\begin_inset Formula $n$
+\end_inset
+
+ with the number of elements actually allocated,
+ which is considered the upper bound and which increases whenever a value that has not been yet allocated is written to.
+\end_layout
+
+\end_body
+\end_document
