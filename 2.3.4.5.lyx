@@ -107,5 +107,337 @@ TODO 3,
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc3[M24]
+\end_layout
+
+\end_inset
+
+An extended binary tree with 
+\begin_inset Formula $m$
+\end_inset
+
+ external nodes determines a set of path lengths 
+\begin_inset Formula $l_{1},l_{2},\dots,l_{m}$
+\end_inset
+
+ that describe the lengths of paths from the root to the respective external nodes.
+ Conversely,
+ if we are given a set of numbers 
+\begin_inset Formula $l_{1},l_{2},\dots,l_{m}$
+\end_inset
+
+,
+ is it always possible to construct an extended binary tree in which these numbers are the path lengths in some order?
+ Show that this is possible if and only if 
+\begin_inset Formula $\sum_{j=1}^{m}2^{-l_{j}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We assign each external node an interval of real numbers as follows:
+ start with 
+\begin_inset Formula $[l,u)=[0,1)$
+\end_inset
+
+;
+ then,
+ for each edge in the path from the root to the node,
+ if it's a left edge,
+ set 
+\begin_inset Formula $[l,u)\gets[l,\frac{l+u}{2})$
+\end_inset
+
+,
+ and if it's a right edge,
+ set 
+\begin_inset Formula $[l,u)\gets[\frac{l+u}{2},u)$
+\end_inset
+
+,
+ so the interval's length is 
+\begin_inset Formula $2^{-l}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ being the path length.
+ It's easy to see that these intervals are disjoint and that,
+ for each 
+\begin_inset Formula $x\in[0,1)$
+\end_inset
+
+,
+ there is a special node whose interval contains 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ With this in mind:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+This is precisely the sum of the lengths of the intervals,
+ which is 1 because 
+\begin_inset Formula $[0,1)$
+\end_inset
+
+ is the disjoint union of these intervals.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+We just have to sort the path lengths in increasing order,
+ assign consecutive intervals of length 
+\begin_inset Formula $2^{-l_{k}}$
+\end_inset
+
+ starting from 0 and converting the intervals to paths (more precisely,
+ to sequences of left/right turns),
+ which we can do since the increasing order ensures that the starting point 
+\begin_inset Formula $l_{k}$
+\end_inset
+
+ of an interval 
+\begin_inset Formula $[l_{k},u_{k})$
+\end_inset
+
+ is a multiple of the length 
+\begin_inset Formula $u_{k}-l_{k}$
+\end_inset
+
+.
+ These paths are all different and none is a prefix of another one,
+ so they define the leaves of a binary tree.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc4[M25]
+\end_layout
+
+\end_inset
+
+(E.
+ S.
+ Schwartz and B.
+ Kallick.) Assume that 
+\begin_inset Formula $w_{1}\leq w_{2}\leq\dots\leq w_{m}$
+\end_inset
+
+.
+ Show that there is an extended binary tree that minimizes 
+\begin_inset Formula $\sum w_{j}l_{j}$
+\end_inset
+
+ and for which the terminal nodes in left to right order contain the respective values 
+\begin_inset Formula $w_{1},w_{2},\dots,w_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $T$
+\end_inset
+
+ be an extended binary tree that minimizes 
+\begin_inset Formula $\sum w_{j}l_{j}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $i<j$
+\end_inset
+
+,
+ if 
+\begin_inset Formula $w_{i}<w_{j}$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $l_{i}\geq l_{j}$
+\end_inset
+
+ in that tree,
+ as otherwise we could reduce the weight path length by swapping their positions as
+\begin_inset Formula 
+\[
+(w_{i}l_{j}+w_{j}l_{i})-(w_{i}l_{i}+w_{j}l_{j})=(w_{i}-w_{j})(l_{j}-l_{i})<0\#.
+\]
+
+\end_inset
+
+Thus we might assume 
+\begin_inset Formula $l_{i}\geq l_{j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i<j$
+\end_inset
+
+.
+ This means lengths 
+\begin_inset Formula $l_{1},\dots,l_{m}$
+\end_inset
+
+ are in decreasing order,
+ so the proof in the previous exercise gives us a tree whose nodes,
+ in the order of the tree,
+ are 
+\begin_inset Formula $w_{m},\dots,w_{1}$
+\end_inset
+
+ with lengths 
+\begin_inset Formula $l_{m},\dots,l_{1}$
+\end_inset
+
+,
+ and we just have to swap left and right edges in that tree.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc12[M20]
+\end_layout
+
+\end_inset
+
+Suppose that a node has been chosen at random in a binary tree,
+ with each node equally likely.
+ Show that the average size of the subtree rooted at that node is related to the path length of the tree.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $V_{1},\dots,V_{m}$
+\end_inset
+
+ be the internal nodes,
+ with path lengths 
+\begin_inset Formula $l_{1},\dots,l_{m}$
+\end_inset
+
+.
+ The average size of the subtrees is the sum of the number of nodes in each subtree divided by 
+\begin_inset Formula $m$
+\end_inset
+
+,
+ but in this sum,
+ each node 
+\begin_inset Formula $V_{k}$
+\end_inset
+
+ is counted 
+\begin_inset Formula $l_{k}+1$
+\end_inset
+
+ times,
+ one for the subtree generated by each node in the path from the root to 
+\begin_inset Formula $V_{k}$
+\end_inset
+
+ including both ends of the path.
+ Thus this average is precisely
+\begin_inset Formula 
+\[
+\frac{1}{m}\sum_{k}(l_{k}+1)=\frac{1}{m}(I+m)=\frac{I}{m}+1,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I$
+\end_inset
+
+ is the internal path length of the tree.
+\end_layout
+
 \end_body
 \end_document
