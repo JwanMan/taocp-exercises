@@ -92,23 +92,6 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO 5,
- 10,
- 14,
- 21 (3pp.,
- 1:08)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -722,74 +705,45 @@ answer
 \end_inset
 
 These are precisely the 0-2-trees in exercise 2.3–20.
- We know 0-2-trees always have an odd number of nodes.
- Let 
-\begin_inset Formula $b_{n}$
-\end_inset
-
- be the number of such trees with 
-\begin_inset Formula $2n+1$
-\end_inset
-
- nodes,
- then 
-\begin_inset Formula $b_{0}=1$
-\end_inset
-
- and,
- for 
-\begin_inset Formula $n>0$
-\end_inset
-
-,
-\begin_inset Formula 
-\[
-b_{n}=\sum_{m=0}^{n-1}b_{m}b_{n-m-1},
-\]
-
-\end_inset
-
-as the root would have 
+ We know 0-2-trees always have an odd number of nodes,
+ say 
 \begin_inset Formula $2m+1$
 \end_inset
 
- nodes in the left side and 
-\begin_inset Formula $2(n-m-1)+1=2n-2m-1$
+ nodes.
+ By the construction in the text,
+ these trees correspond to sequences of 
+\begin_inset Formula $2m$
 \end_inset
 
- nodes in the right side.
- Then,
+ nodes where each node that appears does so exactly twice.
+ There are 
+\begin_inset Formula $\binom{2m+1}{m}$
+\end_inset
+
+ ways to choose which nodes 
+\emph on
+do
+\emph default
+ appear in the sequence,
+ and 
+\begin_inset Formula $\frac{(2m)!}{2^{m}}$
+\end_inset
+
+ ways to arranging them (we can think of arranging 
+\begin_inset Formula $2m$
+\end_inset
+
+ elements and then discarding the relative order of equal pairs of elements).
+ This gives us
 \begin_inset Formula 
 \[
-B(z)\coloneqq\sum_{n\geq0}b_{n}z^{n}=1+\sum_{n\geq1}\sum_{m=0}^{n-1}b_{m}b_{n-m-1}z^{n}=1+z\sum_{m,k\geq0}b_{m}b_{k}z^{m+k}=1+zB(z)^{2},
+\binom{2m+1}{m}(2m)!\Bigg/2^{m}
 \]
 
 \end_inset
 
-so 
-\begin_inset Formula $zB(z)^{2}-B(z)+1=0$
-\end_inset
-
- and 
-\begin_inset Formula $B(z)=\frac{1-\sqrt{1-4z}}{2z}$
-\end_inset
-
-,
- where we take the negative sign as it is the one where the solution converges at 
-\begin_inset Formula $z=0$
-\end_inset
-
-.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO
-\end_layout
-
-\end_inset
-
-
+labeled oriented 0-2-trees.
 \end_layout
 
 \end_body
