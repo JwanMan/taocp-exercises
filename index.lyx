@@ -1737,8 +1737,30 @@ literal "false"
 Multilinked Structures
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "2.4.lyx"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Dynamic Storage Allocation
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "2.5.lyx"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
