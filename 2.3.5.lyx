@@ -92,18 +92,107 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-TODO 1,
- 6 (1p.,
- 0:15)
+
+
+\backslash
+rexerc1[M21]
 \end_layout
 
 \end_inset
 
+In Section 2.3.4 we saw that trees are special cases of the 
+\begin_inset Quotes eld
+\end_inset
 
+classical
+\begin_inset Quotes erd
+\end_inset
+
+ mathematical concept of a directed graph.
+ Can Lists be described in graph-theoretic terminology?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Yes,
+ we can consider Lists as ordered trees where,
+ in general,
+ only the leaves have labels.
+ If we allow Lists to be referenced from multiple places,
+ then we can consider them as graphs where outgoing arcs from a given node are ordered and such that there is a distinguished vertex 
+\begin_inset Formula $R$
+\end_inset
+
+ such that there is at least one path from 
+\begin_inset Formula $R$
+\end_inset
+
+ to any other vertex.
+ These Lists can be used to reason about computer memory in higher level programming languages.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc6[00]
+\end_layout
+
+\end_inset
+
+The quantitative discussion at the end of this section says that the cost of garbage collection is approximately 
+\begin_inset Formula $c_{1}\mathtt{N}+c_{2}\mathtt{M}$
+\end_inset
+
+ units of time;
+ where does the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $c_{2}\mathtt{M}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ term come from?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+From scanning the memory in search of nodes to collect.
 \end_layout
 
 \end_body
