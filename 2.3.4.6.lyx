@@ -92,17 +92,132 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-TODO 1 (1p.,
- 0:15)
+
+
+\backslash
+rexerc1[21]
 \end_layout
 
 \end_inset
 
+Find a simple one-to-one correspondence between binary trees with 
+\begin_inset Formula $n$
+\end_inset
 
+ nodes and dissections of an 
+\begin_inset Formula $(n+2)$
+\end_inset
+
+-sided convex polygon into 
+\begin_inset Formula $n$
+\end_inset
+
+ triangles,
+ assuming that the sides of the polygon are distinct.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $v_{0},\dots,v_{n+1}$
+\end_inset
+
+ be the vertices of the polygon.
+ We start at the root and,
+ if the left subtree has 
+\begin_inset Formula $k$
+\end_inset
+
+ nodes (
+\begin_inset Formula $0\leq k<n$
+\end_inset
+
+) and the right subtree has 
+\begin_inset Formula $n-k-1$
+\end_inset
+
+ nodes,
+ we take out the triangle 
+\begin_inset Formula $\text{conv}\{v_{0},v_{1},v_{k+2}\}$
+\end_inset
+
+.
+ This leaves us with a polygon of 
+\begin_inset Formula $k+2$
+\end_inset
+
+ nodes 
+\begin_inset Formula $v_{1},\dots,v_{k+2}$
+\end_inset
+
+ when the left subtree is not empty,
+ and one of 
+\begin_inset Formula $n-k+1$
+\end_inset
+
+ nodes 
+\begin_inset Formula $v_{k+2},\dots,v_{n+1},v_{0}$
+\end_inset
+
+ when the right subtree is not empty,
+ and we just have to dissect these two smaller polygons recursively,
+ for example,
+ by renaming 
+\begin_inset Formula $v_{k+2}$
+\end_inset
+
+ to 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ in the polygon for the left subtree and 
+\begin_inset Formula $v_{k+2},\dots,v_{n+1}$
+\end_inset
+
+ to 
+\begin_inset Formula $v_{1},\dots,v_{n-k}$
+\end_inset
+
+ in the polygon for the right subtree.
+\end_layout
+
+\begin_layout Standard
+To get back the original binary tree,
+ we just have to see which other vertex is in the triangle that contains the edge between 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+,
+ take it out,
+ and then 
+\begin_inset Quotes eld
+\end_inset
+
+decode
+\begin_inset Quotes erd
+\end_inset
+
+ the two remaining polygons if they exist,
+ something we can do for arbitrary dissections of the polygon.
 \end_layout
 
 \end_body
