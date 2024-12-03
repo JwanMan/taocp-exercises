@@ -92,22 +92,295 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-TODO 1,
- 2,
- 4,
- 8,
- 11,
- 13 (2pp.,
- 1:35)
+
+
+\backslash
+exerc1[00]
+\end_layout
+
+\end_inset
+
+Considering COBOL data configurations as tree structures,
+ are the data items listed by a COBOL programmer in preorder,
+ postorder,
+ or neither of these orders?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+They are in preorder.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc2[10]
+\end_layout
+
+\end_inset
+
+Comment about the running time of Algorithm A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+It takes a constant amount of time for each data item read (assuming that accessing the symbol table takes constant time).
+ There is also a loop to get out of a nested record,
+ but each iteration of the loop takes out an item from the stack so we may consider that as part of processing such item.
+ Therefore the running time is proportional to the number of data items in the input.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exerc8[10]
+\end_layout
+
+\end_inset
+
+Under what circumstances is 
+\begin_inset Quotes eld
+\end_inset
+
+
+\family typewriter
+MOVE CORRESPONDING 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ TO 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\family default
+
+\begin_inset Quotes erd
+\end_inset
+
+ exactly the same as 
+\begin_inset Quotes eld
+\end_inset
+
+
+\family typewriter
+MOVE 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ TO 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\family default
+
+\begin_inset Quotes erd
+\end_inset
+
+,
+ according to the definition in the text?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+When 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ or 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is an elementary item.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc11[23]
+\end_layout
+
+\end_inset
+
+What additional links or changes in the strategy of the algorithms of the text could make Algorithm B or Algorithm C faster?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
 \end_layout
 
 \end_inset
 
 
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+(I had to look up the solution.)
+\end_layout
+
+\end_inset
+
+ One could make Algorithm C faster by storing sibling nodes in the table in lexicographical order,
+ so step C3 would have a linear rather than quadratic complexity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rexerc13[24]
+\end_layout
+
+\end_inset
+
+Give an algorithm to substitute for Algorithm A when the Data Table is to have the format shown in exercise 12.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+answer 
+\end_layout
+
+\end_inset
+
+We remove the instructions that set 
+\family typewriter
+PARENT
+\family default
+,
+ 
+\family typewriter
+CHILD
+\family default
+,
+ 
+\family typewriter
+SIB
+\family default
+,
+ and 
+\family typewriter
+NAME
+\family default
+,
+ as those fields do not exist now (in particular,
+ A6 disappears),
+ and we implement 
+\begin_inset Formula $\mathtt{Q}\Leftarrow\mathtt{AVAIL}$
+\end_inset
+
+ in step A2 by sequential allocation.
+ We set the 
+\begin_inset Formula $\mathtt{SCOPE}$
+\end_inset
+
+ of an entry when we remove the corresponding item from the stack in step A5.
+ (Note that we do the same in A5 when 
+\begin_inset Formula $\mathtt{L1}=\mathtt{L}$
+\end_inset
+
+ as when 
+\begin_inset Formula $\mathtt{L1}>\mathtt{L}$
+\end_inset
+
+,
+ so we could just do those instructions unconditionally,
+ then after removing the current stack item and before loading the next one we check if 
+\begin_inset Formula $\mathtt{L1}=\mathtt{L}$
+\end_inset
+
+ and if so we go to A7,
+ then if 
+\begin_inset Formula $\mathtt{L1}\geq\mathtt{L}$
+\end_inset
+
+ we repeat,
+ otherwise we report the error.)
+\end_layout
+
+\begin_layout Standard
+For this to work,
+ we have to get the stack empty by the time the algorithm finishes,
+ which we can do by setting 
+\begin_inset Formula $\mathtt{L}\gets0$
+\end_inset
+
+ when the input is exhausted in step A2 and then terminate in step A7 when 
+\begin_inset Formula $\mathtt{L}=0$
+\end_inset
+
+.
 \end_layout
 
 \end_body
